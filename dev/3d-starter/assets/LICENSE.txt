@@ -1,0 +1,1 @@
+Original Little Big Arcade example character, CC0-1.0. Generated from scripts/generate-wars-rig.py as a sample asset. Future games must supply their own art; the toolkit does not select or require this character or palette.
