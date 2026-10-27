@@ -1,0 +1,12 @@
+Original Little Big Arcade forest ruin geometry, rune designs, woodgrain texture, asset-generation scripts, tree-LOD generator scripts and original forest cover art are dedicated to the public domain under CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Embedded stone maps: Boulder 01 by Rico Cilliers / Poly Haven, CC0.
+https://polyhaven.com/a/boulder_01
+https://polyhaven.com/license
+
+Trees, shrubs, grass and flowers: Quaternius, CC0.
+https://quaternius.com/packs/ultimatestylizednature.html
+
+Heroes: Kay Lousberg / KayKit, CC0; see KAYKIT-LICENSE.txt.
+https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0

@@ -1,0 +1,248 @@
+{
+  "license": "CC0-1.0",
+  "source": "https://quaternius.com/packs/ultimatestylizednature.html",
+  "generator": "generate_tree_lod.mjs",
+  "meshoptimizerVersion": "1.3.0",
+  "models": [
+    {
+      "file": "BirchTree_1_LOD.glb",
+      "bytes": 591572,
+      "sha256": "2b777fa98b2c60f7c9927f51f710daff4808dd8225af6dce70f9a04bc4d11c60",
+      "sourceSha256": "85d98e80079844de63eea93700147da3372bf95465653e4aa06fb8b5fa387b5a",
+      "source": "BirchTree_1.glb",
+      "sourceTriangles": 4596,
+      "triangles": 1200,
+      "triangleRatio": 0.26109660574412535,
+      "method": "meshoptimizer 1.3.0 attribute-aware simplification, separate bark and alpha foliage budgets; foliage retention distributed over eight spatial card clusters",
+      "flags": [
+        "Permissive",
+        "Prune"
+      ],
+      "foliageFlags": [
+        "Permissive",
+        "Prune",
+        "Sparse",
+        "ErrorAbsolute"
+      ],
+      "primitives": [
+        {
+          "material": "BirchTree_Bark",
+          "foliage": false,
+          "sourceTriangles": 2688,
+          "targetTriangles": 300,
+          "triangles": 300,
+          "appearanceErrorRelative": 0.011961963027715683,
+          "errorLimitRelative": 0.08,
+          "uvWeight": 0.65,
+          "vertices": 260,
+          "spatialGroups": 1,
+          "groupAppearanceErrors": [
+            0.011961963027715683
+          ]
+        },
+        {
+          "material": "BirchTree_Leaves",
+          "foliage": true,
+          "sourceTriangles": 1908,
+          "targetTriangles": 900,
+          "triangles": 900,
+          "appearanceErrorRelative": 0.0930301962999881,
+          "errorLimitRelative": 0.15,
+          "uvWeight": 2,
+          "vertices": 1800,
+          "spatialGroups": 8,
+          "groupAppearanceErrors": [
+            0.08335509983411482,
+            0.06942668430721635,
+            0.09303004244114682,
+            0.0930301962999881,
+            0.09302984332970517,
+            0.09289836642456888,
+            0.09289893660733363,
+            0.08350571858921073
+          ]
+        }
+      ]
+    },
+    {
+      "file": "BirchTree_2_LOD.glb",
+      "bytes": 609544,
+      "sha256": "8411453de84c113a7fb4a3035f4ac285a93a168bda50b590f477332178c14983",
+      "sourceSha256": "11a2e0ea25abfeb18a8bdb4a2bc15a1ce885cf66aacc833ba488c3e5c28e11c1",
+      "source": "BirchTree_2.glb",
+      "sourceTriangles": 7660,
+      "triangles": 1444,
+      "triangleRatio": 0.18851174934725848,
+      "method": "meshoptimizer 1.3.0 attribute-aware simplification, separate bark and alpha foliage budgets; foliage retention distributed over eight spatial card clusters",
+      "flags": [
+        "Permissive",
+        "Prune"
+      ],
+      "foliageFlags": [
+        "Permissive",
+        "Prune",
+        "Sparse",
+        "ErrorAbsolute"
+      ],
+      "primitives": [
+        {
+          "material": "BirchTree_Bark",
+          "foliage": false,
+          "sourceTriangles": 5464,
+          "targetTriangles": 350,
+          "triangles": 344,
+          "appearanceErrorRelative": 0.018634285777807236,
+          "errorLimitRelative": 0.08,
+          "uvWeight": 0.65,
+          "vertices": 376,
+          "spatialGroups": 1,
+          "groupAppearanceErrors": [
+            0.018634285777807236
+          ]
+        },
+        {
+          "material": "BirchTree_Leaves",
+          "foliage": true,
+          "sourceTriangles": 2196,
+          "targetTriangles": 1100,
+          "triangles": 1100,
+          "appearanceErrorRelative": 0.0917835236203937,
+          "errorLimitRelative": 0.15,
+          "uvWeight": 2,
+          "vertices": 2200,
+          "spatialGroups": 8,
+          "groupAppearanceErrors": [
+            0.0917835236203937,
+            0.07671986186048031,
+            0.0771260998778108,
+            0.07421458462477182,
+            0.07203253564564666,
+            0.0747566181280241,
+            0.07722626940463292,
+            0.07475639937746507
+          ]
+        }
+      ]
+    },
+    {
+      "file": "MapleTree_1_LOD.glb",
+      "bytes": 617860,
+      "sha256": "eb5967d31f503ebf984418f2d323d62e694bf2a6f87fc1624ad915f82c3d8db1",
+      "sourceSha256": "1ef0d5522d2ddb1cccaf1409c20f5b72325c300c798c9946710beb3d3cc0143a",
+      "source": "MapleTree_1.glb",
+      "sourceTriangles": 3848,
+      "triangles": 1000,
+      "triangleRatio": 0.2598752598752599,
+      "method": "meshoptimizer 1.3.0 attribute-aware simplification, separate bark and alpha foliage budgets; foliage retention distributed over eight spatial card clusters",
+      "flags": [
+        "Permissive",
+        "Prune"
+      ],
+      "foliageFlags": [
+        "Permissive",
+        "Prune",
+        "Sparse",
+        "ErrorAbsolute"
+      ],
+      "primitives": [
+        {
+          "material": "MapleTree_Bark",
+          "foliage": false,
+          "sourceTriangles": 2984,
+          "targetTriangles": 300,
+          "triangles": 300,
+          "appearanceErrorRelative": 0.018136586993932724,
+          "errorLimitRelative": 0.08,
+          "uvWeight": 0.65,
+          "vertices": 271,
+          "spatialGroups": 1,
+          "groupAppearanceErrors": [
+            0.018136586993932724
+          ]
+        },
+        {
+          "material": "MapleTree_Leaves",
+          "foliage": true,
+          "sourceTriangles": 864,
+          "targetTriangles": 700,
+          "triangles": 700,
+          "appearanceErrorRelative": 0.11304775017059182,
+          "errorLimitRelative": 0.15,
+          "uvWeight": 2,
+          "vertices": 1400,
+          "spatialGroups": 8,
+          "groupAppearanceErrors": [
+            0.09159536921092039,
+            0.11125795221224333,
+            0.08082059336099649,
+            0.11224129522405668,
+            0.09245725597408198,
+            0.11031799395040137,
+            0.09305577223477048,
+            0.11304775017059182
+          ]
+        }
+      ]
+    },
+    {
+      "file": "MapleTree_3_LOD.glb",
+      "bytes": 643112,
+      "sha256": "9689b998f8ae0a5a79ccb94909cdd424e784241ac41395bb990c4e955fae0293",
+      "sourceSha256": "3277b1f08fdc5d683de2c92f542c4f694cd0fdc143ada9e403281c3a6e3dc8ca",
+      "source": "MapleTree_3.glb",
+      "sourceTriangles": 6678,
+      "triangles": 1400,
+      "triangleRatio": 0.20964360587002095,
+      "method": "meshoptimizer 1.3.0 attribute-aware simplification, separate bark and alpha foliage budgets; foliage retention distributed over eight spatial card clusters",
+      "flags": [
+        "Permissive",
+        "Prune"
+      ],
+      "foliageFlags": [
+        "Permissive",
+        "Prune",
+        "Sparse",
+        "ErrorAbsolute"
+      ],
+      "primitives": [
+        {
+          "material": "MapleTree_Bark",
+          "foliage": false,
+          "sourceTriangles": 4944,
+          "targetTriangles": 400,
+          "triangles": 400,
+          "appearanceErrorRelative": 0.019058721140027046,
+          "errorLimitRelative": 0.08,
+          "uvWeight": 0.65,
+          "vertices": 385,
+          "spatialGroups": 1,
+          "groupAppearanceErrors": [
+            0.019058721140027046
+          ]
+        },
+        {
+          "material": "MapleTree_Leaves",
+          "foliage": true,
+          "sourceTriangles": 1734,
+          "targetTriangles": 1000,
+          "triangles": 1000,
+          "appearanceErrorRelative": 0.08010170976852188,
+          "errorLimitRelative": 0.15,
+          "uvWeight": 2,
+          "vertices": 2000,
+          "spatialGroups": 8,
+          "groupAppearanceErrors": [
+            0.07080728811546845,
+            0.07157139312961695,
+            0.07881838638650886,
+            0.08010170976852188,
+            0.07852128716982751,
+            0.07088309126242216,
+            0.07917405714160697,
+            0.07906501212425535
+          ]
+        }
+      ]
+    }
+  ]
+}

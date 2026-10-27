@@ -1,0 +1,816 @@
+[
+  {
+    "level": 1,
+    "broken": 3,
+    "total": 3,
+    "moves": [
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 1
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 3
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "broken": 4,
+    "total": 4,
+    "moves": [
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 1
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 2
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 3
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 4
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "broken": 4,
+    "total": 4,
+    "moves": [
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 2
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 3
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 4
+      }
+    ]
+  },
+  {
+    "level": 4,
+    "broken": 7,
+    "total": 7,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 4
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 5
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 6
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 7
+      }
+    ]
+  },
+  {
+    "level": 5,
+    "broken": 6,
+    "total": 6,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 2
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 4
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 5
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 6
+      }
+    ]
+  },
+  {
+    "level": 6,
+    "broken": 9,
+    "total": 9,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 70,
+        "broken": 4
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 15,
+        "broken": 7
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 15,
+        "broken": 9
+      }
+    ]
+  },
+  {
+    "level": 7,
+    "broken": 8,
+    "total": 8,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 95,
+        "broken": 4
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 6
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 7
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 8
+      }
+    ]
+  },
+  {
+    "level": 8,
+    "broken": 13,
+    "total": 13,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 7
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 30,
+        "broken": 9
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 30,
+        "broken": 11
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 95,
+        "broken": 12
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 70,
+        "broken": 13
+      }
+    ]
+  },
+  {
+    "level": 9,
+    "broken": 5,
+    "total": 5,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 2
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 70,
+        "broken": 4
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 5
+      }
+    ]
+  },
+  {
+    "level": 10,
+    "broken": 12,
+    "total": 12,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 70,
+        "broken": 4
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 70,
+        "broken": 7
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 9
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 15,
+        "broken": 11
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 12
+      }
+    ]
+  },
+  {
+    "level": 11,
+    "broken": 5,
+    "total": 5,
+    "moves": [
+      {
+        "type": "split",
+        "x": -125,
+        "y": 30,
+        "broken": 3
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 95,
+        "broken": 5
+      }
+    ]
+  },
+  {
+    "level": 12,
+    "broken": 14,
+    "total": 14,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 70,
+        "broken": 4
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 30,
+        "broken": 8
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 15,
+        "broken": 11
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 95,
+        "broken": 13
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 50,
+        "broken": 14
+      }
+    ]
+  },
+  {
+    "level": 13,
+    "broken": 5,
+    "total": 5,
+    "moves": [
+      {
+        "type": "split",
+        "x": -125,
+        "y": 30,
+        "broken": 3
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 5
+      }
+    ]
+  },
+  {
+    "level": 14,
+    "broken": 20,
+    "total": 20,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -85,
+        "y": 120,
+        "broken": 9
+      },
+      {
+        "type": "heavy",
+        "x": -105,
+        "y": 60,
+        "broken": 14
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 30,
+        "broken": 16
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 45,
+        "broken": 19
+      },
+      {
+        "type": "standard",
+        "x": -85,
+        "y": 45,
+        "broken": 20
+      }
+    ]
+  },
+  {
+    "level": 15,
+    "broken": 12,
+    "total": 12,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 105,
+        "broken": 3
+      },
+      {
+        "type": "heavy",
+        "x": -85,
+        "y": 80,
+        "broken": 6
+      },
+      {
+        "type": "bouncy",
+        "x": -105,
+        "y": 0,
+        "broken": 8
+      },
+      {
+        "type": "split",
+        "x": -125,
+        "y": 30,
+        "broken": 11
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 45,
+        "broken": 12
+      }
+    ]
+  },
+  {
+    "level": 16,
+    "broken": 9,
+    "total": 9,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 7
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 95,
+        "broken": 9
+      }
+    ]
+  },
+  {
+    "level": 17,
+    "broken": 7,
+    "total": 7,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 6
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 50,
+        "broken": 7
+      }
+    ]
+  },
+  {
+    "level": 18,
+    "broken": 13,
+    "total": 13,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 9
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 12
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 13
+      }
+    ]
+  },
+  {
+    "level": 19,
+    "broken": 12,
+    "total": 12,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 9
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 12
+      }
+    ]
+  },
+  {
+    "level": 20,
+    "broken": 13,
+    "total": 13,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 30,
+        "broken": 7
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 15,
+        "broken": 10
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 30,
+        "broken": 12
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 13
+      }
+    ]
+  },
+  {
+    "level": 21,
+    "broken": 9,
+    "total": 9,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 15,
+        "broken": 6
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 9
+      }
+    ]
+  },
+  {
+    "level": 22,
+    "broken": 5,
+    "total": 5,
+    "moves": [
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 50,
+        "broken": 3
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 70,
+        "broken": 5
+      }
+    ]
+  },
+  {
+    "level": 23,
+    "broken": 20,
+    "total": 20,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 10
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 18
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 15,
+        "broken": 20
+      }
+    ]
+  },
+  {
+    "level": 24,
+    "broken": 17,
+    "total": 17,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 9
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 17
+      }
+    ]
+  },
+  {
+    "level": 25,
+    "broken": 8,
+    "total": 8,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 15,
+        "broken": 3
+      },
+      {
+        "type": "split",
+        "x": -125,
+        "y": 15,
+        "broken": 4
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 7
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 8
+      }
+    ]
+  },
+  {
+    "level": 26,
+    "broken": 21,
+    "total": 21,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 9
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 19
+      },
+      {
+        "type": "heavy",
+        "x": -125,
+        "y": 15,
+        "broken": 21
+      }
+    ]
+  },
+  {
+    "level": 27,
+    "broken": 14,
+    "total": 14,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 9
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 15,
+        "broken": 12
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 14
+      }
+    ]
+  },
+  {
+    "level": 28,
+    "broken": 20,
+    "total": 20,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 11
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 17
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 20
+      }
+    ]
+  },
+  {
+    "level": 29,
+    "broken": 24,
+    "total": 24,
+    "moves": [
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 7
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 19
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 50,
+        "broken": 23
+      },
+      {
+        "type": "standard",
+        "x": -125,
+        "y": 15,
+        "broken": 24
+      }
+    ]
+  },
+  {
+    "level": 30,
+    "broken": 30,
+    "total": 30,
+    "moves": [
+      {
+        "type": "bouncy",
+        "x": -105,
+        "y": 15,
+        "broken": 9
+      },
+      {
+        "type": "bouncy",
+        "x": -125,
+        "y": 30,
+        "broken": 20
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 30,
+        "broken": 24
+      },
+      {
+        "type": "heavy",
+        "x": -105,
+        "y": 45,
+        "broken": 26
+      },
+      {
+        "type": "explosive",
+        "x": -125,
+        "y": 45
+      },
+      {
+        "type": "explosive",
+        "x": -85,
+        "y": 120
+      }
+    ]
+  }
+]

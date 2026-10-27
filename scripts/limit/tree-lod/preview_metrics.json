@@ -1,0 +1,22 @@
+[
+  {
+    "name": "BirchTree_1",
+    "maskAreaRatio": 0.909,
+    "silhouetteIoU": 0.899
+  },
+  {
+    "name": "BirchTree_2",
+    "maskAreaRatio": 0.924,
+    "silhouetteIoU": 0.922
+  },
+  {
+    "name": "MapleTree_1",
+    "maskAreaRatio": 0.99,
+    "silhouetteIoU": 0.972
+  },
+  {
+    "name": "MapleTree_3",
+    "maskAreaRatio": 0.965,
+    "silhouetteIoU": 0.959
+  }
+]
