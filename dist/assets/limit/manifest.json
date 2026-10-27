@@ -1,0 +1,520 @@
+{
+  "version": 1,
+  "models": {
+    "hero": {
+      "url": "assets/limit/models/hero.glb",
+      "bytes": 981696,
+      "sha256": "8d213da2068e65d7e1d85d0b05adfb87a1d43a6a3d265b9804850367ccf2208e",
+      "sourceSha256": "60428e3abc09ba83e595d256e3af8c5c976b46cdae599f0802fc82b4a3445168",
+      "triangles": 6952,
+      "textures": {
+        "knight_texture": {
+          "url": "assets/limit/textures/836dd581d58d2d78.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [
+        "1H_Melee_Attack_Slice_Horizontal",
+        "Cheer",
+        "Death_A",
+        "Dodge_Forward",
+        "Hit_A",
+        "Idle",
+        "Interact",
+        "Jump_Idle",
+        "Jump_Land",
+        "Jump_Start",
+        "PickUp",
+        "Running_A",
+        "Spellcast_Shoot",
+        "Walking_A"
+      ],
+      "license": "CC0-1.0",
+      "source": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0"
+    },
+    "companion": {
+      "url": "assets/limit/models/companion.glb",
+      "bytes": 917332,
+      "sha256": "082bac0f8f0f6d71bf8bbf0a3dcee63ce15fbc42ac26dd590f5e3a95ffcca5f8",
+      "sourceSha256": "93e6e25213009952276d9cf34f5d96a243767334c66f280db0433ddfabb91545",
+      "triangles": 6035,
+      "textures": {
+        "rogue_texture": {
+          "url": "assets/limit/textures/37d34f8813778ec5.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [
+        "1H_Melee_Attack_Slice_Horizontal",
+        "Cheer",
+        "Death_A",
+        "Dodge_Forward",
+        "Hit_A",
+        "Idle",
+        "Interact",
+        "Jump_Idle",
+        "Jump_Land",
+        "Jump_Start",
+        "PickUp",
+        "Running_A",
+        "Spellcast_Shoot",
+        "Walking_A"
+      ],
+      "license": "CC0-1.0",
+      "source": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0"
+    },
+    "BirchTree_1": {
+      "url": "assets/limit/models/BirchTree_1.glb",
+      "bytes": 719080,
+      "sha256": "3261190a22c655e04477d33f326369cd9a270848c0a7dcdbdff6138e439bfa3a",
+      "sourceSha256": "85d98e80079844de63eea93700147da3372bf95465653e4aa06fb8b5fa387b5a",
+      "triangles": 4596,
+      "textures": {
+        "BirchTree_Bark": {
+          "url": "assets/limit/textures/c9284db2c2197ccd.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "BirchTree_Leaves": {
+          "url": "assets/limit/textures/6205234b89d99877.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "BirchTree_2": {
+      "url": "assets/limit/models/BirchTree_2.glb",
+      "bytes": 810584,
+      "sha256": "9f3abfcaad2de5affe9fca30508a9b4d001610c677cdf0a08f2dc8b990ed971d",
+      "sourceSha256": "11a2e0ea25abfeb18a8bdb4a2bc15a1ce885cf66aacc833ba488c3e5c28e11c1",
+      "triangles": 7660,
+      "textures": {
+        "BirchTree_Bark": {
+          "url": "assets/limit/textures/c9284db2c2197ccd.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "BirchTree_Leaves": {
+          "url": "assets/limit/textures/6205234b89d99877.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "Bush_Large": {
+      "url": "assets/limit/models/Bush_Large.glb",
+      "bytes": 91768,
+      "sha256": "20e5d2524c24dfe41f8d24dc4d504f22bd4b0cd01f3a1ab290560b3c8d0f2965",
+      "sourceSha256": "e5071be79b1ae8598f55d4dfa6570d83af9b7611436cf2b5eaa52d1936d3b443",
+      "triangles": 276,
+      "textures": {
+        "Bush_Leaves": {
+          "url": "assets/limit/textures/908148b9452a2fad.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "Bush_Small": {
+      "url": "assets/limit/models/Bush_Small.glb",
+      "bytes": 85748,
+      "sha256": "9c52f927398f3d4ffceb542850b97e9f871e5a31797b32958295803da3c42c38",
+      "sourceSha256": "853f3cf42ac392c70c987ad85e9148eed287a82676c83eefc57c9449d646d36e",
+      "triangles": 190,
+      "textures": {
+        "Bush_Leaves": {
+          "url": "assets/limit/textures/908148b9452a2fad.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "DeadTree_1": {
+      "url": "assets/limit/models/DeadTree_1.glb",
+      "bytes": 378280,
+      "sha256": "48ace3d0074259ce3f9563cc5f3a86b700c8220452cb33dbfcf7f1725309dd4d",
+      "sourceSha256": "06d2bb027fe7a6a0be80458522f52052ddc923280b72aa867bdb68f4264f8264",
+      "triangles": 4792,
+      "textures": {
+        "NormalTree_Bark": {
+          "url": "assets/limit/textures/eb97e763d2f06b7f.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "Flower_1_Clump": {
+      "url": "assets/limit/models/Flower_1_Clump.glb",
+      "bytes": 325784,
+      "sha256": "fd2215f697525db3c62dbd4b5d0eae788408d72dfc82ef7fb36e2439070e49af",
+      "sourceSha256": "d647af809bf5af52696a30e44dc6c60d502318d3fad75e5141fec1e66af906a7",
+      "triangles": 620,
+      "textures": {
+        "Flowers": {
+          "url": "assets/limit/textures/92927e7fab5a6af6.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "Grass_Large": {
+      "url": "assets/limit/models/Grass_Large.glb",
+      "bytes": 25444,
+      "sha256": "46a21b430cb68b8b894bd5a25b30957e6c0281c2c5bc414651e9a0be3113dc11",
+      "sourceSha256": "28f22f3012912a2d55edc77d88eed7ab6ee8e7875cd511d21cda7f5f349fe947",
+      "triangles": 108,
+      "textures": {
+        "Grass": {
+          "url": "assets/limit/textures/abb387ebdfce0c6e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "Grass_Small": {
+      "url": "assets/limit/models/Grass_Small.glb",
+      "bytes": 22900,
+      "sha256": "396ac054e4cec8c9ac50c7e666b0ec22862dc31ebab44812e7a849c98fe4d980",
+      "sourceSha256": "a27199faba135de6ce90e1d9fcf94b8521009545b956c416d9fbe553ed669fd2",
+      "triangles": 58,
+      "textures": {
+        "Grass": {
+          "url": "assets/limit/textures/abb387ebdfce0c6e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "MapleTree_1": {
+      "url": "assets/limit/models/MapleTree_1.glb",
+      "bytes": 674268,
+      "sha256": "5995090d17bc69f35fb0dc5c2ce4baf11fa6bd160231c4f47a3ea9620d4af657",
+      "sourceSha256": "1ef0d5522d2ddb1cccaf1409c20f5b72325c300c798c9946710beb3d3cc0143a",
+      "triangles": 3848,
+      "textures": {
+        "MapleTree_Bark": {
+          "url": "assets/limit/textures/b16ed30257201b3c.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "MapleTree_Leaves": {
+          "url": "assets/limit/textures/7bd164fd38ec6fc0.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "MapleTree_3": {
+      "url": "assets/limit/models/MapleTree_3.glb",
+      "bytes": 784816,
+      "sha256": "8cd9b190187c094f69767f945ea4abe3228487efef7cb78cf5c0c57a79b966d1",
+      "sourceSha256": "3277b1f08fdc5d683de2c92f542c4f694cd0fdc143ada9e403281c3a6e3dc8ca",
+      "triangles": 6678,
+      "textures": {
+        "MapleTree_Bark": {
+          "url": "assets/limit/textures/b16ed30257201b3c.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "MapleTree_Leaves": {
+          "url": "assets/limit/textures/7bd164fd38ec6fc0.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "boulder_high": {
+      "url": "assets/limit/models/boulder_high.glb",
+      "bytes": 1651656,
+      "sha256": "cce3773a3e7ac5471deefdeba43e4137a9cc3d8e2a23217c52327574301253d9",
+      "sourceSha256": "272dd9529560db21015468276826a1de7c941ff31a54ee2b87cea95505139d23",
+      "triangles": 12000,
+      "textures": {
+        "boulder_01": {
+          "url": "assets/limit/textures/e1c9ac676a145e5e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com"
+    },
+    "boulder_low": {
+      "url": "assets/limit/models/boulder_low.glb",
+      "bytes": 1238972,
+      "sha256": "b106286b951246cdaa4a8d54a6b73c53384f0b2ee859e0fa113ce13abf5d57c8",
+      "sourceSha256": "b7fa566c3225183d0f85fee9396dbe3c31d4a62cc8930d221b32021ffa9ae631",
+      "triangles": 2000,
+      "textures": {
+        "boulder_01": {
+          "url": "assets/limit/textures/e1c9ac676a145e5e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com"
+    },
+    "fern_02_1k": {
+      "url": "assets/limit/models/fern_02_1k.glb",
+      "bytes": 550144,
+      "sha256": "d8ba08d0f6d5e6812608ebebd5e57c37bab7047ddf848edf136c0cb6457e3292",
+      "sourceSha256": "68b47695e77263eaf2294ed7431255793b54fe5165aece19ace01637b24e6808",
+      "triangles": 6232,
+      "textures": {
+        "fern_02": {
+          "url": "assets/limit/textures/0a38092160353a77.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com"
+    },
+    "BirchTree_1_LOD": {
+      "url": "assets/limit/models/BirchTree_1_LOD.glb",
+      "bytes": 591660,
+      "sha256": "7dd10ee649d726b3c9bfb0234fdb8e4cff60378111bb52ec7dde7d292085ab1d",
+      "sourceSha256": "2b777fa98b2c60f7c9927f51f710daff4808dd8225af6dce70f9a04bc4d11c60",
+      "triangles": 1200,
+      "textures": {
+        "BirchTree_Bark": {
+          "url": "assets/limit/textures/c9284db2c2197ccd.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "BirchTree_Leaves": {
+          "url": "assets/limit/textures/6205234b89d99877.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "BirchTree_2_LOD": {
+      "url": "assets/limit/models/BirchTree_2_LOD.glb",
+      "bytes": 609632,
+      "sha256": "ea0b654aa625ababf8a49948bb87336a2cc311bd6f941762b860fd9f5e364c91",
+      "sourceSha256": "8411453de84c113a7fb4a3035f4ac285a93a168bda50b590f477332178c14983",
+      "triangles": 1444,
+      "textures": {
+        "BirchTree_Bark": {
+          "url": "assets/limit/textures/c9284db2c2197ccd.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "BirchTree_Leaves": {
+          "url": "assets/limit/textures/6205234b89d99877.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "MapleTree_1_LOD": {
+      "url": "assets/limit/models/MapleTree_1_LOD.glb",
+      "bytes": 598712,
+      "sha256": "32bd74192ff418bb6bdf9b9275ce78339a37be751809e3cd3734a130ad4de332",
+      "sourceSha256": "eb5967d31f503ebf984418f2d323d62e694bf2a6f87fc1624ad915f82c3d8db1",
+      "triangles": 1000,
+      "textures": {
+        "MapleTree_Bark": {
+          "url": "assets/limit/textures/b16ed30257201b3c.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "MapleTree_Leaves": {
+          "url": "assets/limit/textures/7bd164fd38ec6fc0.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "MapleTree_3_LOD": {
+      "url": "assets/limit/models/MapleTree_3_LOD.glb",
+      "bytes": 623964,
+      "sha256": "bb31de13e75f855086349b692afbbc703d83766f1fe3593488420b7e9d63c177",
+      "sourceSha256": "9689b998f8ae0a5a79ccb94909cdd424e784241ac41395bb990c4e955fae0293",
+      "triangles": 1400,
+      "textures": {
+        "MapleTree_Bark": {
+          "url": "assets/limit/textures/b16ed30257201b3c.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "MapleTree_Leaves": {
+          "url": "assets/limit/textures/7bd164fd38ec6fc0.png",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "https://quaternius.com/packs/ultimatestylizednature.html"
+    },
+    "gate": {
+      "url": "assets/limit/models/gate.glb",
+      "bytes": 1524196,
+      "sha256": "d25e180e459f90d69262a798e05b806a9ae2279bf72e232a8d9bc1d3d2ed0d42",
+      "sourceSha256": "58149ea2750dfe0121c6f9b47a1f97339af808a97d8dcc6605c2ccab0e2eecf1",
+      "triangles": 3416,
+      "textures": {
+        "weathered_stone_PolyHaven_CC0": {
+          "url": "assets/limit/textures/e1c9ac676a145e5e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "original_hewn_wood_CC0": {
+          "url": "assets/limit/textures/57a969acc3c32fd7.jpg",
+          "width": 512,
+          "height": 512,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "Original CC0 geometry; scripts/limit/generate_ruins.py with Poly Haven stone maps"
+    },
+    "beacon": {
+      "url": "assets/limit/models/beacon.glb",
+      "bytes": 1299892,
+      "sha256": "7a7a783f86cb1abc4bac6435be3c02538b57bada9b9bd05189da0fd742a32fd7",
+      "sourceSha256": "13fd82eb4ed59a7b449586244f4367706c2035e821c5e7051d36bdc5bd78f90c",
+      "triangles": 1080,
+      "textures": {
+        "weathered_stone_PolyHaven_CC0": {
+          "url": "assets/limit/textures/e1c9ac676a145e5e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "original_hewn_wood_CC0": {
+          "url": "assets/limit/textures/57a969acc3c32fd7.jpg",
+          "width": 512,
+          "height": 512,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "Original CC0 geometry; scripts/limit/generate_ruins.py with Poly Haven stone maps"
+    },
+    "bridge": {
+      "url": "assets/limit/models/bridge.glb",
+      "bytes": 1462324,
+      "sha256": "54f3e7d5f2ebcda3e1d112ccf67bfcfc0c4b2161cd99e8f7e592d65d252cc8df",
+      "sourceSha256": "77ae6c3e2928a9db0ef8e916f1c2affdcb726626c7dd0993f41242fc7b41ab0d",
+      "triangles": 2764,
+      "textures": {
+        "weathered_stone_PolyHaven_CC0": {
+          "url": "assets/limit/textures/e1c9ac676a145e5e.jpg",
+          "width": 1024,
+          "height": 1024,
+          "flipY": false
+        },
+        "original_hewn_wood_CC0": {
+          "url": "assets/limit/textures/57a969acc3c32fd7.jpg",
+          "width": 512,
+          "height": 512,
+          "flipY": false
+        }
+      },
+      "clips": [],
+      "license": "CC0-1.0",
+      "source": "Original CC0 geometry; scripts/limit/generate_ruins.py with Poly Haven stone maps"
+    }
+  },
+  "surfaces": {
+    "forest_ground_04": {
+      "diff_high": "assets/limit/textures/forest_ground_04_diff_high.jpg",
+      "diff_low": "assets/limit/textures/forest_ground_04_diff_low.jpg",
+      "nor_gl_high": "assets/limit/textures/forest_ground_04_nor_gl_high.jpg",
+      "nor_gl_low": "assets/limit/textures/forest_ground_04_nor_gl_low.jpg",
+      "rough_high": "assets/limit/textures/forest_ground_04_rough_high.jpg",
+      "rough_low": "assets/limit/textures/forest_ground_04_rough_low.jpg"
+    },
+    "bark_willow": {
+      "diff_high": "assets/limit/textures/bark_willow_diff_high.jpg",
+      "diff_low": "assets/limit/textures/bark_willow_diff_low.jpg",
+      "nor_gl_high": "assets/limit/textures/bark_willow_nor_gl_high.jpg",
+      "nor_gl_low": "assets/limit/textures/bark_willow_nor_gl_low.jpg",
+      "rough_high": "assets/limit/textures/bark_willow_rough_high.jpg",
+      "rough_low": "assets/limit/textures/bark_willow_rough_low.jpg"
+    }
+  },
+  "licenses": [
+    "KAYKIT-LICENSE.txt",
+    "SOURCES_AND_LICENSES.md",
+    "ORIGINAL-ASSETS-LICENSE.txt"
+  ]
+}
