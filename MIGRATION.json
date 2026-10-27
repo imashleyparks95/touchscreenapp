@@ -1,0 +1,13 @@
+{
+  "source_directory": "/workspace/sites/little-big-arcade",
+  "source_commit": "d64605049968c4c0eedf52d668dd9f613b811af6",
+  "version": "6.2.0",
+  "runtime_files_unchanged": 246,
+  "excluded": [
+    ".git",
+    "node_modules",
+    "verification screenshots and logs"
+  ],
+  "target_repository": "https://github.com/imashleyparks95/touchscreenapp",
+  "target_branch": "main"
+}
