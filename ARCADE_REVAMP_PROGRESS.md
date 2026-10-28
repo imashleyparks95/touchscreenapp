@@ -212,3 +212,8 @@ Physical Windows controller sensitivity, touch reach, GPU appearance/performance
 - Review branch: **`revamp/milestone-2-foundation`**, based on `7cde351`; current app version **6.4.0**. The milestone checkpoint is the tip of this review branch; resolve it with `git rev-parse revamp/milestone-2-foundation`. Next action is the user trial. No production publish or Milestone 3 implementation is authorized.
 - **User trial:** run `npm ci` then `npm start` from the checkpoint source. Check the darker library; open Project Limit Break → Settings → Controls & Camera; try speed/deadzone/invert, Auto/Show/Hide, SHOW TOUCH recovery, simultaneous movement/look/actions and mixed controller/touch co-op. Try MONITOR, the benchmark JSON/CSV exports and BACK TO ARCADE.
 - Return with feedback before beginning Milestone 3. Physical sensitivity, touch reach, Bluetooth/USB reliability, capture devices and GPU performance remain unverified. Keep all later game/zone/artwork work pending rather than marking it done.
+
+### Publication handoff (2026-10-28 UTC)
+
+- Implementation checkpoint committed locally as `cae1b4fe5042e2413b0d4c0fc9bb8c04c893b5ff`. Native Git fetch/push cannot authenticate in the reconnected environment, and `gh auth status` reports an invalid injected token. The branch has **not** been published; restore GitHub authentication before pushing `revamp/milestone-2-foundation`. No credential changes or deployment were attempted.
+- A source archive is provided for the user trial. Resume with that trial and remote publication, not Milestone 3.
