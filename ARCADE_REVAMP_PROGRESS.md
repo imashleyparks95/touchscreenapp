@@ -2,6 +2,8 @@
 
 ## Resume here
 
+- **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication blocker, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
+
 - **Current checkpoint: Milestone 2, existing Forest foundation improvements — complete; user trial pending.** The user explicitly said “continue”; no physical trial feedback was supplied. Pause again for user testing before Milestone 3.
 - **User review gate:** stop after each milestone and let the user try it. Continuation to Milestone 2 was explicitly authorized; this does not verify hardware testing or authorize Milestone 3/deployment. Dark overall shell colors are now a persistent user preference.
 - **Milestone 2 deployment is now authorized (2026-10-28).** The user requested deployment before testing. Publish only this v6.4.0 checkpoint to the existing Sites project, preserving its URL/access policy. No Sites deployment tools exist in this environment; GitHub pushes do not publish the site. Milestone 3 remains paused for the user trial.
@@ -221,3 +223,7 @@ Physical Windows controller sensitivity, touch reach, GPU appearance/performance
 ### Deployment request (2026-10-28 UTC)
 
 The user explicitly requested deployment before testing. Tool discovery confirmed that this session has no Sites/deployment capability. Deployment remains unperformed, and GitHub publication remains blocked by environment authentication. The deployable app checkpoint is `e64a460b4d39f24569b2b407f4a096109c63a866` (v6.4.0); later documentation-only changes record this authorization. Use the provided source archive in the existing Sites-enabled conversation if GitHub access is still unavailable. Serve `dist/` in project `appgprj_6adab219a4788191952c4c83432002c5`, preserve URL/access policy, and verify live version 6.4.0 before the user trial. Do not create a replacement site or begin Milestone 3.
+
+### Recurring milestone handoff
+
+User requested a Work Mode message after every milestone and clear repository directions. Added `WORK_MODE_HANDOFF.md`, linked it from README/progress, and persisted the requirement in AGENTS.md. Documentation only; no runtime changes or deployment performed. Current app archive still identifies tested checkpoint `e64a460`.

@@ -71,6 +71,8 @@ Two controllers get independent P1/P2 cursors. Choose a two-player mode first an
 
 ## Deploy to the existing website
 
+Start with [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the latest milestone checkpoint, exact source identity, deployment instructions and user trial checklist.
+
 Current website: https://little-big-arcade-parks.diladiop.chatgpt.site
 
 Existing Sites project ID: `appgprj_6adab219a4788191952c4c83432002c5`. Preserve `.openai/hosting.json` and its `static.directory: dist`. A GitHub push alone does **not** publish to this Sites website, and this export contains no deployment credentials or GitHub Actions deployment integration.
