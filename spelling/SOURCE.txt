@@ -1,0 +1,10 @@
+Spelling Adventure local vocabulary, version 1, 25 October 2026.
+
+Explicit editorial English word pools; no generated inflection padding. Counts: Niko 550, Roxy 1,050, Kelly 1,750; 3,350 globally distinct spellings.
+
+Selected definitions and usage examples derive from WordNet 3.0, copyright 2006 Princeton University. Full license: WORDNET-LICENSE.txt. Official data archive: https://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.gz
+License source: https://wordnet.princeton.edu/license-and-commercial-use
+
+Original elementary definitions, homophone distinctions and contextual sentences were added. Other senses were selected from the explicit candidate lists with filtering for inappropriate adult/offensive meanings and examples. Where no suitable complete usage example was available, the local bank uses an original category-specific context or a word-specific explanatory sentence. Contexts are intentionally concise; some advanced definitions retain dictionary terminology. These are spelling practice pools, not a claim of formal curriculum certification.
+
+The full WordNet database is not shipped. Only the selected local entries are included. No runtime request, paid dictionary API, web scraping or remote pronunciation service is required by this asset.

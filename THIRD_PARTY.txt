@@ -1,0 +1,23 @@
+Little Big Arcade — third-party audio encoder
+
+LAME / lamejs 1.2.1, by Alex Zhukov and LAME contributors.
+Upstream: https://github.com/zhuker/lamejs
+LAME: https://lame.sourceforge.net
+
+The browser encoder is distributed as a separate, unmodified lame.min.js.
+This encoder converts PCM audio into genuine MPEG Layer III (MP3) files.
+The package declares LGPL-3.0; the package also includes the historical GNU
+Library GPL version 2 text. Both are reproduced here, with GPL-3.0 (which
+LGPL-3.0 incorporates), and the upstream LICENSE notice.
+
+The complete, unmodified corresponding npm source package is distributed here
+as lamejs-1.2.1-source.tgz. This application does not modify the encoder.
+Users may replace or relink the separate encoder under the applicable license.
+
+Matter.js 0.20.0 (MIT), Liam Brummitt, https://brm.io/matter-js/
+poly-decomp 0.3.0 (MIT), Stefan Hedman, https://github.com/schteppe/poly-decomp.js
+See MATTER-LICENSE.txt and POLY-DECOMP-LICENSE.txt.
+
+MediaPipe Tasks Vision and local Face/Pose Landmarker models: see vision/LICENSE.txt and vision/SOURCE.txt.
+
+Spelling Adventure selected vocabulary uses WordNet 3.0 definitions and usage examples, with original editorial word pools, definitions and context. Copyright 2006 Princeton University. See spelling/WORDNET-LICENSE.txt and spelling/SOURCE.txt. Local-only dictionary; no paid service.
