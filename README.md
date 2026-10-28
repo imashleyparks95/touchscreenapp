@@ -1,5 +1,17 @@
 # Little Big Arcade
 
+## Revamp checkpoints
+
+Read [ARCADE_REVAMP_PROGRESS.md](ARCADE_REVAMP_PROGRESS.md) for the current milestone, complete game inventory, tested capabilities, gaps and exact resume instructions. The [full master plan](docs/ARCADE_REVAMP_MASTER_PLAN.md) is retained in the repository. Development pauses for user testing after each milestone; there is no automatic deployment.
+
+```sh
+npm run audit:arcade
+npm run test:audit
+npm run test:limit:browser
+```
+
+The read-only audit guards the original roster, save identities, assets and offline dependency closure. The new Forest browser test exercises the actual imported scene and a measured five-stage Forest run in an isolated browser; it takes at least the warm-up plus 30 measured seconds, apart from loading. Cloud software-rendered results are not target-PC benchmarks. `npm test` now includes the audit regression alongside the original 35 test programs.
+
 This repository began as a migration of the existing working application, version 6.2.0. The current version is declared in package.json and the release notes. Original source: `/workspace/sites/little-big-arcade/`, commit `d646050` (full SHA in MIGRATION.json). No games or interfaces have been rebuilt.
 
 ## Install and run
