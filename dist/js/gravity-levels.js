@@ -1,0 +1,32 @@
+export const GRAVITY_NAMES=['First Flip','Sideways Spark','Ceiling Surf','Neon Corner','Momentum Garden','Bounce School','Switchback','Pulse Passage','Moving Target','Flux Factory','Rotary Room','Magnetic Alley','Laser Logic','Glass Orbit','Kinetic Keys','Pressure Point','Bridge Circuit','Mirror Maze','Crush Corridor','Warp Workshop','Triple Current','Docking Bay','Signal Storm','Polarity Puzzle','Gravity Reactor','Plasma Circuit','Clockwork Galaxy','Energy Exchange','Quantum Crossing','Chaos Core'];
+export const DIRECTIONS={up:{x:0,y:-1,icon:'↑',name:'UP'},down:{x:0,y:1,icon:'↓',name:'DOWN'},left:{x:-1,y:0,icon:'←',name:'LEFT'},right:{x:1,y:0,icon:'→',name:'RIGHT'}};
+export function gravityLevel(id,difficulty=3){
+ const i=id-1,depth=i<3?0:i<6?1:i<20?2:3,mirror=i%2===1,gap=[225,205,185,165,150][difficulty-1],thickness=18,ys=depth===0?[]:depth===1?[350+(i%3-1)*18]:depth===2?[430+(i%5-2)*6,250+(i%5-2)*7]:[470+(i%5-2)*4,330+(i%5-2)*8,180+(i%5-2)*6],mirrorX=x=>mirror?1000-x:x;
+ const walls=ys.map((y,j)=>({id:'wall-'+j,x:mirrorX(j%2===0?(1000-gap)/2:(1000+gap)/2),y,w:1000-gap,h:thickness,kind:'wall'}));
+ if(depth===0)walls.push({id:'intro-wall',x:500,y:340+(i%3)*35,w:230+i*35,h:20,kind:'wall'});
+ const objects=[];
+ if(i>=3)objects.push({id:'spikes',kind:'spikes',x:mirrorX(330),y:depth===3?145:205,w:90,h:14});
+ if(i>=4)objects.push({id:'bounce',kind:'bounce',x:mirrorX(450),y:602,w:130,h:15});
+ if(i>=5)objects.push({id:'moving-platform',kind:'moving',x:mirrorX(460),y:520,w:110,h:14,range:55,axis:'x',period:4300});
+ if(i>=6)objects.push({id:'bumper',kind:'bumper',x:mirrorX(710),y:540,r:27,range:i>=9?42:0,period:3400});
+ const switches=i>=7?[{id:'A',x:mirrorX(135),y:545}]:[];
+ if(i>=7&&depth)objects.push({id:'switch-door',kind:'door',x:mirrorX(1000-gap/2),y:ys[0],w:gap,h:thickness,switch:'A'});
+ if(i>=9)objects.push({id:'platform',kind:'platform',x:mirrorX(490),y:555,w:125,h:16,rotatable:i>=10,moveBox:{x:300,y:480,w:380,h:120}});
+ if(i>=10)objects.push({id:'timed-door',kind:'timed',x:mirrorX(gap/2),y:depth>1?ys[1]:190,w:gap,h:15,period:4200,openFor:2200});
+ if(i>=11)objects.push({id:'blade',kind:'blade',x:mirrorX(605),y:depth>1?ys[1]+95:345,w:95,h:12,period:4200});
+ if(i>=12)objects.push({id:'laser',kind:'laser',x:mirrorX(1000-gap/2),y:depth===3?400:340,w:gap,h:9,period:3400,on:1700});
+ if(i>=13)objects.push({id:'magnet',kind:'magnet',x:mirrorX(430),y:110,w:120,h:12});
+ if(i>=14)objects.push({id:'wall-moving',kind:'moving',x:mirrorX(640),y:depth>1?ys[1]+95:345,w:24,h:65,range:30,axis:'x',period:3900});
+ if(i>=15)objects.push({id:'falling-1',kind:'block',x:mirrorX(360),y:depth===3?410:360,w:35,h:35},{id:'falling-2',kind:'block',x:mirrorX(365),y:depth===3?370:315,w:30,h:30});
+ if(i>=16)objects.push({id:'crush',kind:'crush',x:mirrorX(540),y:depth>1?ys[1]+95:345,w:105,h:16,range:27,axis:'y',period:2800});
+ if(i>=17)objects.push({id:'conveyor',kind:'conveyor',x:500,y:646,w:145,h:12,direction:mirror?-1:1});
+ const zones=[];
+ if(i>=8)zones.push({id:'boost',kind:'boost',x:mirrorX(260),y:540,r:42});
+ if(i>=14)zones.push({id:'slow',kind:'slow',x:mirrorX(600),y:105,r:65});
+ if(i>=17)zones.push({id:'warp-in',kind:'teleport',x:mirrorX(235),y:540,r:23,dest:{x:mirrorX(1000-gap/2),y:depth===3?420:330}});
+ if(i>=19)zones.push({id:'shield',kind:'shield',x:mirrorX(800),y:610,r:21});
+ const orbs=[{id:'lower',x:mirrorX(974),y:612,required:i>=20},{id:'middle',x:mirrorX(28),y:depth>1?ys[1]+45:110,required:i>=20},{id:'bonus',x:mirrorX(500+(i%3)*35),y:105,required:false}];
+ const checkpoints=i>=15?[{x:mirrorX(970),y:depth===3?443:400,r:45,gravity:'up'}]:[];
+ return{id,name:GRAVITY_NAMES[i],depth,mirror,difficulty,theme:['Neon Laboratory','Pinball Foundry','Orbital Works','Prism Citadel','Quantum Facility','Chaos Reactor'][Math.floor(i/5)],start:{x:mirrorX(90),y:570},goal:{x:mirrorX(974),y:30,r:[38,32,27,24,22][difficulty-1]},walls,objects,zones,orbs,checkpoints,rampZone:i>=15?{x:mirrorX(520)-110,y:490,w:220,h:105}:null,time:120000,changeLimit:difficulty>=4&&i>=18?[Infinity,Infinity,Infinity,22,18][difficulty-1]:Infinity,speed:[.65,.82,1,1.16,1.32][difficulty-1],gravityStrength:[.00065,.0008,.0009,.001,.00105][difficulty-1],requiredSwitch:switches.length?'A':null,switches};
+}
+export const GRAVITY_LEVELS=Array.from({length:30},(_,i)=>gravityLevel(i+1));

@@ -1,0 +1,3 @@
+export function newDrawingSettings(){return[{tool:'brush',color:'#a47bff',size:18,fill:false},{tool:'brush',color:'#ff7bab',size:18,fill:false}];}
+export function pointerDrawingSettings(settings,x,width,collaborating){const side=collaborating&&x>width/2?1:0;return{...settings[side],side};}
+export function restoreDrawingSettings(saved){const defaults=newDrawingSettings(),tools=new Set(['pencil','marker','brush','spray','eraser','fill','line','circle','rect','triangle','star','select']);return defaults.map((d,i)=>{let p=saved?.[i];if(!p)return d;return{tool:tools.has(p.tool)?p.tool:d.tool,color:/^#[a-f0-9]{6}$/i.test(p.color)?p.color:d.color,size:Math.max(1,Math.min(100,Number(p.size)||18)),fill:!!p.fill};});}

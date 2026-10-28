@@ -1,0 +1,13 @@
+const vision=import('../vendor/vision/vision_bundle.mjs'),helpers=import('./air-slice-mask.js');
+let model,numPoses=2,masksEnabled=true,segmentationError='',missingMasks=0,jobs=Promise.resolve();
+const options=(canvas,outputSegmentationMasks)=>({canvas,baseOptions:{modelAssetPath:new URL('../vendor/vision/pose_landmarker_lite.task',self.location.href).href,delegate:'GPU'},runningMode:'VIDEO',numPoses,minPoseDetectionConfidence:.45,minPosePresenceConfidence:.45,minTrackingConfidence:.5,outputSegmentationMasks});
+async function handle(d){
+ if(d.type==='retry-masks'){segmentationError='';missingMasks=0;return;}
+ if(d.type==='init'){numPoses=d.numPoses||2;masksEnabled=d.backgroundRemoval!==false;const canvas=new OffscreenCanvas(640,360);if(!canvas.getContext('webgl2'))throw Error('Worker graphics are unavailable.');const {FilesetResolver,PoseLandmarker}=await vision,files=await FilesetResolver.forVisionTasks(new URL('../vendor/vision',self.location.href).href);try{model=await PoseLandmarker.createFromOptions(files,options(canvas,masksEnabled));}catch(e){if(!masksEnabled)throw e;segmentationError='Person segmentation is unavailable on this device.';masksEnabled=false;model=await PoseLandmarker.createFromOptions(files,options(canvas,false));}postMessage({type:'ready',segmentationError});return;}
+ if(d.type!=='detect')return;let out,scene=null,maskMs=0;const start=performance.now();
+ try{const wanted=!!d.backgroundRemoval&&!segmentationError;if(wanted!==masksEnabled){try{await model.setOptions({outputSegmentationMasks:wanted});masksEnabled=wanted;}catch(e){segmentationError='Person segmentation is unavailable on this device.';masksEnabled=false;await model.setOptions({outputSegmentationMasks:false});}}
+  out=model.detectForVideo(d.image,d.time);if(masksEnabled){const before=performance.now();try{const {mergePersonMasks}=await helpers,mask=mergePersonMasks((out.segmentationMasks||[]).map(m=>({width:m.width,height:m.height,data:m.getAsFloat32Array()})));if(mask){missingMasks=0;scene={mask,frame:d.image};}else missingMasks++;}catch(e){segmentationError='Person masks could not be read on this device.';}maskMs=performance.now()-before;}
+  const result={type:'result',landmarks:out.landmarks,time:d.time,scene,maskMs,inferenceMs:performance.now()-start,segmentationError};if(!scene){d.image.close();d.image=null;}out.close?.();out=null;postMessage(result,scene?[scene.frame,scene.mask.alpha.buffer]:[]);d.image=null;
+ }finally{out?.close?.();if(d.image){try{d.image.close();}catch{}d.image=null;}}
+}
+self.onmessage=({data:d})=>{jobs=jobs.then(()=>handle(d)).catch(e=>{try{d.image?.close();}catch{}postMessage({type:'error',message:e.message||String(e)});});};

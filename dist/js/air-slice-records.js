@@ -1,0 +1,18 @@
+import {DB,player,save,commitRound,unlock,uid} from './data.js';
+import {airRuleKey} from './air-slice-core.js';
+export function emptyAirStats(){return{games:0,fruit:0,playtime:0,highestCombo:0,golden:0,giants:0,wins:0,coopGames:0,coopBest:0,bests:{},matches:[]};}
+export function commitAirSession(summary,ids,{matchId=uid()}={}){
+ const o=summary.options,coop=o.competition==='coop',versus=o.competition==='versus',rule=airRuleKey(o),hasInput=summary.players.some(p=>p.slices>0),timed=!(o.mode==='zen'&&o.infinite);
+ if(ids.some(id=>player(id)?.airSlice?.matches?.includes(matchId)))return{duplicate:true,rows:[],winner:null};
+ const winner=versus?summary.players[0].score===summary.players[1].score?null:summary.players[0].score>summary.players[1].score?0:1:null;
+ const entries=ids.map((id,i)=>{const p=summary.players[i],duration=(summary.turnClocks?.[i]??summary.clock)/1000;return{id,score:coop?summary.team.score:p.score,hits:p.slices,errors:p.bombs,misses:p.misses,accuracy:p.slices+p.misses?Math.round(p.slices/(p.slices+p.misses)*100):0,duration,soloWin:p.slices>0,details:{matchId,mode:o.mode,competition:o.competition,input:o.input,rule,teamIds:coop?ids:[],teamScore:summary.team.score,teamFruit:summary.team.slices,teamCombo:summary.team.highestCombo,teamSlices:summary.team.teamSlices,teamPerfect:summary.team.perfectCombos,...p,clock:duration*1000,completed:true,unlimited:!timed}};});
+ let rows=[];const settings={game:'air',difficulty:o.difficulty,learn:false,mode:versus?'versus':'solo',ruleset:'air-slice-v1',levelId:o.mode,competition:o.competition,challengeKey:rule,ranked:hasInput,pointsEligible:timed};
+ // Cooperative partners complete together; they never create a rivalry/draw against each other.
+ if(coop){for(const entry of entries)rows.push(...commitRound([entry],settings));}else rows=commitRound(entries,{...settings,winnerId:versus?winner===null?null:ids[winner]:undefined});
+ for(let i=0;i<ids.length;i++){const p=player(ids[i]);if(!p)continue;const stat=p.airSlice??=emptyAirStats(),s=summary.players[i];stat.games++;stat.fruit+=s.slices;stat.playtime+=summary.turnClocks?.[i]??summary.clock;stat.highestCombo=Math.max(stat.highestCombo,s.highestCombo);stat.golden+=s.golden;stat.giants+=s.giants;stat.matches.push(matchId);if(winner===i&&versus)stat.wins++;if(coop){stat.coopGames++;stat.coopBest=Math.max(stat.coopBest,summary.team.score);}const key=[o.mode,o.competition,o.difficulty,rule].join('|');stat.bests[key]=Math.max(stat.bests[key]||0,coop?summary.team.score:s.score);if(s.slices)unlock(p,'air-first');if(stat.fruit>=100)unlock(p,'air-master');if(s.highestCombo>=5)unlock(p,'air-combo');if(stat.giants>=25)unlock(p,'air-watermelon');if(coop&&hasInput)unlock(p,'air-duo');if(stat.wins>=10)unlock(p,'air-champion');if(coop&&summary.team.score>=1500)unlock(p,'air-legends');}
+ const saved=save();return{duplicate:false,rows,winner,saved};
+}
+export function airLeaderboard({mode='arcade',competition='solo',difficulty=3,input='camera',rule=null}={}){
+ const all=DB.profiles.flatMap(p=>p.results.filter(r=>r.game==='air'&&r.ruleset==='air-slice-v1'&&r.levelId===mode&&r.competition===competition&&r.difficulty===difficulty&&r.details?.input===input&&(!rule||r.challengeKey===rule)).map(r=>({p,r})));
+ const best=new Map();for(const row of all){const key=competition==='coop'?(row.r.details.teamIds||[]).slice().sort().join('|')+'|'+row.r.challengeKey:row.p.id+'|'+row.r.challengeKey,old=best.get(key);if(!old||row.r.score>old.r.score||row.r.score===old.r.score&&row.r.duration<old.r.duration)best.set(key,row);}return[...best.values()].sort((a,b)=>b.r.score-a.r.score||a.r.duration-b.r.duration);
+}
