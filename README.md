@@ -1,6 +1,6 @@
 # Little Big Arcade
 
-Migration of the existing working application, version 6.2.0. Original source: `/workspace/sites/little-big-arcade/`, commit `d646050` (full SHA in MIGRATION.json). No games or interfaces have been rebuilt.
+This repository began as a migration of the existing working application, version 6.2.0. The current version is declared in package.json and the release notes. Original source: `/workspace/sites/little-big-arcade/`, commit `d646050` (full SHA in MIGRATION.json). No games or interfaces have been rebuilt.
 
 ## Install and run
 
@@ -33,6 +33,22 @@ npm run test:limit
 
 The full suite covers the existing game systems, persistence, offline behavior, media and 3D functionality. Consult AGENTS.md and 3D_GAME_DEVELOPMENT.md before changes. Automated fixtures do not establish real Windows multitouch, physical cameras/microphones, gamepad or GPU compatibility. Smoke-test those devices on the actual arcade PC.
 
+Version 6.3.0 adds a browser regression suite:
+
+```sh
+npm run test:browser
+```
+
+It uses an installed `/usr/bin/chromium`, `CHROMIUM_PATH` when supplied, or Playwright's Chromium (install that with `npx playwright install chromium`). The test starts its own local server, checks all main pages and all 25 world entry screens at several widths, exercises controller fixtures and real canvas drawing, and verifies a real service-worker offline reload. Reports and screenshots go to `/tmp/`. It does not substitute for physical controller, microphone, camera, touch or GPU testing.
+
+## Find a world and play with controllers
+
+The lobby has searchable worlds, rotating local daily suggestions and a shortcut to the last world opened. Suggestions do not change scores or track activity remotely. The last-world shortcut stays in this browser and is separate from exported progress.
+
+Pair a standard-mapping controller through your device's Bluetooth settings or connect it over USB, then press and release a button. D-pad moves between controls; left/right adjusts options. A selects. Left stick moves a labeled controller cursor; hold A or RT to drag, draw or aim in pointer-driven games. LB slows the cursor for precise work, right stick scrolls, B cancels a drag or dismissible dialog, Menu pauses/resumes when the game offers it, and View opens the guide. The first press discovers the controller; held buttons never accept instructions automatically.
+
+Two controllers get independent P1/P2 cursors. Choose a two-player mode first and use the game's assigned play areas. Each controller supplies one pointer, so two-finger gestures require touch or another controller. Living Forest keeps its dedicated controller movement, camera and combat adapter, which takes over automatically. Wobbly Wars uses controller cursors for deployment and menus; its battles remain automatic. Camera, microphone and speech activities still need their real devices. A disconnect cancels held input and pauses games that expose a Pause control; intentionally resume after reconnecting. Browser permission prompts, file pickers and audio unlock may still require a touchscreen or mouse tap. Use **Controller Guide** in the lobby or Settings for pairing and control details.
+
 ## Deploy to the existing website
 
 Current website: https://little-big-arcade-parks.diladiop.chatgpt.site
@@ -47,7 +63,7 @@ An independent static host can also serve `build/` over HTTPS, but that creates 
 
 Profiles, scores, settings, drawings and imported audio stored in the browser are not repository files. Use the application's backup/export feature on the original browser and restore on a new device/origin. Keep the original browser data until restore is verified. Service-worker caching may require the normal application update flow/reload after publication.
 
-All runtime source and assets were preserved byte-for-byte. Added files provide migration tooling and documentation; package.json only gains start/dev/build scripts. Existing asset licenses and source notices remain included. The upstream application's overall license is not newly granted by this migration.
+The initial migration preserved runtime source and assets byte-for-byte and added migration tooling, documentation and start/dev/build scripts. Subsequent version 6.3.0 changes are documented in ACCEPTANCE-6.3.0.md; SOURCE_SHA256.json remains the original migration baseline. Existing asset licenses and source notices remain included. The upstream application's overall license is not newly granted by this migration.
 
 Excluded: .git internals, node_modules, generated verification screenshots/logs and temporary build/cache output. No secrets were intentionally exported. See EXPORT_TREE.txt, SOURCE_SHA256.json and MIGRATION.json for the complete inventory and provenance.
 
