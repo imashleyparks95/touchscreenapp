@@ -1,5 +1,13 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Presentation and arcade controller integration — 6.3.0
+
+`dist/js/wars3d-details.js` owns the authored class capes and toy-soldier material refinements. Capes use the existing independent bone-attachment API on the actual spine, including physics-detached bones. They do not change rig geometry, wrist sockets, combat shapes, prices or input rules. Authored cloth motion freezes at zero dt and fades/disposes with the actor. Wobbly Wars health fills now share a billboard frame with their backing, and ownership rings scale for giants and mounted units. `tests/wars3d-weapons.mjs` covers the costume attachment, paused cloth, backing and scene cleanup alongside its existing rendered weapon/hand and ragdoll checks.
+
+The arcade-wide `dist/js/arcade-controller.js` reuses `GamepadHub` for neutral-button detection and stable ownership. It adds DOM menu navigation and labeled virtual pointers for pointer-driven games, including Wobbly Wars deployment. Its pointer-capture shim applies only to its own virtual IDs and is removed when all pointers finish. Physical pointers continue to use the native methods. It cancels held input on context changes, blur and disconnect, and yields completely while Living Forest's `.lb-app` owns controller input. `tests/shell-browser.mjs` independently exercises menu selection, disabled options, two captured pointers, actual drawing, disconnect pause and acknowledgement boundaries. No new shared 3D toolkit contract is introduced.
+
+The browser suite audits setup screens and shell layouts; it does not establish physical Bluetooth/USB reliability or GPU appearance. Inspect cape silhouettes, health-bar layering and increasing army sizes on the target GPU before deployment. The export's `SOURCE_SHA256.json` remains the immutable migration baseline; intentional post-migration source changes are documented separately.
+
 Toolkit interface version **1.0**, introduced with application **6.0.0**. Read this document before creating a 3D game or changing a shared 3D system. Reuse the tested components here; add game-specific rules and art outside `dist/js/3d/`. A shared renderer does not prescribe a theme, camera angle, character design, scoring system or game genre.
 
 ## Technology and project architecture
@@ -233,7 +241,7 @@ node tests/wars3d-controller.mjs
 npm test
 ```
 
-Run the actual commands and record results. This project is buildless; there is no production transpilation/build script to claim passed. Packaging verifies static assets/source provenance. When dependencies change, use npm with the pinned lockfile and regenerate the local vendor bundle; do not replace runtime URLs with CDN dependencies.
+Run the actual commands and record results. This project is buildless; there is no production transpilation. The migration adds `npm run build` to copy authoritative `dist/` into `build/`. Packaging verifies static assets/source provenance. When dependencies change, use npm with the pinned lockfile and regenerate the local vendor bundle; do not replace runtime URLs with CDN dependencies.
 
 For every shared change, run independent toolkit tests, the starter and Wobbly Wars checks, then the full arcade suite. Test entry/acknowledgment, single/two-player completion, pause/help, restart/rematch, fullscreen/resize, exit/reopen, failed GLB/WASM/WebGL startup and saved-data roundtrips. Check repeated creation/disposal body and mesh counts. Keep screenshots and any unverified behavior in the acceptance report.
 
@@ -314,7 +322,7 @@ Milestone 1 is a complete forest expedition with three lanterns, deep-water chec
 
 ### Required checks and hardware limits
 
-Run `npm run test:limit` for independent interfaces, GLB/offline/license checks, complete solo/co-op objective routes, real controller gating/profile/backup fixtures and the actual Babylon/Havok scene. Run `npm test` before publishing shared changes; it includes the separate runnable starter and Wobbly Wars regressions. This static project has no production bundler/build command. Syntax-check edited modules and inspect the live launcher, instructions, both heroes, movement/camera, settings, complete baseline/export/history and cleanup.
+Run `npm run test:limit` for independent interfaces, GLB/offline/license checks, complete solo/co-op objective routes, real controller gating/profile/backup fixtures and the actual Babylon/Havok scene. Run `npm test` before publishing shared changes; it includes the separate runnable starter and Wobbly Wars regressions. This static project has no production bundler; `npm run build` copies authoritative `dist/` into `build/` without transpiling. Syntax-check edited modules and inspect the live launcher, instructions, both heroes, movement/camera, settings, complete baseline/export/history and cleanup.
 
 Use a current browser with WebGL 2 and WebAssembly for the intended visuals. Exact Windows GPU/CPU/RAM minimums and 30/60 FPS capability remain **unestablished until hardware measurements**. WebGL 1 disables unsupported features; no-WebGL mode is a visibly reduced Canvas compatibility renderer (900px width cap), not the visual target. GPU/Windows touchscreen, simultaneous physical touch, real gamepads, audible sound quality and advanced effect correctness must be tested on target hardware. Never turn automated fixtures or cloud software results into a hardware pass.
 
