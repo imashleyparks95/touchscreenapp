@@ -4,7 +4,7 @@
 
 - **Current checkpoint: Milestone 2, existing Forest foundation improvements — complete; user trial pending.** The user explicitly said “continue”; no physical trial feedback was supplied. Pause again for user testing before Milestone 3.
 - **User review gate:** stop after each milestone and let the user try it. Continuation to Milestone 2 was explicitly authorized; this does not verify hardware testing or authorize Milestone 3/deployment. Dark overall shell colors are now a persistent user preference.
-- **No deployment is authorized for this revamp.** Earlier deployment requests concerned the old `2c31e13` polish commit. Do not infer authorization for subsequent milestones. No Sites deployment access exists in this environment; GitHub pushes do not publish the site.
+- **Milestone 2 deployment is now authorized (2026-10-28).** The user requested deployment before testing. Publish only this v6.4.0 checkpoint to the existing Sites project, preserving its URL/access policy. No Sites deployment tools exist in this environment; GitHub pushes do not publish the site. Milestone 3 remains paused for the user trial.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
 - Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-2-foundation`**, based on that checkpoint. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
@@ -217,3 +217,7 @@ Physical Windows controller sensitivity, touch reach, GPU appearance/performance
 
 - Implementation checkpoint committed locally as `cae1b4fe5042e2413b0d4c0fc9bb8c04c893b5ff`. Native Git fetch/push cannot authenticate in the reconnected environment, and `gh auth status` reports an invalid injected token. The branch has **not** been published; restore GitHub authentication before pushing `revamp/milestone-2-foundation`. No credential changes or deployment were attempted.
 - A source archive is provided for the user trial. Resume with that trial and remote publication, not Milestone 3.
+
+### Deployment request (2026-10-28 UTC)
+
+The user explicitly requested deployment before testing. Tool discovery confirmed that this session has no Sites/deployment capability. Deployment remains unperformed, and GitHub publication remains blocked by environment authentication. The deployable app checkpoint is `e64a460b4d39f24569b2b407f4a096109c63a866` (v6.4.0); later documentation-only changes record this authorization. Use the provided source archive in the existing Sites-enabled conversation if GitHub access is still unavailable. Serve `dist/` in project `appgprj_6adab219a4788191952c4c83432002c5`, preserve URL/access policy, and verify live version 6.4.0 before the user trial. Do not create a replacement site or begin Milestone 3.
