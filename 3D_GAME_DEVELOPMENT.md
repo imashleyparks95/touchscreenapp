@@ -1,5 +1,15 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Forest foundation controls — 6.4.0
+
+`dist/js/limit/input-settings.js` is Forest-owned policy, not a new shared engine contract. It normalizes bounded controller/touch camera speeds, camera-stick deadzone, invert-Y and Auto/Show/Hide touch preferences. Optional preferences live in `DB.settings.limitBreak.input`; older backups without them remain valid. `limit/records.js` rejects malformed or out-of-range saved options.
+
+The native menu adapter accepts optional `getLookDeadzone` and `onActivity` callbacks. Active controller input can hide Auto touch UI; mixed co-op retains a touch partner's controls, and active touch captures keep Auto UI visible until released. A persistent toolbar control restores explicitly hidden controls. The separate LOOK region owns one camera pointer independently of both movement sticks and action buttons. Pause, explicit hiding and disposal cancel captures and release touch-run state. Dedicated Forest controller ownership still excludes the global cursor adapter.
+
+The monitor and minimap use separate wide-screen positions; the active header/stage also fit narrower screens. Controls never participate in the fixed-camera formal benchmark, and benchmark results can return directly to the arcade. Verify physical touch reach/controller feel on the target PC; CDP-injected contacts and standard-controller fixtures do not establish hardware reliability.
+
+Tests: `tests/limit-input-settings.mjs`, the menu tests in `tests/3d-gamepads.mjs`, the actual Forest UI fixture in `tests/limit-controller.mjs` and the real scene/input/export/exit path in `tests/limit-browser.mjs`. The full arcade suite, independent toolkit/starter and Wobbly Wars tests remain required regression checks.
+
 ## Presentation and arcade controller integration — 6.3.0
 
 `dist/js/wars3d-details.js` owns the authored class capes and toy-soldier material refinements. Capes use the existing independent bone-attachment API on the actual spine, including physics-detached bones. They do not change rig geometry, wrist sockets, combat shapes, prices or input rules. Authored cloth motion freezes at zero dt and fades/disposes with the actor. Wobbly Wars health fills now share a billboard frame with their backing, and ownership rings scale for giants and mounted units. `tests/wars3d-weapons.mjs` covers the costume attachment, paused cloth, backing and scene cleanup alongside its existing rendered weapon/hand and ragdoll checks.

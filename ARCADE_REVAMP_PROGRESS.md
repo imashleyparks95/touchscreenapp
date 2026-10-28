@@ -2,11 +2,11 @@
 
 ## Resume here
 
-- **Current checkpoint: Milestone 1, audit and existing-state recovery — implemented and verified; awaiting the user’s trial/review.** Do not begin Milestone 2 implementation yet.
-- **User review gate:** stop after each milestone and let the user try it. Do not begin Milestone 2 implementation until the user has reviewed Milestone 1 and asks to continue. Investigating the existing foundation is part of Milestone 1, not a new Milestone 2 implementation.
+- **Current checkpoint: Milestone 2, existing Forest foundation improvements — complete; user trial pending.** The user explicitly said “continue”; no physical trial feedback was supplied. Pause again for user testing before Milestone 3.
+- **User review gate:** stop after each milestone and let the user try it. Continuation to Milestone 2 was explicitly authorized; this does not verify hardware testing or authorize Milestone 3/deployment. Dark overall shell colors are now a persistent user preference.
 - **No deployment is authorized for this revamp.** Earlier deployment requests concerned the old `2c31e13` polish commit. Do not infer authorization for subsequent milestones. No Sites deployment access exists in this environment; GitHub pushes do not publish the site.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. This session's branch is **`revamp/milestone-1-audit`**, based on the prior polish work. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-2-foundation`**, based on that checkpoint. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -15,8 +15,8 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 
 | Milestone | Status | Evidence / remaining work |
 | --- | --- | --- |
-| 1 — Audit and existing-state recovery | **Complete; user trial/review pending** | Complete inventory and preservation audit; original baseline plus actual solo/co-op Forest movement/cleanup and a real five-stage Forest benchmark verified. |
-| 2 — Limit Break foundation | Existing implementation substantially present; not signed off against this plan | Imported Forest, animated heroes, traversal, camera, collision, native controllers, touch and monitoring exist. Reuse them. Review target-PC visuals, input ergonomics and unfinished foundation options before choosing a focused change. |
+| 1 — Audit and existing-state recovery | **Complete; user authorized continuation** | Complete inventory and preservation audit; original baseline plus actual solo/co-op Forest movement/cleanup and a real five-stage Forest benchmark verified. |
+| 2 — Limit Break foundation | **Foundation checkpoint complete; user trial pending** | Existing real Forest reused. Added saved camera preferences, independent touch LOOK region, adaptive touch visibility and restore control, mixed-input safeguards, separate monitor/map and benchmark exit. User requested a darker overall shell; applied muted dark palette. Physical target-PC sign-off remains. |
 | 3 — Shared systems | Partially inherited | Independent 3D toolkit, controller hub, cursor/menu adapter, lifecycle and audio systems exist. Shared controller cursor is not native direct-action support in every game. |
 | 4 — Launcher redesign | Partially inherited from 6.3.0 | Warm shell, search, categories, daily picks and last-opened shortcut exist. Favorites, richer previews and accurate per-game capability indicators are unfinished. |
 | 5 — Gameplay expansion | Forest chapter only | Three lanterns, three sentinels, lever/gate and chapter completion exist. Ancient Castle, separate Combat Arena, Chaos Chamber and a connected four-zone adventure do not. |
@@ -35,11 +35,11 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | Assets | 22 local GLBs; actual imported textured heroes, foliage, ruins and props; normal/roughness maps, true tree/boulder LODs | KayKit Adventurers, Quaternius, Poly Haven and original geometry; licenses/provenance in `dist/assets/limit/`. No mandatory runtime account, paid API or CDN. |
 | Heroes/animation | Imported 41-joint hero/rogue rigs and idle/walk/run/jump/interact/attack/cast/dodge/defeat/cheer clips | Do not substitute generic poses for the measured imported weapon/palm paths. Physical display inspection remains. |
 | Living Forest | Seeded terrain, bridge/stream, trees/rocks/foliage, ruins, gate, lanterns, wardens and sentinels | No explorable castle interior, dedicated arena, wildlife showcase or Chaos Chamber. |
-| Movement/camera | Acceleration, gravity, terrain/obstacle collision, camera-relative movement, following shared camera and wall recovery | Co-op uses one shared camera, not split-screen. Input sensitivity and optional touch-UI hiding need review. |
+| Movement/camera | Acceleration, gravity, terrain/obstacle collision, camera-relative movement, following shared camera and wall recovery | Co-op uses one shared camera, not split-screen. Saved camera sensitivity/deadzone and Auto/Show/Hide touch UI are implemented in 6.4.0; target-device feel still needs review. |
 | Actions/combat | Jump/run/interact, melee strike, pulse, dodge, health/recovery; obstacle-aware NPC navigation and swept contacts | Normal damage preserves attacks. Full four-zone progression and a larger boss encounter are future work. |
 | Objectives | Restore three lanterns, defeat three sentinels, operate lever, raise gate, finish together; restart chapter | Unfinished adventures restart; no mid-chapter save/checkpoint resume across sessions is claimed. Existing completed scores remain. |
-| Keyboard/touch | P1 WASD/Space/E/F/R/C; P2 arrows/Numpad actions; independent on-screen sticks/actions; right-drag orbit | Physical USB multitouch, large-display reach, simultaneous stick/action/camera ergonomics not verified here. |
-| Controllers | Stable two-player Gamepad API hub, neutral-button protection, disconnect pause; A jump, X strike, Y interact, RT pulse, B dodge, RB run, LB recenter, right stick camera | Actual Windows Bluetooth/USB pairing, physical connection reliability and configurable sensitivity remain unverified/unfinished. Do not confuse recommended mappings in the plan with implemented mappings. |
+| Keyboard/touch | P1 WASD/Space/E/F/R/C; P2 arrows/Numpad actions; independent on-screen sticks/actions; right-drag orbit and independent touch LOOK region | Physical USB multitouch, large-display reach, simultaneous stick/action/camera ergonomics not verified here. |
+| Controllers | Stable two-player Gamepad API hub, neutral-button protection, disconnect pause; A jump, X strike, Y interact, RT pulse, B dodge, RB run, LB recenter, right stick camera | Actual Windows Bluetooth/USB pairing, physical connection reliability remain unverified; configurable camera speeds/deadzone are now implemented. Do not confuse recommended mappings in the plan with implemented mappings. |
 | Graphics | Auto/Low/Medium/High/Ultra/Experimental Maximum; bounded resolution/shadows/surfaces/foliage/particles/physics/effects; day/dusk/night/rain demos | Unsupported effects are gated. GPU shaders and sustained speed on the intended PC still need testing. |
 | Monitoring | Real frame samples, average/1% low/percentiles/spikes; scene counts and available engine data; missing metrics N/A | JS heap is not RAM/VRAM. Do not invent GPU timing or memory figures. |
 | Benchmark | Five **Forest** camera stages, five-second warm-up plus ~30 measured seconds, fixed settings, local history capped at 20, raw samples, JSON/CSV, 30/60 FPS recommendations | Stages: canopy, water, ruins, navigating wardens, physics grove. They are not castle/combat/chaos scenarios. Physics is not promised bit-for-bit identical across devices. |
@@ -109,7 +109,7 @@ Record evidence separately for **automated fixtures**, **actual browser play**, 
 
 1. **Only one Forest zone is implemented.** Do not relabel its five camera stages as four completed gameplay zones or stress scenarios.
 2. **Native and cursor controllers differ.** The global adapter intentionally yields to Forest's native adapter. Preserve that ownership boundary; no second poller should move the same player.
-3. **Touch ergonomics and optional UI hiding are unfinished.** The current Forest exposes touch sticks/actions on screen; configurable sensitivity and explicit hide/auto behavior need user-device feedback before changing the foundation.
+3. **Touch ergonomics still need hardware review.** Version 6.4.0 adds camera preferences, an independent LOOK area and Auto/Show/Hide controls with mixed-input safeguards. Real wall-display reach and physical device feel remain user checks.
 4. **Shared camera, not split-screen.** Co-op is real shared-objective play with independent actors, not two independent views.
 5. **Cloud graphics are not the arcade PC.** SwiftShader/compatibility measurements cannot promise 30/60 FPS on the intended integrated GPU. Formal runs must retain preset/resolution/workload and raw frames.
 6. **Persistence has two stores.** Keep localStorage/IndexedDB restore rollback behavior. Raw benchmark history shares the local profile/settings storage budget; avoid unbounded history or sample growth.
@@ -165,10 +165,50 @@ This milestone changes developer tooling and documentation, not gameplay. The us
 4. Try the **Forest Baseline**, review resolution/renderer/settings and export its JSON on the actual arcade PC. Export a family backup before switching browser/origin. Give feedback on visual density, camera feel, touch-panel reach and real frame pacing.
 5. Return with feedback and explicitly ask to continue to Milestone 2. A website trial would require separate authorized deployment through the existing Sites workflow; no live-site change is included here.
 
-### Next actions
+### Milestone 1 handoff (historical; continuation was subsequently authorized)
 
 1. **Wait for user trial/review.** The milestone implementation, 36-program aggregate run, 68-case browser suite, real Forest browser run, build and source-preservation checks are complete.
-2. The checkpoint is on `revamp/milestone-1-audit`; identify its exact commit with `git log -1 --format=%H -- ARCADE_REVAMP_PROGRESS.md`. Provide the source trial package/instructions and stop. Do not deploy or implement Milestone 2 in the same session.
+2. The checkpoint is on `revamp/milestone-1-audit`; its exact milestone-1 commit is `7cde35184b0fecf80c1a2c31aa15168daec13de3`. Provide the source trial package/instructions and stop. Do not deploy or implement Milestone 2 in the same session.
 3. **Pause for the user to try it.** Ask for feedback on the current Forest, movement/camera, native controller controls, touch reach and visual quality on the real arcade PC.
 4. After the user says continue, pick a focused Milestone 2 foundation improvement from verified gaps (input sensitivity, usable touch camera/hide controls, visual/performance problems observed on the target device). Reuse the existing Forest; do not create another registration or rebuild solved systems.
 5. Update this document at the end of every coding session with exact changes, tests, failures, unfinished items, commit/branch and the next action. Never overwrite inherited evidence with new unverified completion claims.
+
+
+## Session record — Milestone 2 foundation (2026-10-27, America/New_York)
+
+### Authorization and scope
+
+The user said **“continue”**, authorizing the next milestone, then requested **“the overall UI is too bright, i prefer darker colors.”** Continue only this foundation checkpoint and the requested dark shell. No deployment authorization was given. Do not infer physical trial success from the continuation message.
+
+### Implemented
+
+- Retained the existing registered Forest, imported rigs/assets, physics, collision, combat, objectives, co-op and benchmark. No duplicate game, engine migration, model replacement, scoring change or new zone.
+- Added saved, bounded controller camera speed, camera-stick deadzone, touch look speed and invert-Y; optional fields remain compatible with old backups, while invalid new preferences are rejected. Movement mapping/physics remain unchanged.
+- Added Auto/Show/Hide touch controls, an independent drag-to-look area and a persistent restore button. Auto does not hide a mixed-input co-op partner or an active touch gesture. Pause/hide/disposal release captures and touch-run state.
+- Native Forest menus skip disabled graphics choices. Activity/deadzone callbacks remain game-owned extensions; the global cursor adapter still yields to Forest.
+- Separated minimap and monitor at supported wide sizes; bounded narrow layouts and a flexible active header/stage. Added a direct result-to-arcade exit without loading another scene.
+- Replaced bright shell surfaces with muted charcoal/plum, softer accents and readable text. Profile theme variants also remain dark. Individual game palettes retain their identity; this is not a claim that every game's art was redrawn.
+- Version/release notes/offline cache updated coherently to **6.4.0**, with the new local input module precached. No new runtime services/dependencies or credentials.
+
+### Verification results
+
+- `npm test`: **37 programs passed**, including the new input-settings/pointer tests, independent toolkit/starter, Wobbly Wars, older backups/new preference roundtrip and existing solo/co-op completions. After the darker palette changes, the relevant browser, release, offline and audit checks were rerun successfully.
+- The initial dark-palette check caught remaining low-contrast legacy text declarations; corrected the palette and reran. Do not record the failed palette run as a pass.
+- `npm run test:browser`: **72 checks passed**, including all 25 game entries, six shell pages, dark Aurora/Nebula variants, search/profile/restore/controller fixtures and real offline reload.
+- `npm run test:limit:browser`: **passed** in the real imported scene: saved settings, independent look, injected simultaneous movement/look/jump, mixed-input co-op, disconnect pause, overlay separation, active 800/390 px layout, real benchmark exports, direct exit and engine cleanup. Injected touch/controllers are not physical hardware evidence.
+- Final `audit:arcade`, build and diff/whitespace checks **passed**. All 25 public games and the hidden entry remain, all original 98 asset/vendor hashes match, and save identities/hosting target remain intact. No deployment performed.
+- The workspace disconnected during final verification. It was reconnected with the edits intact; the final smaller-screen/native-scene checks and build were then completed. No checkpoint was claimed committed during the outage.
+
+### Not finished / next milestone boundary
+
+Physical Windows controller sensitivity, touch reach, GPU appearance/performance and real devices remain user checks. Castle, separate Combat Arena, Chaos Chamber, four-zone progression, later benchmark workloads and the remaining game-by-game revamp are still future work. Stop for the user to try this checkpoint; do not automatically begin Milestone 3.
+
+
+### Checkpoint evidence and next steps
+
+- [Dark library screenshot](docs/revamp/M2_LIBRARY.png), [Forest controls/monitor screenshot](docs/revamp/M2_FOREST.png), [real browser raw report](docs/revamp/M2_FOREST_BROWSER.json), [static preservation audit](docs/revamp/M2_STATIC_AUDIT.json). M1 evidence remains historical and unchanged.
+- Final software-rendered smoke benchmark: **156 frames**, **5.18 average FPS**, **0.92 1% low**, at Low preset in ANGLE/SwiftShader. This verifies measurement/export operation; it is not a performance improvement claim, a controlled comparison with M1, or a prediction for the arcade PC.
+
+- Review branch: **`revamp/milestone-2-foundation`**, based on `7cde351`; current app version **6.4.0**. The milestone checkpoint is the tip of this review branch; resolve it with `git rev-parse revamp/milestone-2-foundation`. Next action is the user trial. No production publish or Milestone 3 implementation is authorized.
+- **User trial:** run `npm ci` then `npm start` from the checkpoint source. Check the darker library; open Project Limit Break → Settings → Controls & Camera; try speed/deadzone/invert, Auto/Show/Hide, SHOW TOUCH recovery, simultaneous movement/look/actions and mixed controller/touch co-op. Try MONITOR, the benchmark JSON/CSV exports and BACK TO ARCADE.
+- Return with feedback before beginning Milestone 3. Physical sensitivity, touch reach, Bluetooth/USB reliability, capture devices and GPU performance remain unverified. Keep all later game/zone/artwork work pending rather than marking it done.

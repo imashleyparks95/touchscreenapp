@@ -3,6 +3,7 @@
 - Before revamp work, read `ARCADE_REVAMP_PROGRESS.md` and the full specification in `docs/ARCADE_REVAMP_MASTER_PLAN.md`. Resume from the latest verified state; do not duplicate existing Limit Break systems.
 - Update `ARCADE_REVAMP_PROGRESS.md` at the end of every coding session with completed work, unfinished items, actual tests/results, failures/limitations and precise next steps.
 - Stop after each milestone so the user can try it before implementation of the next milestone. Do not treat earlier deployment authorization as approval to deploy new milestone changes; deployment needs explicit authorization for the current work.
+- The user prefers a dark overall arcade UI: use muted dark backgrounds and softer accents, not bright cream/light shell surfaces. Keep text readable and preserve individual games' intentional art direction.
 
 - Add two-player support to every new game whenever reasonably feasible, in the initial implementation. Use simultaneous versus and co-op where the mechanics permit. Use clearly explained alternating turns or pass-and-play when the input hardware cannot support simultaneous interaction.
 - Preserve single-player play, existing games, profiles, scores, achievements, saved projects, multiplayer behavior and backup compatibility.

@@ -25,6 +25,15 @@ try{
   await page.setViewportSize({width,height:1000});
   for(const route of ['home','players','boards','trophies','rivals','settings']){await navigate(route);await inspect(`${route}/${width}`);}
  }
+ // Profile themes must honor the user's dark-shell preference, including cards.
+ for(const theme of ['aurora','nebula'])for(const width of [1440,390]){
+  await page.setViewportSize({width,height:1000});
+  await page.evaluate(async theme=>{const d=await import('/js/data.js');d.player().theme=theme;d.save();},theme);await navigate('home');
+  const surfaces=await page.evaluate(()=>['body','.game-tile'].map(selector=>getComputedStyle(document.querySelector(selector)).backgroundColor));
+  for(const color of surfaces)assert.ok(color.match(/[\d.]+/g).slice(0,3).every(n=>Number(n)<90),'shell and cards stay dark in profile themes');
+  await inspect(`home-${theme}/${width}`);
+ }
+ await page.evaluate(async()=>{const d=await import('/js/data.js');d.player().theme='neon';d.save();});
  await navigate('home');
  await page.locator('#worldSearch').fill('robot');assert.equal(await page.locator('#deck [data-game]').count(),1);assert.match(await page.locator('#deck').innerText(),/Robot Repair/);
  await page.locator('#worldSearch').fill('zz-no-world');await page.locator('#clearWorldSearch').click();assert.equal(await page.locator('#deck [data-game]').count(),25);

@@ -1,5 +1,13 @@
 # Little Big Arcade
 
+## Current trial checkpoint — 6.4.0
+
+The overall arcade uses muted dark colors, including the Aurora and Nebula profile themes. Project Limit Break retains its existing Forest adventure, graphics and multiplayer modes.
+
+In the Forest's **Settings → Controls & Camera**, adjust controller camera speed, camera-stick deadzone, touch look speed, invert-Y and Auto/Show/Hide touch controls. These preferences are saved and included in backups; older backups without them still work. Auto keeps touch controls for a touch co-op partner while a controller is in use. **SHOW TOUCH** in the toolbar always restores hidden controls. The separate **DRAG TO LOOK** area can be used alongside movement and action buttons. Movement deadzones and combat rules are unchanged.
+
+The monitor/minimap now have separate positions on supported wide screens; the camera drag area stays above the touch panels. Benchmark results include **BACK TO ARCADE**, without loading another Forest scene. Physical Windows controls, touchscreen reach and GPU performance still need testing on the arcade PC. Development is paused at each milestone for that user trial; nothing is automatically deployed.
+
 ## Revamp checkpoints
 
 Read [ARCADE_REVAMP_PROGRESS.md](ARCADE_REVAMP_PROGRESS.md) for the current milestone, complete game inventory, tested capabilities, gaps and exact resume instructions. The [full master plan](docs/ARCADE_REVAMP_MASTER_PLAN.md) is retained in the repository. Development pauses for user testing after each milestone; there is no automatic deployment.
