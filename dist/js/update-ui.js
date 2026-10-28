@@ -1,0 +1,34 @@
+import {RELEASES,CURRENT_RELEASE,APP_VERSION} from './releases.js';
+import {createUpdateStore,releaseSections} from './update-core.js';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function createUpdateUI({storage=localStorage,games,artwork,notify,onBack,beforeEntry=()=>{}}){
+ let existing=false;try{existing=!!storage.getItem('lba-universe-v3')||!!storage.getItem('lba-records');}catch{}
+ const store=createUpdateStore(storage,{existing});let dialog=null,frame=0,returnFocus=null,historyButton=null,activeGame=null;
+ const gameInfo=id=>games.find(g=>g.id===id)||{id,name:id==='face'?'Feed the Face':id};
+ const stopReading=()=>{if('speechSynthesis'in window)window.speechSynthesis.cancel();};
+ function close(){stopReading();if(dialog){dialog.close();dialog.remove();dialog=null;}returnFocus?.focus?.();}
+ function cancel(){if(frame)cancelAnimationFrame(frame);frame=0;close();}
+ function sections(rows,game){return releaseSections(rows,game).map(r=>`<section class="release-section"><h3>v${esc(r.version)} <time datetime="${r.releaseDate}">${new Date(r.releaseDate+'T12:00:00').toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</time></h3>${r.entry?.introduced?`<p>${esc(r.entry.introduction)}</p>`:''}<ul>${r.changes.map(c=>`<li><span class="release-category">${esc(c.category)}</span><span>${esc(c.text)}</span></li>`).join('')}</ul></section>`).join('');}
+ function show({title,kicker,body,game,action,continueTo,mandatory=false,history=false}){
+ cancel();returnFocus=document.activeElement;const d=dialog=document.createElement('dialog');d.className='update-dialog'+(store.state.largeText?' large-reading':'');d.setAttribute('aria-labelledby','updateTitle');
+ const art=game?(game==='face'?'<img src="assets/face-closed.png" alt="">':artwork(game)):'<img src="assets/mark.svg" alt="">';
+ d.innerHTML=`<header class="update-heading"><div><span class="eyebrow">${esc(kicker)}</span><h2 id="updateTitle" tabindex="-1">${esc(title)}</h2></div><div class="update-art" aria-hidden="true">${art}</div></header><div class="update-reading"><button class="btn secondary" data-large aria-pressed="${store.state.largeText}">Aa · LARGER TEXT</button><button class="btn secondary" data-read>▶ READ ALOUD</button><button class="btn secondary" data-stop>■ STOP</button></div><div class="update-details" tabindex="0" aria-label="Release notes">${body}</div><p class="update-storage" role="status"></p><footer>${mandatory&&game?'<button class="btn secondary" data-back>← ARCADE</button>':''}${!history?'<button class="btn secondary" data-history>UPDATE HISTORY</button>':''}<button class="btn primary" data-ack>${esc(action)}</button></footer>`;
+ for(const type of ['pointerdown','pointerup','click'])d.addEventListener(type,e=>e.stopPropagation());
+ d.addEventListener('cancel',e=>{e.preventDefault();if(!mandatory){close();if(history&&continueTo)continueTo();}});
+ d.querySelector('[data-large]').onclick=()=>{const v=!store.state.largeText;store.setLargeText(v);d.classList.toggle('large-reading',v);d.querySelector('[data-large]').setAttribute('aria-pressed',String(v));};
+ const read=d.querySelector('[data-read]'),stop=d.querySelector('[data-stop]');read.disabled=stop.disabled=!('speechSynthesis'in window&&'SpeechSynthesisUtterance'in window);
+ if(read.disabled)read.textContent='READ-ALOUD UNAVAILABLE';
+ read.onclick=()=>{stopReading();const u=new SpeechSynthesisUtterance(title+'. '+d.querySelector('.update-details').innerText);u.rate=.88;u.onerror=()=>{if(dialog===d)d.querySelector('.update-storage').textContent='Reading is unavailable. You can still read all notes here.';};window.speechSynthesis.speak(u);};stop.onclick=stopReading;
+ if(d.querySelector('[data-back]'))d.querySelector('[data-back]').onclick=()=>{cancel();onBack();};
+ if(d.querySelector('[data-history]'))d.querySelector('[data-history]').onclick=()=>{const spec={title,kicker,body,game,action,continueTo,mandatory,history};showHistory(game,()=>show(spec));};
+ d.querySelector('[data-ack]').onclick=e=>{e.stopPropagation();if(dialog!==d)return;close();frame=requestAnimationFrame(()=>{frame=0;continueTo?.();});};
+ document.body.append(d);d.showModal();d.querySelector('#updateTitle').focus();
+ }
+ const persistWarning=ok=>{if(!ok)notify('Update acknowledgment could not be saved. Browser storage is unavailable; this notice may return.');};
+ function showHistory(game,back){const rows=game?RELEASES.filter(r=>r.games?.[game]):RELEASES;show({title:game?gameInfo(game).name+' · Update History':'Arcade Update History',kicker:'RELEASE NOTES · LATEST FIRST',game,body:sections(rows,game)||'<p>No game changes are recorded in this release history yet.</p>',action:back?'BACK TO NOTICE':'CLOSE HISTORY',continueTo:back,history:true});}
+ function arcade(){if(!store.arcadePending())return;const welcome=store.state.welcome;show({title:welcome?'Welcome to Little Big Arcade!':'Little Big Arcade updated!',kicker:`INSTALLED VERSION ${APP_VERSION}`,body:welcome?`<p class="update-intro">Explore the games, choose your profile, earn achievements and discover new adventures.</p><p>Your arcade is ready. Each game explains how to play before it starts.</p>`:sections(store.arcadeReleases().length?store.arcadeReleases():[CURRENT_RELEASE]),action:welcome?'LET’S PLAY!':'GOT IT — LET’S PLAY!',mandatory:true,continueTo:()=>persistWarning(store.acknowledgeArcade())});}
+ function beforeGame(game,launch){const rows=store.pending(game);if(!rows.length)return false;beforeEntry();const intro=rows.some(r=>r.games[game].introduced);show({title:intro?'New game — '+gameInfo(game).name+'!':gameInfo(game).name+' has been updated!',kicker:intro?'NEW GAME INTRODUCTION':'WHAT’S NEW IN THIS GAME',game,body:sections(rows,game),action:intro?'DISCOVER THE GAME!':'GOT IT — CONTINUE!',mandatory:true,continueTo:()=>{persistWarning(store.acknowledgeGame(game,rows.map(r=>r.version)));launch();}});return true;}
+ function setGame(game){activeGame=game;historyButton?.remove();historyButton=null;if(!game)return;historyButton=document.createElement('button');historyButton.className='game-update-history';historyButton.textContent='✦ UPDATE HISTORY';historyButton.onclick=()=>{if(document.querySelector('.game-instruction-help'))return;showHistory(activeGame);};document.body.append(historyButton);}
+ function attachBadge(){let badge=document.getElementById('arcadeVersion');if(!badge){badge=document.createElement('button');badge.id='arcadeVersion';badge.className='arcade-version';document.querySelector('.wordmark').after(badge);}badge.innerHTML=`<strong>v${APP_VERSION} <span>WHAT’S NEW ↗</span></strong><small>${esc(CURRENT_RELEASE.summary)}</small>`;badge.onclick=()=>showHistory();}
+ return {store,arcade,beforeGame,setGame,cancel,showHistory,attachBadge};
+}
