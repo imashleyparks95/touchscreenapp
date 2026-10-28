@@ -1,0 +1,4 @@
+import{IMPORTED_CONTACTS}from'./geometry-data.js';
+import{clamp}from'../3d/math.js';
+export function forestWeaponPose(unit,state='attack',progress=unit.attack?.progress||0){const profile=IMPORTED_CONTACTS[unit.model||'hero'],data=profile[state],at=clamp(progress,0,1)*64,i=Math.min(63,Math.floor(at)),t=at-i,scale=(unit.scale||profile.scale)/profile.scale,c=Math.cos(unit.angle),s=Math.sin(unit.angle);const point=key=>{const a=data.frames[i][key],b=data.frames[i+1][key],v=a.map((n,k)=>(n+(b[k]-n)*t)*scale);return{x:unit.x+v[0]*c+v[2]*s,y:unit.y+v[1],z:unit.z-v[0]*s+v[2]*c};};return{root:point('root'),tip:point('tip'),release:point('release')};}
+export const FOREST_ACTIONS={attack:{duration:64/60,windup:.18,activeEnd:.67,cooldown:.16,damage:34},cast:{duration:56/60,windup:.38,activeEnd:.7,cooldown:1.5,damage:28},dodge:{duration:.4,cooldown:.85,speed:7.2}};

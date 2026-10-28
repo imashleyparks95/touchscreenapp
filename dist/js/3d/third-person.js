@@ -1,0 +1,26 @@
+import {CharacterController} from './controllers.js';
+import {clamp,distance,moveCircle,turnToward} from './math.js';
+/** Reusable terrain-following controller. Distances m; feet at y; no game defaults. */
+export class ThirdPersonController{
+ constructor({x=0,z=0,radius=.3,height=1.8,speed=3.2,runSpeed=5.2,jumpSpeed=6.7,gravity=18,acceleration=16,stepHeight=.38,groundAt=()=>0,obstacles=[],navigationObstacles=obstacles,bounds={minX:-20,maxX:20,minZ:-20,maxZ:20}}={}){Object.assign(this,{x,z,radius,height,speed,runSpeed,jumpSpeed,gravity,acceleration,stepHeight,groundAt,obstacles,navigationObstacles,bounds});this.y=groundAt(x,z);this.vx=this.vz=this.vy=this.angle=this.walk=0;this.grounded=true;this.state='idle';this.intent={x:0,z:0,run:false};this.nav=new CharacterController({x,z,radius,height,speed,obstacles:navigationObstacles,bounds});this.target=null;}
+ navigate(p){this.nav.x=this.x;this.nav.z=this.z;this.nav.moveTo(p);this.target=p;}
+ setIntent({x=0,z=0,run=false,jump=false}={}){const n=Math.max(1,Math.hypot(x,z));this.intent={x:x/n,z:z/n,run};if(Math.hypot(x,z)>.05){this.target=null;this.nav.stop();}if(jump&&this.grounded){this.vy=this.jumpSpeed;this.grounded=false;}}
+ stop(){this.intent={x:0,z:0,run:false};this.vx=this.vz=0;this.target=null;this.nav.stop();}
+ update(seconds){if(!(seconds>0))return;const count=Math.ceil(Math.min(seconds,.1)/(1/60));for(let i=0;i<count;i++)this.step(Math.min(seconds,.1)/count);}
+ floorAt(x,z,previous=this.y){let floor=this.groundAt(x,z);for(const o of this.obstacles){const top=o.maxY??o.top;if(!o.navigationOnly&&!o.noStand&&Number.isFinite(top)&&top<=previous+this.stepHeight&&Math.abs(x-o.x)<o.w/2&&Math.abs(z-o.z)<o.d/2)floor=Math.max(floor,top);}return floor;}
+ solid(o){return !o.navigationOnly&&(o.maxY??o.top??Infinity)>this.y+this.stepHeight&&(o.minY??-Infinity)<this.y+this.height-.05;}
+ step(dt){let x=this.intent.x,z=this.intent.z;if(this.target&&Math.hypot(x,z)<.05){Object.assign(this.nav,{x:this.x,z:this.z,speed:this.speed,obstacles:this.navigationObstacles.filter(o=>o.navigationOnly||this.solid(o))});this.nav.update(dt);x=this.nav.vx/this.speed;z=this.nav.vz/this.speed;if(!this.nav.target)this.target=null;}
+  const speed=this.intent.run?this.runSpeed:this.speed,f=1-Math.exp(-this.acceleration*dt);this.vx+=(x*speed-this.vx)*f;this.vz+=(z*speed-this.vz)*f;const old={x:this.x,z:this.z},ground=this.floorAt(this.x,this.z);moveCircle(this,this.vx*dt,this.vz*dt,this.obstacles.filter(o=>this.solid(o)),this.bounds);const next=this.floorAt(this.x,this.z);if(this.grounded&&next-ground>this.stepHeight){this.x=old.x;this.z=old.z;this.vx=this.vz=0;}const floor=this.floorAt(this.x,this.z);if(this.grounded&&floor<this.y-.16)this.grounded=false;
+  if(!this.grounded){this.vy-=this.gravity*dt;this.y+=this.vy*dt;if(this.y<=floor){this.y=floor;this.vy=0;this.grounded=true;}}else this.y=floor;
+  const moved=distance(this,old);this.speedNow=moved/dt;this.walk+=moved*3.5;if(moved>.0001)this.angle=turnToward(this.angle,Math.atan2(this.x-old.x,this.z-old.z),dt*12);this.state=!this.grounded?'jump':this.speedNow>.15?(this.intent.run?'run':'walk'):'idle';
+ }
+ reset({x=0,z=0}={}){this.stop();this.x=x;this.z=z;this.y=this.groundAt(x,z);this.vy=0;this.grounded=true;this.state='idle';}
+}
+/** Follow one or more players through an existing orbit camera. Input remains caller-owned. */
+export function createThirdPersonCamera({B,camera},{distance=6.4,height=1.25,smoothing=8,maxDistance=14,obstacles=[],groundAt=()=>-Infinity}={}){let initialized=false,lastRadius=camera.radius;return{update(players,dt){if(!players.length)return;const target=players.reduce((p,u)=>p.add(new B.Vector3(u.x,u.y+height,u.z)),B.Vector3.Zero()).scale(1/players.length),gap=Math.max(0,...players.map(u=>Math.hypot(u.x-target.x,u.z-target.z)));if(initialized&&Math.abs(camera.radius-lastRadius)>.001)distance=clamp(camera.radius-gap*.7,4,maxDistance);const desired=clamp(distance+gap*.7,distance,maxDistance),f=initialized?1-Math.exp(-Math.max(0,dt)*smoothing):1;camera.target.copyFrom(B.Vector3.Lerp(camera.target,target,f));let radius=desired,dir={x:Math.cos(camera.alpha)*Math.sin(camera.beta),y:Math.cos(camera.beta),z:Math.sin(camera.alpha)*Math.sin(camera.beta)};
+ for(const box of obstacles){let low=0,high=radius;for(const k of ['x','y','z']){const min=box['min'+k.toUpperCase()],max=box['max'+k.toUpperCase()],origin=camera.target[k],v=dir[k];if(Math.abs(v)<1e-8){if(origin<min||origin>max){high=-1;break;}}else{const a=(min-origin)/v,b=(max-origin)/v;low=Math.max(low,Math.min(a,b));high=Math.min(high,Math.max(a,b));}}if(high>=low&&low>0)radius=Math.min(radius,Math.max(.8,low-.2));}
+ for(let i=1;i<=12;i++){const d=radius*i/12,x=camera.target.x+dir.x*d,y=camera.target.y+dir.y*d,z=camera.target.z+dir.z*d;if(y<groundAt(x,z)+.15){radius=Math.max(.8,d-.2);break;}}
+ camera.lowerRadiusLimit=.8;camera.radius=radius<camera.radius?radius:camera.radius+(radius-camera.radius)*f;lastRadius=camera.radius;initialized=true;},reset(){initialized=false;}};}
+
+/** Screen input (+x right, +z down) to a right-handed ArcRotate camera's ground plane. */
+export function cameraRelativeMovement({x=0,z=0},alpha){return{x:Math.sin(alpha)*x+Math.cos(alpha)*z,z:-Math.cos(alpha)*x+Math.sin(alpha)*z};}
