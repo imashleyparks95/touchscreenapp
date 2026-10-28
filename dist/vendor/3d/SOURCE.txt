@@ -1,0 +1,3 @@
+Babylon.js 9.32.0 and babylonjs-loaders 9.32.0: Apache-2.0, https://github.com/BabylonJS/Babylon.js
+Havok 1.3.14: MIT, https://github.com/BabylonJS/havok
+Pinned npm packages copied locally. No runtime CDN or paid service.
