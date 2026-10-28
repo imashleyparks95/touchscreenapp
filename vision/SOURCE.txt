@@ -1,0 +1,8 @@
+MediaPipe Tasks Vision 0.10.32, @mediapipe/tasks-vision from npm. Apache-2.0.
+Official Face Landmarker model: https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task
+All runtime and model files are served locally; no footage or audio is sent to Google.
+
+Air Slice Pose Landmarker Lite model: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task
+SHA-256: 59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a
+Official model/documentation: https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker
+Uses the existing local @mediapipe/tasks-vision 0.10.32 runtime. Apache-2.0. No runtime external model requests or camera uploads.
