@@ -2,7 +2,7 @@
 
 ## Deploy v6.8.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-6-benchmark**, based on published M5 `c342950`. Exact tested commit will be recorded after publication. Earlier deployment branches are unchanged. The user authorized deployment of completed milestones and tests once deployed. Finish any earlier deployment before publishing this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-6-benchmark**, based on published M5 `c342950`. Tested app commit **`11bc3b7c9f497ab2aa6a54f7b9fe66cdc563c983`** is published and verified on GitHub. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Earlier deployment branches are unchanged. The user authorized deployment of completed milestones and tests once deployed. Finish any earlier deployment before publishing this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md`, this file and `3D_GAME_DEVELOPMENT.md` → Five-world benchmarking. Source entry points: `dist/js/limit/benchmark-suite.js`, `ui.js`, `records.js`, original Forest and Journey scenes. `dist/` is authoritative; build/ is just a generated copy. Package/release/service-worker identify **6.8.0**. Evidence and exact fixture/hardware limits are in `docs/revamp/M6_*` and its README.
 
@@ -22,4 +22,4 @@ Cloud SwiftShader smoke results are slow/sample-limited and do not predict the i
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 6, version 6.8.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-6-benchmark, using the exact published commit in my handoff. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md. Deployment is authorized. Finish any earlier deployment, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL and access policy, and do not create a replacement site. Verify live version 6.8.0 and send me the existing URL so I can try the five-scenario benchmark and settings tuner. Stop before Milestone 7.
+Deploy Little Big Arcade Milestone 6, version 6.8.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-6-benchmark, commit 11bc3b7c9f497ab2aa6a54f7b9fe66cdc563c983. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md. Deployment is authorized. Finish any earlier deployment, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL and access policy, and do not create a replacement site. Verify live version 6.8.0 and send me the existing URL so I can try the five-scenario benchmark and settings tuner. Stop before Milestone 7.

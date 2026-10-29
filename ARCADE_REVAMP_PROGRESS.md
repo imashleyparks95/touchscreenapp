@@ -388,3 +388,7 @@ Find My Best Settings now runs all five scenarios at each supported preset (five
 `docs/revamp/M6_REGRESSION.txt`, `M6_CONTROLLER.txt`, `M6_UNIT.txt`, `M6_BROWSER.txt`, `M6_BROWSER.json`, `M6_FIRST_BROWSER.json`, `M6_RESULTS.png`, `M6_SHELL.txt`, `M6_STATIC_AUDIT.json`; older evidence remains unchanged. `3D_GAME_DEVELOPMENT.md` documents the game-owned benchmark contract and limitations.
 
 Publish this checked v6.8.0 checkpoint, record its exact commit in `WORK_MODE_HANDOFF.md`, and give Work Mode the authorized deployment request for existing Sites project `appgprj_6adab219a4788191952c4c83432002c5`, serving `dist/`, preserving URL/access. Work Mode should finish any earlier deployment, verify live **6.8.0**, then return the URL for the user's trial. No archive/PR required for this branch handoff. Stop before M7. Future M7 work must progressively review each actual 2D game; target-PC timing/tuning and physical input/GPU/audio remain hardware verification items.
+
+### Milestone 6 published checkpoint
+
+Successfully pushed tested **v6.8.0** app commit **`11bc3b7c9f497ab2aa6a54f7b9fe66cdc563c983`** to **`revamp/milestone-6-benchmark`** and verified the GitHub branch matches. This follow-up records publication/deployment directions only; runtime is unchanged. M5 remains at `c342950e274642b132afba5adf9f3682b4abf7fa`. Work Mode should deploy the exact checkpoint to the existing Sites project and verify live **6.8.0**, then return the URL for user testing. No Sites deployment or M7 work was performed here.
