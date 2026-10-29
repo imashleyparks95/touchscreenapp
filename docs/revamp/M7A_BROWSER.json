@@ -1,0 +1,61 @@
+{
+  "version": "6.9.0",
+  "checks": [
+    "bugs/solo: responsive real scene/touch, pause/help, fixture exactly-once records, acknowledged rematch, exit",
+    "bugs/versus: responsive real scene/touch, pause/help, fixture exactly-once records, acknowledged rematch, exit",
+    "balloons/solo: real scene/touch/controller, pause/help, edition records and legacy selection, acknowledged replay, exit",
+    "balloons/versus: real scene/touch/controller, pause/help, edition records and legacy selection, acknowledged replay, exit"
+  ],
+  "audits": [
+    {
+      "game": "bugs",
+      "mode": "solo",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "game": "bugs",
+      "mode": "solo",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "game": "bugs",
+      "mode": "versus",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "game": "bugs",
+      "mode": "versus",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "game": "balloons",
+      "mode": "solo",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "game": "balloons",
+      "mode": "solo",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "game": "balloons",
+      "mode": "versus",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "game": "balloons",
+      "mode": "versus",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Injected touch and forced-clock completion fixtures; legal full rounds are separate Node tests. Not physical hardware certification."
+}

@@ -80,3 +80,40 @@ body.theme-aurora:not(.immersive) .app-shell{background:radial-gradient(ellipse 
 .daily-world:nth-child(4){grid-column:1/-1;min-height:72px;background:#30263e}.daily-world:nth-child(4)>span:first-child{width:42px;height:42px;font-size:24px}
 
 .device-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.device-actions .btn{margin-left:0;min-height:44px;font-size:11px}@media(max-width:650px){.device-actions{width:100%;justify-content:stretch}.device-actions .btn{width:100%}}
+/* Milestone 7A: illustrated reaction worlds with independent, readable player cues. */
+:is(.ref-game-bugs,.ref-game-balloons){height:100dvh;min-height:0;display:flex;flex-direction:column}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-header{flex-shrink:0;background:#19242c;border-color:#45534d}
+:is(.ref-game-bugs,.ref-game-balloons) #refContent{flex:1;min-height:0;min-width:0;display:flex;flex-direction:column;overflow:auto}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-play{height:100%;flex:1;min-height:0;display:flex;flex-direction:column}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-matchbar{gap:10px;flex-wrap:wrap}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-matchbar>div{display:flex;gap:8px;flex-wrap:wrap}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-matchbar button{min-height:44px}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-zones{flex:1;min-height:0;min-width:0;align-items:stretch;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-zones.split{grid-template-columns:repeat(2,minmax(0,1fr))}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-zone{display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-zonebody{flex:1;min-height:0;min-width:0;display:flex}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-field{display:block!important;position:relative;flex:1;min-width:0;min-height:0;overflow:hidden}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-field canvas{position:absolute;inset:0;display:block;width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:none;aspect-ratio:auto;touch-action:none}
+:is(.ref-game-bugs,.ref-game-balloons) .refined-controls[hidden]{display:none!important}
+:is(.ref-game-bugs,.ref-game-balloons) :is(.reaction-cue,.reaction-feedback,.refined-player,.refined-playerstats,.refined-message,.refined-matchbar){flex-shrink:0}
+.reaction-cue{display:flex;align-items:center;gap:12px;padding:10px 15px;min-width:0;background:#182b31;border-bottom:1px solid #425650;color:#e4ebe0}
+.reaction-cue>b{display:grid;place-items:center;flex:0 0 38px;min-height:38px;font-size:23px;border:1px solid var(--cue);border-radius:12px;color:var(--cue)}
+.reaction-cue>div{min-width:0}.reaction-cue strong{display:block;font-size:clamp(13px,1.6vw,20px);line-height:1.3;color:var(--cue)}.reaction-cue small{display:block;font-size:12px;line-height:1.4;color:#bbc9c6}
+.reaction-feedback{min-height:35px;padding:8px 14px;font-size:12px;font-weight:600;background:#192a31;color:#dfdac4;border-top:1px solid #3c5154}
+.reaction-guide{padding:12px 16px;margin:12px 0;border:1px solid #60606c;border-radius:12px;background:#242b3a}.reaction-guide summary{cursor:pointer;min-height:30px;font-size:12px;font-weight:700}.reaction-guide p{font-size:13px!important;line-height:1.7}
+body:has(:is(.ref-game-bugs,.ref-game-balloons))>.game-instruction-help{background:#253c42;color:#f3ead2;border-color:#718b83}
+body:has(:is(.ref-game-bugs,.ref-game-balloons) .refined-play)>.game-instruction-help{display:none}
+/* Portrait screens keep the entire field visible without a tall empty letterbox. */
+@media(max-width:650px){
+ :is(.ref-game-bugs,.ref-game-balloons){height:auto;min-height:100dvh;overflow:visible}
+ :is(.ref-game-bugs,.ref-game-balloons) #refContent{flex:0 0 auto;overflow:visible}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-play{height:auto;flex:none}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-zones{flex:none;grid-template-rows:auto}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-zones.split{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,auto)}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-zonebody{flex:none;display:block}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-field canvas{position:static;inset:auto;height:auto!important;aspect-ratio:1000/640}
+ .reaction-cue{padding:6px 9px;gap:8px}.reaction-cue>b{flex-basis:28px;min-height:28px;font-size:18px}.reaction-cue small{font-size:10px}
+ .reaction-feedback{min-height:29px;padding:6px 9px;font-size:11px}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-playerstats{font-size:9px;padding:5px}
+ :is(.ref-game-bugs,.ref-game-balloons) .refined-matchbar>span{font-size:11px}
+}

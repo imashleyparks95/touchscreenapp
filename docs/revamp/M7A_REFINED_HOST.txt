@@ -1,0 +1,9 @@
+PASS: 120 updated gameplay/difficulty/learning launches and renders; ladybug count/size/boundaries/cues/real stimulus timing; all balloon types; all 20 recipes and 45 ingredients, direct plate assembly, exact quantities, ordered stacks and ingredient removal; keeper movement/AI delay/true reactions; legal full 240-cell excavations on all difficulties, tool locks/cooldowns/save restore; all six battle types and anti-spam; seed fairness; legacy/new mode record separation; valid excavation backup.
+PASS: shipped host equal fresh turns, five-shot tie → one-shot sudden death, rotated first player, aggregate winner, one commit only after both players; best-of-three round wins and aggregate stats; pause excludes elapsed time; resumed clock includes full active milliseconds.
+PASS: history-based anticipations have no future-shot knowledge; a partial expedition does not grant a completion win.
+PASS: actual shipped pointer handler gives both zones independent pointer IDs and equal performance-clock reaction times; paused touches cannot score.
+PASS: Accuracy Battle has exactly one matching visible color over 1,200 seeded challenges across all difficulties.
+PASS: correct target positions vary across all slots; excavation snapshots are immutable and invalid local saves are rejected.
+PASS: full-width and split-zone pointer coordinates hit the visible target near the right edge at 1911- and 1363-pixel screen widths.
+PASS: counted learning recipes and required stack order agree over 200 seeded café setups; all serve directly without a cooking stage.
+PASS: all 45 ingredients remain categorized; earlier cooking scores are preserved separately from new plate-assembly scores.

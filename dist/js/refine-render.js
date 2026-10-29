@@ -1,3 +1,4 @@
+import {drawReactionGame} from './reaction-art.js';
 import {drawBackdrop,drawCharacter,drawFood} from './premium-art.js';
 import {BUG_COLORS,FOOD,MATERIALS,TREASURES,MODE_NAMES,clamp} from './refine-core.js';
 export function renderGame(ctx,m,p){
@@ -10,17 +11,7 @@ export function renderGame(ctx,m,p){
  const background=(a,b)=>{let g=ctx.createLinearGradient(0,0,0,640);g.addColorStop(0,a);g.addColorStop(1,b);ctx.fillStyle=g;ctx.fillRect(0,0,1000,640);};
  const star=(x,y,r,c)=>{ctx.beginPath();for(let i=0;i<10;i++){let a=i*Math.PI/5-Math.PI/2,v=i%2?r*.45:r;ctx.lineTo(x+Math.cos(a)*v,y+Math.sin(a)*v);}ctx.closePath();ctx.fillStyle=c;ctx.fill();};
  const face=(x,y,s=1)=>{C(x-9*s,y,3*s,'#17253d');C(x+9*s,y,3*s,'#17253d');ctx.beginPath();ctx.arc(x,y+4*s,9*s,0,Math.PI);ctx.strokeStyle='#17253d';ctx.lineWidth=2*s;ctx.stroke();};
- if(m.game==='bugs'){
- drawBackdrop(ctx,'bug garden',m.clock);for(let i=0;i<22;i++){let x=i*47;L(x,640,x+Math.sin(m.clock/2000+i)*10,610-i%3*10,'#488269',5);}for(let i=0;i<35;i++)C((i*137)%1000,130+(i*79)%500,1.4,'#8cba7966');
- for(let b of m.items){const color=BUG_COLORS[b.color];drawCharacter(ctx,'bug',b.x,b.y,b.r/34,{color:color.hex,angle:b.angle+Math.PI/2,time:m.clock});T(color.mark,b.x,b.y-b.r*.25,Math.max(10,b.r*.62),'#27344e');}
- for(let e of m.effects){let z=(m.clock-e.at)/900;for(let i=0;i<5;i++)star(e.x+Math.cos(i*1.26)*z*50,e.y+Math.sin(i*1.26)*z*50,Math.max(0,6*(1-z)),e.color);}const target=BUG_COLORS[m.target],pulse=m.clock-m.targetAt<700;banner('FIND '+target.name.toUpperCase()+' '+target.mark,`${m.items.length} ladybugs · Match the color & symbol · Streak ${m.combo}`,target.hex);R(20,111,960*clamp((m.switchAt-m.clock)/(m.switchAt-m.targetAt),0,1),4,2,target.hex);if(pulse){ctx.strokeStyle=target.hex;ctx.lineWidth=4;ctx.strokeRect(7,7,986,626);}
- }
- if(m.game==='balloons'){
- drawBackdrop(ctx,'balloon candy sky',m.clock);for(let i=0;i<30;i++)star((i*173)%1000,(i*101)%640,2,'#c7c8ed66');for(let i=0;i<4;i++){let x=i*300+Math.sin(m.clock/4000+i)*20;ellipse(x,260+i*40,100,22,'#8ba6e514');}
- for(let b of m.items){L(b.x,b.y+b.r,b.x+Math.sin(m.clock/400+b.phase)*12,b.y+b.r+48,'#d9c7dd77');const danger=b.type==='danger',color=danger?'#3c405e':b.type==='gold'?'#ffd25c':b.type==='time'?'#56e5d1':BUG_COLORS[b.color].hex;if(danger){star(b.x,b.y,b.r*1.2,'#f88ca8');ellipse(b.x,b.y,b.r*.8,b.r,'#30324f');T('!',b.x,b.y,b.r*.8,'#ff9fbb');}else{drawCharacter(ctx,'balloon',b.x,b.y,b.r/46,{color,time:m.clock});if(b.type==='armor'){ctx.beginPath();ctx.ellipse(b.x,b.y,b.r*.86,b.r*1.05,0,0,Math.PI*2);ctx.strokeStyle='#dfe8ff';ctx.lineWidth=4;ctx.stroke();T(b.hp,b.x,b.y,b.r*.7,'#1a2941');}else if(m.learn)T(m.difficulty===1?BUG_COLORS[b.color].mark:b.label,b.x,b.y,b.r*.7,'#1a2941');else if(b.type!=='normal')T({gold:'★',speed:'ϟ',tiny:'•',time:'+2',mystery:'?'}[b.type],b.x,b.y,b.r*.65,'#1a2941');else face(b.x,b.y,.8);}}
- for(let e of m.effects){let z=(m.clock-e.at)/900;for(let i=0;i<8;i++){let a=i*Math.PI/4;C(e.x+Math.cos(a)*z*75,e.y+Math.sin(a)*z*75,Math.max(0,6*(1-z)),e.color);}}
- banner(m.learn?m.question:'BALLOON MAYHEM',`Wave ${m.wave} · Streak ×${(1+Math.min(3,Math.floor(m.combo/8))*.5).toFixed(1)} · Avoid spiky balloons`,'#ffbc7c');
- }
+ if(['bugs','balloons'].includes(m.game)){drawReactionGame(ctx,m,p);return;}
  if(m.game==='keeper'){
  background('#152b45','#18534b');for(let i=0;i<80;i++)C(8+i*13,125+(i%3)*10,4,['#c5b4e1','#47b7ad','#f1b46e'][i%3]);for(let i=0;i<10;i++)R(i*100,150,50,490,0,'#53886a20');const g=m.goal();R(g.x,g.y,g.w,g.h,5,'#a0d7f710','#d6f4f1');for(let x=g.x+41;x<g.x+g.w;x+=41)L(x,g.y,x,g.y+g.h,'#c7e9ff27');for(let y=g.y+33;y<g.y+g.h;y+=33)L(g.x,y,g.x+g.w,y,'#c7e9ff27');L(g.x,g.y+g.h,g.x+g.w,g.y+g.h,'#fff',5);
  const keeper=m.variant==='taker'?m.ai:m.glove;let diving=m.penaltyState==='flight';ctx.save();ctx.translate(keeper.x,keeper.y);ctx.rotate(diving?clamp((keeper.tx-keeper.x)/150,-.75,.75):0);C(0,-40,24,'#f3bf98');R(-24,-16,48,70,15,p.color);L(-20,0,-65,-20,'#e3bb92',16);L(20,0,65,-20,'#e3bb92',16);R(-84,-39,38,39,12,'#ffd46d','#fff0bb');R(46,-39,38,39,12,'#ffd46d','#fff0bb');L(-13,50,-23,83,'#17243f',15);L(13,50,23,83,'#17243f',15);face(0,-42,.9);ctx.restore();

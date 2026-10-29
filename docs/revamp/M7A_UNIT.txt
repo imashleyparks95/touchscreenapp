@@ -1,0 +1,2 @@
+PASS: 20 legal full seeded rounds, real scoring/learning fairness, special balloon answer visibility, actual temporary mystery breeze/expiry/new spawns, hidden-target exit, prompt tap protection and finite reduced-effects art.
+PASS: real corrected/legacy Balloon leaderboards remain separate and both editions roundtrip through schema-3 backups without rewriting old records.

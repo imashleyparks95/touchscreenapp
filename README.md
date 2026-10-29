@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.8.0
+## Current development checkpoint — 6.9.0
+
+Milestone **7A** begins the progressive 2D upgrade with **Bug Squash** and **Balloon Mayhem**: original illustrated worlds/characters, individual readable player prompts and feedback, reduced-effects support, soft hit sounds and responsive solo/two-player fields. Balloon learning answers stay visible on special types, mystery breezes expire after three seconds, and corrected scores use a separate edition with earlier records still selectable. Touch/mouse and existing controller cursors remain supported; physical input/audio checks are still needed. Other 2D game batches remain unfinished.
+
+### Retained connected expedition — 6.7.0
 
 Milestone 5 adds Project Limit Break’s **Full Expedition**: Living Forest → Ancient Castle → Crown Arena → Chaos Chamber. Recover Castle seals behind interactive doors, face the two-phase Crown Warden, stabilize the Chamber and finish together in solo/co-op. Open the game and choose **FULL EXPEDITION**. The original Forest chapter and measured Forest Baseline remain separate choices.
 
