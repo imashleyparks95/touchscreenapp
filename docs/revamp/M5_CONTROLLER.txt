@@ -1,0 +1,6 @@
+PASS: actual game controller defers scene/model work until acknowledgment, pauses clocks, commits one chapter once, restarts within session, saves co-op separately, records measured baseline history without points and discards aborted runs. Controller measurements use explicit 10 FPS fixtures, not hardware results.
+PASS: actual achievements, co-op records without rival wins, measured raw history/settings backup roundtrip and incomplete sample rejection.
+PASS: actual adventure disconnect callback freezes its clock until intentional resume (standard-controller fixture).
+PASS: actual expedition UI holds launch for acknowledgement, transitions across four real rule models without partial scores, disposes old runtimes, preserves session acknowledgement and commits one separate-edition result per solo/co-op profile (UI fixtures).
+PASS: late asset-loading completion while hidden stays paused until intentional resume (visibility fixture).
+PASS: switching an unfinished expedition to benchmark/tuning asks before discarding it; cancellation preserves the current model and resumes intentionally (UI fixture).

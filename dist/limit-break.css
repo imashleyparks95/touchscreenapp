@@ -21,3 +21,5 @@
 @media(max-width:720px){.lb-playing .lb-stage.lb-monitor-visible .lb-monitor{left:12px;right:auto;top:185px;width:calc(100% - 140px);max-width:250px;max-height:max(100px,calc(100% - 460px))}}
 .lb-look-pad{bottom:calc(100% + 16px)}.lb-stage:has(#lbTouch[hidden]) .lb-camera{bottom:18px}
 @media(max-width:720px){.lb-playing .lb-header nav #lbMonitorToggle{display:block}}
+.lb-expedition-modes{flex-wrap:wrap}.lb-expedition-modes>button:first-child{flex-basis:100%;border-color:#a5bc98}.lb-header nav{flex-wrap:wrap}.lb-dialog-card [data-load]+output{font-size:12px;color:#ded1a6}.lb-dialog-card h3{color:#e8dfbf}.lb-header #lbLoad{border-color:#91b6c4}.lb-header #lbLoad[hidden]{display:none}
+@media(max-width:720px){.lb-header nav{justify-content:flex-start}.lb-header #lbLoad{font-size:10px;min-height:44px}.lb-expedition-modes{grid-template-columns:1fr}.lb-expedition-modes>button{min-height:58px}}

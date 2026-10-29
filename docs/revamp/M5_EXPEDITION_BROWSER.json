@@ -1,0 +1,350 @@
+{
+  "version": "6.7.0",
+  "checks": [
+    "real Castle geometry/rigs, keyboard door collision, interaction and passage",
+    "new area pause freezes actual model and imported-scene clock",
+    "actual arena architecture and imported enlarged boss load through expedition transition",
+    "actual bounded Chamber actors/AI/physics/pulses/effects, real measured-window download and reset removes workload",
+    "Chamber load remains reachable at 800/390 px",
+    "forced-completion transition fixture writes no partial score and exactly one completed edition per co-op profile",
+    "actual adventure records UI separates editions/team modes and completed co-op backup validates"
+  ],
+  "areas": [
+    {
+      "area": "forest",
+      "players": [
+        {
+          "x": -0.5,
+          "z": -16,
+          "hp": 120
+        },
+        {
+          "x": 1,
+          "z": -16,
+          "hp": 120
+        }
+      ],
+      "actors": 7,
+      "meshes": 839,
+      "bodies": 78,
+      "version": "v6.7.0 WHAT’S NEW ↗"
+    },
+    {
+      "area": "castle",
+      "players": [
+        {
+          "x": -0.5,
+          "z": -10.5,
+          "hp": 120
+        },
+        {
+          "x": 1,
+          "z": -10.5,
+          "hp": 120
+        }
+      ],
+      "actors": 5,
+      "meshes": 361,
+      "bodies": 42,
+      "version": "v6.7.0 WHAT’S NEW ↗"
+    },
+    {
+      "area": "arena",
+      "players": [
+        {
+          "x": -0.5,
+          "z": -10.5,
+          "hp": 120
+        },
+        {
+          "x": 1,
+          "z": -10.5,
+          "hp": 120
+        }
+      ],
+      "actors": 5,
+      "meshes": 317,
+      "bodies": 28,
+      "version": "v6.7.0 WHAT’S NEW ↗"
+    },
+    {
+      "area": "chaos",
+      "players": [
+        {
+          "x": -0.5,
+          "z": -10.5,
+          "hp": 120
+        },
+        {
+          "x": 1,
+          "z": -10.5,
+          "hp": 120
+        }
+      ],
+      "actors": 4,
+      "meshes": 274,
+      "bodies": 29,
+      "version": "v6.7.0 WHAT’S NEW ↗"
+    }
+  ],
+  "loaded": {
+    "area": "chaos",
+    "players": [
+      {
+        "x": -0.5,
+        "z": -10.5,
+        "hp": 120
+      },
+      {
+        "x": 1,
+        "z": -10.5,
+        "hp": 120
+      }
+    ],
+    "actors": 8,
+    "meshes": 354,
+    "bodies": 37,
+    "version": "v6.7.0 WHAT’S NEW ↗"
+  },
+  "reset": {
+    "area": "chaos",
+    "players": [
+      {
+        "x": -1,
+        "z": -2,
+        "hp": 120
+      },
+      {
+        "x": 1,
+        "z": -2,
+        "hp": 120
+      }
+    ],
+    "actors": 4,
+    "meshes": 284,
+    "bodies": 29,
+    "version": "v6.7.0 WHAT’S NEW ↗"
+  },
+  "measuredWindows": {
+    "scope": "Interactive Chamber measured windows; not a repeatable formal benchmark",
+    "runs": [
+      {
+        "at": 1793294074333,
+        "load": {
+          "characters": 0,
+          "enemies": 0,
+          "physics": 8,
+          "projectiles": 0,
+          "particles": 20,
+          "lights": 0,
+          "complexity": 1
+        },
+        "actual": {
+          "characters": 0,
+          "enemies": 0,
+          "physics": 8,
+          "projectiles": 0,
+          "particles": 20,
+          "lights": 0,
+          "complexity": 16
+        },
+        "metrics": {
+          "frames": 17,
+          "durationMs": 3401.2000000178814,
+          "averageFPS": 4.9982359167089925,
+          "onePercentLowFPS": 1.2386968908525129,
+          "medianMs": 166.69999998807907,
+          "p95Ms": 283.69999998807907,
+          "p99Ms": 283.69999998807907,
+          "worstMs": 807.3000000119209,
+          "spikes": 16,
+          "worstSpikesMs": [
+            807.3000000119209,
+            283.69999998807907,
+            204.10000002384186,
+            180,
+            178.30000001192093,
+            169.59999999403954,
+            169.09999999403954,
+            166.90000000596046
+          ],
+          "distribution": [
+            {
+              "maxMs": 8.333,
+              "count": 1
+            },
+            {
+              "maxMs": 16.667,
+              "count": 0
+            },
+            {
+              "maxMs": 33.333,
+              "count": 0
+            },
+            {
+              "maxMs": 50,
+              "count": 0
+            },
+            {
+              "maxMs": 100,
+              "count": 0
+            },
+            {
+              "maxMs": null,
+              "count": 16
+            }
+          ],
+          "sampleLimited": true,
+          "currentMs": 178.30000001192093,
+          "currentFPS": 5.608524957561084,
+          "characters": 4,
+          "bodies": 29,
+          "meshes": 167,
+          "triangles": 32662,
+          "drawCalls": 157,
+          "gpuMs": null,
+          "jsHeapMiB": 94.87518978118896,
+          "systemRAM": null,
+          "gpuVRAM": null
+        },
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 896,
+          "renderHeight": 578,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable"
+        }
+      },
+      {
+        "at": 1793294082148,
+        "load": {
+          "characters": 2,
+          "enemies": 2,
+          "physics": 12,
+          "projectiles": 4,
+          "particles": 24,
+          "lights": 1,
+          "complexity": 1
+        },
+        "actual": {
+          "characters": 2,
+          "enemies": 2,
+          "physics": 12,
+          "projectiles": 4,
+          "particles": 24,
+          "lights": 1,
+          "complexity": 16
+        },
+        "metrics": {
+          "frames": 37,
+          "durationMs": 6652.800000011921,
+          "averageFPS": 5.561568061558096,
+          "onePercentLowFPS": 3.19795331000359,
+          "medianMs": 198.89999997615814,
+          "p95Ms": 264.5,
+          "p99Ms": 291.40000000596046,
+          "worstMs": 312.69999998807907,
+          "spikes": 36,
+          "worstSpikesMs": [
+            312.69999998807907,
+            291.40000000596046,
+            264.5,
+            234.90000000596046,
+            221.2000000178814,
+            210,
+            209,
+            208.2000000178814
+          ],
+          "distribution": [
+            {
+              "maxMs": 8.333,
+              "count": 1
+            },
+            {
+              "maxMs": 16.667,
+              "count": 0
+            },
+            {
+              "maxMs": 33.333,
+              "count": 0
+            },
+            {
+              "maxMs": 50,
+              "count": 0
+            },
+            {
+              "maxMs": 100,
+              "count": 0
+            },
+            {
+              "maxMs": null,
+              "count": 36
+            }
+          ],
+          "sampleLimited": true,
+          "currentMs": 153.09999999403954,
+          "currentFPS": 6.531678641665133,
+          "characters": 8,
+          "bodies": 37,
+          "meshes": 108,
+          "triangles": 29684,
+          "drawCalls": 98,
+          "gpuMs": null,
+          "jsHeapMiB": 78.88706588745117,
+          "systemRAM": null,
+          "gpuVRAM": null
+        },
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 896,
+          "renderHeight": 578,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable"
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "failedAssets": [],
+  "scope": "Actual imported scenes and keyboard/input/load/export/cleanup. Area objective completion is forced solely to isolate UI transitions; tests/limit-expedition.mjs separately completes all solo/co-op objectives legally. Browser touch/controller/GPU are not physical hardware evidence."
+}

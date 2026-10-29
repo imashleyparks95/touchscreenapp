@@ -1,0 +1,11 @@
+Legal expedition area: 1 player(s), forest 46.4s, 0 recoveries.
+Legal expedition area: 1 player(s), castle 44.9s, 0 recoveries.
+Legal expedition area: 1 player(s), arena 50.9s, 1 recoveries.
+Legal expedition area: 1 player(s), chaos 39.0s, 0 recoveries.
+Legal expedition area: 2 player(s), forest 43.9s, 0 recoveries.
+Legal expedition area: 2 player(s), castle 52.3s, 0 recoveries.
+Legal expedition area: 2 player(s), arena 47.2s, 2 recoveries.
+Legal expedition area: 2 player(s), chaos 37.8s, 0 recoveries.
+PASS: legal full solo/co-op four-area expeditions, side doors/seals, two-phase boss, separate completion-only scoring, bounded/resettable optional workload and actual journey instructions. Pure gameplay, not physical/GPU evidence.
+PASS: actual separate co-op expedition records preserve older Forest results in schema-3 backups; malformed/partial completion records are rejected.
+PASS: adventure leaderboards keep old/new editions and solo/co-op results separate.

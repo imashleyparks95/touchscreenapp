@@ -52,4 +52,4 @@ GAMES.push({id:'air',name:'Air Slice',desc:'Fresh fruit. Real hand swipes. A jui
 
 GAMES.push({id:'spelling',name:'Spelling Adventure',desc:'Listen, write and discover a world of words.',tag:'Three word trails · 5 modes',type:'learn',learn:true,color:'#b9d8b0',icon:'✎'});
 
-GAMES.push({id:'limit',name:'Project Limit Break',desc:'Explore the forest. Face its sentinels. Open the ancient gate.',tag:'Forest Adventure · Milestone 2',type:'together',color:'#56775b',icon:'🌿',hint:'Restore three forest lanterns and awaken the ancient gate.',intro:'Explore the Living Forest solo or together. Measure the scene with a repeatable automatic baseline.'});
+GAMES.push({id:'limit',name:'Project Limit Break',desc:'Forest, Castle, Arena, Chamber. Find the way home.',tag:'Four-area expedition',type:'together',color:'#56775b',icon:'🌿',hint:'Restore each area, use its exit lever and bring every explorer through.',intro:'Choose the connected four-area expedition, original Forest chapter or measured Forest baseline.'});

@@ -1,3 +1,16 @@
 import {FOREST_INPUT_DEFAULTS,forestInputSettings} from './input-settings.js';
 // Backup checks are bounded to this new game's settings and measured history.
 export function validateForestSettings(settings){const s=settings?.limitBreak;if(!s)return;if(typeof s!=='object'||Array.isArray(s)||!['auto','low','medium','high','ultra','maximum'].includes(s.preset)||!Array.isArray(s.history)||s.history.length>20)throw Error('Project Limit Break settings are invalid.');if(s.input!==undefined){if(!s.input||typeof s.input!=='object'||Array.isArray(s.input))throw Error('Forest input settings are invalid.');const normalized=forestInputSettings(s.input);for(const key of Object.keys(FOREST_INPUT_DEFAULTS))if(s.input[key]!==undefined&&s.input[key]!==normalized[key])throw Error('Forest input setting is invalid: '+key);}for(const r of s.history){if(r?.version!==1||typeof r.id!=='string'||r.id.length>80||!Number.isFinite(r.at)||!r.settings||typeof r.settings.label!=='string'||r.settings.label.length>80||!r.metadata||typeof r.metadata.renderer!=='string'||r.metadata.renderer.length>80||!['renderWidth','renderHeight'].every(k=>Number.isFinite(r.metadata[k])&&r.metadata[k]>0&&r.metadata[k]<=32768)||!Array.isArray(r.stages)||r.stages.length<1||r.stages.length>8||!Array.isArray(r.frameTimesMs)||r.frameTimesMs.length>36000||!r.frameTimesMs.every(n=>Number.isFinite(n)&&n>0))throw Error('A forest benchmark result is invalid.');for(const report of [r.overall,...r.stages]){if(!report||!Number.isInteger(report.frames)||report.frames<1||!['averageFPS','onePercentLowFPS','medianMs','p95Ms','worstMs'].every(k=>Number.isFinite(report[k])&&report[k]>=0))throw Error('Forest benchmark measurements are invalid.');}if(r.frameTimesMs.length!==r.overall.frames)throw Error('Forest benchmark frame data is incomplete.');}}
+
+/** Whole-expedition records are new; old Forest editions remain untouched. */
+export function validateExpeditionRecords(profile){
+ const shape=[['forest',3,3],['castle',2,3],['arena',1,3],['chaos',2,2]];
+ for(const record of profile.results||[]){if(record.ruleset!=='limit-expedition-v1')continue;const chapters=record.details?.chapters;
+  if(record.game!=='limit'||record.mode!=='solo'||!['solo','coop'].includes(record.competition)||record.challengeKey!=='four-paths-1'||record.completed!==true||!Number.isFinite(record.elapsed)||record.elapsed<0||!Array.isArray(chapters)||chapters.length!==4||chapters.some((chapter,i)=>!chapter||chapter.id!==shape[i][0]||chapter.completed!==true||chapter.lanterns!==shape[i][1]||chapter.sentinels!==shape[i][2]||!Number.isFinite(chapter.elapsed)||chapter.elapsed<0||!['retries','defeats'].every(key=>Number.isInteger(chapter[key])&&chapter[key]>=0))||record.details.lanterns!==8||record.details.sentinels!==11)throw Error('An expedition completion record is invalid.');
+ }
+}
+
+export function adventureRecordRows(profiles,edition='limit-expedition-v1',competition='solo'){
+ const rows=profiles.flatMap(profile=>(profile.results||[]).filter(result=>result.game==='limit'&&result.ruleset===edition&&(result.competition||'solo')===competition).map(result=>({profile,result}))).sort((a,b)=>b.result.score-a.result.score||(a.result.elapsed??Infinity)-(b.result.elapsed??Infinity));
+ return rows.filter((row,index)=>rows.findIndex(other=>other.profile.id===row.profile.id)===index);
+}

@@ -15,7 +15,7 @@ export function worldCapabilities(id){
  return{multiplayer:LIBRARY_MODES[id]||'',controller:id==='limit'?'Native controller':'Controller cursor',
   touch:['funny','monster'].includes(id)?'Touch editing':'Touch & mouse',
   device:({funny:'Camera for face tracking',monster:'Camera / microphone for capture',zoo:'Microphone for custom voices',air:'Camera tracking or touch fallback',spelling:'Speakers for spoken words'})[id]||'',
-  note:id==='limit'?'Explore the Living Forest. Castle and Chaos Chamber are still future chapters.':id==='paint'?'Freehand drawing works best with touch or a mouse.':id==='math'?'Use touch or a mouse for handwriting; submit answers separately.':id==='beat'?'Make music together, or take turns in rhythm challenges.':id==='wars'?'Choose simultaneous touch deployment when your device supports it, or take turns.':''};
+  note:id==='limit'?'Explore four connected areas, or choose the original Forest chapter and its separate traversal baseline.':id==='paint'?'Freehand drawing works best with touch or a mouse.':id==='math'?'Use touch or a mouse for handwriting; submit answers separately.':id==='beat'?'Make music together, or take turns in rhythm challenges.':id==='wars'?'Choose simultaneous touch deployment when your device supports it, or take turns.':''};
 }
 export function libraryState(profile){
  const value=profile?.library;

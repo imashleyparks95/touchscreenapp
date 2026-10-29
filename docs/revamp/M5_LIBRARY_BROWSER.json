@@ -1,0 +1,467 @@
+{
+  "version": "6.7.0",
+  "checks": [
+    "manual spotlight selection, no automatic carousel",
+    "preview heart updates saved state and returns focus to the rebuilt game card",
+    "touch favorite action, favorites isolated by profile and persisted across reload",
+    "alphabetical sort, together filter includes real Beat Lab rhythm turns, search composes with filter",
+    "all 25 game previews audited at desktop, tablet and phone widths",
+    "preview launch closes modal, preserves instruction gate and adds profile-local recent entry",
+    "controller confirms favorite and opens actual game preview",
+    "actual offline reload retains favorites and opens previews without network"
+  ],
+  "audit": [
+    {
+      "id": "air",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "balloons",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "beat",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "buddy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "bugs",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "build",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "castle",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "circuit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "paint",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "doodle",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "funny",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "gladiator",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "gravity",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "math",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "cafe",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "dentist",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "monster",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "zoo",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "limit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "robot",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "ninja",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "slime",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "spelling",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "battle",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "wars",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "violations": []
+    },
+    {
+      "id": "air",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "balloons",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "beat",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "buddy",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "bugs",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "build",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "castle",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "circuit",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "paint",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "doodle",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "funny",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "gladiator",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "gravity",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "math",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "cafe",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "dentist",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "monster",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "zoo",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "limit",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "robot",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "ninja",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "slime",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "spelling",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "battle",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "wars",
+      "width": 768,
+      "scrollWidth": 768,
+      "violations": []
+    },
+    {
+      "id": "air",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "balloons",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "beat",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "buddy",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "bugs",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "build",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "castle",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "circuit",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "paint",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "doodle",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "funny",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "gladiator",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "gravity",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "math",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "cafe",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "dentist",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "monster",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "zoo",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "limit",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "robot",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "ninja",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "slime",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "spelling",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "battle",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    },
+    {
+      "id": "wars",
+      "width": 390,
+      "scrollWidth": 390,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "limitations": "Controller fixture and browser touch-capable context are not physical Windows/controller/touchscreen verification."
+}

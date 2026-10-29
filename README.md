@@ -1,8 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.6.0
+## Current development checkpoint — 6.7.0
 
-Milestone 4 introduces the dark game library: illustrated spotlight worlds, individual game previews, profile-specific favorites/recent shelves, search, filters and sorting. Native controllers, cursor controls, multiplayer modes and capture devices are labeled separately. Favorites and recent history use the existing backup format; old backups remain supported. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact checkpoint and deployment status.
+Milestone 5 adds Project Limit Break’s **Full Expedition**: Living Forest → Ancient Castle → Crown Arena → Chaos Chamber. Recover Castle seals behind interactive doors, face the two-phase Crown Warden, stabilize the Chamber and finish together in solo/co-op. Open the game and choose **FULL EXPEDITION**. The original Forest chapter and measured Forest Baseline remain separate choices.
+
+The Chamber offers bounded load controls, actual performance counters, reset and measured-window JSON exports; formal repeatable multi-zone benchmarks remain Milestone 6. Only complete expeditions save their new score edition. Unfinished expeditions restart from the Forest. **Adventure Records** separates expeditions, older Forest editions and solo/co-op results; existing backups and saved data remain supported. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact source and deployment directions.
 
 ### Retained Forest foundation — 6.4.0
 
@@ -21,6 +23,7 @@ npm run audit:arcade
 npm run test:audit
 npm run test:library:browser
 npm run test:limit:browser
+npm run test:expedition:browser
 ```
 
 The read-only audit guards the original roster, save identities, assets and offline dependency closure. The new Forest browser test exercises the actual imported scene and a measured five-stage Forest run in an isolated browser; it takes at least the warm-up plus 30 measured seconds, apart from loading. Cloud software-rendered results are not target-PC benchmarks. `npm test` now includes the audit regression alongside the original 35 test programs.

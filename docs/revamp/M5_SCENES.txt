@@ -1,0 +1,7 @@
+BJS - [17:13:41]: Babylon.js v9.32.0 - Null engine
+PASS: actual castle architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
+BJS - [17:13:42]: Babylon.js v9.32.0 - Null engine
+Actual boss blade/palm max alignment error: 0.001930 m
+PASS: actual arena architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
+BJS - [17:13:42]: Babylon.js v9.32.0 - Null engine
+PASS: actual chaos architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
