@@ -1,5 +1,13 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Shared arcade foundation — 6.5.0
+
+Read `SHARED_ARCADE_SYSTEMS.md` for lightweight lifetime, pointer-coordinate/contact, menu, music-clock and decorative-presentation contracts. Forest LOOK and both menu adapters use independently tested shared helpers without moving Forest policy into the toolkit. GamepadHub and existing 3D graphics capability negotiation remain the reusable foundations; no incompatible toolkit API version change is introduced.
+
+`bind3DInput` now releases actual captures on normal completion, cancellation, blur/hide/pagehide and disposal. `pointercancel`/`lostpointercapture` call cancellation instead of successful `up`, preventing cancelled deployment/interactions from committing. Cancellation can receive `(handle,event)` for an individual contact; explicit `cancel()`/disposal still invoke the game cleanup callback without arguments. `ground(event)` returns null for a zero-size surface and uses the current CSS rectangle. Independent real Babylon projection/two-player/capture/cancellation tests cover this correction, followed by starter, Wobbly Wars and actual Forest browser regressions.
+
+`create3DEffects(runtime,{onEvent,getPresentation})` adds an optional settings callback, defaulting to unchanged full effects. It reads only decorative particle intensity/reduced-motion; events still route to audio/game callbacks when visual particles are off. Wobbly Wars passes the arcade settings; unrelated games and formal Forest benchmark workloads retain their own configuration. Do not relabel this as native controller gameplay support or a new graphics engine.
+
 ## Forest foundation controls — 6.4.0
 
 `dist/js/limit/input-settings.js` is Forest-owned policy, not a new shared engine contract. It normalizes bounded controller/touch camera speeds, camera-stick deadzone, invert-Y and Auto/Show/Hide touch preferences. Optional preferences live in `DB.settings.limitBreak.input`; older backups without them remain valid. `limit/records.js` rejects malformed or out-of-range saved options.

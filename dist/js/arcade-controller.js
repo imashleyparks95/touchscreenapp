@@ -1,7 +1,8 @@
+import {menuUsable,stepSelect,menuNeighbor} from './shared/menu.js';
 import {GamepadHub,padAxis,padButton} from './3d/gamepads.js';
 
 const controls='button,a[href],select,input:not([type="hidden"]),textarea,[tabindex="0"]';
-const usable=n=>n&&!n.disabled&&!n.closest('[hidden],[inert]')&&n.getClientRects().length>0;
+const usable=menuUsable;
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 
 // Controller pointers use the game's existing input handlers, not a second rules engine.
@@ -51,18 +52,14 @@ export function createArcadeController({doc=document,win=window,getPads=()=>navi
  const mark=n=>{focused?.classList.remove('controller-focus');focused=n;if(n){n.classList.add('controller-focus');n.focus({preventScroll:true});n.scrollIntoView({block:'nearest',inline:'nearest'});}};
  function adjust(n,step){
   if(n.tagName==='SELECT'){
-   const options=[...n.options].filter(o=>!o.disabled&&!o.parentElement.disabled),index=options.indexOf(n.selectedOptions[0]);
-   const option=options[clamp(index+step,0,options.length-1)];if(!option)return;n.value=option.value;n.dispatchEvent(new Event('change',{bubbles:true}));
+   stepSelect(n,step);
   }else if(n.matches('input[type="range"]')){step>0?n.stepUp():n.stepDown();n.dispatchEvent(new Event('input',{bubbles:true}));n.dispatchEvent(new Event('change',{bubbles:true}));}
  }
  function moveFocus(root,dx,dy){
   const nodes=items(root);if(!nodes.length)return;const active=doc.activeElement;
   if(!nodes.includes(active)){mark(nodes[0]);return;}
   if(dx&&active.matches('select,input[type="range"]')){adjust(active,dx);return;}
-  const a=active.getBoundingClientRect(),ax=a.x+a.width/2,ay=a.y+a.height/2;
-  let chosen=null,best=Infinity;
-  for(const n of nodes){if(n===active)continue;const b=n.getBoundingClientRect(),x=b.x+b.width/2-ax,y=b.y+b.height/2-ay,along=x*dx+y*dy,across=Math.abs(x*dy-y*dx);if(along>4&&along+across*2<best){chosen=n;best=along+across*2;}}
-  if(chosen)mark(chosen);else if(dy)mark(nodes[(nodes.indexOf(active)+(dy>0?1:-1)+nodes.length)%nodes.length]);
+  const next=menuNeighbor(nodes,active,dx,dy);if(next)mark(next);
  }
  function confirm(root){const n=root.contains(doc.activeElement)&&usable(doc.activeElement)&&doc.activeElement.matches(controls)?doc.activeElement:items(root)[0];if(!n)return;mark(n);if(n.tagName==='SELECT')adjust(n,1);else if(n.matches('input[type="range"]'))adjust(n,1);else n.click();}
  function back(){const dialog=topDialog();if(!dialog)return;const button=dialog.querySelector('[data-instructions-back],[data-back]');if(button){button.click();return;}const e=new Event('cancel',{cancelable:true});if(dialog.dispatchEvent(e))dialog.close();}
@@ -89,11 +86,11 @@ export function createArcadeController({doc=document,win=window,getPads=()=>navi
     c.hidden=s.mode!=='pointer';c.style.left=s.x+'px';c.style.top=s.y+'px';
     const scroll=padAxis(pad,3);if(scroll)scrollTarget(s.mode==='focus'?doc.activeElement:doc.elementFromPoint(s.x,s.y))?.scrollBy?.(0,scroll*dt*750);
     const held=padButton(pad,0)||padButton(pad,7);
-    if(held&&!s.held){if(s.mode==='pointer')pointers.down(player,s.x,s.y);else if(hub.pressed(player,0)){confirm(root);hub.clear();}}
+    if(held&&!s.held){if(s.mode==='pointer')pointers.down(player,s.x,s.y);else if(hub.pressed(player,0)){confirm(root);reset();break;}}
     if(!held&&s.held)pointers.up(player);s.held=held;
-    if(hub.pressed(player,1)){const dragging=pointers.size>0;pointers.cancelAll();if(!dragging)back();hub.clear();}
-    if(hub.pressed(player,9)){pointers.cancelAll();pause();hub.clear();}
-    if(hub.pressed(player,8)){pointers.cancelAll();guide();hub.clear();}
+    if(hub.pressed(player,1)){const dragging=pointers.size>0;pointers.cancelAll();if(!dragging)back();reset();break;}
+    if(hub.pressed(player,9)){pointers.cancelAll();pause();reset();break;}
+    if(hub.pressed(player,8)){pointers.cancelAll();guide();reset();break;}
    }
   }
   if(auto)frame=request(tick);

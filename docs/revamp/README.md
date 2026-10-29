@@ -14,3 +14,9 @@ See `ARCADE_REVAMP_PROGRESS.md` at the repository root for the milestone ledger,
 ## Milestone 2 evidence — 6.4.0
 
 `M2_LIBRARY.png` shows the requested darker shell. `M2_FOREST.png` and `M2_FOREST_BROWSER.json` cover saved camera preferences, mixed-input controls, injected simultaneous touch, responsive active controls, the real scene and its benchmark/export/exit path. `M2_STATIC_AUDIT.json` verifies the preserved roster, assets, save identities and offline dependency closure. The raw cloud benchmark is a functional smoke check, not a controlled comparison against M1 or a hardware FPS claim. M1 reports remain unmodified historical evidence.
+
+## Milestone 3 evidence — 6.5.0
+
+`M3_SHARED_BROWSER.json` records five actual browser integration scenarios with CDP touch and explicit gamepad/visibility fixtures; `M3_SHELL_BROWSER.json` records 72 responsive/accessibility audits with no page exceptions. `M3_SETTINGS.png` shows the dark settings and decorative particle control; that focused browser harness blocks service workers, so its offline-update status is not a production check. Real offline reload is separately covered by the shell suite. `M3_FOREST_BROWSER.json` contains real imported-scene solo/co-op checks and all raw benchmark frames, with `M3_FOREST.png` as visual evidence. `M3_STATIC_AUDIT.json` preserves roster/asset/save/cache/hosting verification. None constitutes physical Windows/input/audio/GPU certification, and the software benchmark is not a controlled performance comparison.
+
+See `SHARED_ARCADE_SYSTEMS.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for contracts, limitations and the current review/deployment authorization status. M1/M2 files remain unchanged.

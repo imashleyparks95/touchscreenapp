@@ -1,0 +1,12 @@
+{
+  "version": "6.5.0",
+  "checks": [
+    "effect preference survives real reload",
+    "actual shared audio keeps one clock, stops on mute/injected visibility, preserves phase on unrelated volume changes",
+    "CDP two-contact touch test captures independently, releases both on modal close, removes listeners and restores focus",
+    "dialog replacement disposes only its own resources, once",
+    "two controllers cannot acknowledge a new dialog during the same confirmation frame"
+  ],
+  "errors": [],
+  "limitations": "CDP touch, standard gamepad and injected visibility fixtures; physical hardware and audible quality remain unverified."
+}

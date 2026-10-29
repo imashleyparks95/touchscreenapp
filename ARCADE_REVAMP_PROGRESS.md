@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Milestone 2, existing Forest foundation improvements — complete; user trial pending.** The user explicitly said “continue”; no physical trial feedback was supplied. Pause again for user testing before Milestone 3.
-- **User review gate:** stop after each milestone and let the user try it. Continuation to Milestone 2 was explicitly authorized; this does not verify hardware testing or authorize Milestone 3/deployment. Dark overall shell colors are now a persistent user preference.
-- **Milestone 2 deployment is now authorized (2026-10-28).** The user requested deployment before testing. Publish only this v6.4.0 checkpoint to the existing Sites project, preserving its URL/access policy. No Sites deployment tools exist in this environment; GitHub pushes do not publish the site. Milestone 3 remains paused for the user trial.
+- **Current checkpoint: Milestone 3 shared systems — complete; v6.5.0 ready for review.** The user explicitly waived the Milestone 2 manual trial and authorized starting Milestone 3 while Work Mode handles the separately pinned Milestone 2 deployment. Stop before Milestone 4; no physical trial success is implied.
+- **User review gate:** stop after each milestone unless the user explicitly waives that boundary. They waived Milestone 2 and authorized Milestone 3 development; this does not authorize Milestone 3 production deployment or Milestone 4 development. Keep the muted dark shell preference.
+- **Milestone 2 deployment is now authorized (2026-10-28).** The user requested deployment before testing. Publish only this v6.4.0 checkpoint to the existing Sites project, preserving its URL/access policy. No Sites deployment tools exist in this environment; GitHub pushes do not publish the site. Milestone 3 was subsequently authorized for development, but not deployment.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-2-foundation`**, based on that checkpoint. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-3-shared-systems`**, based on the pushed Milestone 2 tip `f3f1764`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -18,8 +18,8 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | Milestone | Status | Evidence / remaining work |
 | --- | --- | --- |
 | 1 — Audit and existing-state recovery | **Complete; user authorized continuation** | Complete inventory and preservation audit; original baseline plus actual solo/co-op Forest movement/cleanup and a real five-stage Forest benchmark verified. |
-| 2 — Limit Break foundation | **Foundation checkpoint complete; user trial pending** | Existing real Forest reused. Added saved camera preferences, independent touch LOOK region, adaptive touch visibility and restore control, mixed-input safeguards, separate monitor/map and benchmark exit. User requested a darker overall shell; applied muted dark palette. Physical target-PC sign-off remains. |
-| 3 — Shared systems | Partially inherited | Independent 3D toolkit, controller hub, cursor/menu adapter, lifecycle and audio systems exist. Shared controller cursor is not native direct-action support in every game. |
+| 2 — Limit Break foundation | **Foundation checkpoint complete; user waived manual trial** | Existing real Forest reused. Added saved camera preferences, independent touch LOOK region, adaptive touch visibility and restore control, mixed-input safeguards, separate monitor/map and benchmark exit. User requested a darker overall shell; applied muted dark palette. Physical target-PC sign-off remains. |
+| 3 — Shared systems | **Shared foundation checkpoint complete — 6.5.0** | Tested lightweight touch/lifetime/menu/music/presentation helpers integrated into real consumers; existing GamepadHub and capability-gated 3D graphics retained. Five browser integration scenarios plus full regressions pass. Per-game native mappings remain later work. |
 | 4 — Launcher redesign | Partially inherited from 6.3.0 | Warm shell, search, categories, daily picks and last-opened shortcut exist. Favorites, richer previews and accurate per-game capability indicators are unfinished. |
 | 5 — Gameplay expansion | Forest chapter only | Three lanterns, three sentinels, lever/gate and chapter completion exist. Ancient Castle, separate Combat Arena, Chaos Chamber and a connected four-zone adventure do not. |
 | 6 — Scientific benchmarking | Forest-only implementation | Six presets including Auto; actual frame logging, five Forest stages, warm-up, history, JSON/CSV and short tuning runs exist. No castle/combat/chaos benchmark claims are valid yet. |
@@ -231,3 +231,42 @@ User requested a Work Mode message after every milestone and clear repository di
 ### GitHub publication restored (2026-10-29, America/New_York)
 
 Native Git authentication now works. Successfully pushed `revamp/milestone-2-foundation` to `imashleyparks95/touchscreenapp` and configured its upstream. The tested v6.4.0 app checkpoint `e64a460b4d39f24569b2b407f4a096109c63a866` is now available on GitHub. Earlier authentication/publication blockers above are historical and resolved. Updated `WORK_MODE_HANDOFF.md` accordingly. No deployment performed; Work Mode should deploy this authorized checkpoint to the existing Sites project, then stop for user testing before Milestone 3.
+
+## Session record — Milestone 3 shared systems (2026-10-29, America/New_York)
+
+### Authorization, inheritance and branch isolation
+
+The user said **“no need to test”** at the Milestone 2 manual boundary and then explicitly requested starting Milestone 3 while Work Mode deploys Milestone 2. Development is on `revamp/milestone-3-shared-systems`, based on `f3f1764`; the M2 branch and deployment commit remain unchanged. M3 deployment is not authorized. Do not start M4 automatically.
+
+Existing independent 3D controller/animation/physics/combat/AI/toolkit, GamepadHub, native Forest bindings, global controller cursor, graphics presets/capability negotiation and game-owned lifecycles were retained rather than recreated.
+
+### Completed and actual consumers
+
+- Added `dist/js/shared/lifetime.js`: reverse-order, idempotent cleanup/listener ownership and late-registration disposal with error isolation. Shared modal, pointer binder, music clock and 3D binder use it. Async scene session tokens remain necessary.
+- Added shared current-rectangle coordinate conversion and independent captured pointer contacts. Forest LOOK and the multi-contact diagnostic use the binder; the 3D ground-input binder reuses coordinates/lifetime ownership. Cancellation/blur/hide/pagehide/disposal release contacts. Corrected 3D pointercancel/lost-capture treating an aborted gesture as a successful action.
+- Consolidated actual global/Forest menu geometry and disabled-option/optgroup selection in `shared/menu.js`. Native/cursor ownership is unchanged. A confirming controller ends the current global input frame, preventing a second controller from immediately acknowledging the new dialog.
+- Common modal setup can return a disposer; close/replacement/navigation release it, ordinary close restores initiating focus, and a queued prior close event cannot dispose the new dialog owner.
+- Common synth music owns at most one clock, stops scheduling while hidden/muted/zero-volume/disabled/background-suspended, and preserves phase on unrelated settings changes. Queued common voices stop on mute, hiding and pagehide. No automatic creation/resumption/closing of the shared recording context by lifecycle hooks.
+- Optional validated `DB.settings.presentation.effects` offers Full/Reduced/Off decorative particles. Actual Wobbly Wars shared effects and the retained classic canvas engine consume it; event/audio routing and game rules remain intact. Defaults and old backups work without the field. Existing shared renderer capability negotiation/presets remain the 3D configuration foundation. No global setting overrides formal Forest workloads.
+- Added `SHARED_ARCADE_SYSTEMS.md` contracts, consumers, usage/limitations and test commands; updated 3D docs, README, v6.5.0 release notes and cache coherently. All five new runtime modules are precached.
+
+### Game-by-game impact
+
+- **Project Limit Break:** native menu helpers and LOOK-pointer lifecycle shared; existing camera preferences, movement/combat, real Forest assets, solo/co-op and benchmark remain. Actual browser movement, pause, mixed input and exports pass. No new zone/model/animation/artwork claimed.
+- **Wobbly Wars:** shared particles honor decorative intensity/reduced motion; callbacks still route with particles Off. 3D input capture/cancel handling improved. Independent actual rig/physics/effects plus game rules/controller/purchases regressions pass. No troop/card/pricing/model replacement.
+- **Classic canvas engine:** decorative counts use the same safe preference; 140 legacy game/difficulty/mode launch fixtures and gameplay regressions pass. Existing public refined games are not falsely claimed to all consume this path.
+- **All public entries:** shared menu/dialog/audio infrastructure and offline code benefit the shell; all 25 public game entries retain passing responsive/accessibility checks. Creative Studio's actual undoable controller drawing remains verified. Native direct-action support has not been added to every game in this milestone. Other game-by-game art/gameplay work remains as recorded above.
+
+### Verification and evidence
+
+- `npm test`: **38 programs passed**, including independent shared modules/actual common audio fixture, older/new backups, independent 3D toolkit/starter, actual captured-contact cancellation, actual particle counts/event routing, Wobbly Wars and complete Forest rules/scene suites.
+- `npm run test:browser`: **72 responsive layout/accessibility audits passed**, plus existing controller/drawing/persistence/offline scenarios.
+- `npm run test:shared:browser`: **5 integration scenarios passed**: real reload preference, actual common music clock, CDP two-contact close cleanup/focus, queued dialog replacement and simultaneous two-controller confirmation boundary. No page exceptions. Visibility/controllers are injected fixtures, and CDP touch is not physical touchscreen QA.
+- `npm run test:limit:browser`: **passed** actual imported solo/co-op scene, keyboard/right-drag/LOOK, mixed input, disconnect pause, monitor/map, benchmark JSON/CSV, result exit and zero retained engine instances. No browser exceptions or failed local assets. Software smoke benchmark: **124 frames**, **4.04 average FPS**, **0.67 1% low** on ANGLE/SwiftShader at Low. This is functional measurement evidence, not a controlled comparison, speed-up claim or target-PC performance result.
+- `npm run audit:arcade`: 25 original public IDs, hidden/legacy hooks, **249** local cache entries, **151** reachable precached dependencies, all **98** original asset/vendor hashes, save identities and hosting target preserved. Build and whitespace checks pass. Runtime assets/vendor, migration provenance and hosting config match M2 exactly.
+- Initial runs caught a stripped-import VM fixture and a minimal-document audio fixture; supplied the real validator to the harness and made optional music event hooks capability-safe. The first focused browser test used a fixed 30ms delay for dialog close and failed under renderer load; replaced it with the actual close event and reran successfully. No failed run is recorded as a pass.
+- Evidence: `docs/revamp/M3_SHARED_BROWSER.json`, `M3_SHELL_BROWSER.json`, `M3_FOREST_BROWSER.json`, `M3_STATIC_AUDIT.json`, `M3_SETTINGS.png`, `M3_FOREST.png`. The focused settings harness blocks service workers; its offline-update status is not a production deployment check. M1/M2 evidence is historical and unchanged.
+
+### Handoff and next steps
+
+Commit/push the v6.5.0 checkpoint on `revamp/milestone-3-shared-systems`, then record its exact tested source commit in `WORK_MODE_HANDOFF.md` with the ready-to-paste Work Mode review/preview message. A later documentation-only commit may identify the app checkpoint. No production deployment performed or authorized for M3. Wait for review/continuation before M4. Physical Windows/USB/Bluetooth input, real wall-display reach, audible output and target GPU remain unverified; later native game bindings/art/zones remain future milestones.

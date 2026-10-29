@@ -1,3 +1,4 @@
+import {bindPointers} from '../shared/pointers.js';
 // Forest-owned preferences: no score, graphics, benchmark or shared rig policy.
 export const FOREST_INPUT_DEFAULTS=Object.freeze({controllerLook:1,touchLook:1,lookDeadzone:.18,invertY:false,touchControls:'auto'});
 export function forestInputSettings(value={}){
@@ -13,12 +14,5 @@ export function rotateForestCamera(camera,x,y,yawScale,pitchScale,invertY=false)
 }
 /** One shared camera drag region, independent of both movement sticks/actions. */
 export function bindForestLook(target,{enabled=()=>true,onLook=()=>{}}={}){
- let pointer=null,lastX=0,lastY=0;
- function cancel(){const id=pointer;pointer=null;if(id!==null&&target.hasPointerCapture?.(id))target.releasePointerCapture(id);}
- function down(e){if(!enabled()||pointer!==null)return;e.preventDefault();pointer=e.pointerId;lastX=e.clientX;lastY=e.clientY;target.setPointerCapture(pointer);}
- function move(e){if(e.pointerId!==pointer)return;if(!enabled()){cancel();return;}e.preventDefault();onLook(e.clientX-lastX,e.clientY-lastY);lastX=e.clientX;lastY=e.clientY;}
- function up(e){if(e.pointerId===pointer)cancel();}
- const listeners=[['pointerdown',down],['pointermove',move],['pointerup',up],['pointercancel',up],['lostpointercapture',up]];
- for(const [name,fn]of listeners)target.addEventListener(name,fn);
- return{cancel,dispose(){cancel();for(const [name,fn]of listeners)target.removeEventListener(name,fn);}};
+ return bindPointers(target,{enabled,maxPointers:1,move:(_contact,_event,delta)=>onLook(delta.x,delta.y)});
 }

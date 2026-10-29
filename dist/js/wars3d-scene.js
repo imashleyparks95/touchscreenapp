@@ -6,7 +6,7 @@ import {createActorFactory} from './3d/actors.js';
 import {create3DEffects} from './3d/effects.js';
 import {createWarEquipment,makeArrow} from './wars3d-equipment.js';
 import {DEFEAT_TIMING,defeatOpacity} from './wars3d-weapons.js';
-export async function createWarScene(runtime,model,{onEvent=()=>{}}={}){const{B,scene}=runtime,factory=await createActorFactory(runtime,soldierRig),effects=create3DEffects(runtime,{onEvent}),actors=new Map(),retired=new Set(),projectiles=new Map(),materials=new Map(),props=[];let currentItems='',lastEvents=0;
+export async function createWarScene(runtime,model,{onEvent=()=>{},getPresentation=()=>({})}={}){const{B,scene}=runtime,factory=await createActorFactory(runtime,soldierRig),effects=create3DEffects(runtime,{onEvent,getPresentation}),actors=new Map(),retired=new Set(),projectiles=new Map(),materials=new Map(),props=[];let currentItems='',lastEvents=0;
  function mat(name,color,emissive=0){if(materials.has(name))return materials.get(name);const m=new B.StandardMaterial(name,scene);m.diffuseColor=B.Color3.FromHexString(color);m.specularColor=new B.Color3(.06,.06,.06);if(emissive)m.emissiveColor=m.diffuseColor.scale(emissive);materials.set(name,m);return m;}
  const {zoneMeshes}=createWarEnvironment(runtime,model,mat);
  const propContainers=Object.fromEntries(await Promise.all(['pony','dragon','cannon'].map(async name=>[name,await runtime.assets.load('assets/wars3d/'+name+'.glb')])));

@@ -1,0 +1,597 @@
+{
+  "scope": "Real browser Living Forest baseline; software-backed cloud rendering is not physical Windows/GPU verification.",
+  "initial": {
+    "players": [
+      {
+        "name": "actor1:controller",
+        "x": -0.5,
+        "y": 0.16023255791610985,
+        "z": -16
+      },
+      {
+        "name": "actor2:controller",
+        "x": -7,
+        "y": 0.14867186408827324,
+        "z": -12
+      },
+      {
+        "name": "actor1:controller",
+        "x": 0,
+        "y": 0.12985426287350363,
+        "z": 3
+      },
+      {
+        "name": "actor2:controller",
+        "x": 7.347839274635365,
+        "y": 0.12848382703932332,
+        "z": 5.76810715024309
+      },
+      {
+        "name": "actor3:controller",
+        "x": -5,
+        "y": 0.10878445810076287,
+        "z": 11
+      },
+      {
+        "name": "actor3:controller",
+        "x": 0,
+        "y": 0.11528626802669459,
+        "z": 14.2
+      }
+    ],
+    "bodies": 77,
+    "meshes": 825,
+    "alpha": -1.5707963267948966
+  },
+  "preferences": {
+    "controllerLook": 1.5,
+    "touchLook": 1.2,
+    "lookDeadzone": 0.24,
+    "invertY": true,
+    "touchControls": "show"
+  },
+  "simulatedTouch": {
+    "before": {
+      "name": "actor1:controller",
+      "x": -0.5,
+      "y": 0.13195937886569153,
+      "z": -14.400000000000006
+    },
+    "after": {
+      "name": "actor1:controller",
+      "x": 0.02832814208990047,
+      "y": 0.10233388807636573,
+      "z": -13.606782547322974
+    },
+    "cameraBefore": -2.5547963267948974,
+    "cameraAfter": -2.6987963267948976,
+    "scope": "CDP-injected simultaneous touch; not physical multitouch verification"
+  },
+  "soloMovement": {
+    "before": {
+      "name": "actor1:controller",
+      "x": -0.5,
+      "y": 0.16023255791610985,
+      "z": -16
+    },
+    "after": {
+      "name": "actor1:controller",
+      "x": -0.5,
+      "y": 0.1326943031920144,
+      "z": -14.435222578273251
+    }
+  },
+  "coopMovement": {
+    "before": [
+      {
+        "name": "actor1:controller",
+        "x": -0.5,
+        "y": 0.16023255791610985,
+        "z": -16
+      },
+      {
+        "name": "actor1:controller",
+        "x": 1,
+        "y": 0.1193177067835786,
+        "z": -16
+      }
+    ],
+    "after": [
+      {
+        "name": "actor1:controller",
+        "x": -0.5,
+        "y": 0.16023255791610985,
+        "z": -16
+      },
+      {
+        "name": "actor1:controller",
+        "x": 1.3597851193392307,
+        "y": 0.09770168642973934,
+        "z": -15.147777916649206
+      }
+    ]
+  },
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "run": {
+    "version": 1,
+    "seed": 872341,
+    "warmupSeconds": 5,
+    "settings": {
+      "label": "Low",
+      "resolutionScale": 0.7,
+      "shadowSize": 0,
+      "texture": "low",
+      "distance": 22,
+      "foliage": 0.4,
+      "particles": 24,
+      "ao": false,
+      "reflections": false,
+      "post": false,
+      "samples": 1,
+      "physics": 8,
+      "preset": "low",
+      "requestedPreset": "low"
+    },
+    "metadata": {
+      "engine": "Babylon.js 9.32.0",
+      "physics": "Havok 1.3.14",
+      "renderer": "WebGL 2",
+      "glInfo": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "renderWidth": 896,
+      "renderHeight": 578,
+      "capabilities": {
+        "renderer": "WebGL 2",
+        "gpu": true,
+        "webgl2": true,
+        "shadows": true,
+        "ao": true,
+        "reflections": true,
+        "post": true,
+        "instancing": true,
+        "maxTextureSize": 8192,
+        "maxSamples": 4,
+        "gpuTimer": false
+      },
+      "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+      "baseline": "living-forest-v2-navigation",
+      "scope": "Milestone 2 forest traversal, obstacle-aware wardens and physics; no castle/combat stress/chaos results",
+      "characters": 3,
+      "weather": "day",
+      "physicsObjects": 8,
+      "audio": "No ambience during baseline",
+      "adaptiveQuality": false,
+      "warmupPath": "One pre-recording sweep of all forest stages"
+    },
+    "frameTimesMs": [
+      335.69999998807907,
+      306.5,
+      321.80000001192093,
+      316.59999999403954,
+      354.90000000596046,
+      324.69999998807907,
+      320.5,
+      354.60000002384186,
+      351.7999999821186,
+      355.09999999403954,
+      311.80000001192093,
+      338.90000000596046,
+      402.2999999821186,
+      408.40000000596046,
+      400.40000000596046,
+      440,
+      391.19999998807907,
+      360,
+      370.7000000178814,
+      399.19999998807907,
+      433,
+      387,
+      310.90000000596046,
+      353.30000001192093,
+      306.39999997615814,
+      276.40000000596046,
+      310.40000000596046,
+      311.40000000596046,
+      308.19999998807907,
+      224.2000000178814,
+      272,
+      311.39999997615814,
+      297.80000001192093,
+      287.69999998807907,
+      288.60000002384186,
+      308.59999999403954,
+      276.59999999403954,
+      2222.199999988079,
+      229.5,
+      259.30000001192093,
+      307.69999998807907,
+      214.2000000178814,
+      192.09999999403954,
+      139.80000001192093,
+      177,
+      171.39999997615814,
+      155.40000000596046,
+      196.30000001192093,
+      253.19999998807907,
+      300,
+      252.59999999403954,
+      278.40000000596046,
+      286.59999999403954,
+      279.5,
+      109.30000001192093,
+      111,
+      107.90000000596046,
+      107.90000000596046,
+      120.19999998807907,
+      149.90000000596046,
+      126,
+      113.5,
+      113.2999999821186,
+      136.10000002384186,
+      126.59999999403954,
+      116.2999999821186,
+      145.30000001192093,
+      121.80000001192093,
+      118,
+      122.7999999821186,
+      153.80000001192093,
+      146.7999999821186,
+      153,
+      139.40000000596046,
+      118.09999999403954,
+      153.5,
+      147.5,
+      154.40000000596046,
+      183.5,
+      157.40000000596046,
+      181.30000001192093,
+      176.89999997615814,
+      188.40000000596046,
+      185.80000001192093,
+      213.90000000596046,
+      186.39999997615814,
+      167.60000002384186,
+      239.39999997615814,
+      233.80000001192093,
+      265.80000001192093,
+      253.39999997615814,
+      280.40000000596046,
+      282.59999999403954,
+      177.80000001192093,
+      139.5,
+      165.09999999403954,
+      132.7000000178814,
+      160.59999999403954,
+      153.40000000596046,
+      164.39999997615814,
+      135.80000001192093,
+      154.59999999403954,
+      135.59999999403954,
+      151.10000002384186,
+      132.09999999403954,
+      136.5,
+      155.90000000596046,
+      134.09999999403954,
+      157,
+      140.7999999821186,
+      159.7000000178814,
+      140.69999998807907,
+      168.5,
+      147.2000000178814,
+      179.69999998807907,
+      166.09999999403954,
+      160.5,
+      181.59999999403954,
+      190,
+      222.7000000178814,
+      257.90000000596046,
+      277.89999997615814,
+      511.30000001192093,
+      763.1999999880791
+    ],
+    "overall": {
+      "frames": 124,
+      "durationMs": 30707.19999998808,
+      "averageFPS": 4.038140892039917,
+      "onePercentLowFPS": 0.6699269779647525,
+      "medianMs": 190,
+      "p95Ms": 400.40000000596046,
+      "p99Ms": 511.30000001192093,
+      "worstMs": 2222.199999988079,
+      "spikes": 124,
+      "worstSpikesMs": [
+        2222.199999988079,
+        763.1999999880791,
+        511.30000001192093,
+        440,
+        433,
+        408.40000000596046,
+        402.2999999821186,
+        400.40000000596046
+      ],
+      "distribution": [
+        {
+          "maxMs": 8.333,
+          "count": 0
+        },
+        {
+          "maxMs": 16.667,
+          "count": 0
+        },
+        {
+          "maxMs": 33.333,
+          "count": 0
+        },
+        {
+          "maxMs": 50,
+          "count": 0
+        },
+        {
+          "maxMs": 100,
+          "count": 0
+        },
+        {
+          "maxMs": null,
+          "count": 124
+        }
+      ],
+      "sampleLimited": false
+    },
+    "stages": [
+      {
+        "name": "Canopy trail",
+        "frames": 17,
+        "durationMs": 6035.199999988079,
+        "averageFPS": 2.8168080593905054,
+        "onePercentLowFPS": 2.272727272727273,
+        "medianMs": 351.7999999821186,
+        "p95Ms": 408.40000000596046,
+        "p99Ms": 408.40000000596046,
+        "worstMs": 440,
+        "spikes": 17,
+        "worstSpikesMs": [
+          440,
+          408.40000000596046,
+          402.2999999821186,
+          400.40000000596046,
+          391.19999998807907,
+          355.09999999403954,
+          354.90000000596046,
+          354.60000002384186
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 17
+          }
+        ],
+        "sampleLimited": true
+      },
+      {
+        "name": "Water and reflections",
+        "frames": 19,
+        "durationMs": 6117.200000017881,
+        "averageFPS": 3.105996207406078,
+        "onePercentLowFPS": 2.3094688221709005,
+        "medianMs": 310.40000000596046,
+        "p95Ms": 399.19999998807907,
+        "p99Ms": 399.19999998807907,
+        "worstMs": 433,
+        "spikes": 19,
+        "worstSpikesMs": [
+          433,
+          399.19999998807907,
+          387,
+          370.7000000178814,
+          360,
+          353.30000001192093,
+          311.40000000596046,
+          311.39999997615814
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 19
+          }
+        ],
+        "sampleLimited": true
+      },
+      {
+        "name": "Ruins and lighting",
+        "frames": 17,
+        "durationMs": 5912.299999982119,
+        "averageFPS": 2.875361534436922,
+        "onePercentLowFPS": 0.4500045000474145,
+        "medianMs": 252.59999999403954,
+        "p95Ms": 307.69999998807907,
+        "p99Ms": 307.69999998807907,
+        "worstMs": 2222.199999988079,
+        "spikes": 17,
+        "worstSpikesMs": [
+          2222.199999988079,
+          307.69999998807907,
+          300,
+          286.59999999403954,
+          278.40000000596046,
+          276.59999999403954,
+          259.30000001192093,
+          253.19999998807907
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 17
+          }
+        ],
+        "sampleLimited": true
+      },
+      {
+        "name": "Navigating wardens",
+        "frames": 38,
+        "durationMs": 6025.5,
+        "averageFPS": 6.306530578375239,
+        "onePercentLowFPS": 3.5778175313059033,
+        "medianMs": 147.5,
+        "p95Ms": 253.39999997615814,
+        "p99Ms": 265.80000001192093,
+        "worstMs": 279.5,
+        "spikes": 38,
+        "worstSpikesMs": [
+          279.5,
+          265.80000001192093,
+          253.39999997615814,
+          239.39999997615814,
+          233.80000001192093,
+          213.90000000596046,
+          188.40000000596046,
+          186.39999997615814
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 38
+          }
+        ],
+        "sampleLimited": true
+      },
+      {
+        "name": "Physics grove",
+        "frames": 33,
+        "durationMs": 6617,
+        "averageFPS": 4.98715429953151,
+        "onePercentLowFPS": 1.310272536708097,
+        "medianMs": 160.5,
+        "p95Ms": 282.59999999403954,
+        "p99Ms": 511.30000001192093,
+        "worstMs": 763.1999999880791,
+        "spikes": 33,
+        "worstSpikesMs": [
+          763.1999999880791,
+          511.30000001192093,
+          282.59999999403954,
+          280.40000000596046,
+          277.89999997615814,
+          257.90000000596046,
+          222.7000000178814,
+          190
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 33
+          }
+        ],
+        "sampleLimited": true
+      }
+    ],
+    "formula": "Average FPS = 1000 × frame count / sum(frame ms). 1% low = 1000 / mean(slowest ceil(1% of frames)). Percentiles use floor((N−1) × q). No synthetic score.",
+    "id": "7681d9a2-0f44-4f6e-aac2-f4b3ac460684",
+    "at": 1793288812976
+  },
+  "errors": [],
+  "failedAssets": []
+}
