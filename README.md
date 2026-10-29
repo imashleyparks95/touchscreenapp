@@ -1,8 +1,8 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.5.0
+## Current development checkpoint — 6.6.0
 
-Milestone 3 adds shared menu/input cleanup, quieter common audio scheduling and saved decorative particle controls. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact checkpoint and deployment status.
+Milestone 4 introduces the dark game library: illustrated spotlight worlds, individual game previews, profile-specific favorites/recent shelves, search, filters and sorting. Native controllers, cursor controls, multiplayer modes and capture devices are labeled separately. Favorites and recent history use the existing backup format; old backups remain supported. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact checkpoint and deployment status.
 
 ### Retained Forest foundation — 6.4.0
 
@@ -19,6 +19,7 @@ Read [ARCADE_REVAMP_PROGRESS.md](ARCADE_REVAMP_PROGRESS.md) for the current mile
 ```sh
 npm run audit:arcade
 npm run test:audit
+npm run test:library:browser
 npm run test:limit:browser
 ```
 
@@ -73,9 +74,9 @@ Pair a standard-mapping controller through your device's Bluetooth settings or c
 
 Two controllers get independent P1/P2 cursors. Choose a two-player mode first and use the game's assigned play areas. Each controller supplies one pointer, so two-finger gestures require touch or another controller. Living Forest keeps its dedicated controller movement, camera and combat adapter, which takes over automatically. Wobbly Wars uses controller cursors for deployment and menus; its battles remain automatic. Camera, microphone and speech activities still need their real devices. A disconnect cancels held input and pauses games that expose a Pause control; intentionally resume after reconnecting. Browser permission prompts, file pickers and audio unlock may still require a touchscreen or mouse tap. Use **Controller Guide** in the lobby or Settings for pairing and control details.
 
-## Shared systems checkpoint (Milestone 3)
+## Shared systems foundation (Milestone 3, retained)
 
-Version **6.5.0** improves shared menu/input cleanup, common music scheduling and optional decorative particle intensity. See [SHARED_ARCADE_SYSTEMS.md](SHARED_ARCADE_SYSTEMS.md) for contracts, consumers, tests and limits. The existing Milestone 2 deployment remains pinned to its exact commit; development on `revamp/milestone-3-shared-systems` does not change that branch. Milestone 3 requires separate deployment authorization.
+Version **6.5.0** improves shared menu/input cleanup, common music scheduling and optional decorative particle intensity. See [SHARED_ARCADE_SYSTEMS.md](SHARED_ARCADE_SYSTEMS.md) for contracts, consumers, tests and limits. The existing Milestone 2 deployment remains pinned to its exact commit; development on `revamp/milestone-3-shared-systems` does not change that branch. The user’s standing workflow is to deploy completed, verified milestone checkpoints through Work Mode to the existing site, then test live.
 
 ## Deploy to the existing website
 

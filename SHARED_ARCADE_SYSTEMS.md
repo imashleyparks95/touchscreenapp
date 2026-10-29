@@ -1,4 +1,4 @@
-# Shared arcade systems — v6.5.0
+# Shared arcade systems — v6.6.0
 
 These lightweight ES modules do not load Babylon, access profiles, select a game theme, or implement game rules. Import them directly from `dist/js/shared/`. Keep native gameplay bindings in the game; controller cursors do not become direct movement controls merely by sharing menus.
 
@@ -39,3 +39,13 @@ Settings exposes Full/Reduced/Off for shared Wobbly Wars impact particles and th
 - `npm run audit:arcade` and `npm run build`: roster, original asset integrity, offline closure, hosting/save identities and packaging.
 
 No physical Windows/USB/Bluetooth, audible-quality or target-GPU pass is implied by these checks. Per-game native controls, art, new zones and launcher redesign remain their later milestones.
+
+## Launcher library — 6.6.0
+
+`dist/js/library.js` is a lightweight, profile-independent policy module. `LIBRARY_MODES` covers exactly the 25 public IDs and describes actual modes; `worldCapabilities(id)` distinguishes native Forest gameplay from controller cursors and real camera/microphone/speech needs. The hidden game and retained score-only IDs never enter public shelves. `libraryWorlds(games,{filter,query,sort,profile})` composes categories, favorites/recent, search and alphabetical/recent ordering without mutating the registry. Together now includes Beat Lab's existing alternating rhythm challenge.
+
+`libraryState(profile)` reads optional bounded lists safely. `toggleFavorite(profile,id)` and `rememberProfileWorld(profile,id,at)` update only `profile.library`, never scores, achievements or results. Favorites are unique public IDs (max 25); recent entries are `{id,at}` (max 12, unique IDs, most recently opened first). `validateLibrary(profile)` rejects malformed backup data; absent library fields are valid old backups. The existing schema-3 localStorage/IndexedDB/backup identities remain unchanged. The old browser-global last-world key is retained; the new personal shelf starts when that player opens a world and is labeled **Recently opened**, not a claim of completed play.
+
+The launcher retains registry artwork and game launch routes. Heart/preview controls are sibling buttons outside the primary card button, not nested interactive controls. Preview content uses the actual `GAME_INSTRUCTIONS` control/multiplayer descriptions; opening a preview starts no game, capture, scoring or 3D runtime. Opening a game from a preview closes the shared modal before existing setup/instruction/update flows run. Focus, touch targets, profile-chip horizontal scrolling, reduced motion and dark Aurora/Nebula themes are covered by the browser checks. Spotlight selection is manual; there is no automatic carousel or remote tracking.
+
+`tests/library.mjs` verifies capability coverage, optional save validation, profile isolation, sorting/filter/search, hidden-ID rejection and old/new backups. `npm run test:library:browser` verifies real favorites/reload/profile changes, sort/search, all 25 previews at three widths (75 accessibility/layout audits), touch/controller actions, gated launch/recent history, unchanged points/results and real service-worker offline reload. Existing 72 shell/game-entry audits and shared-system checks remain required. Physical touchscreen ergonomics and Windows/Bluetooth reliability still need the user's live device.

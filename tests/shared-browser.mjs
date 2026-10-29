@@ -3,6 +3,7 @@ import {spawn} from 'node:child_process';
 import {existsSync,writeFileSync} from 'node:fs';
 import {chromium} from 'playwright';
 
+const evidencePrefix=process.env.ARCADE_SHARED_EVIDENCE_PREFIX||'/tmp/arcade-shared';
 const port=Number(process.env.ARCADE_SHARED_TEST_PORT||8094),origin=`http://127.0.0.1:${port}`;
 const server=spawn(process.execPath,['scripts/serve.mjs'],{env:{...process.env,PORT:String(port)},stdio:'pipe'});
 let browser;
@@ -58,7 +59,7 @@ try{
   for(const pad of pads)pad.buttons[0]={pressed:false,value:0};tick();pads[1].buttons[0]={pressed:true,value:1};tick();
   const result={immediate,after:acks};ui.dispose();document.querySelector('#handoffFixture').remove();opener.remove();return result;
  });assert.deepEqual(handoff,{immediate:0,after:1});checks.push('two controllers cannot acknowledge a new dialog during the same confirmation frame');
- await navigate('settings');await page.waitForFunction(()=>!document.querySelector('#notifications').childElementCount);await page.screenshot({path:'/tmp/arcade-m3-settings.png',fullPage:true});
- assert.deepEqual(errors,[]);writeFileSync('/tmp/arcade-m3-shared-browser.json',JSON.stringify({version:'6.5.0',checks,errors,limitations:'CDP touch, standard gamepad and injected visibility fixtures; physical hardware and audible quality remain unverified.'},null,2));
+ await navigate('settings');await page.waitForFunction(()=>!document.querySelector('#notifications').childElementCount);await page.screenshot({path:evidencePrefix+'.png',fullPage:true});
+ assert.deepEqual(errors,[]);const version=await page.evaluate(async()=>(await import('/js/releases.js')).APP_VERSION);writeFileSync(evidencePrefix+'.json',JSON.stringify({version,checks,errors,limitations:'CDP touch, standard gamepad and injected visibility fixtures; physical hardware and audible quality remain unverified.'},null,2));
  console.log(`PASS: ${checks.length} shared-system browser scenarios; ${checks.join('; ')}. No browser errors.`);
 }finally{await browser?.close();server.kill('SIGTERM');}

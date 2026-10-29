@@ -1,7 +1,7 @@
 // Local, rotating suggestions. No account, tracking, streaks or progress mutation.
 export function matchingWorlds(games,filter='all',query=''){
  const terms=query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
- return games.filter(g=>(filter==='all'||g.type===filter||(filter==='learn'&&g.learn)||(filter==='together'&&g.id!=='beat'))&&terms.every(term=>`${g.name} ${g.desc} ${g.tag}`.toLocaleLowerCase().includes(term)));
+ return games.filter(g=>(filter==='all'||g.type===filter||(filter==='learn'&&g.learn)||filter==='together')&&terms.every(term=>`${g.name} ${g.desc} ${g.tag}`.toLocaleLowerCase().includes(term)));
 }
 export function dailyWorlds(games,date=new Date()){
  const day=Math.floor(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())/86400000);
