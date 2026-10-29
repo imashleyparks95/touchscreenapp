@@ -270,3 +270,7 @@ Existing independent 3D controller/animation/physics/combat/AI/toolkit, GamepadH
 ### Handoff and next steps
 
 Commit/push the v6.5.0 checkpoint on `revamp/milestone-3-shared-systems`, then record its exact tested source commit in `WORK_MODE_HANDOFF.md` with the ready-to-paste Work Mode review/preview message. A later documentation-only commit may identify the app checkpoint. No production deployment performed or authorized for M3. Wait for review/continuation before M4. Physical Windows/USB/Bluetooth input, real wall-display reach, audible output and target GPU remain unverified; later native game bindings/art/zones remain future milestones.
+
+### Milestone 3 published checkpoint
+
+Successfully pushed tested app commit **`1035ccf3fc5b30b11cf914f77a5f2e464456461b`** to **`revamp/milestone-3-shared-systems`**. Updated `WORK_MODE_HANDOFF.md` with exact source, v6.5.0, actual evidence, preview/review directions and the explicit separation from M2's authorized v6.4.0 deployment. This handoff commit changes documentation only. No M3 production deployment or M4 implementation is authorized/performed.

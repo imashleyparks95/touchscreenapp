@@ -1,39 +1,40 @@
-# Work Mode handoff — Milestone 2
+# Work Mode handoff — Milestone 3
 
-## Source to review
+## Exact source and authorization
 
 - Repository: `imashleyparks95/touchscreenapp`.
-- Branch: `revamp/milestone-2-foundation`.
-- Tested app checkpoint: `e64a460b4d39f24569b2b407f4a096109c63a866`, version **6.4.0**. Later commits only document authorization/handoff; do not substitute the older Milestone 1 or main branch runtime.
-- Publication: **pushed successfully to GitHub** on 2026-10-29. Fetch `revamp/milestone-2-foundation`; the tested app checkpoint is available in its history. Later commits only update documentation. No archive is needed. Do not silently deploy an older revision.
+- Branch: `revamp/milestone-3-shared-systems`.
+- Tested app checkpoint: **`1035ccf3fc5b30b11cf914f77a5f2e464456461b`**, version **6.5.0**. It has been pushed successfully to GitHub. Later documentation-only commits may record this handoff; verify the requested source rather than silently choosing main.
+- **Milestone 3 production deployment is not yet authorized.** The user authorized M3 development while Work Mode handles the separate M2 deployment. Review/prepare a preview where supported; do not publish this checkpoint to production until the user explicitly authorizes it.
+- The authorized Milestone 2 deployment remains pinned to **`f3f1764f2744701b47e031f129a7b2f202014d78`** on `revamp/milestone-2-foundation`, version **6.4.0**. That branch is unchanged. Do not silently swap v6.5.0 into an in-progress v6.4.0 deployment.
 
 ## Repository map
 
-1. Read `AGENTS.md` and `ARCADE_REVAMP_PROGRESS.md` for rules, actual completion, limitations and user trial gate.
-2. Read this file and README's deployment section for the existing destination and source workflow.
-3. `dist/` is authoritative runtime source; `.openai/hosting.json` identifies the existing project. `build/` is an ignored build copy. `package.json` and `dist/js/releases.js` identify version 6.4.0.
-4. `docs/revamp/README.md`, `M2_FOREST_BROWSER.json`, `M2_STATIC_AUDIT.json`, `M2_LIBRARY.png` and `M2_FOREST.png` contain actual evidence.
-5. `docs/ARCADE_REVAMP_MASTER_PLAN.md` is the complete future specification. It is not an instruction to implement later milestones during deployment.
+1. Read `AGENTS.md` and `ARCADE_REVAMP_PROGRESS.md` for requirements, milestone ledger, actual verification, hardware limits and the review/continuation gate.
+2. Read `SHARED_ARCADE_SYSTEMS.md` for the new lightweight input/lifetime/menu/music/presentation contracts and actual consumers. `3D_GAME_DEVELOPMENT.md` describes existing shared 3D APIs and additive input/effect changes.
+3. `dist/` is authoritative runtime source. `.openai/hosting.json` identifies the existing destination. `build/` is an ignored copy. `package.json` and `dist/js/releases.js` agree on v6.5.0; the service worker caches the five new shared modules.
+4. `docs/revamp/README.md` and the `M3_*` reports/screenshots contain real evidence. Read actual scope: CDP touch/controller/visibility fixtures are not physical Windows hardware, and SwiftShader samples are not target-GPU results.
+5. `docs/ARCADE_REVAMP_MASTER_PLAN.md` contains future milestones; do not implement M4 or later work during this handoff.
 
-## Deployment
+## Checks and deployment destination
 
-The user explicitly authorized deploying this Milestone 2 checkpoint before testing. Use the Sites-enabled conversation's Sites skill and authenticated source workflow. Import the exact checkpoint, run `npm ci`, `npm test`, `npm run audit:arcade` and `npm run build`. Prior checkpoint verification also passed 72 shell browser checks and the native Forest browser check; rerun browser checks when the environment supports them. No code redesign is requested.
+Before packaging a preview, use `npm ci`, `npm test`, `npm run audit:arcade`, `npm run build`. Browser commands: `npm run test:browser`, `npm run test:shared:browser`, `npm run test:limit:browser`. Recorded results: 38 regression programs, 72 responsive/accessibility audits, five focused shared browser scenarios, actual Forest solo/co-op/input/benchmark/export/disposal checks, preservation audit and build passed. No models/art assets were replaced in this milestone.
+
+Use the Sites-enabled conversation's Sites skill/authenticated source workflow for an existing-project preview, if supported. Keep the production version unchanged until authorized. A successful GitHub push/build does not prove deployment.
 
 - Existing project: `appgprj_6adab219a4788191952c4c83432002c5`.
 - Existing URL: https://little-big-arcade-parks.diladiop.chatgpt.site
-- Serve **`dist/`**. Preserve the URL, access policy and browser save identities. Do not create a replacement site.
-- Confirm successful deployment and live **6.4.0**, including the normal service-worker update/reload path. A GitHub push alone is not deployment. Report actual deployed source/version and live verification; do not claim success from a build alone.
+- Serve **`dist/`**. Preserve URL, access policy, browser save identities and mandatory game instructions. Never create a replacement site.
+- When production deployment is explicitly authorized, synchronize this exact source, confirm the terminal deployment result and verify live **6.5.0** through the normal service-worker update/reload flow. Report actual source/version and URL.
 
-## User trial after deployment
+## Suggested review
 
-Check the darker library and profile themes. Open Project Limit Break and try Settings → Controls & Camera: sensitivity, deadzone, invert-Y, Auto/Show/Hide and SHOW TOUCH recovery. Try movement/look/actions together, solo and mixed controller/touch co-op, pause/reconnect, MONITOR/map placement, benchmark JSON/CSV exports and BACK TO ARCADE. Verify saved data survives reload. Physical Windows touch/controller and target GPU performance remain user checks; automated fixtures do not certify them.
-
-Stop for user feedback before Milestone 3. Deployment authorization applies to this checkpoint only.
+Try Settings → Decorative particles (Full/Reduced/Off) and reload; original backups without this option must still restore. Check controller menu navigation, disabled choices, two-controller confirmation boundaries and touch-test close/reopen with independent contacts. Check common music mute, hide/return and Beat Lab background suspension. Review Wobbly Wars effects and retained troop purchasing, and Forest LOOK/camera, mixed co-op, disconnect pause, monitor and benchmark exports. Saved scores/profiles/media and all 25 public worlds remain. Actual audible quality, Windows/USB/Bluetooth input, wall-display ergonomics and target GPU remain hardware checks. The user waived M2 manual testing; that is not a physical-device pass.
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 2 (v6.4.0) for my trial. Repository: imashleyparks95/touchscreenapp; branch: revamp/milestone-2-foundation; tested checkpoint: e64a460b4d39f24569b2b407f4a096109c63a866. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md first. The checkpoint is available on GitHub; fetch the branch and verify the source commit. Deploy dist/ to existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its URL and access policy. Deployment is authorized. Verify live version 6.4.0, report the live URL, and stop for my testing. Do not create a replacement site or start Milestone 3.
+Review Little Big Arcade Milestone 3 (v6.5.0) from imashleyparks95/touchscreenapp, branch revamp/milestone-3-shared-systems, commit 1035ccf3fc5b30b11cf914f77a5f2e464456461b. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and SHARED_ARCADE_SYSTEMS.md. Prepare an existing-project preview if supported, serving dist/ in Sites project appgprj_6adab219a4788191952c4c83432002c5. Preserve the existing production URL/access policy. Do not replace the site or change the separately pinned M2 deployment. Verify preview version 6.5.0; do not deploy M3 to production until I authorize it. Do not begin Milestone 4.
 
 ## Maintaining this handoff
 
-At each completed milestone, update this file and the progress document with the exact tested source commit, version, branch, evidence, publication status and trial steps. Commit the app checkpoint before recording its hash; a later documentation-only commit can carry the handoff. Provide the message in the session's final response. For future milestones without deployment authorization, change the message to request review/preview and await explicit deployment authorization. Never reuse an old milestone's authorization.
+At every completed milestone, update this file and the progress document with the tested source commit, branch, version, evidence, publication status, authorization and next steps. Commit the app checkpoint before recording its hash; a later documentation-only commit can carry the handoff. Include a ready-to-paste Work Mode message in the session's final response. Never reuse an earlier milestone's deployment authorization or claim an unpushed commit is on GitHub. Provide a source archive only when publication is blocked.
