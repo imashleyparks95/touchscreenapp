@@ -1,0 +1,171 @@
+
+> little-big-arcade@6.8.0 test
+> node tests/limit-benchmark.mjs && node tests/limit-expedition.mjs && node tests/limit-journey-scene.mjs && node tests/library.mjs && node tests/shared-systems.mjs && node tests/limit-input-settings.mjs && node tests/audit-arcade.mjs && node tests/universe.mjs && node tests/engine.mjs && node tests/offline.mjs && node tests/studios.mjs && node tests/smash.mjs && node tests/refinement.mjs && node tests/circuit-face.mjs && node tests/touch-worlds.mjs && node tests/gravity.mjs && node tests/premium.mjs && node tests/launch-fixes.mjs && node tests/media-expansion.mjs && node tests/air-slice.mjs && node tests/castle-overhaul.mjs && node tests/spelling.mjs && node tests/combat-upgrades.mjs && node tests/updates.mjs && node tests/quest-games.mjs && node tests/quest-controllers.mjs && node tests/math-expansion.mjs && node tests/3d-toolkit.mjs && node tests/3d-attachments.mjs && node tests/wars3d-exchanges.mjs && node tests/wars3d-arm-clearance.mjs && node tests/wars3d-core.mjs && node tests/wars3d-environment.mjs && node tests/wars3d-weapons.mjs && node tests/wars3d-controller.mjs && node tests/3d-gamepads.mjs && node tests/3d-adventure.mjs && node tests/limit-assets.mjs && node tests/limit-core.mjs && node tests/limit-gameplay.mjs && node tests/limit-controller.mjs && node tests/limit-scene.mjs
+
+PASS: five seeded workloads repeat, compatibility caps, warm-up exclusion, incomplete-run rejection, raw-frame aggregation, exports, comparison separation and frame-pacing tuning (explicit 10 FPS fixture).
+PASS: real schema-3 suite backup roundtrip and per-scenario raw-sample corruption rejection.
+Legal expedition area: 1 player(s), forest 46.4s, 0 recoveries.
+Legal expedition area: 1 player(s), castle 44.9s, 0 recoveries.
+Legal expedition area: 1 player(s), arena 50.9s, 1 recoveries.
+Legal expedition area: 1 player(s), chaos 39.0s, 0 recoveries.
+Legal expedition area: 2 player(s), forest 43.9s, 0 recoveries.
+Legal expedition area: 2 player(s), castle 52.3s, 0 recoveries.
+Legal expedition area: 2 player(s), arena 47.2s, 2 recoveries.
+Legal expedition area: 2 player(s), chaos 37.8s, 0 recoveries.
+PASS: legal full solo/co-op four-area expeditions, side doors/seals, two-phase boss, separate completion-only scoring, bounded/resettable optional workload and actual journey instructions. Pure gameplay, not physical/GPU evidence.
+PASS: actual separate co-op expedition records preserve older Forest results in schema-3 backups; malformed/partial completion records are rejected.
+PASS: adventure leaderboards keep old/new editions and solo/co-op results separate.
+BJS - [19:12:36]: Babylon.js v9.32.0 - Null engine
+PASS: actual castle architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
+BJS - [19:12:37]: Babylon.js v9.32.0 - Null engine
+Actual boss blade/palm max alignment error: 0.001930 m
+PASS: actual arena architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
+BJS - [19:12:38]: Babylon.js v9.32.0 - Null engine
+PASS: actual chaos architecture, imported rigs, textured surfaces, real Havok contacts and full disposal.
+PASS: all 25 public capability entries, native/cursor/device distinctions, profile-isolated favorites, bounded/deduplicated recents, search/filter/sort, Beat Lab together inclusion, old/new backup compatibility and rejected malformed library data without changing scores.
+PASS: independent lifetime disposal/error isolation, scaled two-contact input and cancellation, common menu selection, bounded decorative settings/backup compatibility, one music clock and actual shared audio mute/hidden cleanup. Device/audio fixtures, not physical hardware or audible QA.
+PASS: backward-compatible Forest input preferences, bounds/invalid backup rejection, mixed-input visibility, camera inversion/limits, independent look-pointer ownership and pause/disposal capture cleanup. Fixtures, not physical touch.
+PASS: static audit detects removed/duplicate games, missing/uncached imports, missing cache entries, changed assets, save identity changes and version mismatches. Isolated fixtures; no real browser saves accessed.
+PASS: empty profiles, old-record migration, difficulty/mode separation, per-player persistence, practice exclusion, wins/ties/rivalries/streaks/achievements, all 16 PCM sounds, worker MP3 encoding and independent ffprobe validation.
+PASS: binary audio backup roundtrip, invalid restore causes no write, unsafe profile data rejected, idle rounds award no XP/badges.
+PASS: valid restore changes profiles and media together; failed media transaction restores prior profile JSON and preserves prior media.
+PASS: 140 game/difficulty/mode launches, real difficulty mechanics, equal seeded VS, independent simultaneous pointer IDs/scores, target timing excluding pause, no abandoned records, equal alternating turns, treasure completion and scored physics collisions.
+PASS: every required offline file exists, install/activate cache lifecycle, offline HTML/modules/font/MP3 worker and encoder responses, navigation fallback.
+PASS: explicit lobby-only update activation, other arcade windows block activation, no automatic game reload, once-only reload, update failures/timeouts, no-cache registration checks and complete installed-release coherence.
+PASS: microphone single-session guard, input-level/timer callbacks, final chunk decode, real PCM trim, re-record, disconnect recovery, late permission cleanup, denial/missing-device/unsupported/decode error handling.
+PASS: actual simultaneous drawing pointer handlers retain independent tools/colors/sizes across midpoint and later toolbar edits; old art gets safe default controls; keyboard editing utilities.
+PASS: actual audio-clock scheduler, concurrent track notes, duplicate Play guard, tempo boundary update, next-step pause/resume, stop reset and lag recovery; all four 16/32-step presets.
+PASS: shipped project serialization retains custom microphone PCM, sample boundaries, per-track pitch/volume, patterns and master gain; offline composition renderer schedules that same buffer at the correct pitch/duration.
+PASS: shipped load routine accepts pre-update project fields and preserves custom audio, copied controls and fallback selection; full backup/restore serialization retains recorded sample PCM.
+PASS: offline song length includes the complete tail of a long recorded/imported sample.
+PASS: shipped microphone panel updates capture controls, waveform trim/preview and unsaved state; Save assigns only the trimmed PCM to the chosen sequencer track.
+PASS: 150 stable level/difficulty worlds, unique authored levels, real shape/material properties, exact turn reset and deterministic input replay, locked weapons, no tap/movement destruction, split/explosive abilities and difficulty mechanics.
+PASS: both competition comparators/all tiebreakers, explicit winner overrides raw score for profile/rivalry wins, mode/level/difficulty/metric isolation, legacy record preservation, no custom XP/points, progression/achievements and custom structure backup roundtrip.
+PASS: actual two-turn UI completion flow, exactly-once commit, first-player rotation, paused/menu clocks and no unfinished-match commit.
+PASS: all 30 campaign levels can be fully demolished on Hard with unlocked projectiles within their actual shot budgets.
+PASS: actual shared gallery shows both creators’ levels to either profile, direct play works for both, and editing/saving another player’s level preserves the original and creates a copy.
+PASS: 120 updated gameplay/difficulty/learning launches and renders; ladybug count/size/boundaries/cues/real stimulus timing; all balloon types; all 20 recipes and 45 ingredients, direct plate assembly, exact quantities, ordered stacks and ingredient removal; keeper movement/AI delay/true reactions; legal full 240-cell excavations on all difficulties, tool locks/cooldowns/save restore; all six battle types and anti-spam; seed fairness; legacy/new mode record separation; valid excavation backup.
+PASS: shipped host equal fresh turns, five-shot tie → one-shot sudden death, rotated first player, aggregate winner, one commit only after both players; best-of-three round wins and aggregate stats; pause excludes elapsed time; resumed clock includes full active milliseconds.
+PASS: history-based anticipations have no future-shot knowledge; a partial expedition does not grant a completion win.
+PASS: actual shipped pointer handler gives both zones independent pointer IDs and equal performance-clock reaction times; paused touches cannot score.
+PASS: Accuracy Battle has exactly one matching visible color over 1,200 seeded challenges across all difficulties.
+PASS: correct target positions vary across all slots; excavation snapshots are immutable and invalid local saves are rejected.
+PASS: full-width and split-zone pointer coordinates hit the visible target near the right edge at 1911- and 1363-pixel screen widths.
+PASS: counted learning recipes and required stack order agree over 200 seeded café setups; all serve directly without a cooking stage.
+PASS: all 45 ingredients remain categorized; earlier cooking scores are preserved separately from new plate-assembly scores.
+PASS: 30 unique solvable circuits, physical gates, crossing rules, bridge lanes, stage order, timed failures, undo/reset, isolated pointer ownership and fair accuracy comparison.
+PASS: chewing runs 4 full cycles without changing movement on all difficulties, queued rapid feeds, swept mouth-only collisions, one score per projectile, separate simultaneous launchers, all 20 mode/difficulty combinations and repeatable five-tap timing.
+PASS: profile and rivalry records, backup roundtrip with new games and secret badges, Circuit lobby replacement, no face tile or ordinary trophy disclosure.
+PASS: shipped session controller best-of-five and best-of-three flow, exactly-once recording, marathon independent advancement, pause-safe clocks, and simultaneous independent pointer handlers.
+PASS: every Feed the Face difficulty has a successful tap shot, launch-time food request fairness, independent selections, cooldown and angry reaction without movement changes.
+PASS: all 30 slime courses and all 30 ninja missions completed using legal pointer controls and tool actions; split-pad-merge objectives and mass conservation; all seven patients at every difficulty and all 30 clinic cases fully treated.
+PASS: genuine two-point stretching, pinching, natural contraction, force-based flinging, deterministic simulation, pointer isolation, conserved split mass and every requested obstacle family.
+PASS: no canned tap treatments, correct-tool enforcement, genuine hold filling, controlled directional extraction, identical independent patient resets and accuracy/time tiebreaks.
+PASS: swipe dash is one-shot per gesture, shield and movement coexist with finite energy, real star/switch collisions, warning-before-detection, functional protection, wall jumps and short energy-limited teleports.
+PASS: 90 scene renders, profile/rivalry integration, isolated record keys, backup compatibility and retained cosmetic selection; all nine existing lobby games remain alongside the three new worlds, with the face secret still hidden.
+PASS: shipped dental handoff is identical and untimed between players, first player alternates, best-of-three records once, race winners override raw score, pause freezes clocks, and real canvas handlers isolate four slime touchpoints and concurrent ninja swipes.
+PASS: all 150 level/difficulty combinations complete within the real timer and gravity budget through actual controls; all 30 course geometries are distinct and late objectives are fulfilled.
+PASS: real Matter momentum, four-direction swipes, no ball dragging, deterministic independent worlds, two-finger platform rotation and dragging, collision-capable temporary ramps and cleanup.
+PASS: switch/door physics and falling-block release, held obstacle shutdown, shield absorption, checkpoint retries and finite gravity limits, all obstacle/help types, real survival pressure and distinct mode tiebreakers.
+PASS: Gravity lobby/records replacement, retired game cannot launch, old digging scores remain in backups, every unrelated world and hidden-game architecture is retained.
+PASS: all 150 scene variants including drawn ramps render with finite canvas coordinates.
+PASS: shipped best-of-five ends at three victories and commits once; Orb Challenge waits for both; real canvas handlers isolate simultaneous swipes and platform rotation; pause freezes both clocks and releases all input.
+PASS: all 20 Castle sieges and all 20 Wobbly campaign battles won through legal player actions and budgets; all 100 Doodle level/difficulty combinations defended through real ink costs and tower attacks.
+PASS: 135 career jobs plus 100 randomized fault combinations fully repaired, reassembled and interactively tested; every Buddy challenge mode completes at all five difficulties using real grabs, releases and gadgets.
+PASS: anchored elastic pull prevents free dragging; release moves opposite tension; all 30 Slime courses completed through slings, including genuine split-pad-merge puzzles.
+PASS: overlap/support validation, physical debris, creative no-attack behavior, saved budget enforcement; all eight Buddy physics rooms and all gadgets stay finite, with independent articulated grabs and complete body/joint cleanup.
+PASS: imperfect line/circle/triangle/zigzag/star/spiral recognition, rejection without ink charge, concurrent stroke ownership, undo refunds, real wall path/damage effects, and repair ordering/test failure feedback.
+PASS: all 21 units run live combat, terrain-aware AI reaches valid campaign winners, identical inputs reproduce exact physics, saved armies cannot bypass budgets, and a capped 48-unit/288-body battle stays finite and cleans up.
+PASS: all five game scenes at every difficulty render finite coordinates; all new records, designs, coins and unlocks roundtrip through the existing backup format without deleting legacy games or exposing secrets.
+PASS: shipped alternating identical robot turns, best-of-three exactly-once commits, two-stage equal-budget army preparation and explicit combat winner, Castle Clash opponent-design exchange and isolated attack clocks, concurrent Doodle stroke ownership, and pause cleanup.
+PASS: actual Castle controller opens the next construction stage, refreshes new unlocks and exact assault controls, holds the clock, saves per-profile defeats immediately and continues without an instruction popup or premature match record.
+PASS: torso-relative Buddy neck limits, impact wobble, attachment and recovery through idle, throws, counter-spins, head/limb grabs, inversion and gadgets; body tumbles freely and War joints stay unchanged. Full illustrated ladybugs stay in bounds through every difficulty and live scale change.
+PASS: all 25 normal games plus the hidden game have distinct instructions; mandatory focus-contained acknowledgement, no Escape/backdrop skip, no start before acknowledgement, duplicate prevention, input-frame separation and pending-start cleanup.
+PASS: every shipped game entry holds real model creation until acknowledgement, even after 30 seconds of frame callbacks; studios install their interactive/audio workspaces only after Play + acknowledgement.
+PASS: all 18 mesh distortions alter geometry, preserve UVs and stay finite with two rotated faces; 19 monster fields, 43 original species and 48 stickers; expressions, calibration, all challenge difficulties, edit history, pitch analysis, 11 audio effects, limiting, original PCM preservation and PCM WAV encoding.
+PASS: voice assignment → exact voice ID → call animation → bounded coin award; rerecord preserves names/upgrades; offline cap/zero/future/idempotence; all 43 species adopt into suitable habitats, 44-animal simulation stays bounded, layout undo/redo, habitat reassignment, one-time discoveries, separate Creative economy and fair two-player guessing.
+PASS: late camera permission closes its stream, selected camera constraints and friendly denial handling, video recording state guards, actual chunk assembly and track cleanup.
+PASS: voice PCM, shared monster references, zoo names/upgrades/layout/voices and actual codec MIME round-trip through arcade backup without removing existing profiles.
+PASS: all three actual new entry controllers hold device requests, IndexedDB reads/writes, zoo creation and simulation until acknowledgement, even after 30 seconds of frame callbacks; acknowledgement still requires explicit camera/mic actions.
+PASS: the actual live pitch worklet transforms a generated 180 Hz input at 0.72×, 1× and 1.5× with finite samples; browser AudioWorklet availability remains a separate HTTPS capability check.
+PASS: shipped layer handlers isolate two simultaneous sticker drags, perform true pinch/rotation, recover one-finger drag after a pinch, clean pointer ownership, and mark video drawing for actual rendering.
+PASS: continuous fast-hand paths and rejection of stationary-hand forearm sweeps, cover/mirror mapping, anti-jitter thresholds, once-only deterministic collision ownership, five-fruit combos, giant/team participation rules, all power-ups and bomb penalties; all 36 mode/difficulty/player combinations accept legal input; Zen, time limits, bounded physics/effects and identical versus waves.
+PASS: stable geometry/prediction-based identities through reordered two-person crossing, ambiguity detection, temporary loss/recovery, real four-joint mapping, calibration requiring arm movement/raised hold, independent bilateral swipes and no phantom sweep after tracking loss.
+PASS: actual shipped concurrent touch handlers retain owners when fingers cross, release/cancel cleanly, and all original fruit/interior/special/half artwork renders finite canvas coordinates.
+PASS: individual lifetime progress, all game statistics, cooperative team records without rivalries, exactly-once saves, versus victories/achievements, input/difficulty/settings record isolation and full backup compatibility.
+PASS: actual controller blocks world/audio/camera/records before acknowledgement, explicitly requests the camera only on Enable, freezes countdown/pause clocks, commits once, and provides identical alternating turns with no premature match save.
+PASS: cancellation during local model loading terminates the worker, clears its deadline and resolves without starting inference after exit.
+PASS: live scene toggle preserves the same world, advancing clock and score; per-profile preference survives reopening; mask union includes both players and overlap; missing arms/people and invalid outlines fall back; quick motion remains sharp; bounded cutout hold, virtual-only recovery and latched sustained-performance fallback close frames without changing gameplay.
+PASS: shipped pose worker uses both masks, transfers matched captured frames, closes results and frames once, and disables masks without recreating pose tracking; blocked/missing/busy selected-camera errors request no audio; saved preference survives validated backups.
+PASS: profile-defeat unlock boundaries, costed melee progression, offensive movement/target/cooldowns, collision-safe low-wall vaults and sealed-wall feedback, distinct weapon ammunition, king health/defeat and reserved space, highest-structure flag relocation/fallback, exact quotas and continuous varied wave pressure.
+PASS: 3350 globally distinct vocabulary entries with complete metadata; unbiased shuffle and recent-word priority; all 15 named-pool/mode combinations; tile reorder, missing-letter answers, exact scoring/streaks, hearts and timed/untimed bounds; no duplicate scoring; explicit three-adventure unhinted mastery, review history and edit feedback.
+PASS: actual concurrent whiteboard pointer handlers produce continuous independent strokes, retain normalized handwriting through resize, erase/undo/clear separately, cancel and release captures, and never reference official answer state.
+PASS: queued speech never overlaps player voices, selects a local English voice when installed, cancels cleanly and gives a usable no-speech fallback.
+PASS: actual spelling controller blocks models/audio before acknowledgment, defaults to the child’s named pool, scores physical-keyboard submissions, preserves writing through words, pauses clocks, saves once, isolates simultaneous scores/boards, shares co-op writing and freezes untimed handoffs.
+PASS: vocabulary history, mastery evidence, missed words, per-category stats and Castle defeat unlock progress survive the existing validated backup format.
+PASS: all five turn-based modes and both canvas settings alternate every word for 20 equal turns, block inactive input, keep future prompts/history/speech hidden until Ready, preserve independent writing, freeze handoffs, count timeout answers once and commit once; weighted scores, review-list recycling, natural female voice preference, late voice discovery, failed-voice fallback, phonetic Niko, slow replay and speech replacement.
+PASS: manual word/slow/sentence replays omit player names in every layout; actual female US voice choices are distinct, capped at three, previewable and selected ahead of automatic rank; missing saved voices fall back, late catalogs update, listeners release and voice preference survives normalization/backup.
+PASS: 80 seeded Niko decks at all adaptive tiers mix 3/4/5/6 letters in both first ten-word blocks; all five modes retain the mix, all 523 eligible words remain unique, legacy review/history survive and Roxy/Kelly selection stays unchanged.
+PASS: four independent hand-only sweeps, no elbow/stale scoring, actual virtual-only rendering through mask gaps and latched failure, explicit raw-camera OFF; all 25 object upgrade paths/costs/caps and shared visuals, stable survivor IDs/home/full upgraded healing/no resurrection, paid destruction loss, 3–18 damage short-range royal attack, health fade/reset; all 21 weapon poses, timed windup, muzzle releases, gait, recoverable knockdown and permanent defeat.
+PASS: central semantic version and verified release notes; welcome/migration; independent persistent app/game acknowledgments; missed-release merge/deduplication; future new games; read-only history; safe reset/storage failure; real modal cancellation, input separation, no early launch and secret route gating.
+PASS: 47760 grade/skill/complexity problems, independent arithmetic/visual/fraction/system checks, 16 formats, equivalent answers, equal alternating 20-turn grade-independent scoring, hidden handoffs, adaptive mastery; all combat actions, double-action guards, independent gear, budgets, attribute effects, ring-outs; seven tournaments on Easy/Normal/Hard in 25/32/52 legal career bouts; complete backup roundtrip.
+PASS: actual new-game controllers do not create combat, notebook, speech, clocks or scores before acknowledgment; duplicate action/submission guards; real pause/resume clocks; exactly-once career outcome; immediate displayed score; alternating grade-specific UI, independent progress and hidden Ready handoff.
+PASS: actual ten-question co-op completion preserves five questions per grade and records shared-goal rewards without head-to-head wins or draws.
+PASS: 119400 questions across 199 skills, all grades and three tiers; 54600 independent answer audits; unique choices, no 1:1 ratios, harder proportional reasoning, true regrouping, function tables, signed inequalities, finite diagrams, retained skill IDs, adaptive support without hint-based promotion, mixed-subject rotation and targeted subject practice.
+BJS - [19:14:05]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:05]: Babylon.js v9.32.0 - Null engine
+PASS: toolkit v1 independently tested without Wobbly Wars imports: custom controllers/navigation, state/clip blending, timed contact attacks, swept pooled shots, pointer ownership, budgets, camera ray roundtrips, asset deduplication, local audio, effect pooling, frame sampling, real Havok settling/ragdoll recovery/disposal, skinned GLB software rendering, and complete one-/two-player starter games. WebGL GPU and physical touchscreen remain separate hardware verification.
+BJS - [19:14:06]: Babylon.js v9.32.0 - Null engine
+PASS: independent starter-model sockets, configurable offsets/pivots, rotation/scaling, actual ragdoll attachments, disposal, unreachable IK and serialized/immediate pose targets; no Wobbly Wars imports.
+PASS: A–E: nonlethal/lethal simultaneous swords (both iteration orders), mid-swing damage retaining timeline/hit history/cooldown, repeated multiple attackers, real arrow impact plus archer release, explicit knockdown/stun/stagger recovery and death priority.
+PASS: 4902 arm poses, 970596 actual skinned-vertex clearance checks: all 21 classes, full swings with/without simultaneous damage feedback, locomotion, explicit statuses, kneeling death, both hands, low/high aim and unarmed stance. Max reach error 0.000000m. Proximal shoulder/armor seam excluded intentionally; this is a torso-core guard, not a zero-intersection claim for every costume triangle.
+Campaign solutions: 100 /100; unresolved: [] stalemates across attempted formations: 0
+16 units: 61 ms total simulation for 25.3 s battle; winner 0
+48 units: 274 ms total simulation for 25.4 s battle; winner 1
+96 units: 626 ms total simulation for 21.2 s battle; winner 1
+PASS: legal budgets/refunds/atomic legacy formations, co-op ownership, ten obstacle maps, contact-only melee, swept projectiles, shields, both-team outcomes, 100 campaign solutions and increasing battle sizes.
+BJS - [19:14:18]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:18]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+BJS - [19:14:19]: Babylon.js v9.32.0 - Null engine
+PASS: ten distinct natural environments render real scene geometry with terrain/scenery contrast, low haze, bounded mesh counts and unchanged collision maps; no decorative rigid bodies or gameplay changes.
+BJS - [19:14:20]: Babylon.js v9.32.0 - Null engine
+PASS: 630 real model/equipment poses across 21 classes and three sizes; max render/contact error 0.000000m, support gap 0.0000m; actual wrists, bow nock, shield normals, independent starter sockets/IK, kneel-before-fade after battle ends, pause and disposal.
+PASS: actual Wobbly Wars 3D controller blocks models/engine/scores before acknowledgment, freezes paused clocks, restarts without repeated instructions, enforces deployment turns and co-op pointer workspaces, continues drawn best-of-five rounds, records exactly one three-win match, and saves co-op profiles independently.
+PASS: real arcade achievement API, separate 3D/classic records, co-op without head-to-head changes, graphics preferences and armies roundtrip through validated backups.
+PASS: 21 original illustrated purchasing options, 133 legal card-to-3D purchases across all solo modes/versus/co-op, exact prices, no charge on selection, unaffordable/limit/paused/ready/turn restrictions, immediate refunds, independent budgets and vertical card drag deployment.
+PASS: independent standard-controller hub, sparse indices, stable two-player ownership, neutral handoffs, connection/disconnection/replacement, deadzones, Xbox buttons/analog RT and independent actions (device fixtures).
+PASS: independent controller menu navigation, select adjustment, confirm/back, held-button instruction gate, camera/recenter/help/pause, unfocused input blocking and RAF cleanup (DOM/device fixtures; no physical Bluetooth claim).
+PASS: independent terrain controller/jump/collision/navigation, normalized inputs and separate players/gamepad edges, measured frame statistics and exact 1% lows, warm-up exclusion, immutable benchmark settings/abort/CSV, pacing-aware recommendations, capability-limited presets and actual affine texture draw path.
+PASS: independent camera occlusion/recovery/manual zoom and real DOM input adapter with simultaneous isolated pointers, disabled controls, pause shortcut and cleanup.
+PASS: graphics overrides are bounded, including invalid counts and actual texture/sample capability limits.
+BJS - [19:14:23]: Babylon.js v9.32.0 - Null engine
+PASS: screen-projected directions at seven camera angles, absolute-height platform landing, isolated combat inputs, earliest swept solid/sphere hits and authoritative imported-clip sampling independent of either game.
+PASS: 22 locally bundled GLBs, exact hashes/bytes, valid embedded resource ranges, 41-joint heroes/14 clips, genuine tree LODs, 1K texture limits, redistribution licenses and complete offline coverage.
+PASS: seeded designed forest, safe bridge and water recovery, legitimate-range interactions, complete solo/co-op routes through all three lanterns and gate, frozen completion, and finite repeatable baseline camera paths.
+Complete legal adventure: 1 player(s), 46.5 seconds; 0 recoveries.
+Complete legal adventure: 2 player(s), 53.1 seconds; 0 recoveries.
+PASS: complete solo/co-op combat objectives, all solid scenery, independent navigating/waiting NPCs, NPC/crate contact, routine-hit attack preservation, dodge/recovery, locked/open gate and swept wall-before-enemy projectiles.
+PASS: actual game controller defers scene/model work until acknowledgment, pauses clocks, commits one chapter once, restarts within session, saves co-op separately, records measured baseline history without points and discards aborted runs. Controller measurements use explicit 10 FPS fixtures, not hardware results.
+PASS: actual achievements, co-op records without rival wins, measured raw history/settings backup roundtrip and incomplete sample rejection.
+PASS: actual adventure disconnect callback freezes its clock until intentional resume (standard-controller fixture).
+PASS: actual expedition UI holds launch for acknowledgement, transitions across four real rule models without partial scores, disposes old runtimes, preserves session acknowledgement and commits one separate-edition result per solo/co-op profile (UI fixtures).
+PASS: late asset-loading completion while hidden stays paused until intentional resume (visibility fixture).
+PASS: switching an unfinished expedition to benchmark/tuning asks before discarding it; cancellation preserves the current model and resumes intentionally (UI fixture).
+PASS: five-world UI sequence, one acknowledged session, no arcade points, complete history only, software single-preset tuning and low-target fallback (10 FPS fixtures).
+PASS: five-preset tuning executes all 25 scene samples, chooses safe fallback and releases every replaced runtime (GPU-capability/10 FPS fixtures).
+BJS - [19:14:30]: Babylon.js v9.32.0 - Null engine
+Actual imported blade / cast-palm alignment max error: 0.001292 m
+Actual Havok crate push displacement: 0.720 m
+PASS: actual local textured 41-bone heroes, hidden spare accessories, PBR forest/ruin imports, upward mesh terrain with real Havok settling, independent two heroes, measured telemetry with honest N/A, weather configuration, bounded reset and complete disposal. Node texture image objects are fixtures; browser image/render QA is separate.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

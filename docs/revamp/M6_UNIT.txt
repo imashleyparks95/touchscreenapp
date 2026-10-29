@@ -1,0 +1,2 @@
+PASS: five seeded workloads repeat, compatibility caps, warm-up exclusion, incomplete-run rejection, raw-frame aggregation, exports, comparison separation and frame-pacing tuning (explicit 10 FPS fixture).
+PASS: real schema-3 suite backup roundtrip and per-scenario raw-sample corruption rejection.

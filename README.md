@@ -1,10 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.7.0
+## Current development checkpoint — 6.8.0
 
 Milestone 5 adds Project Limit Break’s **Full Expedition**: Living Forest → Ancient Castle → Crown Arena → Chaos Chamber. Recover Castle seals behind interactive doors, face the two-phase Crown Warden, stabilize the Chamber and finish together in solo/co-op. Open the game and choose **FULL EXPEDITION**. The original Forest chapter and measured Forest Baseline remain separate choices.
 
-The Chamber offers bounded load controls, actual performance counters, reset and measured-window JSON exports; formal repeatable multi-zone benchmarks remain Milestone 6. Only complete expeditions save their new score edition. Unfinished expeditions restart from the Forest. **Adventure Records** separates expeditions, older Forest editions and solo/co-op results; existing backups and saved data remain supported. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact source and deployment directions.
+The Chamber offers bounded load controls, actual performance counters, reset and measured-window JSON exports; the separate five-scenario benchmark now measures all four areas. Only complete expeditions save their new score edition. Unfinished expeditions restart from the Forest. **Adventure Records** separates expeditions, older Forest editions and solo/co-op results; existing backups and saved data remain supported. Read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact source and deployment directions.
 
 ### Retained Forest foundation — 6.4.0
 
@@ -104,3 +104,7 @@ Excluded: .git internals, node_modules, generated verification screenshots/logs 
 ## Push this export manually if needed
 
 The requested destination is https://github.com/imashleyparks95/touchscreenapp on main. Inspect the remote before pushing; never force-push or replace unrelated work. This migration includes a downloadable source ZIP without Git internals.
+
+### Milestone 6 — v6.8.0 benchmark checkpoint
+
+Project Limit Break → **FIVE-SCENARIO BENCHMARK** runs Forest, Castle, Arena and two Chamber workloads (55 seconds plus loading). Export measured raw-frame JSON/CSV, compare matching editions/settings in Benchmark History, or use Settings → Find My Best Settings for a 30/60 FPS recommendation across all scenarios. The original Forest baseline and solo/co-op expedition remain available. Pause/resize/focus loss cancels a formal run. Target-PC hardware results remain unverified; cloud rendering is not a performance promise. Run `npm run test:benchmark:browser` for the actual browser flow. Deployment directions are in `WORK_MODE_HANDOFF.md`.

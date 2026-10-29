@@ -1,0 +1,1365 @@
+{
+  "version": "6.8.0",
+  "checks": [
+    "instruction gate",
+    "five actual scenes and measured samples",
+    "JSON and CSV downloads",
+    "backup roundtrip",
+    "history edition",
+    "engine disposal",
+    "abort without save and safe recovery"
+  ],
+  "result": {
+    "version": 1,
+    "seed": 872341,
+    "warmupSeconds": 3,
+    "settings": {
+      "label": "Low",
+      "resolutionScale": 0.7,
+      "shadowSize": 0,
+      "texture": "low",
+      "distance": 22,
+      "foliage": 0.4,
+      "particles": 24,
+      "ao": false,
+      "reflections": false,
+      "post": false,
+      "samples": 1,
+      "physics": 8,
+      "preset": "low",
+      "requestedPreset": "low"
+    },
+    "metadata": {
+      "engine": "Babylon.js 9.32.0",
+      "physics": "Havok 1.3.14",
+      "renderer": "WebGL 2",
+      "glInfo": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "renderWidth": 770,
+      "renderHeight": 508,
+      "capabilities": {
+        "renderer": "WebGL 2",
+        "gpu": true,
+        "webgl2": true,
+        "shadows": true,
+        "ao": true,
+        "reflections": true,
+        "post": true,
+        "instancing": true,
+        "maxTextureSize": 8192,
+        "maxSamples": 4,
+        "gpuTimer": false
+      },
+      "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+      "weather": "day",
+      "workload": null,
+      "baseline": "four-worlds-v1",
+      "scenario": "forest",
+      "zone": "forest",
+      "adaptiveQuality": false,
+      "simulationHz": 60,
+      "actual": {
+        "frames": 18,
+        "durationMs": 11737.59999999404,
+        "averageFPS": 1.533533260633276,
+        "onePercentLowFPS": 0.5252376700440513,
+        "medianMs": 530.7999999821186,
+        "p95Ms": 1002.1999999880791,
+        "p99Ms": 1002.1999999880791,
+        "worstMs": 1903.9000000059605,
+        "spikes": 17,
+        "worstSpikesMs": [
+          1903.9000000059605,
+          1002.1999999880791,
+          887.9000000059605,
+          793.1999999880791,
+          697,
+          669.1999999880791,
+          609.6000000238419,
+          563.1000000238419
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 1
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 17
+          }
+        ],
+        "sampleLimited": true,
+        "currentMs": 887.9000000059605,
+        "currentFPS": 1.12625295640645,
+        "characters": 3,
+        "bodies": 74,
+        "meshes": 192,
+        "triangles": 83173,
+        "drawCalls": 104,
+        "gpuMs": null,
+        "jsHeapMiB": 98.73041534423828,
+        "systemRAM": null,
+        "gpuVRAM": null
+      },
+      "simulationSeconds": 1.6999999999999988,
+      "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame",
+      "scope": "Five actual area workloads; load and per-scene warm-up excluded"
+    },
+    "frameTimesMs": [
+      697,
+      609.6000000238419,
+      523.8999999761581,
+      515,
+      499.90000000596046,
+      501.40000000596046,
+      537.4000000059605,
+      530.7999999821186,
+      493,
+      491.10000002384186,
+      515.3999999761581,
+      563.1000000238419,
+      669.1999999880791,
+      887.9000000059605,
+      156.09999999403954,
+      138.5,
+      167.5,
+      136.7000000178814,
+      179.5,
+      159.89999997615814,
+      154.40000000596046,
+      163.40000000596046,
+      130.40000000596046,
+      155.09999999403954,
+      135.80000001192093,
+      127.2999999821186,
+      171,
+      159.40000000596046,
+      133.30000001192093,
+      138.19999998807907,
+      154.19999998807907,
+      137.30000001192093,
+      158.5,
+      136.09999999403954,
+      162.7000000178814,
+      140.89999997615814,
+      162.5,
+      138.7000000178814,
+      163.2999999821186,
+      495.7000000178814,
+      368.59999999403954,
+      186.80000001192093,
+      173.5,
+      420.59999999403954,
+      192.7999999821186,
+      185.2000000178814,
+      184.90000000596046,
+      176,
+      224.2999999821186,
+      228.40000000596046,
+      168.09999999403954,
+      189.59999999403954,
+      149,
+      173.5,
+      181.90000000596046,
+      173.59999999403954,
+      155.40000000596046,
+      172.90000000596046,
+      182.80000001192093,
+      170.90000000596046,
+      166.90000000596046,
+      149.19999998807907,
+      203,
+      165.30000001192093,
+      186.09999999403954,
+      159.09999999403954,
+      184.69999998807907,
+      366.5,
+      172.40000000596046,
+      218.80000001192093,
+      138.2999999821186,
+      169.80000001192093,
+      195.69999998807907,
+      142.40000000596046,
+      200.09999999403954,
+      172.5,
+      168.7000000178814,
+      154.09999999403954,
+      210.59999999403954,
+      183.90000000596046,
+      177.80000001192093,
+      175,
+      152.69999998807907,
+      170.80000001192093,
+      170.2999999821186,
+      155.5,
+      170.5,
+      173.80000001192093,
+      244.59999999403954,
+      183.69999998807907,
+      177.90000000596046,
+      152.2000000178814,
+      173.2999999821186,
+      222.09999999403954,
+      271.10000002384186,
+      249.7999999821186,
+      170.2000000178814,
+      210.5,
+      187.5,
+      173.89999997615814,
+      230.60000002384186,
+      166.2999999821186,
+      112.2000000178814,
+      164.69999998807907,
+      257.5,
+      269.40000000596046,
+      278.59999999403954,
+      228.2000000178814,
+      181.39999997615814,
+      306.7000000178814,
+      129.2999999821186,
+      135.40000000596046,
+      118.59999999403954,
+      117.90000000596046,
+      120.7000000178814,
+      141.5,
+      116.39999997615814,
+      265.7000000178814,
+      303.09999999403954,
+      357.09999999403954,
+      404.5,
+      108.80000001192093,
+      133.59999999403954,
+      119.19999998807907,
+      903.6000000238419,
+      240.2999999821186,
+      116.59999999403954,
+      158.60000002384186,
+      113.09999999403954,
+      101.09999999403954,
+      108.09999999403954,
+      152.09999999403954,
+      190.60000002384186,
+      112.19999998807907,
+      132,
+      98.09999999403954,
+      121.7000000178814,
+      97.09999999403954,
+      106.7999999821186,
+      115.10000002384186,
+      118.39999997615814,
+      103.60000002384186,
+      109.09999999403954,
+      112.19999998807907,
+      106.80000001192093,
+      105.19999998807907,
+      102.5,
+      102.2000000178814,
+      106.90000000596046,
+      137.2000000178814,
+      122.59999999403954,
+      112.40000000596046,
+      113.2999999821186,
+      112.59999999403954,
+      137.2000000178814,
+      116.19999998807907,
+      111.30000001192093,
+      112.69999998807907,
+      116.2000000178814,
+      115.69999998807907,
+      137.69999998807907,
+      136,
+      115.90000000596046,
+      106.30000001192093,
+      134.2999999821186,
+      117.10000002384186,
+      109.89999997615814,
+      114.7000000178814,
+      117.2999999821186,
+      135.60000002384186,
+      126.09999999403954,
+      127.40000000596046,
+      119.69999998807907,
+      142.80000001192093,
+      127,
+      120.89999997615814,
+      145,
+      119.30000001192093,
+      130.59999999403954,
+      146.40000000596046,
+      132.19999998807907,
+      123.80000001192093,
+      138.69999998807907,
+      127.2000000178814,
+      125.2999999821186,
+      122.5,
+      142.7000000178814,
+      124.09999999403954,
+      118.69999998807907,
+      139.40000000596046,
+      124.80000001192093,
+      117.59999999403954,
+      116.69999998807907,
+      164.40000000596046,
+      152.7000000178814,
+      170.89999997615814,
+      170.40000000596046,
+      152.80000001192093,
+      179.40000000596046,
+      187.89999997615814,
+      204.30000001192093,
+      176.30000001192093,
+      135.39999997615814,
+      157.5,
+      136.60000002384186,
+      150,
+      133.7999999821186,
+      124.2000000178814,
+      153
+    ],
+    "overall": {
+      "frames": 209,
+      "durationMs": 40463.300000071526,
+      "averageFPS": 5.165174367874854,
+      "onePercentLowFPS": 1.20554550932854,
+      "medianMs": 155.09999999403954,
+      "p95Ms": 501.40000000596046,
+      "p99Ms": 669.1999999880791,
+      "worstMs": 903.6000000238419,
+      "spikes": 209,
+      "worstSpikesMs": [
+        903.6000000238419,
+        887.9000000059605,
+        697,
+        669.1999999880791,
+        609.6000000238419,
+        563.1000000238419,
+        537.4000000059605,
+        530.7999999821186
+      ],
+      "distribution": [
+        {
+          "maxMs": 8.333,
+          "count": 0
+        },
+        {
+          "maxMs": 16.667,
+          "count": 0
+        },
+        {
+          "maxMs": 33.333,
+          "count": 0
+        },
+        {
+          "maxMs": 50,
+          "count": 0
+        },
+        {
+          "maxMs": 100,
+          "count": 2
+        },
+        {
+          "maxMs": null,
+          "count": 207
+        }
+      ],
+      "sampleLimited": false
+    },
+    "stages": [
+      {
+        "name": "Forest environment",
+        "frames": 14,
+        "durationMs": 8034.700000017881,
+        "averageFPS": 1.7424421571395128,
+        "onePercentLowFPS": 1.12625295640645,
+        "medianMs": 523.8999999761581,
+        "p95Ms": 697,
+        "p99Ms": 697,
+        "worstMs": 887.9000000059605,
+        "spikes": 14,
+        "worstSpikesMs": [
+          887.9000000059605,
+          697,
+          669.1999999880791,
+          609.6000000238419,
+          563.1000000238419,
+          537.4000000059605,
+          530.7999999821186,
+          523.8999999761581
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 14
+          }
+        ],
+        "sampleLimited": true,
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 770,
+          "renderHeight": 508,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+          "weather": "day",
+          "workload": null,
+          "baseline": "four-worlds-v1",
+          "scenario": "forest",
+          "zone": "forest",
+          "adaptiveQuality": false,
+          "simulationHz": 60,
+          "actual": {
+            "frames": 18,
+            "durationMs": 11737.59999999404,
+            "averageFPS": 1.533533260633276,
+            "onePercentLowFPS": 0.5252376700440513,
+            "medianMs": 530.7999999821186,
+            "p95Ms": 1002.1999999880791,
+            "p99Ms": 1002.1999999880791,
+            "worstMs": 1903.9000000059605,
+            "spikes": 17,
+            "worstSpikesMs": [
+              1903.9000000059605,
+              1002.1999999880791,
+              887.9000000059605,
+              793.1999999880791,
+              697,
+              669.1999999880791,
+              609.6000000238419,
+              563.1000000238419
+            ],
+            "distribution": [
+              {
+                "maxMs": 8.333,
+                "count": 1
+              },
+              {
+                "maxMs": 16.667,
+                "count": 0
+              },
+              {
+                "maxMs": 33.333,
+                "count": 0
+              },
+              {
+                "maxMs": 50,
+                "count": 0
+              },
+              {
+                "maxMs": 100,
+                "count": 0
+              },
+              {
+                "maxMs": null,
+                "count": 17
+              }
+            ],
+            "sampleLimited": true,
+            "currentMs": 887.9000000059605,
+            "currentFPS": 1.12625295640645,
+            "characters": 3,
+            "bodies": 74,
+            "meshes": 192,
+            "triangles": 83173,
+            "drawCalls": 104,
+            "gpuMs": null,
+            "jsHeapMiB": 98.73041534423828,
+            "systemRAM": null,
+            "gpuVRAM": null
+          },
+          "simulationSeconds": 1.6999999999999988,
+          "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame"
+        },
+        "frameTimesMs": [
+          697,
+          609.6000000238419,
+          523.8999999761581,
+          515,
+          499.90000000596046,
+          501.40000000596046,
+          537.4000000059605,
+          530.7999999821186,
+          493,
+          491.10000002384186,
+          515.3999999761581,
+          563.1000000238419,
+          669.1999999880791,
+          887.9000000059605
+        ]
+      },
+      {
+        "name": "Castle interior lighting",
+        "frames": 45,
+        "durationMs": 8144.300000011921,
+        "averageFPS": 5.5253367385698136,
+        "onePercentLowFPS": 2.0173492030742928,
+        "medianMs": 163.2999999821186,
+        "p95Ms": 228.40000000596046,
+        "p99Ms": 420.59999999403954,
+        "worstMs": 495.7000000178814,
+        "spikes": 45,
+        "worstSpikesMs": [
+          495.7000000178814,
+          420.59999999403954,
+          368.59999999403954,
+          228.40000000596046,
+          224.2999999821186,
+          192.7999999821186,
+          189.59999999403954,
+          186.80000001192093
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 45
+          }
+        ],
+        "sampleLimited": true,
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 770,
+          "renderHeight": 508,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+          "weather": "day",
+          "workload": {
+            "characters": 0,
+            "enemies": 0,
+            "physics": 8,
+            "projectiles": 0,
+            "particles": 20,
+            "lights": 0,
+            "complexity": 1
+          },
+          "baseline": "four-worlds-v1",
+          "scenario": "interior",
+          "zone": "castle",
+          "adaptiveQuality": false,
+          "simulationHz": 60,
+          "actual": {
+            "frames": 60,
+            "durationMs": 11215,
+            "averageFPS": 5.349977708426215,
+            "onePercentLowFPS": 1.1037527593818985,
+            "medianMs": 160.7999999821186,
+            "p95Ms": 368.59999999403954,
+            "p99Ms": 495.7000000178814,
+            "worstMs": 906,
+            "spikes": 59,
+            "worstSpikesMs": [
+              906,
+              495.7000000178814,
+              420.59999999403954,
+              368.59999999403954,
+              245.09999999403954,
+              228.40000000596046,
+              224.2999999821186,
+              205.80000001192093
+            ],
+            "distribution": [
+              {
+                "maxMs": 8.333,
+                "count": 1
+              },
+              {
+                "maxMs": 16.667,
+                "count": 0
+              },
+              {
+                "maxMs": 33.333,
+                "count": 0
+              },
+              {
+                "maxMs": 50,
+                "count": 0
+              },
+              {
+                "maxMs": 100,
+                "count": 0
+              },
+              {
+                "maxMs": null,
+                "count": 59
+              }
+            ],
+            "sampleLimited": true,
+            "currentMs": 182.80000001192093,
+            "currentFPS": 5.4704595182428175,
+            "characters": 4,
+            "bodies": 41,
+            "meshes": 161,
+            "triangles": 18800,
+            "drawCalls": 157,
+            "gpuMs": null,
+            "jsHeapMiB": 89.3463249206543,
+            "systemRAM": null,
+            "gpuVRAM": null
+          },
+          "simulationSeconds": 5.899999999999984,
+          "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame"
+        },
+        "frameTimesMs": [
+          156.09999999403954,
+          138.5,
+          167.5,
+          136.7000000178814,
+          179.5,
+          159.89999997615814,
+          154.40000000596046,
+          163.40000000596046,
+          130.40000000596046,
+          155.09999999403954,
+          135.80000001192093,
+          127.2999999821186,
+          171,
+          159.40000000596046,
+          133.30000001192093,
+          138.19999998807907,
+          154.19999998807907,
+          137.30000001192093,
+          158.5,
+          136.09999999403954,
+          162.7000000178814,
+          140.89999997615814,
+          162.5,
+          138.7000000178814,
+          163.2999999821186,
+          495.7000000178814,
+          368.59999999403954,
+          186.80000001192093,
+          173.5,
+          420.59999999403954,
+          192.7999999821186,
+          185.2000000178814,
+          184.90000000596046,
+          176,
+          224.2999999821186,
+          228.40000000596046,
+          168.09999999403954,
+          189.59999999403954,
+          149,
+          173.5,
+          181.90000000596046,
+          173.59999999403954,
+          155.40000000596046,
+          172.90000000596046,
+          182.80000001192093
+        ]
+      },
+      {
+        "name": "Arena animation and combat",
+        "frames": 43,
+        "durationMs": 8039.0999999940395,
+        "averageFPS": 5.34885745917228,
+        "onePercentLowFPS": 2.728512960436562,
+        "medianMs": 173.80000001192093,
+        "p95Ms": 244.59999999403954,
+        "p99Ms": 271.10000002384186,
+        "worstMs": 366.5,
+        "spikes": 43,
+        "worstSpikesMs": [
+          366.5,
+          271.10000002384186,
+          249.7999999821186,
+          244.59999999403954,
+          230.60000002384186,
+          222.09999999403954,
+          218.80000001192093,
+          210.59999999403954
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 43
+          }
+        ],
+        "sampleLimited": true,
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 770,
+          "renderHeight": 508,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+          "weather": "day",
+          "workload": {
+            "characters": 0,
+            "enemies": 0,
+            "physics": 8,
+            "projectiles": 0,
+            "particles": 20,
+            "lights": 0,
+            "complexity": 1
+          },
+          "baseline": "four-worlds-v1",
+          "scenario": "combat",
+          "zone": "arena",
+          "adaptiveQuality": false,
+          "simulationHz": 60,
+          "actual": {
+            "frames": 56,
+            "durationMs": 11197,
+            "averageFPS": 5.001339644547647,
+            "onePercentLowFPS": 0.9984025558867774,
+            "medianMs": 172.59999999403954,
+            "p95Ms": 271.10000002384186,
+            "p99Ms": 512.5,
+            "worstMs": 1001.6000000238419,
+            "spikes": 55,
+            "worstSpikesMs": [
+              1001.6000000238419,
+              512.5,
+              366.5,
+              271.10000002384186,
+              249.7999999821186,
+              244.59999999403954,
+              230.60000002384186,
+              222.09999999403954
+            ],
+            "distribution": [
+              {
+                "maxMs": 8.333,
+                "count": 1
+              },
+              {
+                "maxMs": 16.667,
+                "count": 0
+              },
+              {
+                "maxMs": 33.333,
+                "count": 0
+              },
+              {
+                "maxMs": 50,
+                "count": 0
+              },
+              {
+                "maxMs": 100,
+                "count": 0
+              },
+              {
+                "maxMs": null,
+                "count": 55
+              }
+            ],
+            "sampleLimited": true,
+            "currentMs": 166.2999999821186,
+            "currentFPS": 6.013229104675435,
+            "characters": 4,
+            "bodies": 27,
+            "meshes": 142,
+            "triangles": 35722,
+            "drawCalls": 137,
+            "gpuMs": null,
+            "jsHeapMiB": 86.49034976959229,
+            "systemRAM": null,
+            "gpuVRAM": null
+          },
+          "simulationSeconds": 5.499999999999986,
+          "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame"
+        },
+        "frameTimesMs": [
+          170.90000000596046,
+          166.90000000596046,
+          149.19999998807907,
+          203,
+          165.30000001192093,
+          186.09999999403954,
+          159.09999999403954,
+          184.69999998807907,
+          366.5,
+          172.40000000596046,
+          218.80000001192093,
+          138.2999999821186,
+          169.80000001192093,
+          195.69999998807907,
+          142.40000000596046,
+          200.09999999403954,
+          172.5,
+          168.7000000178814,
+          154.09999999403954,
+          210.59999999403954,
+          183.90000000596046,
+          177.80000001192093,
+          175,
+          152.69999998807907,
+          170.80000001192093,
+          170.2999999821186,
+          155.5,
+          170.5,
+          173.80000001192093,
+          244.59999999403954,
+          183.69999998807907,
+          177.90000000596046,
+          152.2000000178814,
+          173.2999999821186,
+          222.09999999403954,
+          271.10000002384186,
+          249.7999999821186,
+          170.2000000178814,
+          210.5,
+          187.5,
+          173.89999997615814,
+          230.60000002384186,
+          166.2999999821186
+        ]
+      },
+      {
+        "name": "Chamber physics and particles",
+        "frames": 46,
+        "durationMs": 8097.600000023842,
+        "averageFPS": 5.680695514703685,
+        "onePercentLowFPS": 1.1066843735874443,
+        "medianMs": 119.19999998807907,
+        "p95Ms": 306.7000000178814,
+        "p99Ms": 404.5,
+        "worstMs": 903.6000000238419,
+        "spikes": 46,
+        "worstSpikesMs": [
+          903.6000000238419,
+          404.5,
+          357.09999999403954,
+          306.7000000178814,
+          303.09999999403954,
+          278.59999999403954,
+          269.40000000596046,
+          265.7000000178814
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 2
+          },
+          {
+            "maxMs": null,
+            "count": 44
+          }
+        ],
+        "sampleLimited": true,
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 770,
+          "renderHeight": 508,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+          "weather": "day",
+          "workload": {
+            "characters": 0,
+            "enemies": 0,
+            "physics": 24,
+            "projectiles": 12,
+            "particles": 80,
+            "lights": 0,
+            "complexity": 2
+          },
+          "baseline": "four-worlds-v1",
+          "scenario": "physics",
+          "zone": "chaos",
+          "adaptiveQuality": false,
+          "simulationHz": 60,
+          "actual": {
+            "frames": 65,
+            "durationMs": 11122.100000023842,
+            "averageFPS": 5.8442200663418475,
+            "onePercentLowFPS": 1.0875475802066341,
+            "medianMs": 117.90000000596046,
+            "p95Ms": 306.7000000178814,
+            "p99Ms": 903.6000000238419,
+            "worstMs": 919.5,
+            "spikes": 64,
+            "worstSpikesMs": [
+              919.5,
+              903.6000000238419,
+              404.5,
+              357.09999999403954,
+              306.7000000178814,
+              303.09999999403954,
+              284.7999999821186,
+              278.59999999403954
+            ],
+            "distribution": [
+              {
+                "maxMs": 8.333,
+                "count": 1
+              },
+              {
+                "maxMs": 16.667,
+                "count": 0
+              },
+              {
+                "maxMs": 33.333,
+                "count": 0
+              },
+              {
+                "maxMs": 50,
+                "count": 0
+              },
+              {
+                "maxMs": 100,
+                "count": 2
+              },
+              {
+                "maxMs": null,
+                "count": 62
+              }
+            ],
+            "sampleLimited": true,
+            "currentMs": 102.2000000178814,
+            "currentFPS": 9.78473581042109,
+            "characters": 3,
+            "bodies": 44,
+            "meshes": 148,
+            "triangles": 19947,
+            "drawCalls": 144,
+            "gpuMs": null,
+            "jsHeapMiB": 73.63202857971191,
+            "systemRAM": null,
+            "gpuVRAM": null
+          },
+          "simulationSeconds": 6.383333333333316,
+          "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame"
+        },
+        "frameTimesMs": [
+          112.2000000178814,
+          164.69999998807907,
+          257.5,
+          269.40000000596046,
+          278.59999999403954,
+          228.2000000178814,
+          181.39999997615814,
+          306.7000000178814,
+          129.2999999821186,
+          135.40000000596046,
+          118.59999999403954,
+          117.90000000596046,
+          120.7000000178814,
+          141.5,
+          116.39999997615814,
+          265.7000000178814,
+          303.09999999403954,
+          357.09999999403954,
+          404.5,
+          108.80000001192093,
+          133.59999999403954,
+          119.19999998807907,
+          903.6000000238419,
+          240.2999999821186,
+          116.59999999403954,
+          158.60000002384186,
+          113.09999999403954,
+          101.09999999403954,
+          108.09999999403954,
+          152.09999999403954,
+          190.60000002384186,
+          112.19999998807907,
+          132,
+          98.09999999403954,
+          121.7000000178814,
+          97.09999999403954,
+          106.7999999821186,
+          115.10000002384186,
+          118.39999997615814,
+          103.60000002384186,
+          109.09999999403954,
+          112.19999998807907,
+          106.80000001192093,
+          105.19999998807907,
+          102.5,
+          102.2000000178814
+        ]
+      },
+      {
+        "name": "Chamber combined load",
+        "frames": 61,
+        "durationMs": 8147.600000023842,
+        "averageFPS": 7.486867298323617,
+        "onePercentLowFPS": 4.894762603728095,
+        "medianMs": 127.2000000178814,
+        "p95Ms": 176.30000001192093,
+        "p99Ms": 187.89999997615814,
+        "worstMs": 204.30000001192093,
+        "spikes": 61,
+        "worstSpikesMs": [
+          204.30000001192093,
+          187.89999997615814,
+          179.40000000596046,
+          176.30000001192093,
+          170.89999997615814,
+          170.40000000596046,
+          164.40000000596046,
+          157.5
+        ],
+        "distribution": [
+          {
+            "maxMs": 8.333,
+            "count": 0
+          },
+          {
+            "maxMs": 16.667,
+            "count": 0
+          },
+          {
+            "maxMs": 33.333,
+            "count": 0
+          },
+          {
+            "maxMs": 50,
+            "count": 0
+          },
+          {
+            "maxMs": 100,
+            "count": 0
+          },
+          {
+            "maxMs": null,
+            "count": 61
+          }
+        ],
+        "sampleLimited": true,
+        "metadata": {
+          "engine": "Babylon.js 9.32.0",
+          "physics": "Havok 1.3.14",
+          "renderer": "WebGL 2",
+          "glInfo": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "renderWidth": 770,
+          "renderHeight": 508,
+          "capabilities": {
+            "renderer": "WebGL 2",
+            "gpu": true,
+            "webgl2": true,
+            "shadows": true,
+            "ao": true,
+            "reflections": true,
+            "post": true,
+            "instancing": true,
+            "maxTextureSize": 8192,
+            "maxSamples": 4,
+            "gpuTimer": false
+          },
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+          "memoryLabel": "JavaScript heap only; system RAM and GPU VRAM unavailable",
+          "weather": "day",
+          "workload": {
+            "characters": 4,
+            "enemies": 4,
+            "physics": 24,
+            "projectiles": 12,
+            "particles": 80,
+            "lights": 4,
+            "complexity": 2
+          },
+          "baseline": "four-worlds-v1",
+          "scenario": "combined",
+          "zone": "chaos",
+          "adaptiveQuality": false,
+          "simulationHz": 60,
+          "actual": {
+            "frames": 80,
+            "durationMs": 11181.800000011921,
+            "averageFPS": 7.1544831780138,
+            "onePercentLowFPS": 1.0657572204916286,
+            "medianMs": 124.09999999403954,
+            "p95Ms": 187.89999997615814,
+            "p99Ms": 227.30000001192093,
+            "worstMs": 938.3000000119209,
+            "spikes": 79,
+            "worstSpikesMs": [
+              938.3000000119209,
+              227.30000001192093,
+              204.80000001192093,
+              204.30000001192093,
+              187.89999997615814,
+              179.40000000596046,
+              176.30000001192093,
+              170.89999997615814
+            ],
+            "distribution": [
+              {
+                "maxMs": 8.333,
+                "count": 0
+              },
+              {
+                "maxMs": 16.667,
+                "count": 1
+              },
+              {
+                "maxMs": 33.333,
+                "count": 0
+              },
+              {
+                "maxMs": 50,
+                "count": 0
+              },
+              {
+                "maxMs": 100,
+                "count": 2
+              },
+              {
+                "maxMs": null,
+                "count": 77
+              }
+            ],
+            "sampleLimited": true,
+            "currentMs": 153,
+            "currentFPS": 6.5359477124183005,
+            "characters": 11,
+            "bodies": 52,
+            "meshes": 157,
+            "triangles": 20055,
+            "drawCalls": 153,
+            "gpuMs": null,
+            "jsHeapMiB": 111.39764976501465,
+            "systemRAM": null,
+            "gpuVRAM": null
+          },
+          "simulationSeconds": 7.899999999999977,
+          "simulationPolicy": "60 Hz fixed steps, wall delta capped at 100 ms per rendered frame"
+        },
+        "frameTimesMs": [
+          106.90000000596046,
+          137.2000000178814,
+          122.59999999403954,
+          112.40000000596046,
+          113.2999999821186,
+          112.59999999403954,
+          137.2000000178814,
+          116.19999998807907,
+          111.30000001192093,
+          112.69999998807907,
+          116.2000000178814,
+          115.69999998807907,
+          137.69999998807907,
+          136,
+          115.90000000596046,
+          106.30000001192093,
+          134.2999999821186,
+          117.10000002384186,
+          109.89999997615814,
+          114.7000000178814,
+          117.2999999821186,
+          135.60000002384186,
+          126.09999999403954,
+          127.40000000596046,
+          119.69999998807907,
+          142.80000001192093,
+          127,
+          120.89999997615814,
+          145,
+          119.30000001192093,
+          130.59999999403954,
+          146.40000000596046,
+          132.19999998807907,
+          123.80000001192093,
+          138.69999998807907,
+          127.2000000178814,
+          125.2999999821186,
+          122.5,
+          142.7000000178814,
+          124.09999999403954,
+          118.69999998807907,
+          139.40000000596046,
+          124.80000001192093,
+          117.59999999403954,
+          116.69999998807907,
+          164.40000000596046,
+          152.7000000178814,
+          170.89999997615814,
+          170.40000000596046,
+          152.80000001192093,
+          179.40000000596046,
+          187.89999997615814,
+          204.30000001192093,
+          176.30000001192093,
+          135.39999997615814,
+          157.5,
+          136.60000002384186,
+          150,
+          133.7999999821186,
+          124.2000000178814,
+          153
+        ]
+      }
+    ],
+    "formula": "Average FPS = 1000 × frame count / sum(frame ms). 1% low = 1000 / mean(slowest ceil(1% of frames)). Percentiles use floor((N−1) × q). No synthetic score.",
+    "id": "31d2e52b-e4e7-42ee-b9b9-be7273ddc6cf",
+    "at": 1793301127105
+  },
+  "errors": []
+}
