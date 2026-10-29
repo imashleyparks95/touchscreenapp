@@ -2,7 +2,7 @@
 
 ## Deploy the four-area expedition for live testing
 
-The user explicitly requested M5 and has standing authorization for deployment of completed verified milestones to the existing site, then live testing. App version: **6.7.0**. Repository: **`imashleyparks95/touchscreenapp`**. Branch: **`revamp/milestone-5-expedition`**. The exact tested source/publication is recorded in the session's final handoff after committing. Use that exact commit, not main or the older deployment branch.
+The user explicitly requested M5 and has standing authorization for deployment of completed verified milestones to the existing site, then live testing. App version: **6.7.0**. Repository: **`imashleyparks95/touchscreenapp`**. Branch: **`revamp/milestone-5-expedition`**. Tested app commit: **`8d71d93dba8089f5d5a0064a70e15842076dfd74`**, verified published on GitHub. This documentation follow-up has the same runtime. Deploy that exact app commit or its documentation-only follow-up identified in the final handoff, not main or the older deployment branch.
 
 M4's `revamp/milestone-4-launcher` and earlier deployment branches are unchanged. Finish any earlier in-progress deployment before deliberately publishing M5; avoid racing production versions.
 
@@ -32,7 +32,7 @@ Try Chamber Load in small increments, turn on Monitor, capture/export measured w
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 5, version 6.7.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-5-expedition, using the exact commit in my handoff message. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md first. Deployment is authorized. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its current URL and access policy. Do not create a replacement site. Finish any earlier deployment, deploy this checkpoint, verify live version 6.7.0 and send me the URL so I can test Full Expedition. Stop before Milestone 6.
+Deploy Little Big Arcade Milestone 5, version 6.7.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-5-expedition, commit 8d71d93dba8089f5d5a0064a70e15842076dfd74. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md first. Deployment is authorized. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its current URL and access policy. Do not create a replacement site. Finish any earlier deployment, deploy this checkpoint, verify live version 6.7.0 and send me the URL so I can test Full Expedition. Stop before Milestone 6.
 
 ## Maintaining this handoff
 
