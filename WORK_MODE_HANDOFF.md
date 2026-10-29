@@ -2,7 +2,7 @@
 
 ## Deploy v6.10.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7b-care-games**, based on published 7A `10f1638abaf871e7a85471cae8a9c2a28af3537a`. Exact tested app commit is recorded after publication. Prior deployment branches are unchanged. Deployment is authorized; the user tests once deployed. Finish any earlier deployment before publishing this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7b-care-games**, based on published 7A `10f1638abaf871e7a85471cae8a9c2a28af3537a`. Tested app commit **`c5c686d71f828edaa062e5d4f33b35f733e3f3f0`** is published and verified on GitHub. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Prior deployment branches are unchanged. Deployment is authorized; the user tests once deployed. Finish any earlier deployment before publishing this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7B improves Monster Café and Monster Dentist; Milestone 7 is still in progress.** Source: `dist/js/care-art.js`, `cafe-controls.js`, `refine-render.js`, `refined.js`, `touch-render.js`, `touch-worlds.js` and scoped `arcade-polish.css`. `dist/` is authoritative; package/release/cache identify **6.10.0**. Tests, exact fixture limits and original-art provenance are in `docs/revamp/M7B_*`.
 
@@ -22,4 +22,4 @@ Test actual touchscreen reach/precision, mouse/controller cursor and reduced-mot
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7B, version 6.10.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7b-care-games, using the exact published commit in my handoff. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish any earlier deployment, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL/access policy and do not create a replacement site. Verify live 6.10.0 and send me the existing URL so I can test Monster Café and Monster Dentist. Milestone 7 remains in progress; pause further development for my trial.
+Deploy Little Big Arcade Milestone 7B, version 6.10.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7b-care-games, commit c5c686d71f828edaa062e5d4f33b35f733e3f3f0. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish any earlier deployment, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL/access policy and do not create a replacement site. Verify live 6.10.0 and send me the existing URL so I can test Monster Café and Monster Dentist. Milestone 7 remains in progress; pause further development for my trial.
