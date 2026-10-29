@@ -2,7 +2,7 @@
 
 ## Deploy this checkpoint for live testing
 
-The user explicitly instructed that completed milestones should be deployed to the existing site, then tested live. Milestone 4 is ready as **v6.6.0** in `imashleyparks95/touchscreenapp`, branch **`revamp/milestone-4-launcher`**. Use the exact commit supplied in the session handoff; publication/commit identity is finalized below after the code checkpoint is committed. Do not accidentally deploy main or an older milestone.
+The user explicitly instructed that completed milestones should be deployed to the existing site, then tested live. Milestone 4 is ready as **v6.6.0** in `imashleyparks95/touchscreenapp`, branch **`revamp/milestone-4-launcher`**. The tested app checkpoint **`46f2fd89334f14128d8974f349c2558cd87e5ee2`** has been pushed to GitHub. Later handoff commits change documentation only; the runtime is identical. Deploy the exact commit supplied in the user’s message. Do not accidentally deploy main or an older milestone.
 
 The M3 deployment branch `revamp/milestone-3-shared-systems` is unchanged. Once any in-progress earlier deployment finishes, deploy this newer M4 checkpoint deliberately; avoid racing two production deployments.
 
@@ -29,7 +29,7 @@ Dark welcome/profile strip; manual spotlight selection; personal favorites and r
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 4, version 6.6.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-4-launcher, using the exact commit in my handoff message. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and SHARED_ARCADE_SYSTEMS.md first. Deployment is authorized. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its current URL and access policy. Do not create a replacement site. Finish any earlier deployment first, deploy this checkpoint, verify live version 6.6.0 and send me the URL so I can test. Stop before Milestone 5.
+Deploy Little Big Arcade Milestone 4, version 6.6.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-4-launcher, commit 46f2fd89334f14128d8974f349c2558cd87e5ee2. Read WORK_MODE_HANDOFF.md, AGENTS.md, ARCADE_REVAMP_PROGRESS.md and SHARED_ARCADE_SYSTEMS.md first. Deployment is authorized. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its current URL and access policy. Do not create a replacement site. Finish any earlier deployment first, deploy this checkpoint, verify live version 6.6.0 and send me the URL so I can test. Stop before Milestone 5.
 
 ## Maintaining this handoff
 

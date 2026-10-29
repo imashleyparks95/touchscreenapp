@@ -308,3 +308,7 @@ All 25 existing public games receive launcher cards, previews and accurate mode/
 ### Next steps and limits
 
 Push the tested M4 checkpoint and update `WORK_MODE_HANDOFF.md` with its exact commit. Give the user a direct request for Work Mode to deploy v6.6.0 `dist/` to existing Sites project `appgprj_6adab219a4788191952c4c83432002c5`, preserving its URL/access policy; verify the live version and use the normal service-worker update/reload path. The user tests after deployment. No archive or PR is required for this branch-based handoff. No M5 implementation in this session. Physical Windows/USB/Bluetooth input, large-wall-display reach and actual audible/GPU appearance remain target-device checks. No live-site result is claimed from local builds or another chat's status.
+
+### Milestone 4 published checkpoint
+
+Successfully pushed tested v6.6.0 app commit **`46f2fd89334f14128d8974f349c2558cd87e5ee2`** on **`revamp/milestone-4-launcher`**. `WORK_MODE_HANDOFF.md` now records exact source/publication and a direct deployment request under the user’s standing authorization. This follow-up changes documentation only; runtime matches the tested commit. M3's deployment branch remains unchanged. Next action: Work Mode deploys the existing site and verifies live **6.6.0**, then the user tests. No Sites deployment or M5 work was performed here.
