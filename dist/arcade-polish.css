@@ -117,3 +117,11 @@ body:has(:is(.ref-game-bugs,.ref-game-balloons) .refined-play)>.game-instruction
  :is(.ref-game-bugs,.ref-game-balloons) .refined-playerstats{font-size:9px;padding:5px}
  :is(.ref-game-bugs,.ref-game-balloons) .refined-matchbar>span{font-size:11px}
 }
+/* Milestone 7B: readable recipe status and treatment planning. */
+.chef-status{margin:0;padding:7px 12px;background:#213b3e;color:#e6e7d3;font-size:12px;line-height:1.4;border-radius:9px}
+.cafe-layout .chef-plate{grid-template-rows:auto auto auto auto}.cafe-layout .chef-orders strong{overflow-wrap:anywhere}.cafe-layout .chef-orders [role=progressbar]{display:block}
+.touch-dentist .dental-checklist{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px;background:#243141}.touch-dentist .dental-checklist button{min-height:40px;padding:7px 11px;border:1px solid #66768b;border-radius:10px;background:#303b50;color:#e8e5e2;font:600 12px Outfit,sans-serif;cursor:pointer}.touch-dentist .dental-checklist button[aria-pressed=true]{background:#34574f;border-color:#9bcab7}.dental-tool-guide{margin:0;padding:9px 14px;background:#253f44;color:#e4e7d7;font-size:13px;line-height:1.5}.touch-dentist .touch-tool{min-height:48px}.touch-dentist .touch-tool[aria-pressed=true]{outline:2px solid #a6d8c4;outline-offset:-3px}
+@media(max-width:650px){.touch-dentist .dental-checklist{flex-wrap:nowrap;overflow-x:auto}.touch-dentist .dental-checklist button{flex-shrink:0}.dental-tool-guide{font-size:12px}.chef-status{font-size:11px;padding:5px 8px}}
+body:has(:is(.ref-game-cafe,.touch-dentist))>.game-instruction-help{background:#253c42;color:#f3ead2;border-color:#718b83}
+body:has(.ref-game-cafe .refined-play,.touch-dentist .touch-play)>.game-instruction-help{display:none}
+.touch-dentist .new-matchbar>div{display:flex;flex-wrap:wrap;gap:7px}.touch-dentist .new-matchbar button{min-height:44px}

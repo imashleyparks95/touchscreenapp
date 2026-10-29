@@ -1,3 +1,4 @@
+import {drawCareBackdrop,cafeGuest} from './care-art.js';
 import {drawReactionGame} from './reaction-art.js';
 import {drawBackdrop,drawCharacter,drawFood} from './premium-art.js';
 import {BUG_COLORS,FOOD,MATERIALS,TREASURES,MODE_NAMES,clamp} from './refine-core.js';
@@ -34,6 +35,6 @@ export function renderGame(ctx,m,p){
  const length=type==='reaction'?m.cfg.window:type==='combo'?m.deadline-m.previewUntil:m.cfg.window;const fraction=clamp((m.deadline-m.clock)/length,0,1);R(30,617,940*fraction,6,3,p.color);T('STREAK '+m.combo,500,582,18,'#d1c6e5');
  }
  if(m.game==='cafe'){
- drawBackdrop(ctx,'cafe restaurant',m.clock);for(let i=0;i<8;i++){L(i*150,0,i*150,122,'#8b91ac33');C(i*150,130,9,'#ffd47899');}let o=m.orders[m.orderIndex||0];if(o){const x=500;drawCharacter(ctx,'monster',x,340,2.8,{variant:o.id%4,chef:o.id%5===0,time:m.clock,color:['#71c5b4','#ad8be3','#f093bd'][o.id%3]});for(const e of m.effects.filter(e=>e.kind==='order')){const z=(m.clock-e.at)/900;for(let k=0;k<6;k++){const a=k*Math.PI/3;star(x+Math.cos(a)*(70+z*120),300+Math.sin(a)*(45+z*65),Math.max(0,13*(1-z)),'#ffe599');}}T(o.recipe.name,x,445,30,'#ffd780');}R(0,560,1000,80,0,'#a1765a');L(0,561,1000,561,'#dcb995',4);T('Your plate is right below ↓',500,600,23,'#ffedd1');banner('MONSTER CAFÉ',`${m.served} happy customers · ${m.ingredients.length} ingredients · Streak ${m.combo}`,'#65e4c7');
+ drawCareBackdrop(ctx,'cafe');for(let i=0;i<8;i++){L(i*150,0,i*150,122,'#8b91ac33');C(i*150,130,9,'#ffd47899');}let o=m.orders[m.orderIndex||0];if(o){const x=500;drawCharacter(ctx,'monster',x,340,2.8,{variant:o.id%4,chef:o.id%5===0,expression:(m.clock-o.at)/o.patience>.75?'surprise':'happy',time:p.reduceMotion?0:m.clock,color:['#71c5b4','#ad8be3','#f093bd'][o.id%3]});for(const e of m.effects.filter(e=>e.kind==='order')){const z=(m.clock-e.at)/900;for(let k=0;k<6;k++){const a=k*Math.PI/3;star(x+Math.cos(a)*(70+z*120),300+Math.sin(a)*(45+z*65),Math.max(0,13*(1-z)),'#ffe599');}}T(cafeGuest(o)+' · '+o.recipe.name,x,445,25,'#ffd780');}R(0,560,1000,80,0,'#a1765a');L(0,561,1000,561,'#dcb995',4);T('Your plate is right below ↓',500,600,23,'#ffedd1');banner('MONSTER CAFÉ',`${m.served} happy customers · ${m.ingredients.length} ingredients · Streak ${m.combo}`,'#65e4c7');
  }
 }

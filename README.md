@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.9.0
+## Current development checkpoint — 6.10.0
+
+Milestone **7B** polishes Monster Café and Monster Dentist: original kitchen/clinic/enamel artwork, named guest moods, live recipe/quantity status and patience bars, selectable treatment guidance, matching-tooth outlines, persistent focus and cleaner gesture ownership. Manual dental help now pauses the real clock. Scoring, patient/recipe rules, alternating play and old records remain. See `WORK_MODE_HANDOFF.md` for the exact deployable checkpoint. Milestone 7 is still in progress; physical precision gestures/audio remain to try.
+
+### Retained reaction-game checkpoint — 6.9.0
 
 Milestone **7A** begins the progressive 2D upgrade with **Bug Squash** and **Balloon Mayhem**: original illustrated worlds/characters, individual readable player prompts and feedback, reduced-effects support, soft hit sounds and responsive solo/two-player fields. Balloon learning answers stay visible on special types, mystery breezes expire after three seconds, and corrected scores use a separate edition with earlier records still selectable. Touch/mouse and existing controller cursors remain supported; physical input/audio checks are still needed. Other 2D game batches remain unfinished.
 
