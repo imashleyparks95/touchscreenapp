@@ -2,7 +2,7 @@
 
 ## Resume here
 
-- **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication blocker, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
+- **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
 - **Current checkpoint: Milestone 2, existing Forest foundation improvements — complete; user trial pending.** The user explicitly said “continue”; no physical trial feedback was supplied. Pause again for user testing before Milestone 3.
 - **User review gate:** stop after each milestone and let the user try it. Continuation to Milestone 2 was explicitly authorized; this does not verify hardware testing or authorize Milestone 3/deployment. Dark overall shell colors are now a persistent user preference.
@@ -227,3 +227,7 @@ The user explicitly requested deployment before testing. Tool discovery confirme
 ### Recurring milestone handoff
 
 User requested a Work Mode message after every milestone and clear repository directions. Added `WORK_MODE_HANDOFF.md`, linked it from README/progress, and persisted the requirement in AGENTS.md. Documentation only; no runtime changes or deployment performed. Current app archive still identifies tested checkpoint `e64a460`.
+
+### GitHub publication restored (2026-10-29, America/New_York)
+
+Native Git authentication now works. Successfully pushed `revamp/milestone-2-foundation` to `imashleyparks95/touchscreenapp` and configured its upstream. The tested v6.4.0 app checkpoint `e64a460b4d39f24569b2b407f4a096109c63a866` is now available on GitHub. Earlier authentication/publication blockers above are historical and resolved. Updated `WORK_MODE_HANDOFF.md` accordingly. No deployment performed; Work Mode should deploy this authorized checkpoint to the existing Sites project, then stop for user testing before Milestone 3.

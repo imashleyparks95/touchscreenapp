@@ -5,7 +5,7 @@
 - Repository: `imashleyparks95/touchscreenapp`.
 - Branch: `revamp/milestone-2-foundation`.
 - Tested app checkpoint: `e64a460b4d39f24569b2b407f4a096109c63a866`, version **6.4.0**. Later commits only document authorization/handoff; do not substitute the older Milestone 1 or main branch runtime.
-- Publication: checkpoint is committed locally, **not pushed**. Environment GitHub authentication is unavailable. If the exact commit cannot be fetched, request the supplied `Little-Big-Arcade-Milestone-2-source.zip` archive; its `CHECKPOINT.txt` identifies this commit. Do not silently deploy an older revision.
+- Publication: **pushed successfully to GitHub** on 2026-10-29. Fetch `revamp/milestone-2-foundation`; the tested app checkpoint is available in its history. Later commits only update documentation. No archive is needed. Do not silently deploy an older revision.
 
 ## Repository map
 
@@ -32,7 +32,7 @@ Stop for user feedback before Milestone 3. Deployment authorization applies to t
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 2 (v6.4.0) for my trial. Repository: imashleyparks95/touchscreenapp; branch: revamp/milestone-2-foundation; tested checkpoint: e64a460b4d39f24569b2b407f4a096109c63a866. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md first. The checkpoint has not been pushed because Codex GitHub authentication is blocked; use the attached Little-Big-Arcade-Milestone-2-source.zip if the commit is unavailable, and verify CHECKPOINT.txt. Deploy dist/ to existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its URL and access policy. Deployment is authorized. Verify live version 6.4.0, report the live URL, and stop for my testing. Do not create a replacement site or start Milestone 3.
+Deploy Little Big Arcade Milestone 2 (v6.4.0) for my trial. Repository: imashleyparks95/touchscreenapp; branch: revamp/milestone-2-foundation; tested checkpoint: e64a460b4d39f24569b2b407f4a096109c63a866. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md first. The checkpoint is available on GitHub; fetch the branch and verify the source commit. Deploy dist/ to existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserving its URL and access policy. Deployment is authorized. Verify live version 6.4.0, report the live URL, and stop for my testing. Do not create a replacement site or start Milestone 3.
 
 ## Maintaining this handoff
 
