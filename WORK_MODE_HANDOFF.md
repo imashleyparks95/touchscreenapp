@@ -2,7 +2,7 @@
 
 ## Deploy v6.11.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7c-motion-games**, based on published 7B `69920961a4effd2db61d8fa2456172f8caa9ae87`. Exact tested app commit is recorded after publication. Earlier deployment branches are unchanged. Deployment is authorized; the user tests once deployed. Finish earlier deployments before publishing this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7c-motion-games**, based on published 7B `69920961a4effd2db61d8fa2456172f8caa9ae87`. Tested app commit **`8b3c9c0253dfdfda4622f8bb482c0daa262ba4eb`** is published and verified on GitHub. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Earlier deployment branches are unchanged. Deployment is authorized; the user tests once deployed. Finish earlier deployments before publishing this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7C improves Slime Lab/Shadow Ninjas; Milestone 7 is still in progress.** Runtime entry points: `dist/js/touch-native.js`, `motion-art.js`, `touch-worlds.js`, `touch-render.js`, global ownership in `arcade-controller.js`, capability/instruction metadata and scoped `arcade-polish.css`. `dist/` is authoritative; app/package/cache agree on **6.11.0**. Actual evidence and precise fixture/hardware limits are in `docs/revamp/M7C_*`.
 
@@ -24,4 +24,4 @@ Menu pauses; View opens manual help. Disconnect must pause and clear held gestur
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7C, version 6.11.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7c-motion-games, using the exact published commit in my handoff. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL/access policy and do not create a replacement site. Verify live 6.11.0 and send me the existing URL to test Slime Lab/Shadow Ninjas and their native controllers. Milestone 7 remains in progress; pause further development for my trial.
+Deploy Little Big Arcade Milestone 7C, version 6.11.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7c-motion-games, commit 8b3c9c0253dfdfda4622f8bb482c0daa262ba4eb. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve its URL/access policy and do not create a replacement site. Verify live 6.11.0 and send me the existing URL to test Slime Lab/Shadow Ninjas and their native controllers. Milestone 7 remains in progress; pause further development for my trial.
