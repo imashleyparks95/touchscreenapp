@@ -616,3 +616,7 @@ Static audit/build/syntax/whitespace pass: **25 public IDs, 268 cached files, 17
 ### Resume / next steps
 
 Work Mode should deploy the exact published **6.15.0** `dist/` checkpoint to the existing site/URL/access policy and return its URL. User trials choice-first Doodle sketches, bullets/mines/green-plus healing, ink/undo/upgrade, placement, both player modes and preserved record editions; Castle building/purchases/upgrades/supports/save/reopen/siege. Stop for the deployed trial. **Next proposed batch after continuation: 7H — Buddy Mayhem and Two-Player Tap Battle**, inspecting real gestures/physics/reactions/feedback while preserving modes and records. Other unreviewed rows and M8–M10 remain unfinished.
+
+### Milestone 7G published checkpoint
+
+Successfully pushed tested **v6.15.0** app commit **`0db2edbbe330fda5bac86893401fd84e8f9c2bbf`** to **`revamp/milestone-7g-defense-games`**, verified the remote branch, and confirmed 7F remains at `64c2e6deb39c01dcd9cc7d00b5fcbdf337c46efd`. This follow-up changes documentation only. Full regression completed (49 programs), followed by focused ability/host/backup checks and final active browser checks; all 151 browser audits pass. Work Mode should deploy the exact published checkpoint to the existing Sites project, verify live **6.15.0** and return its URL for the user's choice-first Doodle/mines/healers and Castle trial. **Milestone 7 remains in progress; stop before proposed 7H unless continued.** No live deployment performed here.

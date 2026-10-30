@@ -2,7 +2,7 @@
 
 ## Deploy v6.15.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7g-defense-games**, based on published 7F `64c2e6deb39c01dcd9cc7d00b5fcbdf337c46efd`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Previous deployment branches are unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7g-defense-games**, based on published 7F `64c2e6deb39c01dcd9cc7d00b5fcbdf337c46efd`. Tested app commit **0db2edbbe330fda5bac86893401fd84e8f9c2bbf**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Previous deployment branches are unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7G improves Castle Creator and reworks Doodle Defenders per the user's explicit choice-first request. Milestone 7 remains in progress.** Runtime: `dist/js/doodle-core.js`, `premium.js`, `premium-render.js`, `defense-polish.js`, instructions and scoped `dist/arcade-polish.css`. Authoritative source is `dist/`; version **6.15.0**. Evidence: `docs/revamp/M7G_*`. All 25 refreshed covers and shared local Beat Lab sounds remain.
 
@@ -24,4 +24,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7G, version 6.15.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7g-defense-games, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.15.0 and return the URL for my trial of choice-first Doodle drawing, turrets/mines/healers and Castle Creator. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7G, version 6.15.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7g-defense-games, commit 0db2edbbe330fda5bac86893401fd84e8f9c2bbf. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.15.0 and return the URL for my trial of choice-first Doodle drawing, turrets/mines/healers and Castle Creator. Pause further development for my trial.
