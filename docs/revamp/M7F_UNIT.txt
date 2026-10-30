@@ -1,0 +1,1 @@
+PASS: real gravity momentum retained on all 30 boards, read-only mission guidance, sling feedback, actual shipped canceled/valid shot handlers, lost-capture builder rollback and finite original physics artwork. No physical device certification.

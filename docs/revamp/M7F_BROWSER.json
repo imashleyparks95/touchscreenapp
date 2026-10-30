@@ -1,0 +1,48 @@
+{
+  "version": "6.14.0",
+  "checks": [
+    "actual independent direction buttons/swipes, captured controller-pointer fixture cleanup and real paused physics/clock",
+    "actual canceled sling consumes zero shots, legal shot uses one with live power, paused physics and equal fresh second-player turn; manual finish, not a claimed full browser demolition",
+    "real builder placement/save and actual shared-structure backup parse"
+  ],
+  "audits": [
+    {
+      "game": "gravity",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "gravity",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "smash",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "smash",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "builder",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "builder",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual browser pointer controls and controller-cursor fixture; real physics/turns/save; no forced completion, hardware or complete campaign browser claim."
+}

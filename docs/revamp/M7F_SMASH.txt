@@ -1,0 +1,5 @@
+PASS: 150 stable level/difficulty worlds, unique authored levels, real shape/material properties, exact turn reset and deterministic input replay, locked weapons, no tap/movement destruction, split/explosive abilities and difficulty mechanics.
+PASS: both competition comparators/all tiebreakers, explicit winner overrides raw score for profile/rivalry wins, mode/level/difficulty/metric isolation, legacy record preservation, no custom XP/points, progression/achievements and custom structure backup roundtrip.
+PASS: actual two-turn UI completion flow, exactly-once commit, first-player rotation, paused/menu clocks and no unfinished-match commit.
+PASS: all 30 campaign levels can be fully demolished on Hard with unlocked projectiles within their actual shot budgets.
+PASS: actual shared gallery shows both creators’ levels to either profile, direct play works for both, and editing/saving another player’s level preserves the original and creates a copy.

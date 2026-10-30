@@ -1,0 +1,6 @@
+PASS: all 150 level/difficulty combinations complete within the real timer and gravity budget through actual controls; all 30 course geometries are distinct and late objectives are fulfilled.
+PASS: real Matter momentum, four-direction swipes, no ball dragging, deterministic independent worlds, two-finger platform rotation and dragging, collision-capable temporary ramps and cleanup.
+PASS: switch/door physics and falling-block release, held obstacle shutdown, shield absorption, checkpoint retries and finite gravity limits, all obstacle/help types, real survival pressure and distinct mode tiebreakers.
+PASS: Gravity lobby/records replacement, retired game cannot launch, old digging scores remain in backups, every unrelated world and hidden-game architecture is retained.
+PASS: all 150 scene variants including drawn ramps render with finite canvas coordinates.
+PASS: shipped best-of-five ends at three victories and commits once; Orb Challenge waits for both; real canvas handlers isolate simultaneous swipes and platform rotation; pause freezes both clocks and releases all input.
