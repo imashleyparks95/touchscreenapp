@@ -2,7 +2,7 @@
 
 ## Deploy v6.18.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7j-media-studios**, based on published 7I `590aec7a29591f150d6cf3e29fcad5db81e59e3d`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Earlier deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7j-media-studios**, based on published 7I `590aec7a29591f150d6cf3e29fcad5db81e59e3d`. Tested app commit **9fa1c53f64e9f5b579660928c6edf9eee499b485**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Earlier deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7J improves Funny Face Studio / Monster Me!; Milestone 7 remains in progress.** User specifically requested more filters and monster customization. Runtime: `dist/js/media-core.js`, `media-art.js`, `media-studio.js`, `media-polish.js`, additive monster validation in `data.js`, scoped `dist/arcade-polish.css`. Authoritative source `dist/`; version **6.18.0**. Evidence: `docs/revamp/M7J_*`. All covers, shared local sounds, choice-first Doodle and previous changes remain.
 
@@ -23,4 +23,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7J, version 6.18.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7j-media-studios, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.18.0 and return the URL for my trial of the eight new face filters, expanded monster customization and media editing. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7J, version 6.18.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7j-media-studios, commit 9fa1c53f64e9f5b579660928c6edf9eee499b485. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.18.0 and return the URL for my trial of the eight new face filters, expanded monster customization and media editing. Pause further development for my trial.
