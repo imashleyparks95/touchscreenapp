@@ -888,3 +888,7 @@ Publish exact checked source, update WORK_MODE_HANDOFF.md, request deployment of
 ### Final checked result
 
 `npm test` completed successfully: **58 programs**, including all **100 campaign/difficulty solutions**, shared targetless/simultaneous exchanges, independent toolkit/starter/Forest, native controller, original 630 weapon poses and all arcade regressions. Final focused AI checks include route invalidation. **Eight browser audits** pass on the corrected runtime (four presentation, four native/mixed touch). Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original hashes**. No live deployment here.
+
+### Published M8D checkpoint
+
+App commit `a49e5b5a9544c3c4ecc04a28cd24a5f231fbffdd` pushed to `revamp/milestone-8d-wars-ai`; remote SHA verified. Documentation follow-up preserves the tested v6.24.0 runtime. Exact deployment/trial request is in WORK_MODE_HANDOFF.md. Stop for user trial; no Sites deployment performed here.

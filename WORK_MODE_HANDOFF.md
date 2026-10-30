@@ -2,7 +2,7 @@
 
 ## Deploy v6.24.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-8d-wars-ai**, based on published 8C `7436ba24e3efa6e44c118fe74927e004489ba40f`. Publication SHA is recorded below after checked source is pushed. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-8d-wars-ai**, based on published 8C `7436ba24e3efa6e44c118fe74927e004489ba40f`. Tested app commit **`a49e5b5a9544c3c4ecc04a28cd24a5f231fbffdd`** is published and verified against the remote branch. This documentation-only follow-up preserves that runtime and may be pinned for deployment. Finish earlier deployments first.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md. Authoritative source: **dist/**. Entry point: **dist/js/wars3d-core.js**; new regression **tests/wars3d-ai.mjs**; evidence **docs/revamp/M8D_***. Version/release: dist/js/releases.js. M8D fixes attack target consistency, stale stopped/stunned velocity and stale navigation paths, with per-step ID lookup. Models, rigs, weapon contact, purchases, native/mixed-touch controls, saved armies and classic edition remain. Broader Milestone 8 remains unfinished.
 
@@ -20,3 +20,7 @@ Final checks: **58 test programs pass**, including all 100 campaign/difficulty s
 - Check original saves/records, co-op/versus/campaign and classic edition. Keep browser family data.
 
 Stop for deployed user trial. After explicit continuation, proposed **M8E — Wobbly Wars lighting/effects and graphics-quality acceptance review**, retaining AI fixes, rig/contact, purchasing and saves. M8 overall and M7/M9/M10 remain unfinished.
+
+## Message to paste into Work Mode
+
+Deploy Little Big Arcade Milestone 8D, version 6.24.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-8d-wars-ai, tested app commit a49e5b5a9544c3c4ecc04a28cd24a5f231fbffdd (or its final documentation-only handoff commit). Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.24.0 and return the URL for my trial. Pause further development for my trial.
