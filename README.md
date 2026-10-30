@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.23.0
+## Current development checkpoint — 6.24.0
+
+Milestone **8D** fixes Wobbly Wars attack-target consistency and stale stopped/stunned movement, clears obsolete routes after retargeting and uses per-step target lookups. New four-map 96-unit mixed-army simulations check limits, terrain safety and completion. Existing models, purchases, controller/touch controls and saves remain. See `WORK_MODE_HANDOFF.md` for exact deployment and trial directions. Physical target-PC/GPU acceptance and broader milestone work remain.
+
+### Retained presentation checkpoint — 6.23.0
 
 Milestone **8C** improves Wobbly Wars class detail, mounted presentation and battlefield framing. Archers gain quivers, slingers pouches, scouts scarves and Pulse Rangers plated cores. Reset View fits the overview to the viewport; Inspect Troop offers a closer view. Resize preserves orbit and safely cancels held movement. Native controls, illustrated purchases, measured weapon alignment, saved armies and classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Further AI/large-army and physical target-PC QA remain.
 

@@ -1,0 +1,1 @@
+PASS: A–E: nonlethal/lethal simultaneous swords (both iteration orders), mid-swing damage retaining timeline/hit history/cooldown, repeated multiple attackers, real arrow impact plus archer release, explicit knockdown/stun/stagger recovery and death priority.

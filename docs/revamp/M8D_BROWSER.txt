@@ -1,0 +1,10 @@
+
+> little-big-arcade@6.24.0 test:wars:presentation:browser
+> node tests/wars-presentation-browser.mjs
+
+PASS: four actual desktop/phone overview audits, full visible battlefield framing, legal class deployment/inspection/reset, resize cancellation, separated phone controls and battle/pause/cleanup.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

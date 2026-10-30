@@ -1,0 +1,5 @@
+Field 0: 100 total actors, 36.2 simulated seconds, 2242ms CPU (not GPU/frame rate), winner 1
+Field 2: 100 total actors, 150.0 simulated seconds, 4547ms CPU (not GPU/frame rate), winner null
+Field 8: 100 total actors, 78.6 simulated seconds, 2849ms CPU (not GPU/frame rate), winner 0
+Field 9: 100 total actors, 36.2 simulated seconds, 1143ms CPU (not GPU/frame rate), winner 1
+PASS: attack target lock/death recovery, stopped/stunned velocity, four 96-unit legal mixed armies, bounded projectiles/splits, finite terrain-safe actors and terminal clock.

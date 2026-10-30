@@ -1,5 +1,11 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Wobbly AI stability — 6.24.0 (Milestone 8D)
+
+Game-owned Battle3D keeps an active attack's living target through its windup/release. A dead locked target cancels that obsolete attack; changing navigation target clears the old route. Fixed-step ID lookup uses a local Map of live units; it is rebuilt each step, so no persistent cache survives resets or split spawns. Existing shared targeting/navigation and deferred contact resolution remain unchanged. Each actor resets movement velocity/speed before decisions, preventing stopped/stunned attackers from retaining a previous walking velocity. No damage, budget, period, physics, rig, hand/weapon or shared toolkit API changes.
+
+`tests/wars3d-ai.mjs` covers attack locks/dead-target recovery and stopped/stunned velocity, then legally places 48 mixed troops per side on four battlefields. It checks terrain-safe finite actors, bounded projectiles/splitting, battle termination and terminal clock. Logged CPU duration is simulation work, not GPU/frame-rate evidence. The ordinary core suite still checks all 100 campaign/difficulty solutions.
+
 ## Wobbly model presentation and framing — 6.23.0 (Milestone 8C)
 
 Game-owned `wars3d-presentation.js` supplies `createWarFraming(runtime,{onChange})` and pure `warPropMotion(unit,{clock,deathAge,reduceMotion})`. Shared toolkit API 1.0, camera factory defaults, rigs and measured hand/weapon paths remain unchanged. The game observes CSS and render aspect ratios from its existing render callback; no extra observer/loop is introduced. Overview fitting projects all eight corners of the 24×14 m battlefield / 0–3.8 m actor-height box through the actual Babylon view/projection matrices, uses bounded radius search and reserves space for stage controls. Tested desktop/portrait aspect ratios fit those extents. This is not an automatic chase camera or a guarantee that off-board scenery/projectiles always fit.

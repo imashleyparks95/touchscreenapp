@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Milestone 8C — Wobbly models, mounted presentation and framing; v6.23.0.** Quiver/pouch/scarf/plated-core class detail, paused/reduced-motion/fade support, mounted wing presentation, responsive full-battlefield overview and Inspect Troop. Actual rig/weapon alignment, native controls, touch, illustrated purchases, saves and classic edition remain. Branch `revamp/milestone-8c-wars-presentation`, based on published 8B `c5896de959ff74e9d72409062584cf2c1ea96a22`. Physical trial and further M8/M7/M9/M10 work remain.
+- **Current checkpoint: Milestone 8D — Wobbly AI and crowded-battle stability; v6.24.0.** Attack target lock/dead-target recovery, stale velocity reset, route invalidation and fixed-step ID lookup. Branch `revamp/milestone-8d-wars-ai`, based on published 8C `7436ba24e3efa6e44c118fe74927e004489ba40f`. Physical trial and broader M8/M7/M9/M10 work remain.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-8c-wars-presentation`**, based on 8B `c5896de`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-8d-wars-ai`**, based on 8C `7436ba2`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -862,3 +862,29 @@ Publish exact checked source and update `WORK_MODE_HANDOFF.md`. Work Mode deploy
 ### Published checkpoint
 
 Tested app commit `1e49a272ccde715b4fb5c539f41c15146fca42c7` pushed to `revamp/milestone-8c-wars-presentation`; remote SHA verified. WORK_MODE_HANDOFF.md pins this v6.23.0 runtime. Documentation-only follow-up preserves it. Deployment remains for Work Mode and the user trial; no deployment performed here.
+
+## Session record — Milestone 8D AI / crowded-battle stability (2026-10-30, America/New_York)
+
+User requested **next**, authorizing this scoped checkpoint after published 8C `7436ba24e3efa6e44c118fe74927e004489ba40f`. Branch `revamp/milestone-8d-wars-ai`, **v6.24.0**. Read full master plan, current progress and 3D contracts. M8D is a scoped checkpoint; broader Milestone 8 remains in progress.
+
+### Changes and preservation
+
+Reviewed target acquisition, navigation, attacks, movement, crowd separation, projectile/split limits and existing legal campaign/large-army tests. Fixed mismatched windup aim/release by retaining a living attack target until that attack finishes; death releases the obsolete attack. Changed navigation targets discard the previous route. Reset actor velocity/speed before each decision so idle, attacking and stunned actors no longer advertise prior walking movement to aiming. A per-step live-unit Map replaces the two repeated target-ID scans per actor; it is local and rebuilt, without a persistent invalidation contract. Existing shared acquisition, crowd steering, physics and deferred damage interfaces reused unchanged.
+
+No new artwork or models in this logic checkpoint: 8C class detail, imported rigs, hand/weapon poses, mounted props and illustrated purchase cards remain. No damage/period/cost/score-edition/schema/dependency/service changes. All prior touch/controller, solo/co-op/versus/campaign modes, saved formations, profiles, local media, achievements, backups and classic edition retained. Existing caps and stalemate behavior preserved; no promise that every equal-army battle produces a winner.
+
+### Verification and limitations
+
+New `tests/wars3d-ai.mjs`: locked windup/dead-target recovery, obsolete route invalidation, stopped/stunned velocity. Four legally placed **96-unit mixed armies** (48 per side, six classes including healers/slimes) on fields 0/2/8/9 check finite terrain-safe actors, 160 projectile cap, existing split cap, bounded completion/stalemate and frozen terminal clock. Initial test placement touched obstacle terrain; corrected the formation to legal deployment coordinates rather than bypassing placement rules. The failed attempt is not a pass. CPU durations are logged simulation work under this host's load, not GPU/FPS evidence or a before/after speedup claim.
+
+Browser presentation and native suites each pass four actual desktop/phone audits (eight total this checkpoint): legal purchases/moves, projected input, full board framing, class inspection/reset, native/global and mixed-touch ownership, Ready/start, pause/disconnect and complete Babylon/Havok cleanup. Layout checks pause a legally started battle; controller/pointer devices are fixtures. No physical Windows/USB/Bluetooth/touch, audible audio or sustained target-GPU certification. Prior checkpoint shell/library audits are historical, not rerun counts here.
+
+The first full regression caught cancellation of targetless melee swings supported by the shared combat contract. Restricted dead-lock cancellation to attacks with an explicit target; independent simultaneous-contact exchanges then passed. Full regression and final audit/build results are recorded below before publication. Evidence: `docs/revamp/M8D_*`. Original 98 hashes, hosting identities and save/media storage remain untouched.
+
+### Resume / next
+
+Publish exact checked source, update WORK_MODE_HANDOFF.md, request deployment of 6.24.0 to the existing Sites project/URL/access policy, then stop for user trial. Trial mixed ranged/melee/healers, target death during windup, stun/recovery, obstacle maps, large armies, native/mixed input, original purchases/saves/classic and target-PC frame pacing. No deployment performed here. After explicit continuation, proposed **M8E — Wobbly Wars lighting/effects and graphics-quality acceptance review**, preserving rigs/weapon contact, AI fixes, purchasing and save interfaces. M8 overall plus M7/M9/M10 and physical/hardware acceptance remain unfinished.
+
+### Final checked result
+
+`npm test` completed successfully: **58 programs**, including all **100 campaign/difficulty solutions**, shared targetless/simultaneous exchanges, independent toolkit/starter/Forest, native controller, original 630 weapon poses and all arcade regressions. Final focused AI checks include route invalidation. **Eight browser audits** pass on the corrected runtime (four presentation, four native/mixed touch). Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original hashes**. No live deployment here.
