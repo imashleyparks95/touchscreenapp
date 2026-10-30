@@ -1,0 +1,38 @@
+{
+  "version": "6.26.0",
+  "checks": [
+    "real recipe via category selection/touch/quantity status, retained category focus and legal serve",
+    "cafe next-starter result copy and alternating fresh turn, pause freeze and forced-clock match persistence fixture",
+    "actual dental checklist/tool guidance, controller-pointer capture releases on tool change",
+    "actual mouse-held water treatment completes real plaque task",
+    "dental equal handoff, paused clock and forced-timeout full match fixture"
+  ],
+  "audits": [
+    {
+      "game": "cafe",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "cafe",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "dentist",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "dentist",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Real browser inputs plus explicit controller/timeout fixtures; legal full dental cases are independently simulated, not physical hardware."
+}

@@ -1,0 +1,1 @@
+PASS: atomic invalid roster/score/winner rejection, identity-preserving practice without writes, explicit winner/tie, reversed pair rivalry, co-op separation and backup compatibility.

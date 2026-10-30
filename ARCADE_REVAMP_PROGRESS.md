@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Milestone 8E — Wobbly lighting and live effects quality; v6.25.0.** Restrained existing-light biome tint; pooled spark reset and live quality/reduced/off caps. Branch `revamp/milestone-8e-wars-lighting`, based on published 8D `58cfd18d1e3497f45013d0c5f5bae1d6c4701616`. Broader M8/M7/M9/M10 and target-PC acceptance remain.
+- **Current checkpoint: Milestone 9A — multiplayer audit / shared match recording; v6.26.0.** Atomic ranked roster/score validation, identity-preserving practice feedback and clearer alternating rematch starter. Branch `revamp/milestone-9a-match-records`, based on published 8E `6d444eaddad7d7f3a9e06478c59851832560822f`. Broader M9 and M7/M8/M10/hardware work remain.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-8e-wars-lighting`**, based on 8D `58cfd18`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-9a-match-records`**, based on 8E `6d444ea`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -25,7 +25,7 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | 6 — Scientific benchmarking | **Checkpoint complete — 6.8.0** | Separate five-scenario suite across actual Forest/Castle/Arena/Chamber scenes, per-scene warm-up, fixed paths/seed/settings, actual raw-frame history/JSON/CSV, comparisons and all-scenario 30/60 FPS tuning. Hardware results remain target-PC work. |
 | 7 — Every 2D game | **In progress — 7A–7L scoped batches, 6.20.0** | Bug Squash and Balloon Mayhem receive individual original art, animation, per-player readable cues/feedback, responsive layouts, soft hit sounds, actual bug fixes and targeted solo/versus verification. 7B adds Monster Café/Monster Dentist art, recipe/tool guidance, focus and input-lifecycle improvements. 7C adds Slime Lab/Shadow Ninjas native actions, illustrated motion worlds and objectives. 7D adds Circuit Rush/Robot Repair guidance, input cleanup and original workshop/board detail. 7E adds Creative Studio tool guidance/inspiration and Beat Lab sound library/recording reuse/step painting. 7F adds Gravity/Smash presentation, alternate controls and capture fixes. 7G adds Castle guidance/art and a user-requested choice-first Doodle mechanic with mines/healers and preserved legacy records. 7H adds Buddy/Tap Battle guidance, room art and capture fixes. 7I adds Math/Spelling learning guidance and Math notebook gesture repairs. 7J adds eight face filters, four saved monster fields and media editor lifecycle fixes. 7K adds Zoo/Air guidance, original badges, touch/pan cleanup and safer background activity shutdown. 7L adds Gladiator tactical guidance/icons/floor detail, gear comparisons, theme and pause fixes; additional art, native inputs and physical sign-off remain. All 25 public covers are refreshed separately. Game rows below retain remaining work; scoped review checkpoints do not establish complete 2D artwork, native controls or physical acceptance. |
 | 8 — Other 3D experiences | **In progress — 8A–8C checkpoints, 6.23.0** | Wobbly Wars retains actual rigs/wrist equipment, authored combat, scenery and recovered illustrated purchases. Added safe staged deployment/undo/co-op ownership, saved-army loading/pause fixes, segmented capes/enamel crests and live guidance. 8B adds native cursors/deployment/camera and menu ownership. 8C adds class accessories, mounted presentation and actual-projection overview/inspection. Further AI/large-army/model work and physical controller/target-GPU testing remain. |
-| 9 — Multiplayer/replayability | Existing modes preserved; further work pending | Many games already have versus, co-op or alternating turns. Simulated regressions pass; physical mixed-input play and new engagement work remain. |
+| 9 — Multiplayer/replayability | **9A shared records checkpoint — 6.26.0; in progress** | Public mode inventory, atomic ranked roster validation, practice identity and alternating rematch guidance. Further game-specific progression/rewards, physical mixed-input play and engagement work remain. |
 | 10 — Final quality pass | Pending | Full per-game playthrough/hardware matrix, integrated four-zone checks and target-device performance remain. |
 
 ## Actual Limit Break inventory
@@ -922,3 +922,29 @@ Publish exact checked source and update WORK_MODE_HANDOFF.md; Work Mode deploys 
 ### Published M8E checkpoint
 
 Tested app `6d17bb987b616e2821e01b840ada1c24a026955f` pushed to `revamp/milestone-8e-wars-lighting`; remote SHA verified. Documentation-only handoff preserves runtime v6.25.0. Screenshots reviewed; deployed user trial remains pending. No Sites deployment performed here. Stop before proposed M9A unless continued.
+
+## Session record — Milestone 9A multiplayer audit / match records (2026-10-30, America/New_York)
+
+User requested **keep going**, authorizing M9A after published 8E `6d444eaddad7d7f3a9e06478c59851832560822f`. Branch `revamp/milestone-9a-match-records`, **v6.26.0**. Master plan/requirements/current progress retained and consulted. First M9 checkpoint, not completion of all multiplayer/replayability work.
+
+### Review / changes
+
+Public inventory: `docs/revamp/M9A_MULTIPLAYER_AUDIT.md` lists existing local mode labels for all 25 games and clearly distinguishes source-contract review from fresh full playthroughs. Reviewed common result recording and actual co-op callers in Wobbly, Spelling, Math and Air; reviewed refined real-host fair turns, first-player rotation, sudden death, match completion and rematch behavior. Existing solo/co-op/versus/creative modes and practical controller distinctions remain.
+
+`data.js:commitRound` preflights the whole ranked roster before profile/rivalry changes: entries must be nonempty, distinct existing profile IDs with finite scores. Invalid explicit winner validation remains before mutation. This prevents duplicate-player self-rivalries and missing-player partial match accounting. Negative finite scores remain allowed. Unranked output retains entry IDs with null rank/no PB and makes no record writes. No guessed session-ID deduplication: game hosts still own exactly-once recording and incomplete-match exclusion, preserving legitimate equal-score rematches.
+
+Café and penalty results now name the next starting player and explain same settings/fresh challenges. Actual existing first-player rotation/rules remain unchanged. No new artwork/models/input modes/dependencies/service or save-schema/score-edition changes. Earlier models/art, all profiles/media/achievements/records/backups, original 98 asset/vendor hashes and hosting identity preserved. No rewrites of historical statistics.
+
+### Checks / failures / limits
+
+New independent recorder test covers duplicate/missing profile, NaN/Infinity/empty roster and invalid winner rejection with unchanged DB/storage; no-write practice identity; explicit round winner overriding raw score; tie and reversed-pair rivalry; existing separate co-op records; backup parse. Initial backup fixture incorrectly omitted the existing backupJSON(data,media) arguments; corrected the fixture, with no runtime backup change. Failed attempt is not a pass.
+
+Café browser completes two real host turns through explicit accelerated-clock fixtures, checks the actual second profile is named as next starter, pause-safe clocks and backup validity; dental checks retain legal tools, capture release and handoff. Four active desktop/phone accessibility/layout audits. Updated old hardcoded browser-report version to actual APP_VERSION. Shell suite checks 72 responsive entry/navigation audits, controller menu/pointers, disconnect and offline reload. Fixture inputs/accelerated clocks are not physical device or full natural-time playthrough claims. Full regression exact final results recorded below.
+
+### Resume / next
+
+Publish exact checked checkpoint and update WORK_MODE_HANDOFF.md. Work Mode deploys 6.26.0 to existing project/URL/access policy, verifies live version and returns URL. User trials two-profile versus finish/tie/rematch, expected next starter, no double results, co-op partner records without rivalry, unranked practice and original backups. Stop for deployed trial; no Sites deployment here. After explicit continuation, proposed **M9B — learning/co-op progression and replay choices review**, retaining score edition/record compatibility. M9 overall, M7/M8 art/hardware acceptance and M10 remain unfinished.
+
+### Final checked result
+
+**60 test programs pass** (`npm test`), including new recorder guards, existing real-host turn/sudden-death/once-only completion, all 100 campaign/difficulty solutions, toolkit/Forest/weapon and full arcade regressions. **76 browser audits pass**: four care plus 72 shell. Final audit/build/syntax/diff checks pass: 25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original migration hashes. Physical/live trials remain.

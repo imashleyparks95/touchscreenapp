@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.25.0
+## Current development checkpoint — 6.26.0
+
+Milestone **9A** audits existing multiplayer modes and protects shared match recording from duplicate/missing profiles and invalid scores. Practice feedback keeps player identity without saving records; café and penalty results name the next starting player. Existing rules, co-op/versus, artwork, controls and saves remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions and `docs/revamp/M9A_MULTIPLAYER_AUDIT.md` for inventory and remaining work.
+
+### Retained lighting checkpoint — 6.25.0
 
 Milestone **8E** refines Wobbly Wars biome lighting through its existing two lights. Shared combat sparks reset correctly on reuse and obey live graphics/reduced-motion/effects-off settings, including while paused. Models, AI, purchases, controls and saves remain. See `WORK_MODE_HANDOFF.md` for deployment and trial details; target-PC graphics/frame pacing still needs trial.
 
