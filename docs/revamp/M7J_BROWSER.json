@@ -1,0 +1,35 @@
+{
+  "version": "6.18.0",
+  "checks": [
+    "27 real filter controls, local PNG import and saved selected filter, canceled crop remains unchanged, no camera/mic request",
+    "23 real monster controls with rendered patterns/accent/cheeks/badge, actual save/gallery reopen/full backup and zero device requests"
+  ],
+  "audits": [
+    {
+      "game": "funny",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "funny",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "monster",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "monster",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual local-photo/editor/character workflows; test PNG is authored canvas imagery, no physical webcam/mic, face tracking success, audible voice or full challenge claim."
+}

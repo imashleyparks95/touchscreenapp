@@ -1,10 +1,10 @@
 export const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
-export const FACE_FILTERS=['Original','Giant Head','Tiny Head','Huge Mouth','Giant Eyes','Tiny Eyes','Giant Nose','Long Chin','Big Forehead','Squished Face','Wide Face','Long Face','Fish-Eye Face','Jelly Face','Giant Smile','Alien Head','Exaggerated Cheeks','Funny Mirror','Random Face'];
+export const FACE_FILTERS=['Original','Giant Head','Tiny Head','Huge Mouth','Giant Eyes','Tiny Eyes','Giant Nose','Long Chin','Big Forehead','Squished Face','Wide Face','Long Face','Fish-Eye Face','Jelly Face','Giant Smile','Alien Head','Exaggerated Cheeks','Funny Mirror','Random Face','Button Nose','Cheek Puff','Pointy Chin','High Brows','Comic Grin','Tilted Smile','Wavy Mirror','Pinch Face'];
 export const LIVE_EFFECTS=['None','Fire Breath','Rainbow Mouth','Laser Eyes','Bouncing Animal Ears','Robot Face','Dragon Transformation','Alien Transformation','Cartoon Dog','Cartoon Cat','Pirate','Wizard','Superhero','Astronaut','Monster','Clown','Bubble Head'];
 export const VOICE_EFFECTS=['Original','Chipmunk','Deep Voice','Robot','Alien','Echo','Monster','Cartoon Squeaky Voice','Slow Voice','Fast Voice','Reverb'];
 export function faceGeometry(points,w=1280,h=720){if(!points?.[454])return null;const at=i=>({x:points[i].x*w,y:points[i].y*h}),a=at(33),b=at(263),left=at(234),right=at(454),top=at(10),chin=at(152),mouth=at(13),nose=at(1);return{center:{x:(left.x+right.x)/2,y:(top.y+chin.y)/2},rx:Math.max(12,Math.hypot(left.x-right.x,left.y-right.y)*.58),ry:Math.max(18,Math.hypot(top.x-chin.x,top.y-chin.y)*.59),angle:Math.atan2(b.y-a.y,b.x-a.x),eyes:[a,b],mouth,nose,chin,top,mouthWidth:Math.max(10,Math.hypot(at(61).x-at(291).x,at(61).y-at(291).y))};}
 export function deformPoint(x,y,face,filter,intensity=1,time=0){if(!face||filter==='Original'||intensity<=0)return{x,y};const k=clamp(intensity,0,1.6)*(face.fade??1),c=Math.cos(face.angle),s=Math.sin(face.angle),dx=x-face.center.x,dy=y-face.center.y,u=c*dx+s*dy,v=-s*dx+c*dy;let du=0,dv=0;const local=p=>({x:c*(p.x-face.center.x)+s*(p.y-face.center.y),y:-s*(p.x-face.center.x)+c*(p.y-face.center.y)}),gauss=(a,b,rx,ry)=>Math.exp(-(((u-a)/rx)**2*2+((v-b)/ry)**2*2)),bulge=(p,rx,ry,sx,sy=sx)=>{const q=local(p),g=gauss(q.x,q.y,rx,ry);du+=(u-q.x)*sx*g*k;dv+=(v-q.y)*sy*g*k;},mouth=local(face.mouth),head=gauss(0,0,face.rx*1.6,face.ry*1.4);
- if(filter==='Random Face')filter=FACE_FILTERS[1+(Math.floor(time/1000000000)||7)%17];
+ if(filter==='Random Face'){const choices=FACE_FILTERS.filter(f=>f!=='Original'&&f!=='Random Face');filter=choices[Math.abs(Math.floor(time/1000000000)||7)%choices.length];}
  if(filter==='Giant Head')bulge(face.center,face.rx*1.7,face.ry*1.5,.8);
  if(filter==='Tiny Head')bulge(face.center,face.rx*1.8,face.ry*1.6,-.65);
  if(filter==='Huge Mouth')bulge(face.mouth,face.rx*.8,face.ry*.45,2.2,2.6);
@@ -21,6 +21,14 @@ export function deformPoint(x,y,face,filter,intensity=1,time=0){if(!face||filter
  if(filter==='Alien Head'){bulge(face.top,face.rx*1.15,face.ry*.8,.8,1.1);for(const p of face.eyes)bulge(p,face.rx*.4,face.ry*.3,1.5,1.2);du-=u*.2*gauss(0,face.ry*.5,face.rx,face.ry)*k;}
  if(filter==='Exaggerated Cheeks')for(const sign of [-1,1]){const p={x:face.center.x+sign*face.rx*.55*c-face.ry*.13*s,y:face.center.y+sign*face.rx*.55*s+face.ry*.13*c};bulge(p,face.rx*.6,face.ry*.5,1.7);}
  if(filter==='Funny Mirror'){du+=Math.sin(v/face.ry*3)*face.rx*.5*head*k;dv+=u*.18*head*k;}
+ if(filter==='Button Nose')bulge(face.nose,face.rx*.5,face.ry*.5,-.65,-.5);
+ if(filter==='Cheek Puff')for(const sign of [-1,1])bulge({x:face.center.x+sign*face.rx*.6*c-face.ry*.2*s,y:face.center.y+sign*face.rx*.6*s+face.ry*.2*c},face.rx*.55,face.ry*.45,1.1,.55);
+ if(filter==='Pointy Chin'){const q=local(face.chin),g=gauss(q.x,q.y,face.rx,face.ry*.6);du-=u*.4*g*k;dv+=face.ry*.45*g*k;}
+ if(filter==='High Brows')for(const eye of face.eyes){const q=local(eye);dv-=face.ry*.3*gauss(q.x,q.y-face.ry*.15,face.rx*.45,face.ry*.35)*k;}
+ if(filter==='Comic Grin'){const g=gauss(mouth.x,mouth.y,face.rx,face.ry*.45);du+=(u-mouth.x)*.95*g*k;dv-=face.ry*.15*g*k;}
+ if(filter==='Tilted Smile'){const g=gauss(mouth.x,mouth.y,face.rx,face.ry*.5);dv+=(u-mouth.x)*.45*g*k;}
+ if(filter==='Wavy Mirror'){du+=Math.sin(v/face.ry*5)*face.rx*.25*head*k;dv+=Math.cos(u/face.rx*4)*face.ry*.18*head*k;}
+ if(filter==='Pinch Face'){du-=u*.55*head*k;dv-=v*.25*head*k;}
  return{x:x+c*du-s*dv,y:y+s*du+c*dv};}
 export function buildMesh(faces,filters,intensity,time,w,h,cols=40,rows=24){const vertices=[],uv=[],indices=[];for(let j=0;j<=rows;j++)for(let i=0;i<=cols;i++){const x=i/cols*w,y=j/rows*h;let px=x,py=y;for(const face of faces)for(const filter of filters){const q=deformPoint(x,y,face,filter,intensity,time);px+=q.x-x;py+=q.y-y;}vertices.push(px/w*2-1,1-py/h*2);uv.push(i/cols,j/rows);}for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){const a=j*(cols+1)+i,b=a+1,c=a+cols+1;indices.push(a,c,b,b,c,c+1);}return{vertices:new Float32Array(vertices),uv:new Float32Array(uv),indices:new Uint16Array(indices)};}
 export function expressions(blend=[],points=[],level=0){const b=Object.fromEntries(blend.map(x=>[x.categoryName,x.score])),get=k=>clamp(b[k]||0);return{mouth:Math.max(get('jawOpen'),clamp(level*4)),smile:(get('mouthSmileLeft')+get('mouthSmileRight'))/2,blink:(get('eyeBlinkLeft')+get('eyeBlinkRight'))/2,brows:Math.max(get('browInnerUp'),(get('browOuterUpLeft')+get('browOuterUpRight'))/2),frown:(get('mouthFrownLeft')+get('mouthFrownRight'))/2,tilt:points[33]&&points[263]?Math.atan2(points[263].y-points[33].y,points[263].x-points[33].x):0};}

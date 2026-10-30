@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.17.0
+## Current development checkpoint — 6.18.0
+
+Milestone **7J** adds **eight face filters (27 total choices)** and Monster Me's **accent colors, body patterns, cheek details and chest badges (23 fields total)**. Choices visibly render and survive save/reopen/backups; older designs keep their appearance. Media studios gain source-aware guidance and safe crop/gesture cancellation, while camera/mic stay explicit and local media workflows remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
+
+### Retained learning checkpoint — 6.17.0
 
 Milestone **7I** clarifies Math answer formats and Spelling's five mode workflows. Math notebook strokes now survive empty motion-sample batches, canceled gestures stay discarded, captures release safely and paused workspaces block input while preserving completed writing. Existing learning pools, handwriting, adaptive questions, scores, multiplayer and free speech—including Niko's pronunciation—remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
 
