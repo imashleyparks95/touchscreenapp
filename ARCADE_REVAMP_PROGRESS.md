@@ -1008,3 +1008,7 @@ Publish exact checked source, update WORK_MODE_HANDOFF.md, request existing-proj
 ### Final checked result
 
 **61 test programs pass** (`npm test`), followed by final focused startup failure/recovery checks. **Four creative browser audits pass** plus the actual recovery/separate-save/original-preservation flow; existing generated mic/shared sounds/paint and media backup regressions remain. Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original hashes**. No Sites deployment here.
+
+### Published M9C checkpoint
+
+App `042859f8e87f794851fa8be6a1f886560fe0559b` pushed to `revamp/milestone-9c-beat-sessions`; remote SHA verified. Documentation-only follow-up preserves v6.28.0 runtime. Work Mode handoff pins checked source/existing destination. No Sites deployment here. Stop for deployed trial; proposed M9D requires continuation.
