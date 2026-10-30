@@ -1,0 +1,85 @@
+{
+  "version": "6.11.0",
+  "checks": [
+    "actual native charge/release causes real soft-body sling; P2 stays independent",
+    "slime: Menu/disconnect pause, held-input cleanup, intentional resume and exit",
+    "actual native movement, independent P2 and aimed real star opens real switch",
+    "ninja: Menu/disconnect pause, held-input cleanup, intentional resume and exit"
+  ],
+  "audits": [
+    {
+      "game": "slime",
+      "width": 1440,
+      "fields": [
+        {
+          "width": 720,
+          "height": 627.421875,
+          "container": 627.421875
+        },
+        {
+          "width": 717,
+          "height": 627.421875,
+          "container": 627.421875
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "slime",
+      "width": 390,
+      "fields": [
+        {
+          "width": 390,
+          "height": 249.59375,
+          "container": 249.59375
+        },
+        {
+          "width": 390,
+          "height": 249.59375,
+          "container": 249.59375
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "ninja",
+      "width": 1440,
+      "fields": [
+        {
+          "width": 720,
+          "height": 627.421875,
+          "container": 627.421875
+        },
+        {
+          "width": 717,
+          "height": 627.421875,
+          "container": 627.421875
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "ninja",
+      "width": 390,
+      "fields": [
+        {
+          "width": 390,
+          "height": 249.59375,
+          "container": 249.59375
+        },
+        {
+          "width": 390,
+          "height": 249.59375,
+          "container": 249.59375
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual browser rules/rendering with standard Gamepad API fixtures; not physical Bluetooth/USB hardware."
+}

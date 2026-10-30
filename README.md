@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.10.0
+## Current development checkpoint — 6.11.0
+
+Milestone **7C** adds original motion-world artwork, objective tracking and native two-controller actions to Slime Lab and Shadow Ninjas. Slime aims/charges a real sling and has split/select/anchor tools; Ninjas move/aim with mapped abilities and shields. Touch remains available. Global controller navigation yields during native play and returns in menus; disconnect pauses safely. Portrait multiplayer uses full-width stacked fields. Existing courses, missions, cosmetic skins, scores and physics remain. Read `WORK_MODE_HANDOFF.md` for the exact deployment checkpoint. Milestone 7 is still in progress; physical controllers and advanced native-course workflows remain to try.
+
+### Retained care-game checkpoint — 6.10.0
 
 Milestone **7B** polishes Monster Café and Monster Dentist: original kitchen/clinic/enamel artwork, named guest moods, live recipe/quantity status and patience bars, selectable treatment guidance, matching-tooth outlines, persistent focus and cleaner gesture ownership. Manual dental help now pauses the real clock. Scoring, patient/recipe rules, alternating play and old records remain. See `WORK_MODE_HANDOFF.md` for the exact deployable checkpoint. Milestone 7 is still in progress; physical precision gestures/audio remain to try.
 

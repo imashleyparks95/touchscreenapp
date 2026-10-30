@@ -1,0 +1,10 @@
+
+> little-big-arcade@6.11.0 test:motion:browser
+> node tests/motion-browser.mjs
+
+PASS: two actual two-player motion sessions, four active audits, native Gamepad API fixture sling/movement/star-switch, global-cursor ownership, pause/disconnect cleanup and backup.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

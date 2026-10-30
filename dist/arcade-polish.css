@@ -125,3 +125,21 @@ body:has(:is(.ref-game-bugs,.ref-game-balloons) .refined-play)>.game-instruction
 body:has(:is(.ref-game-cafe,.touch-dentist))>.game-instruction-help{background:#253c42;color:#f3ead2;border-color:#718b83}
 body:has(.ref-game-cafe .refined-play,.touch-dentist .touch-play)>.game-instruction-help{display:none}
 .touch-dentist .new-matchbar>div{display:flex;flex-wrap:wrap;gap:7px}.touch-dentist .new-matchbar button{min-height:44px}
+.motion-objective{padding:10px 14px;background:#243f43;color:#e4e9d4;font:600 13px Outfit,sans-serif;line-height:1.5;flex-shrink:0;border-bottom:1px solid #58746f}
+.motion-pad-help{padding:12px;border:1px solid #687a85;border-radius:12px;background:#243443;color:#d9e3df!important;font-size:12px!important;line-height:1.6}
+body:has(:is(.touch-slime,.touch-ninja))>.game-instruction-help{background:#253c42;color:#f3ead2;border-color:#718b83}
+body:has(:is(.touch-slime,.touch-ninja) .touch-play)>.game-instruction-help{display:none}
+:is(.touch-slime,.touch-ninja) .new-matchbar>div{display:flex;gap:7px;flex-wrap:wrap}:is(.touch-slime,.touch-ninja) .new-matchbar button{min-height:44px}
+@media(max-width:650px){.motion-objective{font-size:11px;padding:7px 10px}}
+/* Portrait motion worlds retain usable full-width fields and independent panels. */
+@media(max-width:650px){
+ :is(.touch-slime,.touch-ninja){height:auto;min-height:100dvh;overflow:visible}
+ :is(.touch-slime,.touch-ninja) #touchContent{flex:0 0 auto;overflow:visible}
+ :is(.touch-slime,.touch-ninja) .touch-play{height:auto;min-height:0}
+ :is(.touch-slime,.touch-ninja) .new-playfield{flex:none;grid-template-columns:minmax(0,1fr);grid-template-rows:auto}
+ :is(.touch-slime,.touch-ninja) .touch-zone{height:auto;min-height:0}
+ :is(.touch-slime,.touch-ninja) .new-canvas-wrap{flex:0 0 auto;width:100%;height:auto;min-height:0;aspect-ratio:1000/640}
+ :is(.touch-slime,.touch-ninja) .touch-toolrow{display:flex;overflow-x:auto;min-height:65px}
+ :is(.touch-slime,.touch-ninja) .touch-toolrow>*{flex-shrink:0}
+ :is(.touch-slime,.touch-ninja) .new-zone+.new-zone{border-left:0;border-top:3px solid #67739b}
+}

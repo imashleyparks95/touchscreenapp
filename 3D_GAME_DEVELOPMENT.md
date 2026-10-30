@@ -1,5 +1,10 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Controller ownership update — 6.11.0
+
+The lightweight 2D Slime Lab/Shadow Ninjas adapter in `dist/js/touch-native.js` reuses the existing independent `GamepadHub`, `padAxis` and `padButton` without changing toolkit API 1.0 or any 3D rules. The global arcade cursor yields both to Forest's `.lb-app` and to active `[data-native-gamepad="true"]` motion-game panels. Motion-game menus/paused screens return to global navigation. Preserve this ownership boundary when adding consumers; do not poll two gameplay adapters into the same player. See `ARCADE_REVAMP_PROGRESS.md` M7C and `tests/motion-revamp.mjs` / `tests/motion-browser.mjs` for exact supported actions and fixture-versus-hardware limits. Other pointer games retain cursor support; this is not universal native-gameplay certification.
+
+
 ## Five-world benchmarking — 6.8.0
 
 `limit/benchmark-suite.js` is a game-owned adapter over the existing independent `BenchmarkRun`/`FrameLog`, graphics presets, telemetry and real Forest/Journey scenes. Shared toolkit API 1.0 and other consumers are unchanged. `SUITE_STAGES` defines Forest rendering, Castle lighting, Arena combat, Chamber physics/particles and combined Chamber load. Each is freshly loaded, warmed for 3 seconds and recorded for 8 seconds. Loading/warm-up frames are excluded; settings are fixed per preset, with no adaptive quality. A fixed seeded model and camera path run with scripted 60 Hz intents. Catch-up is capped at 100 ms per rendered frame; very slow machines therefore advance less simulation time, recorded per scenario. Havok/backend scheduling is not bit-for-bit deterministic. Invulnerable benchmark actors preserve the combat workload; these are intentional benchmark rules, never adventure behavior.

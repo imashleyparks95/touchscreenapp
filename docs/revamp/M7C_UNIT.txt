@@ -1,0 +1,4 @@
+PASS: actual two-player controller ownership, neutral edges, movement/stopping, sustained dash, real star/shield rules, real charged slime impulse, split/select/reset/anchor cleanup, disconnect pause and disposal. Controller devices are fixtures, not hardware evidence.
+PASS: held-trigger join protection plus native slide, blink and legal wall-adjacent jump invoke actual core abilities (isolated position fixture for wall jump).
+PASS: selected split-blob/aim overlays and reduced-effects motion artwork render with finite coordinates.
+PASS: native anchor selection recovers after a model-driven reset without a lost button press.
