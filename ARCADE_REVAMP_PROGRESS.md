@@ -645,3 +645,7 @@ Shell **72** + library/preview **75** / eight scenarios + active **4** = **151**
 ### Resume / next steps
 
 Publish exact checkpoint and update `WORK_MODE_HANDOFF.md`. Work Mode deploys **6.16.0** `dist/` to the existing project/URL/access policy, verifies live version and returns its URL. User tries Buddy limb/gadget changes, multi-finger releases, rooms/collection and alternating turns; Battle all six types, learning, medley, simultaneous players, pause/help and preserved records. Stop for the deployed trial. **Next proposed batch after continuation: 7I — Math Quest and Spelling Adventure**, reviewing actual educational UI/input/feedback while preserving adaptive grade/word pools, free automatic speech, Niko = NEE-koh, handwriting, multiplayer and backups. Media/zoo/Air Slice and other game-ledger/hardware work plus M8–M10 remain unfinished.
+
+### Milestone 7H published checkpoint
+
+Successfully pushed tested **v6.16.0** app commit **`ce3f999339f8eafa665df87ac12f48cc51a5ced1`** to **`revamp/milestone-7h-play-games`**, verified the remote branch, and confirmed 7G remains at `ba63b7d18677af67889c7caa1311ffa5655222ab`. This follow-up changes documentation only. Full regression completed (50 programs), focused cue/host checks pass and all 151 browser audits pass. Work Mode should deploy the exact published checkpoint to the existing Sites project, verify live **6.16.0** and return its URL for the user's Buddy/Tap Battle trial. **Milestone 7 remains in progress; stop before proposed 7I unless continued.** No live deployment performed here.

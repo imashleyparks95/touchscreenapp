@@ -2,7 +2,7 @@
 
 ## Deploy v6.16.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7h-play-games**, based on published 7G `ba63b7d18677af67889c7caa1311ffa5655222ab`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7h-play-games**, based on published 7G `ba63b7d18677af67889c7caa1311ffa5655222ab`. Tested app commit **ce3f999339f8eafa665df87ac12f48cc51a5ced1**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7H improves Buddy Mayhem/Two-Player Tap Battle; Milestone 7 remains in progress.** Runtime: `dist/js/play-polish.js`, `premium.js`, `premium-render.js`, `refined.js`, `refine-render.js`, scoped `dist/arcade-polish.css`. Authoritative runtime is `dist/`; version **6.16.0**. Evidence: `docs/revamp/M7H_*`. All 25 refreshed covers, shared local sounds and choice-first Doodle/mines/healers remain.
 
@@ -22,4 +22,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7H, version 6.16.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7h-play-games, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.16.0 and return the existing URL for my Buddy Mayhem / Tap Battle trial. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7H, version 6.16.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7h-play-games, commit ce3f999339f8eafa665df87ac12f48cc51a5ced1. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.16.0 and return the existing URL for my Buddy Mayhem / Tap Battle trial. Pause further development for my trial.
