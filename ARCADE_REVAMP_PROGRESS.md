@@ -858,3 +858,7 @@ Audit/build/changed-source syntax/whitespace: **25 public IDs, 276 cache entries
 ### Resume / next steps
 
 Publish exact checked source and update `WORK_MODE_HANDOFF.md`. Work Mode deploys **6.23.0** `dist/` to the existing project/URL/access policy, verifies version and returns URL. User tries Reset overview/portrait/wide/resize, held-input cancel, Inspect with all four class details, camera/zoom bounds, real gait/wings/wheels/reduced motion, native/mixed touch, original purchases/armies/records and classic. Stop for deployed trial. **Next proposed batch after continuation: M8D — Wobbly Wars AI and large-army stability review**, preserving rig/contact, purchases, controls and save interfaces. Further character/art/hardware acceptance and M7/M9/M10 remain unfinished.
+
+### Published checkpoint
+
+Tested app commit `1e49a272ccde715b4fb5c539f41c15146fca42c7` pushed to `revamp/milestone-8c-wars-presentation`; remote SHA verified. WORK_MODE_HANDOFF.md pins this v6.23.0 runtime. Documentation-only follow-up preserves it. Deployment remains for Work Mode and the user trial; no deployment performed here.
