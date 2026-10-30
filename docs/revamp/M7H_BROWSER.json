@@ -1,0 +1,35 @@
+{
+  "version": "6.16.0",
+  "checks": [
+    "actual ragdoll grab then gadget-change cancellation, real glove activation, objective guidance and paused physics",
+    "real GO wait and legal touchscreen response scores P1 only, both prompt panels and actual pause/backup parse"
+  ],
+  "audits": [
+    {
+      "game": "buddy",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "buddy",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "battle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "battle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Real browser input and actual models; virtual-controller grab fixture, no full campaign, physical controller/touch or audible QA claim."
+}

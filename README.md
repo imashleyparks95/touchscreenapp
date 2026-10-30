@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.15.0
+## Current development checkpoint — 6.16.0
+
+Milestone **7H** gives Buddy Mayhem original padded-room detail, live gadget/objective guidance and safe grab-to-gadget changes. Tap Battle gains readable per-player prompts, original arena detail and pause-safe captures. Both improve portrait layouts while retaining physics, challenge rules, unlocks, scoring and multiplayer. All earlier covers, shared local sounds and choice-first Doodle defenses remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
+
+### Retained defense checkpoint — 6.15.0
 
 Milestone **7G** reworks Doodle Defenders around **choose an ability, then draw it your way**. Your sketch stays on-screen: turrets shoot bullets, single-use mines explode, and healers send green pluses to injured defenses or nearby HOME. All eight roles, placement, upgrades and multiplayer remain. New defense records are separate from preserved earlier results. Castle Creator gains support/assault guidance, original fortress detail and clearer build controls while retaining visual purchases and saved designs. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
 

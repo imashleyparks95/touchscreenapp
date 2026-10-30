@@ -1,3 +1,4 @@
+import {drawBattleStage} from './play-polish.js';
 import {drawCareBackdrop,cafeGuest} from './care-art.js';
 import {drawReactionGame} from './reaction-art.js';
 import {drawBackdrop,drawCharacter,drawFood} from './premium-art.js';
@@ -28,7 +29,7 @@ export function renderGame(ctx,m,p){
  for(let e of m.effects){const z=(m.clock-e.at)/900;for(let k=0;k<6;k++){const a=k*1.04;C(e.x+Math.cos(a)*z*35,e.y-Math.sin(a)*z*22+z*z*25,Math.max(0,3*(1-z)),e.color);}}T('Start at the top or beside a cleared section · 60 cleared sections open the next depth',500,632,17,'#d4c6d7');
  }
  if(m.game==='battle'){
- drawBackdrop(ctx,'arcade arena',m.clock);for(let i=0;i<11;i++)L(i*100,125,500,640,p.color+'10');let type=m.roundType,sub=m.learn&&m.question?m.question:type==='reaction'?(m.phase==='go'?'GO! TAP NOW':'WAIT FOR GREEN'):type==='combo'?(m.clock<m.previewUntil?'WATCH THE SEQUENCE':'REPEAT THE SEQUENCE'):type==='speed'?'One target at a time · Move fast, tap accurately':`Find ${BUG_COLORS[m.targetColor]?.name||'the star'} ${BUG_COLORS[m.targetColor]?.mark||'★'}`;
+ drawBattleStage(ctx);for(let i=0;i<11;i++)L(i*100,125,500,640,p.color+'10');let type=m.roundType,sub=m.learn&&m.question?m.question:type==='reaction'?(m.phase==='go'?'GO! TAP NOW':'WAIT FOR GREEN'):type==='combo'?(m.clock<m.previewUntil?'WATCH THE SEQUENCE':'REPEAT THE SEQUENCE'):type==='speed'?'One target at a time · Move fast, tap accurately':`Find ${BUG_COLORS[m.targetColor]?.name||'the star'} ${BUG_COLORS[m.targetColor]?.mark||'★'}`;
  banner(MODE_NAMES[type]||'Skill Medley',sub,p.color);if(type==='survival')T('♥'.repeat(Math.max(0,m.lives)),500,125,22,'#ff88b4');
  if(type==='combo'){const preview=m.clock<m.previewUntil;let current=Math.floor((m.clock-m.challengeAt)/((m.previewUntil-m.challengeAt)/m.sequence.length));for(let i=0;i<m.sequence.length;i++){let x=500+(i-(m.sequence.length-1)/2)*58;R(x-23,117,46,37,9,preview?(i===current?BUG_COLORS[m.sequence[i]].hex:'#33405b'):i<m.seqIndex?'#57dfb8':'#33405b');T(preview?BUG_COLORS[m.sequence[i]].mark:i<m.seqIndex?'✓':'?',x,136,23,preview&&i===current?'#1a263f':'#eee9ff');}}
  for(let t of m.items){const color=type==='reaction'?(m.phase==='go'?'#55e9b4':'#e98a95'):type==='combo'?BUG_COLORS[t.color].hex:BUG_COLORS[t.color].hex;C(t.x,t.y,t.r+9,color+'19');ctx.save();ctx.translate(t.x,t.y);for(let k=0;k<8;k++){ctx.rotate(Math.PI/4);R(-t.r*.14,-t.r*1.05,t.r*.28,t.r*.35,4,color,'#d4e9ef88');}ctx.restore();C(t.x,t.y,t.r*.86,color,'#edf9ff');C(t.x,t.y,t.r*.68,'#25385099','#d7eaff55');T(type==='reaction'?(m.phase==='go'?'GO':'WAIT'):type==='combo'?BUG_COLORS[t.color].mark:m.learn?t.label:type==='accuracy'?BUG_COLORS[t.color].mark:t.good?'★':'✹',t.x,t.y,type==='reaction'?28:t.r*.85,'#16233d');}

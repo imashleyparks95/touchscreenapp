@@ -1,0 +1,1 @@
+PASS: all 30 Battle mode/difficulty cues preserve model state, reaction cues read no future time, memory cues read no future symbols, all 15 Buddy tool hints and real grab cancellation, finite original playroom/arena art.
