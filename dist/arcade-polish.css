@@ -143,3 +143,21 @@ body:has(:is(.touch-slime,.touch-ninja) .touch-play)>.game-instruction-help{disp
  :is(.touch-slime,.touch-ninja) .touch-toolrow>*{flex-shrink:0}
  :is(.touch-slime,.touch-ninja) .new-zone+.new-zone{border-left:0;border-top:3px solid #67739b}
 }
+/* Milestone 7D: puzzle/workbench guidance, without revealing solutions or hidden faults. */
+.circuit-status,.robot-job-status{padding:9px 13px;background:#233d43;color:#e0e7d4;font-size:12px;line-height:1.5;flex-shrink:0}
+.circuit-status p{margin:4px 0 0}.circuit-connections{display:flex;gap:7px;flex-wrap:wrap}.circuit-connections span{padding:3px 10px;border:1px solid #829a98;border-radius:8px;background:#2a414d;font-weight:700}.circuit-connections .powered{background:#416c5d;color:#f1edd9}
+.robot-job-counts{font-size:11px;color:#c0d1c8}.robot-job-parts{display:flex;gap:7px;overflow-x:auto;padding-top:5px}.robot-job-parts span{flex-shrink:0;border:1px solid #67817f;border-radius:8px;padding:4px 8px;background:#2a454a;font-size:11px}.robot-tool-hint{margin:0;padding:8px 13px;background:#29384b;color:#e0dfce;font-size:12px;line-height:1.4;flex-shrink:0}
+body:has(:is(.circuit-room,.premium-robot))>.game-instruction-help{background:#253c42;color:#f3ead2;border-color:#718b83}body:has(.circuit-room .new-play,.premium-robot .premium-play)>.game-instruction-help{display:none}
+:is(.circuit-room,.premium-robot) .new-matchbar>div{display:flex;gap:7px;flex-wrap:wrap}:is(.circuit-room,.premium-robot) .new-matchbar button{min-height:44px}
+@media(max-width:650px){
+ :is(.circuit-room,.premium-robot){height:auto;min-height:100dvh;overflow:visible}
+ :is(.circuit-room,.premium-robot) :is(#newContent,#premiumContent){flex:0 0 auto;overflow:visible}
+ :is(.circuit-room,.premium-robot) .new-play{height:auto;min-height:0}
+ :is(.circuit-room,.premium-robot) .new-playfield{flex:none;grid-template-columns:minmax(0,1fr);grid-template-rows:auto}
+ :is(.circuit-room,.premium-robot) .new-zone{height:auto;min-height:0}
+ :is(.circuit-room,.premium-robot) .new-canvas-wrap{flex:0 0 auto;width:100%;height:auto;min-height:0;aspect-ratio:1000/640}
+ .circuit-room .new-canvas-wrap{aspect-ratio:1}
+ .premium-robot .premium-tools{display:flex;overflow-x:auto;flex-wrap:nowrap}.premium-robot .premium-tool{flex:0 0 95px}
+}
+.circuit-room .circuit-status p{color:#d5e4df}
+.premium-robot .premium-tools button.selected small{color:#f2f0ff}

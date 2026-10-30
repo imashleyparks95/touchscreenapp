@@ -1,0 +1,36 @@
+{
+  "version": "6.12.0",
+  "checks": [
+    "real authored circuit path powers P1 only; controller-pointer cancellation rolls back without penalty; status, pause, exit",
+    "both Robot players legally scan all actual faults and finish diagnosis through TEST; guided status and fair alternating turns",
+    "all 25 actual production covers rendered in a visual contact sheet"
+  ],
+  "audits": [
+    {
+      "game": "circuit",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "circuit",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "robot",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "robot",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual browser inputs and controller-pointer cancellation fixture; circuit route supplied by authored certificate, no forced connections; legal Robot diagnosis, not full repair certification."
+}

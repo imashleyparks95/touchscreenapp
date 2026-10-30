@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.11.0
+## Current development checkpoint — 6.12.0
+
+Milestone **7D** refreshes **all 25 public game covers** with original offline illustrations. Circuit Rush gains PCB detail, live connection status and safe canceled-wire rollback. Robot Repair Shop gains workbench detail, scanned-only repair steps, tool hints and gesture cleanup. Both retain existing rules, scores and multiplayer, with portrait layouts and manual help. See `WORK_MODE_HANDOFF.md` for deployment and trial directions. Milestone 7 remains in progress.
+
+### Retained motion-game checkpoint — 6.11.0
 
 Milestone **7C** adds original motion-world artwork, objective tracking and native two-controller actions to Slime Lab and Shadow Ninjas. Slime aims/charges a real sling and has split/select/anchor tools; Ninjas move/aim with mapped abilities and shields. Touch remains available. Global controller navigation yields during native play and returns in menus; disconnect pauses safely. Portrait multiplayer uses full-width stacked fields. Existing courses, missions, cosmetic skins, scores and physics remain. Read `WORK_MODE_HANDOFF.md` for the exact deployment checkpoint. Milestone 7 is still in progress; physical controllers and advanced native-course workflows remain to try.
 

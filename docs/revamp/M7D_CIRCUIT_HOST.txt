@@ -1,0 +1,5 @@
+PASS: 30 unique solvable circuits, physical gates, crossing rules, bridge lanes, stage order, timed failures, undo/reset, isolated pointer ownership and fair accuracy comparison.
+PASS: chewing runs 4 full cycles without changing movement on all difficulties, queued rapid feeds, swept mouth-only collisions, one score per projectile, separate simultaneous launchers, all 20 mode/difficulty combinations and repeatable five-tap timing.
+PASS: profile and rivalry records, backup roundtrip with new games and secret badges, Circuit lobby replacement, no face tile or ordinary trophy disclosure.
+PASS: shipped session controller best-of-five and best-of-three flow, exactly-once recording, marathon independent advancement, pause-safe clocks, and simultaneous independent pointer handlers.
+PASS: every Feed the Face difficulty has a successful tap shot, launch-time food request fairness, independent selections, cooldown and angry reaction without movement changes.

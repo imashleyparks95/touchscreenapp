@@ -1,10 +1,10 @@
 {
   "name": "little-big-arcade",
-  "version": "6.11.0",
+  "version": "6.12.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/motion-revamp.mjs && node tests/care-revamp.mjs && node tests/reaction-revamp.mjs && node tests/limit-benchmark.mjs && node tests/limit-expedition.mjs && node tests/limit-journey-scene.mjs && node tests/library.mjs && node tests/shared-systems.mjs && node tests/limit-input-settings.mjs && node tests/audit-arcade.mjs && node tests/universe.mjs && node tests/engine.mjs && node tests/offline.mjs && node tests/studios.mjs && node tests/smash.mjs && node tests/refinement.mjs && node tests/circuit-face.mjs && node tests/touch-worlds.mjs && node tests/gravity.mjs && node tests/premium.mjs && node tests/launch-fixes.mjs && node tests/media-expansion.mjs && node tests/air-slice.mjs && node tests/castle-overhaul.mjs && node tests/spelling.mjs && node tests/combat-upgrades.mjs && node tests/updates.mjs && node tests/quest-games.mjs && node tests/quest-controllers.mjs && node tests/math-expansion.mjs && node tests/3d-toolkit.mjs && node tests/3d-attachments.mjs && node tests/wars3d-exchanges.mjs && node tests/wars3d-arm-clearance.mjs && node tests/wars3d-core.mjs && node tests/wars3d-environment.mjs && node tests/wars3d-weapons.mjs && node tests/wars3d-controller.mjs && node tests/3d-gamepads.mjs && node tests/3d-adventure.mjs && node tests/limit-assets.mjs && node tests/limit-core.mjs && node tests/limit-gameplay.mjs && node tests/limit-controller.mjs && node tests/limit-scene.mjs",
+    "test": "node tests/workshop-revamp.mjs && node tests/motion-revamp.mjs && node tests/care-revamp.mjs && node tests/reaction-revamp.mjs && node tests/limit-benchmark.mjs && node tests/limit-expedition.mjs && node tests/limit-journey-scene.mjs && node tests/library.mjs && node tests/shared-systems.mjs && node tests/limit-input-settings.mjs && node tests/audit-arcade.mjs && node tests/universe.mjs && node tests/engine.mjs && node tests/offline.mjs && node tests/studios.mjs && node tests/smash.mjs && node tests/refinement.mjs && node tests/circuit-face.mjs && node tests/touch-worlds.mjs && node tests/gravity.mjs && node tests/premium.mjs && node tests/launch-fixes.mjs && node tests/media-expansion.mjs && node tests/air-slice.mjs && node tests/castle-overhaul.mjs && node tests/spelling.mjs && node tests/combat-upgrades.mjs && node tests/updates.mjs && node tests/quest-games.mjs && node tests/quest-controllers.mjs && node tests/math-expansion.mjs && node tests/3d-toolkit.mjs && node tests/3d-attachments.mjs && node tests/wars3d-exchanges.mjs && node tests/wars3d-arm-clearance.mjs && node tests/wars3d-core.mjs && node tests/wars3d-environment.mjs && node tests/wars3d-weapons.mjs && node tests/wars3d-controller.mjs && node tests/3d-gamepads.mjs && node tests/3d-adventure.mjs && node tests/limit-assets.mjs && node tests/limit-core.mjs && node tests/limit-gameplay.mjs && node tests/limit-controller.mjs && node tests/limit-scene.mjs",
     "test:3d": "node tests/3d-toolkit.mjs && node tests/3d-attachments.mjs && node tests/wars3d-exchanges.mjs && node tests/wars3d-arm-clearance.mjs && node tests/wars3d-core.mjs && node tests/wars3d-environment.mjs && node tests/wars3d-weapons.mjs && node tests/wars3d-controller.mjs && node tests/3d-gamepads.mjs && node tests/3d-adventure.mjs && node tests/limit-assets.mjs && node tests/limit-core.mjs && node tests/limit-gameplay.mjs && node tests/limit-controller.mjs && node tests/limit-scene.mjs",
     "test:limit": "node tests/limit-expedition.mjs && node tests/limit-journey-scene.mjs && node tests/3d-gamepads.mjs && node tests/3d-adventure.mjs && node tests/limit-assets.mjs && node tests/limit-core.mjs && node tests/limit-gameplay.mjs && node tests/limit-controller.mjs && node tests/limit-scene.mjs",
     "start": "node scripts/serve.mjs",
@@ -20,7 +20,8 @@
     "test:benchmark:browser": "node tests/limit-benchmark-browser.mjs",
     "test:reaction:browser": "node tests/reaction-browser.mjs",
     "test:care:browser": "node tests/care-browser.mjs",
-    "test:motion:browser": "node tests/motion-browser.mjs"
+    "test:motion:browser": "node tests/motion-browser.mjs",
+    "test:workshop:browser": "node tests/workshop-browser.mjs"
   },
   "dependencies": {
     "@babylonjs/havok": "1.3.14",
