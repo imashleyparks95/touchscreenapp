@@ -2,7 +2,7 @@
 
 ## Deploy v6.12.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7d-puzzle-workshops**, based on published 7C `b78514156dacacd88525941814faf40c1b9759d8`. Tested app commit **APP_COMMIT_PENDING**. Publication status will be recorded after push. Prior deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7d-puzzle-workshops**, based on published 7C `b78514156dacacd88525941814faf40c1b9759d8`. Tested app commit **030911a78c5c9d98499e9cf91f185bbca28880c4**. Published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Prior deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7D improves Circuit Rush/Robot Repair Shop and refreshes all 25 public game covers. Milestone 7 remains in progress.** Runtime source: `dist/js/cover-art.js`, `workshop-ui.js`, `arcade-new.js`, `premium.js`, `premium-render.js`, `visuals.js`, `premium-art.js`, common instruction artwork and scoped `dist/arcade-polish.css`. `dist/` is authoritative; package/release/cache version is **6.12.0**. Evidence: `docs/revamp/M7D_*`.
 
@@ -23,4 +23,4 @@ Stop for the user's deployed trial. Next development after continuation: **7E, p
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7D, version 6.12.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7d-puzzle-workshops, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.12.0 and send me the existing URL to test all 25 updated game covers plus Circuit Rush and Robot Repair Shop. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7D, version 6.12.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7d-puzzle-workshops, commit 030911a78c5c9d98499e9cf91f185bbca28880c4. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.12.0 and send me the existing URL to test all 25 updated game covers plus Circuit Rush and Robot Repair Shop. Pause further development for my trial.

@@ -527,3 +527,7 @@ During verification, corrected the test's initial Robot handoff assumption (ackn
 ### Resume / next steps
 
 Work Mode deploys exact published 6.12.0 source to the existing Sites project and returns the URL; user tries new library/preview covers, Circuit drawing/cancel/two-player/portrait, Robot scan privacy/tools/panel/repair/Test/alternating turns and physical input. Stop here for the trial. **Next proposed batch is 7E: Creative Studio and Beat Lab**, preserving saved projects, microphone audio, exports, simultaneous drawing and scheduler behavior. Other game-ledger reviews and hardware quality work remain; do not jump to M8 or declare Milestone 7 complete.
+
+### Milestone 7D published checkpoint
+
+Successfully pushed tested **v6.12.0** app commit **`030911a78c5c9d98499e9cf91f185bbca28880c4`** to **`revamp/milestone-7d-puzzle-workshops`**, verified the remote branch, and confirmed 7C remains at `b78514156dacacd88525941814faf40c1b9759d8`. This follow-up changes documentation only. Full tests completed successfully (46 programs); all 151 browser audits passed. Work Mode should deploy the exact published checkpoint to the existing Sites project, verify live **6.12.0**, and return the URL for the user to test all 25 refreshed public covers and the Circuit/Robot improvements. **Milestone 7 remains in progress. Stop for the deployed trial; next proposed batch 7E after continuation.** No live deployment performed here.
