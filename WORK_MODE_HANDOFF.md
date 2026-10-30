@@ -2,7 +2,7 @@
 
 ## Deploy v6.19.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7k-zoo-air**, based on published 7J `a25c0b2bf2f4bd6842f13e4fdcd2b56c585a8356`. Tested app commit **7cdd78cd9c751392e10d13327f43500902df4a0c**. The documentation follow-up has the same runtime and may be pinned by the final handoff. Finish earlier deployments before this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7k-zoo-air**, based on published 7J `a25c0b2bf2f4bd6842f13e4fdcd2b56c585a8356`. Tested app commit **7cdd78cd9c751392e10d13327f43500902df4a0c**. App source is published to GitHub; remote branch verified. The documentation follow-up has the same runtime and may be pinned by the final handoff. Finish earlier deployments before this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7K improves My Noisy Zoo / Air Slice; Milestone 7 remains in progress.** Runtime entry points: `dist/js/noisy-zoo.js`, `air-slice.js`, `air-slice-render.js`, new `zoo-air-polish.js`, scoped `dist/arcade-polish.css`. Authoritative source `dist/`; version **6.19.0**. Evidence: `docs/revamp/M7K_*`. Previous covers, sound library, choice-first Doodle, learning games and 27-filter/23-field media studios remain.
 
