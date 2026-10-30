@@ -1,0 +1,1 @@
+PASS: 80 searchable sounds, 32 new deterministic/finite original PCM samples, captured independent painting/cancel/keyboard/disposal, pattern counts, copied/validated shared PCM and actual backup roundtrip/rejection. Shared library tests are local-device scope, not an online service.

@@ -1,0 +1,35 @@
+{
+  "version": "6.13.0",
+  "checks": [
+    "optional drawing ideas, independent tool guides, concurrent production pointer strokes and actual saved art",
+    "80-sound search/preview/individual assignment, real browser touch painting and keyboard toggles, generated-device microphone capture/track save/shared-library save, actual second-profile reuse and backup parse"
+  ],
+  "audits": [
+    {
+      "game": "studio",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "studio",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "beat",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "beat",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual browser UI, CDP touch and Chromium generated microphone device; no physical microphone/audio/touch/controller certification. Shared sounds are local-device only."
+}

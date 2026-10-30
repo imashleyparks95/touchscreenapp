@@ -1,0 +1,1 @@
+PASS: central semantic version and verified release notes; welcome/migration; independent persistent app/game acknowledgments; missed-release merge/deduplication; future new games; read-only history; safe reset/storage failure; real modal cancellation, input separation, no early launch and secret route gating.

@@ -1,0 +1,10 @@
+
+> little-big-arcade@6.13.0 test:browser
+> node tests/shell-browser.mjs
+
+PASS: 72 responsive shell/game-entry audits; search, filtering, mute state, player switching, canceled restore retry, controller menus, disabled options, independent captured pointers, disconnect pause, acknowledged Creative Studio drawing and real offline reload. Standard-controller fixtures; no physical device/GPU claim.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

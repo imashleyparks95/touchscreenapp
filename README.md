@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.12.0
+## Current development checkpoint — 6.13.0
+
+Milestone **7E** adds Creative Studio drawing sparks and per-artist tool guidance. Beat Lab has **80 original offline sounds** with search, previews and individual track assignment. Record and trim a mic sample, save it to a track, then add it to the shared library for all profiles on the **same device**. Sounds are included in backups; no online publishing is involved. Captured touch step painting, keyboard toggles and pattern counts improve editing. Existing art/music projects, exports, multiplayer and all 25 refreshed covers remain. Read `WORK_MODE_HANDOFF.md` for the deployable checkpoint; Milestone 7 remains in progress.
+
+### Retained puzzle-workshop checkpoint — 6.12.0
 
 Milestone **7D** refreshes **all 25 public game covers** with original offline illustrations. Circuit Rush gains PCB detail, live connection status and safe canceled-wire rollback. Robot Repair Shop gains workbench detail, scanned-only repair steps, tool hints and gesture cleanup. Both retain existing rules, scores and multiplayer, with portrait layouts and manual help. See `WORK_MODE_HANDOFF.md` for deployment and trial directions. Milestone 7 remains in progress.
 

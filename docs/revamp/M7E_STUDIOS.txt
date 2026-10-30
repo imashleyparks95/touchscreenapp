@@ -1,0 +1,7 @@
+PASS: microphone single-session guard, input-level/timer callbacks, final chunk decode, real PCM trim, re-record, disconnect recovery, late permission cleanup, denial/missing-device/unsupported/decode error handling.
+PASS: actual simultaneous drawing pointer handlers retain independent tools/colors/sizes across midpoint and later toolbar edits; old art gets safe default controls; keyboard editing utilities.
+PASS: actual audio-clock scheduler, concurrent track notes, duplicate Play guard, tempo boundary update, next-step pause/resume, stop reset and lag recovery; all four 16/32-step presets.
+PASS: shipped project serialization retains custom microphone PCM, sample boundaries, per-track pitch/volume, patterns and master gain; offline composition renderer schedules that same buffer at the correct pitch/duration.
+PASS: shipped load routine accepts pre-update project fields and preserves custom audio, copied controls and fallback selection; full backup/restore serialization retains recorded sample PCM.
+PASS: offline song length includes the complete tail of a long recorded/imported sample.
+PASS: shipped microphone panel updates capture controls, waveform trim/preview and unsaved state; Save assigns only the trimmed PCM to the chosen sequencer track.

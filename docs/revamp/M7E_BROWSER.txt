@@ -1,0 +1,10 @@
+
+> little-big-arcade@6.13.0 test:creative:browser
+> node tests/creative-browser.mjs
+
+PASS: four active audits, original art save, 80-sound library, real touch painting, generated-device microphone capture, shared sound reuse by a second profile and full media backup.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
