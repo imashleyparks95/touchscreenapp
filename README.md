@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.22.0
+## Current development checkpoint — 6.23.0
+
+Milestone **8C** improves Wobbly Wars class detail, mounted presentation and battlefield framing. Archers gain quivers, slingers pouches, scouts scarves and Pulse Rangers plated cores. Reset View fits the overview to the viewport; Inspect Troop offers a closer view. Resize preserves orbit and safely cancels held movement. Native controls, illustrated purchases, measured weapon alignment, saved armies and classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Further AI/large-army and physical target-PC QA remain.
+
+### Retained native controller checkpoint — 6.22.0
 
 Milestone **8B** adds native controller ground cursors, troop selection/placement/movement and camera controls to Wobbly Wars 3D. Two standard controllers retain independent owners and work alongside touch. B returns to existing menu cursors; paused screens/dialogs retain normal navigation. Held-button safety and disconnect pause protect formations and battles. Original purchases, rigs, combat, saved armies and classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Physical controllers and target-PC performance still need trial.
 

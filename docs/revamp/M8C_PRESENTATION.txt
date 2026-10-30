@@ -1,0 +1,2 @@
+BJS - [20:46:52]: Babylon.js v9.32.0 - Null engine
+PASS: actual projection-matrix overview fits desktop/portrait/rotated camera, inspect and stable resize/disposal; immutable distance-driven legs/wheels and reduced-motion/death wings; eight real-rig class accessories with finite sockets, pause/reduced motion/fade/disposal and unchanged body counts.

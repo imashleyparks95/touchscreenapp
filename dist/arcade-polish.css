@@ -211,3 +211,5 @@ body:has(.ga-combat)>.game-instruction-help{display:none}
 .ww-app .ww-matchbar>div>span,.ww-app .ww-army-title>span,.ww-app [data-ww-unit-info],.ww-app .ww-hint{color:#465b4c}.ww-app .btn.primary{background:#28679f;border-color:#28679f;color:#fff5df}.ww-app .ww-purchase-roster .selected small{color:#f0eaff}
 .ww-pad-status,.ww-pad-guide{margin:0;padding:9px 16px;background:#253b43;color:#e5eadb;font-size:12px;line-height:1.5}.ww-pad-guide{border-bottom:1px solid #718b84}.ww-pad-guide summary{min-height:30px;cursor:pointer;font-weight:700}.ww-pad-guide p{color:#e5eadb}.ww-app #wwPadMode{position:absolute;right:12px;bottom:12px;font-size:10px;z-index:2}.ww-app #wwPadMode[aria-pressed=true]{background:#254d58;color:#f6edda}
 @media(max-width:650px){.ww-app #wwPadMode{bottom:64px}.ww-pad-status,.ww-pad-guide{font-size:11px}}
+.ww-app .ww-camera{max-width:calc(100% - 24px)}
+@media(max-width:650px){.ww-app .ww-camera{display:grid;grid-template-columns:auto 42px 42px auto;gap:6px}.ww-app #wwInspect{grid-column:1 / span 2}.ww-app #wwPadMode{bottom:12px}}
