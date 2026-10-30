@@ -1,0 +1,34 @@
+{
+  "version": "6.22.0",
+  "checks": [
+    "Two standard-controller fixtures through actual native adapter and global ownership: held entry/context A never buys, independent co-op purchases cost 120, native cancel/move plus simultaneous real touch movement, camera/zoom and D-pad change without purchase, Ready/start edges, Menu pause and shared-menu resume, disconnect freezes until deliberate resume, real reticles and complete engine/input disposal"
+  ],
+  "audits": [
+    {
+      "view": "native-deployment",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "native-deployment",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "native-battle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "native-battle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Babylon/Havok and production input/UI paths. getGamepads devices are explicit browser fixtures; touch partner uses projected virtual pointer. This does not certify physical Windows/USB/Bluetooth pads, GPU performance or audio."
+}

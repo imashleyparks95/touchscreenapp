@@ -1,0 +1,1 @@
+PASS: native ground cursors use real army costs/ownership/preview/commit rules, held-button context safety, cancel-before-menus, sparse two-pad co-op/versus ownership, rotated-camera motion, analog drift/bounds, held-move camera lock, zoom limits, D-pad repeat, one-shot Ready, Help/Menu/disconnect pause and disposal. Standard devices are fixtures, not physical controllers.

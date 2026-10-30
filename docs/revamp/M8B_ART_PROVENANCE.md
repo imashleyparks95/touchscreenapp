@@ -1,0 +1,5 @@
+# Milestone 8B native field markers
+
+P1's cyan circular ground marker and P2's amber diamond marker are original, lightweight runtime Torus geometry created in `dist/js/wars3d-scene.js`. Shape and color both distinguish owners. These non-pickable meshes have no physics body, hide outside deployment and dispose with the existing scene. No imported GLB, rig/hand/weapon mapping, texture, font or vendor file was replaced. All 98 original imported asset/vendor migration hashes remain unchanged. Existing class costumes, illustrated purchase cards and 25 library covers remain.
+
+Screenshots show actual local Babylon/Havok gameplay at desktop and phone widths. Native input uses explicitly injected standard `getGamepads` fixtures, and the touch partner uses projected virtual pointers through actual input handlers. This tests production controls and their native/global ownership handoff; it does not certify physical Windows/USB/Bluetooth pads, audio or target-GPU performance. Existing real pointer-only flows and preserved army backups are verified separately.

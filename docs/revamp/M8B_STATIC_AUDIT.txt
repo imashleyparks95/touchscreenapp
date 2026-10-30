@@ -1,0 +1,12 @@
+
+> little-big-arcade@6.22.0 audit:arcade
+> node scripts/audit-arcade.mjs
+
+PASS: registered roster and unique Limit Break — 25 unique registered worlds; all 25 original public IDs retained
+PASS: hidden session and legacy record preservation hooks — Hidden game entry retained; legacy record import present (behavior requires regression tests)
+PASS: version and static hosting configuration — 6.22.0; existing Sites identity and dist/ retained
+PASS: offline manifest files — 275 distinct local cache entries exist
+PASS: application module/style dependency closure — 177 reachable HTML/module/style/icon dependencies exist and are precached (model/texture decoding is tested separately)
+PASS: original vendored and art asset integrity — 98 asset/vendor files match original migration checksums; intentional future asset replacements require a documented provenance update
+PASS: save schema and local media identity — Storage identities unchanged; run backup/restore tests for behavior, and export real family data in its original browser
+25 public worlds inventoried. No live data read; no deployment performed.

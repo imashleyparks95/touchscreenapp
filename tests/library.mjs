@@ -7,7 +7,7 @@ import {matchingWorlds} from '../dist/js/discovery.js';
 const source=readFileSync('dist/js/visuals.js','utf8').replace(/^import .*;\n/gm,'').replace(/^export /gm,'');
 const games=JSON.parse(JSON.stringify(vm.runInNewContext(source+';GAMES',{})));
 assert.equal(games.length,25);assert.deepEqual(Object.keys(LIBRARY_MODES).sort(),games.map(g=>g.id).sort());
-for(const game of games){const c=worldCapabilities(game.id);assert.ok(c.multiplayer&&c.touch&&c.controller);assert.equal(c.controller,['limit','slime','ninja'].includes(game.id)?'Native controller':'Controller cursor');}
+for(const game of games){const c=worldCapabilities(game.id);assert.ok(c.multiplayer&&c.touch&&c.controller);assert.equal(c.controller,['limit','slime','ninja','wars'].includes(game.id)?'Native controller':'Controller cursor');}
 assert.match(worldCapabilities('air').device,/fallback/);assert.match(worldCapabilities('funny').device,/Camera/);assert.match(worldCapabilities('paint').note,/Freehand/);assert.equal(worldCapabilities('face').multiplayer,'');
 const a={name:'One'},b={name:'Two'};assert.deepEqual(libraryState(a),{favorites:[],recent:[]});validateLibrary(a);
 assert.equal(toggleFavorite(a,'paint'),true);assert.equal(toggleFavorite(a,'beat'),true);assert.deepEqual(libraryState(a).favorites,['paint','beat']);assert.deepEqual(libraryState(b).favorites,[]);

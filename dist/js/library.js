@@ -12,10 +12,10 @@ export const LIBRARY_MODES=Object.freeze({
 });
 const publicId=id=>Object.hasOwn(LIBRARY_MODES,id);
 export function worldCapabilities(id){
- return{multiplayer:LIBRARY_MODES[id]||'',controller:['limit','slime','ninja'].includes(id)?'Native controller':'Controller cursor',
+ return{multiplayer:LIBRARY_MODES[id]||'',controller:['limit','slime','ninja','wars'].includes(id)?'Native controller':'Controller cursor',
   touch:['funny','monster'].includes(id)?'Touch editing':'Touch & mouse',
   device:({funny:'Camera for face tracking',monster:'Camera / microphone for capture',zoo:'Microphone for custom voices',air:'Camera tracking or touch fallback',spelling:'Speakers for spoken words'})[id]||'',
-  note:id==='slime'?'Native controllers aim and charge a real sling; split/select/anchor tools support advanced puzzles. Touch still supports two-point stretch and pinch.':id==='ninja'?'Native controllers move and aim independently with direct abilities and shield. Touch routes and gestures remain available.':id==='limit'?'Explore four connected areas, or choose the original Forest chapter and its separate traversal baseline.':id==='paint'?'Freehand drawing works best with touch or a mouse.':id==='math'?'Use touch or a mouse for handwriting; submit answers separately.':id==='beat'?'Make music together, or take turns in rhythm challenges.':id==='wars'?'Choose simultaneous touch deployment when your device supports it, or take turns.':''};
+  note:id==='slime'?'Native controllers aim and charge a real sling; split/select/anchor tools support advanced puzzles. Touch still supports two-point stretch and pinch.':id==='ninja'?'Native controllers move and aim independently with direct abilities and shield. Touch routes and gestures remain available.':id==='limit'?'Explore four connected areas, or choose the original Forest chapter and its separate traversal baseline.':id==='paint'?'Freehand drawing works best with touch or a mouse.':id==='math'?'Use touch or a mouse for handwriting; submit answers separately.':id==='beat'?'Make music together, or take turns in rhythm challenges.':id==='wars'?'3D: native ground cursors, troop selection and camera; B returns to purchasing/menu cursors. Use two controllers or mixed touch for two players. Classic retains cursor controls.':''};
 }
 export function libraryState(profile){
  const value=profile?.library;

@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.21.0
+## Current development checkpoint — 6.22.0
+
+Milestone **8B** adds native controller ground cursors, troop selection/placement/movement and camera controls to Wobbly Wars 3D. Two standard controllers retain independent owners and work alongside touch. B returns to existing menu cursors; paused screens/dialogs retain normal navigation. Held-button safety and disconnect pause protect formations and battles. Original purchases, rigs, combat, saved armies and classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Physical controllers and target-PC performance still need trial.
+
+### Retained Wobbly 3D checkpoint — 6.21.0
 
 Milestone **8A** improves Wobbly Wars 3D deployment, saved-army loading and pause safety. Held troop moves remain previews until a legal release; cancel preserves the formation and co-op gestures stay independent. Existing cloaked classes gain segmented cloth and bone-attached enamel crests. Original rigs, hand-held weapons, illustrated troop purchases, all modes and the classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Native battlefield controller work and further 3D/hardware QA remain.
 

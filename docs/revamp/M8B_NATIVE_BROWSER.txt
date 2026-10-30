@@ -1,0 +1,10 @@
+
+> little-big-arcade@6.22.0 test:wars:native:browser
+> node tests/wars-native-browser.mjs
+
+PASS: four native desktop/phone audits; real native/global cursor handoff, two-pad and mixed touch purchases/moves, camera, Ready/start, pause/resume/disconnect and complete engine cleanup.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
