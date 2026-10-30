@@ -1,2 +1,3 @@
 PASS: visible-state guidance across 36 input/mode/team combinations, original badges, actual zoo cancel/legal layout/undo, pause capture cleanup, stable pinch-to-pan with no animal click, and actual Air Slice paused/clear/dispose capture release.
 PASS: actual pending voice decoding is invalidated on activity stop without playback, rewards or corrupting new activity counters.
+PASS: actual voice playback completing after activity shutdown is stopped and awards no call coins.

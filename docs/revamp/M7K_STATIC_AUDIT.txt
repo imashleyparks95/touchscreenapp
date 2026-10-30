@@ -10,3 +10,8 @@ PASS: application module/style dependency closure — 174 reachable HTML/module/
 PASS: original vendored and art asset integrity — 98 asset/vendor files match original migration checksums; intentional future asset replacements require a documented provenance update
 PASS: save schema and local media identity — Storage identities unchanged; run backup/restore tests for behavior, and export real family data in its original browser
 25 public worlds inventoried. No live data read; no deployment performed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
