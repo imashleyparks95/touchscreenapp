@@ -1,0 +1,17 @@
+
+> little-big-arcade@6.28.0 audit:arcade
+> node scripts/audit-arcade.mjs
+
+PASS: registered roster and unique Limit Break — 25 unique registered worlds; all 25 original public IDs retained
+PASS: hidden session and legacy record preservation hooks — Hidden game entry retained; legacy record import present (behavior requires regression tests)
+PASS: version and static hosting configuration — 6.28.0; existing Sites identity and dist/ retained
+PASS: offline manifest files — 276 distinct local cache entries exist
+PASS: application module/style dependency closure — 178 reachable HTML/module/style/icon dependencies exist and are precached (model/texture decoding is tested separately)
+PASS: original vendored and art asset integrity — 98 asset/vendor files match original migration checksums; intentional future asset replacements require a documented provenance update
+PASS: save schema and local media identity — Storage identities unchanged; run backup/restore tests for behavior, and export real family data in its original browser
+25 public worlds inventoried. No live data read; no deployment performed.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

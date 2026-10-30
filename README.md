@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.27.0
+## Current development checkpoint — 6.28.0
+
+Milestone **9C** protects Beat Lab sessions when starting Beat Battle: a recovery copy appears in Projects before clearing patterns, battle work uses a separate save identity, and active recording/export/microphone edits block new battle startup. Failed storage preserves the current work. Existing sound library, named projects, battle rules and scores remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions.
+
+### Retained learning checkpoint — 6.27.0
 
 Milestone **9B** aligns Math adventure result messages with existing team/personal stage rules. Both teammates see their own grade and saved stage, and can open their own skill progress directly from results. Questions, scores, mastery and record editions remain unchanged. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions.
 

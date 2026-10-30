@@ -1,0 +1,1 @@
+PASS: actual Beat Battle startup blocks active capture/export, saves recoverable pre-clear project, detaches named save identity, ignores duplicate start, preserves edits on failed storage and cancels late disposed startup.
