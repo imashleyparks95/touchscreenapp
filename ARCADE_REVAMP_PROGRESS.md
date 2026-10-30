@@ -918,3 +918,7 @@ Publish exact checked source and update WORK_MODE_HANDOFF.md; Work Mode deploys 
 ### Final checked result
 
 **59 test programs pass** (`npm test`), including independent shared toolkit/starter/effects, Forest/expedition, all arcade regressions, **100 campaign/difficulty solutions** and **630 actual weapon poses**. Expanded final focused environment test and **eight browser audits pass**: four presentation with actual live graphics scaling/two-light policy, four native/mixed touch. Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, 98 original hashes** retained. No live deployment performed.
+
+### Published M8E checkpoint
+
+Tested app `6d17bb987b616e2821e01b840ada1c24a026955f` pushed to `revamp/milestone-8e-wars-lighting`; remote SHA verified. Documentation-only handoff preserves runtime v6.25.0. Screenshots reviewed; deployed user trial remains pending. No Sites deployment performed here. Stop before proposed M9A unless continued.

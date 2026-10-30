@@ -2,7 +2,7 @@
 
 ## Deploy v6.25.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-8e-wars-lighting**, based on published 8D `58cfd18d1e3497f45013d0c5f5bae1d6c4701616`. Exact checked publication recorded below. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-8e-wars-lighting**, based on published 8D `58cfd18d1e3497f45013d0c5f5bae1d6c4701616`. Tested app commit **`6d17bb987b616e2821e01b840ada1c24a026955f`** is pushed and verified against GitHub. This documentation-only follow-up preserves the runtime and may be pinned for deployment. Finish earlier deployments first.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md and 3D_GAME_DEVELOPMENT.md. Authoritative source **dist/**. Entry points: **dist/js/wars3d-environment.js** (existing-light biome tints), **dist/js/3d/effects.js** (pooled/live-quality fix), **tests/3d-effects.mjs**, expanded environment/browser tests. Evidence: **docs/revamp/M8E_***. API, models/rigs/weapon contact, AI, purchases, controls, saved armies and classic edition retained. Broader art/hardware acceptance remains unfinished.
 
@@ -20,3 +20,7 @@ Final checks: **59 test programs pass**, including toolkit/starter/Forest and al
 - Recheck native two-controller/mixed touch, Ready/start, pause/help/disconnect/background/exit, Inspect/Reset, illustrated purchases, original saved armies/records, co-op/versus/campaign and classic. Keep family browser data.
 
 Stop for deployed user trial. Next proposed batch after explicit continuation: **M9A — multiplayer/replayability audit and first fixes**. Broader M7/M8 acceptance, M9 and M10 remain unfinished; no physical hardware/FPS claim.
+
+## Message to paste into Work Mode
+
+Deploy Little Big Arcade Milestone 8E, version 6.25.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-8e-wars-lighting, tested app commit 6d17bb987b616e2821e01b840ada1c24a026955f (or its final documentation-only handoff commit). Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.25.0 and return the URL for my trial. Pause further development for my trial.
