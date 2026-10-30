@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.26.0
+## Current development checkpoint — 6.27.0
+
+Milestone **9B** aligns Math adventure result messages with existing team/personal stage rules. Both teammates see their own grade and saved stage, and can open their own skill progress directly from results. Questions, scores, mastery and record editions remain unchanged. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions.
+
+### Retained multiplayer records checkpoint — 6.26.0
 
 Milestone **9A** audits existing multiplayer modes and protects shared match recording from duplicate/missing profiles and invalid scores. Practice feedback keeps player identity without saving records; café and penalty results name the next starting player. Existing rules, co-op/versus, artwork, controls and saves remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions and `docs/revamp/M9A_MULTIPLAYER_AUDIT.md` for inventory and remaining work.
 

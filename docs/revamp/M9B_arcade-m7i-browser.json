@@ -1,0 +1,48 @@
+{
+  "version": "6.27.0",
+  "checks": [
+    "real Math tutorial, completed/canceled/paused notebook gestures, legal answer submission and hidden fair handoff with independent paper",
+    "Actual ten-question mixed-grade co-op, 2+5 correct reaches 70% team goal, both grade-specific stages/messages, independent P2 progress choice; answers are test-driven, not learning certification",
+    "actual simultaneous spelling guidance, handwriting, legal P1 submission/P2 isolation, pause and real progress backup"
+  ],
+  "audits": [
+    {
+      "game": "math",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "math",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "math-coop-results",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "math-coop-results",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "spelling",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "spelling",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual browser UI and controller-pointer drawing fixture; authored answers drive legal single submissions, not learning or full-adventure certification. No physical handwriting/speech/audio claim."
+}

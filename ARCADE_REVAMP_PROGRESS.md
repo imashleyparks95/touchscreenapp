@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Milestone 9A — multiplayer audit / shared match recording; v6.26.0.** Atomic ranked roster/score validation, identity-preserving practice feedback and clearer alternating rematch starter. Branch `revamp/milestone-9a-match-records`, based on published 8E `6d444eaddad7d7f3a9e06478c59851832560822f`. Broader M9 and M7/M8/M10/hardware work remain.
+- **Current checkpoint: Milestone 9B — learning/co-op result and review choices; v6.27.0.** Math team/personal stage messages align with saved progress, both grades/stages appear and each player can review their skills. Branch `revamp/milestone-9b-learning-coop`, based on published 9A `1286be675be32f4aa78e5e39f8ff4638439216bb`. Broader M9 and M7/M8/M10/hardware acceptance remain.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-9a-match-records`**, based on 8E `6d444ea`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-9b-learning-coop`**, based on 9A `1286be6`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -25,7 +25,7 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | 6 — Scientific benchmarking | **Checkpoint complete — 6.8.0** | Separate five-scenario suite across actual Forest/Castle/Arena/Chamber scenes, per-scene warm-up, fixed paths/seed/settings, actual raw-frame history/JSON/CSV, comparisons and all-scenario 30/60 FPS tuning. Hardware results remain target-PC work. |
 | 7 — Every 2D game | **In progress — 7A–7L scoped batches, 6.20.0** | Bug Squash and Balloon Mayhem receive individual original art, animation, per-player readable cues/feedback, responsive layouts, soft hit sounds, actual bug fixes and targeted solo/versus verification. 7B adds Monster Café/Monster Dentist art, recipe/tool guidance, focus and input-lifecycle improvements. 7C adds Slime Lab/Shadow Ninjas native actions, illustrated motion worlds and objectives. 7D adds Circuit Rush/Robot Repair guidance, input cleanup and original workshop/board detail. 7E adds Creative Studio tool guidance/inspiration and Beat Lab sound library/recording reuse/step painting. 7F adds Gravity/Smash presentation, alternate controls and capture fixes. 7G adds Castle guidance/art and a user-requested choice-first Doodle mechanic with mines/healers and preserved legacy records. 7H adds Buddy/Tap Battle guidance, room art and capture fixes. 7I adds Math/Spelling learning guidance and Math notebook gesture repairs. 7J adds eight face filters, four saved monster fields and media editor lifecycle fixes. 7K adds Zoo/Air guidance, original badges, touch/pan cleanup and safer background activity shutdown. 7L adds Gladiator tactical guidance/icons/floor detail, gear comparisons, theme and pause fixes; additional art, native inputs and physical sign-off remain. All 25 public covers are refreshed separately. Game rows below retain remaining work; scoped review checkpoints do not establish complete 2D artwork, native controls or physical acceptance. |
 | 8 — Other 3D experiences | **In progress — 8A–8C checkpoints, 6.23.0** | Wobbly Wars retains actual rigs/wrist equipment, authored combat, scenery and recovered illustrated purchases. Added safe staged deployment/undo/co-op ownership, saved-army loading/pause fixes, segmented capes/enamel crests and live guidance. 8B adds native cursors/deployment/camera and menu ownership. 8C adds class accessories, mounted presentation and actual-projection overview/inspection. Further AI/large-army/model work and physical controller/target-GPU testing remain. |
-| 9 — Multiplayer/replayability | **9A shared records checkpoint — 6.26.0; in progress** | Public mode inventory, atomic ranked roster validation, practice identity and alternating rematch guidance. Further game-specific progression/rewards, physical mixed-input play and engagement work remain. |
+| 9 — Multiplayer/replayability | **9A–9B checkpoints — 6.27.0; in progress** | Public mode inventory, atomic ranked roster validation, practice identity and alternating rematch guidance. Further game-specific progression/rewards, physical mixed-input play and engagement work remain. |
 | 10 — Final quality pass | Pending | Full per-game playthrough/hardware matrix, integrated four-zone checks and target-device performance remain. |
 
 ## Actual Limit Break inventory
@@ -952,3 +952,29 @@ Publish exact checked checkpoint and update WORK_MODE_HANDOFF.md. Work Mode depl
 ### Published M9A checkpoint
 
 App `e11587b06c222f973af4a3adb31317eba4b3c57f` pushed to `revamp/milestone-9a-match-records`; remote SHA verified. Documentation-only follow-up preserves v6.26.0 runtime. Work Mode handoff pins checked source and existing destination. No Sites deployment here. Stop for deployed user trial; proposed M9B requires continuation.
+
+## Session record — Milestone 9B learning/co-op results (2026-10-30, America/New_York)
+
+User requested **next**, authorizing proposed M9B after published 9A `1286be675be32f4aa78e5e39f8ff4638439216bb`. Branch `revamp/milestone-9b-learning-coop`, **v6.27.0**. Current progress, requirements and retained master plan consulted. M9 remains in progress.
+
+### Reviewed / changed
+
+Reviewed Math/Spelling progression, co-op records and result/replay interfaces. Math already saved team stages using 70% combined correct, but its result message checked only Player 1 and showed only their stage. Example: 2/5 + 5/5 is a team success while the old copy implied no saved stage. A game-local stagePassed helper now expresses the same existing team/personal condition for saving, soloWin metadata and result copy. It does not alter thresholds or scoring. Each player's actual grade/world stage is displayed. Separate-turn success remains personal; failed teams cannot show a saved-stage success for one high-scoring partner.
+
+Both player result cards now offer their own named skill-progress button. This opens existing player/grade progress and targeted-practice choices; original Play Again, setup, first-profile parent progress and world map remain. Existing mastery/hint rules, grade-specific questions, individual co-op records without rivalry, turn handoff and notebooks remain. Spelling retains its existing shared/team records and review-word progress; no Spelling rule change needed in this batch.
+
+No new artwork/models/input modes/dependencies/services, storage schema, score edition, points/mastery formula or hosting identity changes. All prior games/modes, native/mixed touch, profiles/records/achievements/local media/backups and 98 original migration hashes preserved.
+
+### Actual verification / limits
+
+Expanded actual Math host fixtures finish ten-question adventures: co-op 2+5 at the 70% boundary grants both grade-specific stages and soloWin metadata; 4+2 team failure grants neither; turns 4+2 grants only the first personal stage. Both review buttons exist; Play Again clears turns without committing old results again. Initial adventure fixture had not selected a world after acknowledgment, so run was null; fixed by using the existing begin hook for world zero. This fixture correction is not a runtime failure/pass. Normal browser trial selects the world through its actual button.
+
+Expanded learning browser completes actual ten-question mixed-grade co-op via legal answer/Ready/Next controls, confirms both saved-stage messages and grade-specific worlds, and opens P2's actual profile/grade progress. Existing notebook cancel/pause/independent handoff, split Spelling legal isolated submission and backup checks remain. **Six** desktop/phone layout/accessibility audits; answers are test-driven, not child learning/physical handwriting/speech/audio certification. Browser report now uses actual APP_VERSION, retaining its older filename prefix only for fixture compatibility. Final full regression/audit/build results below.
+
+### Resume / next
+
+Publish exact checked source and update WORK_MODE_HANDOFF.md. Work Mode deploys 6.27.0 to existing project/URL/access policy and returns URL. User trials mixed-grade co-op success/failure, separate-turn personal results, P2 review/practice, Play Again, original notebooks/profiles/records and Spelling. Stop for deployed trial. No Sites deployment here. Next proposed after explicit continuation: **M9C — replay/session choices in creative and challenge games**, preserving saved projects and existing competition comparators. Broader M9, M7/M8 art/hardware acceptance and final M10 remain unfinished.
+
+### Final checked result
+
+**60 test programs pass** (`npm test`), including expanded actual Math result/replay fixtures, shared match guards, toolkit/Forest/weapon and full arcade regressions. **Six learning browser audits pass**, including the new fully completed mixed-grade co-op results and actual P2 review route. Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original hashes**. Phone/desktop screenshots reviewed. No deployment performed here.
