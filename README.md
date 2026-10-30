@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.19.0
+## Current development checkpoint — 6.20.0
+
+Milestone **7L** improves Gladiator Arena's tactical feedback, action availability reasons, equipment stat comparisons and pause/help/settings behavior. Original vector action icons, floor markings and armor emblems complement the existing illustrated fighters; Stone and Dusk now use their intended palettes. Tactics, purchases, seven tournaments, career saves and local duels remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Further game art and hardware QA remain.
+
+### Retained Zoo / Air Slice checkpoint — 6.19.0
 
 Milestone **7K** improves My Noisy Zoo and Air Slice with original field-note badges, live care/build/input guidance and safer gesture cleanup. Zoo pinch-to-pan transitions stay steady; pause/tool changes cancel held drags, and backgrounding stops local activities. Air Slice releases held controls on disposal while preserving real hand-only tracking, touch and multiplayer. Local voices, animals, layouts, economy and scores remain. Read `WORK_MODE_HANDOFF.md` for deployment and trial steps. Milestone 7 remains in progress.
 

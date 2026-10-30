@@ -1,0 +1,47 @@
+{
+  "version": "6.20.0",
+  "checks": [
+    "Actual character creation, shop preview leaves career unchanged, legal purchase and owned re-equip without second charge, five real comparisons, action-range reasons, legal jump and AI response, help/pause/settings/background preserve frozen action and require Resume, actual backup retains gear",
+    "Actual two-profile Best of 3 setup and second character creation, balanced duel, legal P1 move, disabled handoff then explicit P2 Ready; career gold/equipment remain separate"
+  ],
+  "audits": [
+    {
+      "view": "shop",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "shop",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "duel",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "duel",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual UI, legal actions and local backup. Browser touch/virtual observation does not certify physical controller, Windows touch, audible audio or a complete tournament campaign."
+}

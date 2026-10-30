@@ -1,0 +1,2 @@
+PASS: actual new-game controllers do not create combat, notebook, speech, clocks or scores before acknowledgment; duplicate action/submission guards; real pause/resume clocks; exactly-once career outcome; immediate displayed score; alternating grade-specific UI, independent progress and hidden Ready handoff.
+PASS: actual ten-question co-op completion preserves five questions per grade and records shared-goal rewards without head-to-head wins or draws.

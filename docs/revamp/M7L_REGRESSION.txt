@@ -1,0 +1,1 @@
+PASS: all 12 action reasons match real legality across 45 distance/energy cases, no RNG/state changes; all 119 equipment comparisons match real stats without purchasing; distinct Stone/Dusk palettes, finite seven-tier action/armor art, immutable tactical markings and actual career backup roundtrip.

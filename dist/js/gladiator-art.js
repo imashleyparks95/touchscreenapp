@@ -120,7 +120,7 @@ export function drawGladiator(c,fighter={},options={}){
  path(c,[M(-40,-133),Q(-24,-147,-3,-132),L(-2,-111),Q(-23,-104,-43,-118),M(3,-132),Q(26,-146,42,-132),L(45,-118),Q(26,-105,3,-111)],null,color(skin,-38),3);
  line(c,[[-25,-145],[-8,-141]],color(skin,40),3);line(c,[[9,-141],[29,-145]],color(skin,40),3);
  path(c,[M(0,-126),L(0,-79),M(-16,-102),Q(-7,-108,-2,-102),M(3,-102),Q(11,-107,18,-100),M(-13,-87),Q(-5,-92,-1,-86),M(3,-86),Q(11,-91,15,-85)],null,color(skin,-27),2.5);
- if(e.chest){const m=metal(e.chest);path(c,[M(-36,-149),L(-18,-139),Q(0,-131,19,-140),L(37,-149),L(46,-121),L(29,-75),Q(0,-68,-29,-75),L(-47,-121),Z()],gradient(c,-46,-150,92,82,m),INK,4);path(c,[M(-34,-129),Q(-18,-138,-3,-125),L(-4,-111),Q(-24,-107,-37,-119),M(4,-125),Q(21,-137,35,-128),L(38,-118),Q(23,-107,5,-111)],null,color(m,-37),3);line(c,[[0,-129],[0,-80]],color(m,55),2);for(const y of [-102,-92,-82])line(c,[[-18,y],[18,y]],color(m,-30),2);rivets(c,-24,-140,4,16);}
+ if(e.chest){const m=metal(e.chest);path(c,[M(-36,-149),L(-18,-139),Q(0,-131,19,-140),L(37,-149),L(46,-121),L(29,-75),Q(0,-68,-29,-75),L(-47,-121),Z()],gradient(c,-46,-150,92,82,m),INK,4);path(c,[M(-34,-129),Q(-18,-138,-3,-125),L(-4,-111),Q(-24,-107,-37,-119),M(4,-125),Q(21,-137,35,-128),L(38,-118),Q(23,-107,5,-111)],null,color(m,-37),3);line(c,[[0,-129],[0,-80]],color(m,55),2);for(const y of [-102,-92,-82])line(c,[[-18,y],[18,y]],color(m,-30),2);rivets(c,-24,-140,4,16);const tier=Number(e.chest.tier)||1;path(c,[M(-7,-123),L(0,-130),L(7,-123),L(5,-114),L(0,-110),L(-5,-114),Z()],tier>=4?'#f1d18a':color(m,60),INK,1.5);}
  // A separate leather waist piece does not change when individual armor is bought.
  path(c,[M(-33,-77),Q(0,-69,33,-77),L(39,-47),L(22,-41),L(11,-49),L(0,-37),L(-11,-49),L(-26,-42),L(-39,-49),Z()],gradient(c,-38,-78,78,42,'#a44335'),INK,4);
  round(c,-34,-78,68,12,4,'#70452a',INK,3);round(c,-8,-78,17,14,2,'#e1bc5a',INK,2);round(c,-3,-74,7,6,1,'#695032',null);for(const xx of [-25,-15,16,26])line(c,[[xx,-63],[xx*1.1,-48]],'#d98754',2);
@@ -132,7 +132,7 @@ export function drawGladiator(c,fighter={},options={}){
  c.restore();
 }
 export function drawArena(c,{theme='sand',time=0,crowd=0}={}){
- const colors={sand:['#79c4e1','#dcb987','#b77949','#ead18d'],sunset:['#dfa083','#b79686','#9d6649','#e5bd7b'],marble:['#97cce0','#d4d1b5','#a3a18b','#e9d6a0'],volcano:['#c28d7e','#b69580','#7f5a4e','#ccb383'],royal:['#77b4d2','#d6b884','#ae7951','#ecd28d']},pal=colors[theme]||colors.sand;
+ const colors={sand:['#79c4e1','#dcb987','#b77949','#ead18d'],sunset:['#dfa083','#b79686','#9d6649','#e5bd7b'],marble:['#97cce0','#d4d1b5','#a3a18b','#e9d6a0'],volcano:['#c28d7e','#b69580','#7f5a4e','#ccb383'],royal:['#77b4d2','#d6b884','#ae7951','#ecd28d']},pal=colors[theme==='stone'?'marble':theme==='dusk'?'sunset':theme]||colors.sand;
  c.save();c.fillStyle=gradient(c,0,0,0,560,pal[0]);c.fillRect(0,0,1000,560);
  oval(c,790,70,43,43,'#fff2bd',null);for(const [x,y,s]of [[80,80,1],[375,49,.8],[881,130,.7]]){c.save();c.translate(x,y);c.scale(s,s);path(c,[M(-60,10),Q(-77,-8,-52,-15),Q(-39,-50,-10,-29),Q(16,-44,34,-16),Q(72,-17,69,10),Z()],'#fff4d6b3',null);c.restore();}
  path(c,[M(0,230),L(104,153),L(174,222),L(288,125),L(408,231),L(559,160),L(715,227),L(892,151),L(1000,220),L(1000,342),L(0,342),Z()],'#7da6a2',null);
