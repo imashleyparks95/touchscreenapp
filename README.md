@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.18.0
+## Current development checkpoint — 6.19.0
+
+Milestone **7K** improves My Noisy Zoo and Air Slice with original field-note badges, live care/build/input guidance and safer gesture cleanup. Zoo pinch-to-pan transitions stay steady; pause/tool changes cancel held drags, and backgrounding stops local activities. Air Slice releases held controls on disposal while preserving real hand-only tracking, touch and multiplayer. Local voices, animals, layouts, economy and scores remain. Read `WORK_MODE_HANDOFF.md` for deployment and trial steps. Milestone 7 remains in progress.
+
+### Retained media checkpoint — 6.18.0
 
 Milestone **7J** adds **eight face filters (27 total choices)** and Monster Me's **accent colors, body patterns, cheek details and chest badges (23 fields total)**. Choices visibly render and survive save/reopen/backups; older designs keep their appearance. Media studios gain source-aware guidance and safe crop/gesture cancellation, while camera/mic stay explicit and local media workflows remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
 

@@ -1,0 +1,35 @@
+{
+  "version": "6.19.0",
+  "checks": [
+    "Actual Zoo creative launch/gate, held prop drag canceled by pause with unchanged model, frozen paused clock, full-width phone field, actual save and full backup, zero device requests",
+    "Actual touch/Zen launch, legal generated-controller pointer slices real spawned fruit, readable live guide, desktop/phone field, pause freezes actual world, no camera/microphone request"
+  ],
+  "audits": [
+    {
+      "game": "zoo",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "zoo",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "air",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "air",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual local Zoo/model/save and touch Air Slice workflows. Virtual pointers and browser touch do not certify physical hardware, webcam tracking or audible local recordings."
+}
