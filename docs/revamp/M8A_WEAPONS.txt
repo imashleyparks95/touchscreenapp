@@ -1,0 +1,2 @@
+BJS - [16:43:21]: Babylon.js v9.32.0 - Null engine
+PASS: 630 real model/equipment poses across 21 classes and three sizes; max render/contact error 0.000000m, support gap 0.0000m; actual wrists, bow nock, shield normals, independent starter sockets/IK, kneel-before-fade after battle ends, pause and disposal.

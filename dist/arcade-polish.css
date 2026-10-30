@@ -205,3 +205,7 @@ body:has(:is(.premium-buddy,.ref-game-battle))>.game-instruction-help{background
 .ga-action i svg{width:30px;height:30px;display:block}.ga-action i{display:flex;align-items:center;justify-content:center}body:has(.ga-app)>.game-instruction-help{background:#293a35;color:#f4e7c5;border-color:#78907d}
 @media(max-width:720px){.ga-action b{font-size:11px}.ga-action small{font-size:10px}.ga-action i svg{width:25px;height:25px}}
 body:has(.ga-combat)>.game-instruction-help{display:none}
+/* Wobbly Wars keeps recovered troop cards and its natural battlefield palette. */
+.ww-guide{padding:11px 16px;margin:0;background:#243d3c;color:#e4ead7;font-size:13px;line-height:1.5;border-block:1px solid #69897c}.ww-header nav{flex-wrap:wrap}body:has(.ww-app)>.game-instruction-help{background:#243d3c;color:#e4ead7;border-color:#69897c}body:has(.ww-play)>.game-instruction-help{display:none}
+@media(max-width:650px){.ww-header{flex-wrap:wrap}.ww-header nav{width:100%;justify-content:flex-end}.ww-stage{min-height:310px}.ww-guide{font-size:12px}.ww-matchbar{flex-wrap:wrap;gap:10px}.ww-camera{flex-wrap:wrap}}
+.ww-app .ww-matchbar>div>span,.ww-app .ww-army-title>span,.ww-app [data-ww-unit-info],.ww-app .ww-hint{color:#465b4c}.ww-app .btn.primary{background:#28679f;border-color:#28679f;color:#fff5df}.ww-app .ww-purchase-roster .selected small{color:#f0eaff}

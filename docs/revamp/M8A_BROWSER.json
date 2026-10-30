@@ -1,0 +1,40 @@
+{
+  "version": "6.21.0",
+  "backend": {
+    "engine": "ThinEngine",
+    "software": false,
+    "webgl": true,
+    "renderer": "WebKit WebGL"
+  },
+  "checks": [
+    "21 preserved troop cards, actual ground-projected deployment/cancel/legal move/undo, pause cancels held move, actual save/clear/gallery load and name cancel, camera-only orbit without deployment, two real armies/start/pause/help/background and saved-army backup; engine fully disposed on exit"
+  ],
+  "audits": [
+    {
+      "view": "deployment",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "deployment",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Babylon/Havok UI and ground projections. NullEngine/software rendering if WebGL unavailable; not physical Windows/pad/GPU/audio or full campaign verification. Classic and completed combat regressions are separate Node checks."
+}

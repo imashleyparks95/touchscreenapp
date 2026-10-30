@@ -1,0 +1,7 @@
+# Milestone 8A original art and preservation
+
+The segmented cloth panel and low-poly enamel class crest in `dist/js/wars3d-details.js` are original runtime geometry authored for Little Big Arcade. They attach to the existing imported soldier spine via the independently tested shared attachment interface. No rig, weapon/hand/socket mapping, imported GLB, texture, font or vendor file was replaced. No external asset or service was added. All 98 original imported asset/vendor migration hashes remain unchanged. Existing illustrated troop purchase cards, original environment palettes and classic edition are preserved.
+
+Seven existing cloaked classes have a nine-vertex/eight-triangle cloth panel and a nine-vertex/twelve-triangle crest. The crest adds one mesh per applicable unit and no physics body; the shared material is reused. Colors/shading use the existing material/WebGL vertex-color path; software fallback has its prior material-only limitations.
+
+Browser screenshots use actual local Babylon/Havok and legal projected-ground UI actions. The closer view uses real camera/zoom controls. Browser reported a WebGL path (`ThinEngine`, renderer `WebKit WebGL`, software fallback false); this does not identify or certify the user's GPU or physical touch/controllers/audio. Node tests separately verify actual imported-rig sockets, weapon alignment, preview positioning, geometry, pause/fade and disposal.

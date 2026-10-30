@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.20.0
+## Current development checkpoint — 6.21.0
+
+Milestone **8A** improves Wobbly Wars 3D deployment, saved-army loading and pause safety. Held troop moves remain previews until a legal release; cancel preserves the formation and co-op gestures stay independent. Existing cloaked classes gain segmented cloth and bone-attached enamel crests. Original rigs, hand-held weapons, illustrated troop purchases, all modes and the classic edition remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Native battlefield controller work and further 3D/hardware QA remain.
+
+### Retained Gladiator checkpoint — 6.20.0
 
 Milestone **7L** improves Gladiator Arena's tactical feedback, action availability reasons, equipment stat comparisons and pause/help/settings behavior. Original vector action icons, floor markings and armor emblems complement the existing illustrated fighters; Stone and Dusk now use their intended palettes. Tactics, purchases, seven tournaments, career saves and local duels remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Further game art and hardware QA remain.
 

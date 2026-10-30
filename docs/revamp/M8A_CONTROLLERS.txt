@@ -1,0 +1,6 @@
+PASS: actual Wobbly Wars 3D controller blocks models/engine/scores before acknowledgment, freezes paused clocks, restarts without repeated instructions, enforces deployment turns and co-op pointer workspaces, continues drawn best-of-five rounds, records exactly one three-win match, and saves co-op profiles independently.
+PASS: real arcade achievement API, separate 3D/classic records, co-op without head-to-head changes, graphics preferences and armies roundtrip through validated backups.
+PASS: 21 original illustrated purchasing options, 133 legal card-to-3D purchases across all solo modes/versus/co-op, exact prices, no charge on selection, unaffordable/limit/paused/ready/turn restrictions, immediate refunds, independent budgets and vertical card drag deployment.
+PASS: actual staged/canceled/legal deployment, single undo commit, stale release after pause rejected, saved formation loads during gallery pause, dialog cancel restores state, background close and late scene loading never auto-resume.
+PASS: simultaneous co-op preview ownership survives another player’s troop selection/Ready; only the legal owning release commits.
+PASS: actual source-card pointer ownership, foreign event rejection, pause/release capture cleanup, no canceled purchase, exact legal drop charge and paused Undo protection.
