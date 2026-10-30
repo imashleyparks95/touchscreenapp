@@ -1,0 +1,11 @@
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+BJS - [21:35:36]: Babylon.js v9.32.0 - Null engine
+PASS: ten distinct natural environments render real scene geometry with terrain/scenery contrast, low haze, bounded mesh counts and unchanged collision maps; no decorative rigid bodies or gameplay changes.

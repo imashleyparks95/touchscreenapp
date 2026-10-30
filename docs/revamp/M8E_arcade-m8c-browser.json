@@ -1,0 +1,35 @@
+{
+  "version": "6.25.0",
+  "checks": [
+    "Live high/medium/low graphics changes apply actual engine scaling while clock stays paused; biome uses only existing two lights",
+    "Actual local 3D class accessories, full board/actor-height projection extents at desktop/phone in deployment and battle, resize cancels held movement without mutating formation, inspect selects/targets all four classes with closer limits then Reset overview, phone controls do not overlap, paused clock and complete engine cleanup"
+  ],
+  "audits": [
+    {
+      "view": "overview",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "overview",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle-overview",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "battle-overview",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Babylon/Havok, real projected-ground input and camera projection from the visible battlefield bounds. This is browser rendering evidence, not physical controller/touch/audio or sustained target-GPU certification."
+}

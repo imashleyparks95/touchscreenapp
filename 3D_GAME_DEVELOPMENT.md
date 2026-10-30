@@ -1,5 +1,13 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Lighting and live effects quality — 6.25.0 (Milestone 8E)
+
+`createWarEnvironment` colors the existing `sky` hemisphere and `sun` directional lights using restrained snow/volcanic/daylight tints and the biome's soil bounce. No extra lights, passes, physics bodies or shared renderer defaults. Light lookup is optional for standalone fixture scenes. Existing geometry/material art and Low compatibility rendering remain.
+
+Shared `create3DEffects` retains its API but now resets pooled spark scale before reuse. It reads particle caps from existing `QUALITY`, applies presentation/reduced-motion preferences to that cap, and trims existing active sparks in `update(0)` as well as live updates. Thus Off takes effect while paused; lowering quality cannot leave a previous high-quality burst active above the new cap. Pooled meshes stay bounded; inactive meshes remain reusable until disposal. Event callbacks/audio routing remain independent of decorative visibility. Shared toolkit/starter and Forest regressions are required for this shared fix.
+
+Independent `tests/3d-effects.mjs` uses real Babylon meshes to check reset, live full/reduced/off and quality caps, paused motion, callback delivery, bounded reuse and disposal. Ten-map environment tests verify existing two-light tint and unchanged collision/art bounds. Browser presentation regression switches actual high/medium/low graphics while paused and checks engine scaling, frozen clock and two-light policy. Physical PC frame pacing is still a user trial, not implied by these correctness tests.
+
 ## Wobbly AI stability — 6.24.0 (Milestone 8D)
 
 Game-owned Battle3D keeps an active attack's living target through its windup/release. A dead locked target cancels that obsolete attack; changing navigation target clears the old route. Fixed-step ID lookup uses a local Map of live units; it is rebuilt each step, so no persistent cache survives resets or split spawns. Existing shared targeting/navigation and deferred contact resolution remain unchanged. Each actor resets movement velocity/speed before decisions, preventing stopped/stunned attackers from retaining a previous walking velocity. No damage, budget, period, physics, rig, hand/weapon or shared toolkit API changes.

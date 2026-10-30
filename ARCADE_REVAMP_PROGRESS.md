@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Milestone 8D — Wobbly AI and crowded-battle stability; v6.24.0.** Attack target lock/dead-target recovery, stale velocity reset, route invalidation and fixed-step ID lookup. Branch `revamp/milestone-8d-wars-ai`, based on published 8C `7436ba24e3efa6e44c118fe74927e004489ba40f`. Physical trial and broader M8/M7/M9/M10 work remain.
+- **Current checkpoint: Milestone 8E — Wobbly lighting and live effects quality; v6.25.0.** Restrained existing-light biome tint; pooled spark reset and live quality/reduced/off caps. Branch `revamp/milestone-8e-wars-lighting`, based on published 8D `58cfd18d1e3497f45013d0c5f5bae1d6c4701616`. Broader M8/M7/M9/M10 and target-PC acceptance remain.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-8d-wars-ai`**, based on 8C `7436ba2`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/milestone-8e-wars-lighting`**, based on 8D `58cfd18`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -892,3 +892,29 @@ Publish exact checked source, update WORK_MODE_HANDOFF.md, request deployment of
 ### Published M8D checkpoint
 
 App commit `a49e5b5a9544c3c4ecc04a28cd24a5f231fbffdd` pushed to `revamp/milestone-8d-wars-ai`; remote SHA verified. Documentation follow-up preserves the tested v6.24.0 runtime. Exact deployment/trial request is in WORK_MODE_HANDOFF.md. Stop for user trial; no Sites deployment performed here.
+
+## Session record — Milestone 8E lighting / effects quality (2026-10-30, America/New_York)
+
+User requested **continue**, authorizing proposed 8E after published 8D `58cfd18d1e3497f45013d0c5f5bae1d6c4701616`. Branch `revamp/milestone-8e-wars-lighting`, **v6.25.0**. Read master plan, requirements/progress and 3D contracts. This is a scoped checkpoint; broader art/hardware acceptance is not declared complete.
+
+### Changes and preservation
+
+Reviewed existing lighting/material/scenery, shared impact pool, graphics presets, presentation preferences and existing lower-quality/fallback behavior. Wobbly now colors its existing sky/sun lights with restrained snow/volcanic/daylight tints and soil bounce. No added light, shadow pass, post effect, collider, imported model or dependency. Existing biome geometry, four terrain batches, rigs, weapons/accessories and all illustrated purchasing remain. No new asset provenance/license requirement: original procedural color tuning, all imported files preserved.
+
+Shared `create3DEffects` now resets reused spark scale before rendering; uses original QUALITY particle caps; applies reduced-motion/reduced/off preferences to live caps and trims active particles even in update(0). Thus effects Off while paused takes effect immediately, and a lower quality cannot leave a previous burst above its cap. Reuse/disposal remain bounded; no API change. Event callbacks/audio remain delivered when decorations are hidden. This is shared with Forest, so independent toolkit/starter and Forest regressions remain required. Simulation, damage, AI, scores and formal benchmark workloads are unchanged.
+
+Preserved low/medium/high settings and software fallback, native two-controller/mixed-touch and all solo/co-op/versus/campaign modes, original saves/profiles/achievements/backups/local media, classic edition and all earlier games. No storage schema, score edition, service, hosting identity or physics change.
+
+### Verification / limitations
+
+New independent `tests/3d-effects.mjs` uses real Babylon meshes: 140 high/40 low, live reduced and Off caps while paused; event callback retained; expiring/reused particle restores scale before its first frame; dt=0 motion freeze, repeated bursts bounded and all owned meshes/materials disposed. Expanded ten-map environment checks verify two existing lights, expected sun tint/soil bounce, finite geometry, unchanged collision count and actual compatibility-renderer contrast. Browser presentation fixture adds real High/Medium/Low selection and actual engine scaling with frozen battle clock and only two lights. Existing native/mixed-touch browser regression also runs. Exact final checks recorded below.
+
+Screenshots/JSON/logs: `docs/revamp/M8E_*`. Browser controller/pointer devices are fixtures; screenshot rendering and NullEngine checks do not certify physical Windows/USB/Bluetooth/touch, audible audio, target-PC color calibration/GPU/frame pacing. Compatibility renderer retains prior material-only shading limits; light tint is chiefly visible on WebGL. No fabricated FPS/GPU measurements or universal performance claim. No failures counted as passes.
+
+### Resume / next
+
+Publish exact checked source and update WORK_MODE_HANDOFF.md; Work Mode deploys 6.25.0 to existing project/URL/access policy and user trials graphics presets, biome legibility, effects full/reduced/off, reduced motion, pause/resume and ordinary controller/touch/saves. Stop for deployed trial; no Sites deployment here. Next proposed batch after explicit continuation: **M9A — multiplayer/replayability audit and first fixes**, using actual game inventory and preserving existing two-player progression/records. M8 hardware/art acceptance, remaining M7, broader M9 and final M10 remain unfinished.
+
+### Final checked result
+
+**59 test programs pass** (`npm test`), including independent shared toolkit/starter/effects, Forest/expedition, all arcade regressions, **100 campaign/difficulty solutions** and **630 actual weapon poses**. Expanded final focused environment test and **eight browser audits pass**: four presentation with actual live graphics scaling/two-light policy, four native/mixed touch. Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, 98 original hashes** retained. No live deployment performed.

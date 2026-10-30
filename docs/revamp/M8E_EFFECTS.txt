@@ -1,0 +1,2 @@
+BJS - [21:35:28]: Babylon.js v9.32.0 - Null engine
+PASS: real-engine pooled spark reset, live quality/reduced/off caps during pause, retained event delivery, frozen dt=0 motion, bounded reuse and disposal.

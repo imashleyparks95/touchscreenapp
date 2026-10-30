@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {create3DEffects} from '../dist/js/3d/effects.js';
+const B=createRequire(import.meta.url)('babylonjs'),engine=new B.NullEngine(),scene=new B.Scene(engine);
+let preference={},events=0;const runtime={B,scene,quality:'high'},fx=create3DEffects(runtime,{getPresentation:()=>preference,onEvent:()=>events++});
+const enabled=()=>scene.meshes.filter(m=>m.isEnabled());
+fx.burst({x:0,y:1,z:0},'#ffffff',200);assert.equal(enabled().length,140);
+runtime.quality='low';fx.update(0);assert.equal(enabled().length,40,'live quality trims even while paused');
+preference={reduceMotion:true};fx.update(0);assert.equal(enabled().length,10);
+preference={presentation:{effects:'off'}};fx.update(0);assert.equal(enabled().length,0);
+fx.event({type:'hit',point:{x:0,y:1,z:0}});assert.equal(events,1,'effect setting does not mute gameplay event callback');assert.equal(enabled().length,0);
+preference={};fx.burst({x:1,y:2,z:3},'#ffffff',1);const spark=enabled()[0];fx.update(.44);assert.ok(spark.scaling.x<.03);fx.update(.02);assert.equal(enabled().length,0);
+fx.burst({x:4,y:5,z:6},'#ffffff',1);assert.equal(enabled()[0],spark);assert.equal(spark.scaling.x,1,'pooled particle resets before its first rendered frame');const before=spark.position.clone();fx.update(0);assert.deepEqual(spark.position,before,'pause freezes active particle');
+for(let i=0;i<50;i++){fx.update(1);fx.burst({x:0,y:1,z:0},'#ffffff',1000);}assert.ok(scene.meshes.length<=140,'pool remains bounded across bursts/quality changes');
+fx.dispose();assert.equal(scene.meshes.length,0);assert.equal(scene.materials.filter(m=>m.name.startsWith('fx-')).length,0);scene.dispose();engine.dispose();
+console.log('PASS: real-engine pooled spark reset, live quality/reduced/off caps during pause, retained event delivery, frozen dt=0 motion, bounded reuse and disposal.');

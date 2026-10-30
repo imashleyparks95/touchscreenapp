@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.24.0
+## Current development checkpoint — 6.25.0
+
+Milestone **8E** refines Wobbly Wars biome lighting through its existing two lights. Shared combat sparks reset correctly on reuse and obey live graphics/reduced-motion/effects-off settings, including while paused. Models, AI, purchases, controls and saves remain. See `WORK_MODE_HANDOFF.md` for deployment and trial details; target-PC graphics/frame pacing still needs trial.
+
+### Retained AI checkpoint — 6.24.0
 
 Milestone **8D** fixes Wobbly Wars attack-target consistency and stale stopped/stunned movement, clears obsolete routes after retargeting and uses per-step target lookups. New four-map 96-unit mixed-army simulations check limits, terrain safety and completion. Existing models, purchases, controller/touch controls and saves remain. See `WORK_MODE_HANDOFF.md` for exact deployment and trial directions. Physical target-PC/GPU acceptance and broader milestone work remain.
 

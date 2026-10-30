@@ -17,6 +17,10 @@ export const WAR_ENVIRONMENTS=Object.freeze([
 
 export function createWarEnvironment(runtime,model,mat){
  const {B,scene}=runtime,t=WAR_ENVIRONMENTS[model.field]||WAR_ENVIRONMENTS[0];
+ // Reuse the two existing lights: biome tint without extra draw/shadow passes.
+ const sky=scene.getLightByName('sky'),sun=scene.getLightByName('sun');
+ if(sky){sky.diffuse=B.Color3.FromHexString(t.biome==='snow'?'#d9e8f1':'#dce6df');sky.groundColor=B.Color3.FromHexString(t.soil).scale(.65);}
+ if(sun)sun.diffuse=B.Color3.FromHexString(t.biome==='volcano'?'#ffd4b0':t.biome==='snow'?'#eef5ff':'#fff0d8');
  scene.clearColor=B.Color4.FromHexString(t.sky+'ff');scene.fogMode=B.Scene.FOGMODE_EXP;scene.fogDensity=.0018;scene.fogColor=B.Color3.FromHexString(t.sky);
  const box=(name,w,h,d,x,y,z,material,layer)=>{const m=B.MeshBuilder.CreateBox(name,{width:w,height:h,depth:d},scene);m.position.set(x,y,z);m.material=material;m.receiveShadows=true;if(layer!==undefined)m.metadata={softwareLayer:layer};return m;};
  const ground=box('battlefield',24,.65,14,0,-.325,0,mat('terrain',t.ground),-20);staticCollider(runtime,ground);
