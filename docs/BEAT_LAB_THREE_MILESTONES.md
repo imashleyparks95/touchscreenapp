@@ -1,8 +1,10 @@
 # Beat Lab expansion — exactly three milestones
 
-Status: **planned, not implemented**. Source specification retained verbatim in [BEAT_LAB_EXPANSION_MASTER_PLAN.md](BEAT_LAB_EXPANSION_MASTER_PLAN.md). User override: use three milestones instead of the specification's five phases; do not overwrite or renumber completed arcade milestones. Start after the consolidated final arcade checkpoint/trial and explicit continuation. No replacement application or redesign. Preserve the familiar default screen and existing 4×4 pads, sequencer, Edit/Transpose/Volume, recording, projects, import/export, sound library, shared local sounds and two-player battle. Advanced tabs are optional. No mandatory API key/subscription/service.
+Status: **BL1 software checkpoint complete — v6.30.0; evidence/publication in ARCADE_REVAMP_PROGRESS.md; BL2 and BL3 remain planned**. Source specification retained verbatim in [BEAT_LAB_EXPANSION_MASTER_PLAN.md](BEAT_LAB_EXPANSION_MASTER_PLAN.md). User override: use three milestones instead of the specification's five phases; do not overwrite or renumber completed arcade milestones. Start after the consolidated final arcade checkpoint/trial and explicit continuation. No replacement application or redesign. Preserve the familiar default screen and existing 4×4 pads, sequencer, Edit/Transpose/Volume, recording, projects, import/export, sound library, shared local sounds and two-player battle. Advanced tabs are optional. No mandatory API key/subscription/service.
 
 ## BL1 — Pattern, Playlist and complete drum-song foundation
+
+Implemented checkpoint: see [BEAT_LAB_PLAYLIST_DEVELOPMENT.md](BEAT_LAB_PLAYLIST_DEVELOPMENT.md) and ARCADE_REVAMP_PROGRESS.md for precise delivered scope, tests and physical trial limits. Original acceptance requirements below are retained.
 
 Combines specification Phase A with the necessary transport/save/export foundations from D/E. Inspect and document current scheduler, project serialization, sounds and recording before changes. Add a versioned compatible project adapter, preserving old data and original source audio; old songs open and sound as before. Keep original controls/layout/default view. New Playlist tab and unobtrusive Add to Playlist connect existing drum patterns to genuine simultaneous track playback.
 

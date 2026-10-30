@@ -1,0 +1,74 @@
+{
+  "version": "6.30.0",
+  "scope": "Actual test-generated browser exports, not physical audio certification. Binary files are reproducible through the browser test.",
+  "files": [
+    {
+      "file": "bl1-song.wav",
+      "bytes": 2857724,
+      "sha256": "c0b3f1a6d3b38968beda9062e76b865db207563679daeb7b3923a15b8cdbbca3",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "44100",
+            "channels": 2,
+            "duration": "16.200000"
+          }
+        ]
+      }
+    },
+    {
+      "file": "bl1-solo.wav",
+      "bytes": 2857724,
+      "sha256": "103b7c0ce96b7410303f8bca8e0da17f2c3a2106450606973317bf579289ca12",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "44100",
+            "channels": 2,
+            "duration": "16.200000"
+          }
+        ]
+      }
+    },
+    {
+      "file": "bl1-volume.wav",
+      "bytes": 2857724,
+      "sha256": "3d0c477709225c6324905369517f22c20d6bed5bef6b81abfb861ab52368d031",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "44100",
+            "channels": 2,
+            "duration": "16.200000"
+          }
+        ]
+      }
+    },
+    {
+      "file": "bl1-song.mp3",
+      "bytes": 259970,
+      "sha256": "eaa30e092e0adbf7d44c893886d3e4208dbc5cb13b1a65c1fa36f87c1d9e1bb5",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 2,
+            "duration": "16.248125"
+          }
+        ]
+      }
+    }
+  ]
+}

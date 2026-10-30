@@ -1,0 +1,28 @@
+// Musical positions are quarter-note beats; legacy projects remain untouched.
+export const PLAYLIST_LIMITS=Object.freeze({tracks:24,clips:512,beats:512,events:40000});
+const finite=(n,a,b)=>typeof n==='number'&&Number.isFinite(n)&&n>=a&&n<=b;
+export function freshPlaylist(){return{version:1,tracks:[{id:'track-1',name:'Drums',color:'#56bbaa',volume:1,pan:0,mute:false,solo:false}],clips:[],snap:.25,zoom:48,loop:false,loopStart:0,loopEnd:32};}
+export function validatePlaylist(value,patterns){
+ if(value===undefined)return freshPlaylist();const p=structuredClone(value),ids=new Set(patterns.map(x=>x.id));
+ if(p.version!==1||!Array.isArray(p.tracks)||!p.tracks.length||p.tracks.length>24||!Array.isArray(p.clips)||p.clips.length>512)throw Error('Invalid Playlist structure.');
+ const tracks=new Set();for(const t of p.tracks){if(typeof t.id!=='string'||tracks.has(t.id)||typeof t.name!=='string'||t.name.length>60||!/^#[\da-f]{6}$/i.test(t.color)||!finite(t.volume,0,2)||!finite(t.pan,-1,1)||typeof t.mute!=='boolean'||typeof t.solo!=='boolean')throw Error('Invalid Playlist track.');tracks.add(t.id);}
+ for(const pattern of patterns){if(p.clips.some(c=>c.patternId===pattern.id)&&(!Number.isInteger(pattern.steps)||pattern.steps<1||pattern.steps>32||!Array.isArray(pattern.matrix)||pattern.matrix.length!==16||!pattern.matrix.every(r=>Array.isArray(r)&&r.length>=pattern.steps&&r.every(v=>typeof v==='boolean'))))throw Error('Invalid Playlist pattern.');if(pattern.playlistPads&&(!Array.isArray(pattern.playlistPads)||pattern.playlistPads.length!==16||!pattern.playlistPads.every(s=>typeof s.sampleId==='string'&&finite(s.volume,0,2)&&finite(s.pitch,-96,96)&&finite(s.start,0,300)&&finite(s.end,.001,300)&&s.end>s.start)))throw Error('Invalid pattern sound settings.');}
+ const clips=new Set();for(const c of p.clips){if(typeof c.id!=='string'||clips.has(c.id)||!ids.has(c.patternId)||!tracks.has(c.trackId)||!finite(c.start,0,512)||!finite(c.length,.125,512)||c.start+c.length>512||!finite(c.offset,0,512))throw Error('Invalid Playlist clip.');clips.add(c.id);}
+ if(![.125,.25,.5,1,4].includes(p.snap)||!finite(p.zoom,16,120)||typeof p.loop!=='boolean'||!finite(p.loopStart,0,511.875)||!finite(p.loopEnd,.125,512)||p.loopEnd<=p.loopStart)throw Error('Invalid Playlist timeline.');return p;
+}
+export const playlistEnd=p=>Math.max(4,...p.clips.map(c=>c.start+c.length));
+export function compilePlaylist(state,patterns,pads,buffers,bpm){
+ if(!finite(bpm,60,200))throw Error('Choose a tempo from 60 to 200 BPM.');
+ const p=validatePlaylist(state,patterns),seconds=60/bpm,events=[],solo=p.tracks.some(t=>t.solo),lookup=new Map(patterns.map(x=>[x.id,x]));
+ for(const c of p.clips){const t=p.tracks.find(t=>t.id===c.trackId);if(t.mute||solo&&!t.solo)continue;const pattern=lookup.get(c.patternId),sounds=pattern.playlistPads||pads,cycle=pattern.steps/4,offset=c.offset%cycle,padSolo=sounds.some(s=>s.solo);if(!(cycle>0))throw Error('Invalid pattern duration.');
+  for(let step=0;step<pattern.steps;step++){let beat=((step/4-offset)%cycle+cycle)%cycle;for(;beat<c.length-1e-7;beat+=cycle)for(let row=0;row<16;row++){
+   const pad=sounds[row];if(!pattern.matrix[row]?.[step]||!pad||pad.mute||padSolo&&!pad.solo)continue;const buffer=buffers.get(pad.sampleId);if(!buffer)throw Error('A Playlist sound is missing. Reopen its original project.');const rate=2**(pad.pitch/12),natural=Math.max(.001,(Math.min(pad.end,buffer.duration)-pad.start)/rate),duration=Math.min(pad.loop ? .25*seconds : natural,(c.length-beat)*seconds);if(duration<=0)continue;
+   events.push({t:(c.start+beat)*seconds,pad:row,p:{...pad,volume:pad.volume*t.volume},duration,pan:t.pan,trackId:t.id,clipId:c.id});if(events.length>40000)throw Error('This Playlist has too many hits. Shorten or simplify the song.');
+  }}
+ }
+ return{events:events.sort((a,b)=>a.t-b.t),length:playlistEnd(p)*seconds};
+}
+export function schedulePlaylistVoice(context,destination,event,when,buffers,skip=0){
+ const p=event.p,buffer=buffers.get(p.sampleId);if(!buffer||skip>=event.duration)return null;const source=context.createBufferSource(),gain=context.createGain(),pan=context.createStereoPanner();source.buffer=buffer;source.playbackRate.value=2**(p.pitch/12);source.loop=!!p.loop;source.loopStart=p.start;source.loopEnd=p.end;gain.gain.value=p.volume;pan.pan.value=event.pan||0;source.connect(gain);gain.connect(pan);pan.connect(destination);const offset=p.start+(p.loop?skip*source.playbackRate.value%(p.end-p.start):skip*source.playbackRate.value);source.start(when,offset);source.stop(when+event.duration-skip);const disconnect=()=>{source.disconnect();gain.disconnect();pan.disconnect();};source.onended=disconnect;return{source,disconnect,gain};
+}
+export function encodeWAV(buffer){const channels=buffer.numberOfChannels,frames=buffer.length,bytes=new ArrayBuffer(44+frames*channels*2),v=new DataView(bytes),str=(at,s)=>{for(let i=0;i<s.length;i++)v.setUint8(at+i,s.charCodeAt(i));};str(0,'RIFF');v.setUint32(4,bytes.byteLength-8,true);str(8,'WAVE');str(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,channels,true);v.setUint32(24,buffer.sampleRate,true);v.setUint32(28,buffer.sampleRate*channels*2,true);v.setUint16(32,channels*2,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,frames*channels*2,true);const data=Array.from({length:channels},(_,i)=>buffer.getChannelData(i));for(let i=0;i<frames;i++)for(let c=0;c<channels;c++){const n=Math.max(-1,Math.min(1,data[c][i]));v.setInt16(44+(i*channels+c)*2,n<0?n*32768:n*32767,true);}return bytes;}

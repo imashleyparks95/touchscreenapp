@@ -1,0 +1,29 @@
+{
+  "version": "6.30.0",
+  "checks": [
+    "Real duplicate/undo/redo, copied/pasted/split clips, unique-source edit without touching originals, independent simultaneous pointer moves and canceled drag rollback",
+    "Original default unchanged; A/B pattern isolation, simultaneous eight-bar tracks, actual clock pause and sample-exact loop, real stereo WAV mix/solo and MP3 verified by ffprobe, compatible project/PCM backup, close/reopen and source editor"
+  ],
+  "audits": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "energy": [
+    1875068893,
+    2787651712
+  ],
+  "soloEnergy": [
+    0,
+    2787651722
+  ],
+  "scope": "Real browser/Web Audio and exported PCM/MP3. Fixture UI/answers, not physical touchscreen/controller/audio latency certification."
+}

@@ -1,0 +1,2 @@
+PASS: independent multitrack timing/repetition/tempo, linked source sound isolation, split-phase continuity, mute/solo/volume/pan, invalid/legacy validation, seek voice offsets and stereo PCM WAV headers/interleaving. Browser checks actual mixed/encoded audio.
+PASS: actual Playlist scheduler uses exact audio-clock loop boundaries, bounded lag recovery and paused musical position.

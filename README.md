@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.29.0 · Final arcade integration
+## Current development checkpoint — 6.30.0 · Beat Lab BL1
+
+Beat Lab keeps its familiar default screen and adds an optional multitrack drum Playlist: independent linked/unique patterns, clip editing, live mix/pan/solo, shared transport/looping, compatible project saves and actual full-song WAV/MP3 export. See `docs/BEAT_LAB_PLAYLIST_DEVELOPMENT.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md`. Piano Roll/instruments and advanced audio/mixing follow in BL2/BL3.
+
+### Retained final arcade checkpoint — 6.29.0
 
 Remaining arcade review is consolidated into one final milestone. Every browser suite and full unit regression is included; Beat Battle also preserves both previous takes before a new session. See `docs/FINAL_ACCEPTANCE.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for evidence, limits and deployment. The attached Beat Lab expansion is preserved and organized into **exactly three future milestones** in `docs/BEAT_LAB_THREE_MILESTONES.md`; its advanced features are not implemented yet.
 

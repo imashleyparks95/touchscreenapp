@@ -1,0 +1,1 @@
+PASS: optional Playlist live clock/mix/loop, independent sources, eight-bar multitrack WAV/MP3 audio proof, solo channel isolation, compatible save/backup/reopen and two responsive audits.

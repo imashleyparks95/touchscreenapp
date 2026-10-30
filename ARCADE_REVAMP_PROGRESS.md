@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: FINAL — consolidated arcade integration; v6.29.0.** User merged all remaining arcade milestone work into one final review/release checkpoint. Branch `revamp/final-arcade-integration`, based on published 9C `c782fa787f4e56ed6a1fdc26a49549f221d83bde`. No more separately numbered arcade development batches are planned. Automated completion and physical/user acceptance are tracked separately below. Beat Lab expansion is a separate **three-milestone** follow-on; not started.
+- **Current checkpoint: Beat Lab BL1 — optional multitrack drum Playlist; v6.30.0.** Original default screen/controls remain. Independent linked/unique source patterns, clip editing, actual stereo mix, shared clock/loop/seek, compatible complete-song saves and WAV/MP3 exports. Branch `beatlab/bl1-playlist-foundation`, based on published final arcade `e6af71f2124bf58d20b932f16d9896c29c81d36a`. BL2 Piano Roll/instruments and BL3 advanced audio/mixer remain planned; physical acceptance remains a user trial.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`revamp/final-arcade-integration`**, based on 9C `c782fa7`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`beatlab/bl1-playlist-foundation`**, based on final arcade `e6af71f`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -28,6 +28,14 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | 9 — Multiplayer/replayability | **9A–9C delivered; remaining review consolidated into FINAL** | Public mode inventory, atomic ranked roster validation, practice identity and alternating rematch guidance. Further game-specific progression/rewards, physical mixed-input play and engagement work remain. |
 | 10 — Final quality pass | **Merged into FINAL by user request** | Remaining 7/8/9 review and 10 integration share one final release; see FINAL_ACCEPTANCE.md for automated evidence versus outstanding physical/art acceptance. |
 | FINAL — consolidated remaining work | **Automated release checkpoint complete — 6.29.0; physical/user acceptance pending** | Full unit suite, every browser suite, preservation checks, session recovery fix, existing-site handoff and three-milestone Beat Lab follow-on. |
+
+## Beat Lab expansion ledger — user-requested three milestones
+
+| Expansion milestone | Status | Scope / next |
+| --- | --- | --- |
+| BL1 — Patterns / Playlist / drum-song foundation | **Implemented — 6.30.0; final checks/publication below** | Optional real multitrack pattern arrangement, source independence, clip tools, clock/mix, saves and WAV/MP3. Physical latency/touch/audio trial pending. |
+| BL2 — Piano Roll / instruments / collaborative performance | Planned | Actual notes/polyphony/instruments/keyboard/recording connected to the same Playlist and export. |
+| BL3 — Advanced audio / mixer / complete-song integration | Planned | Audio clips/real waveforms/independent tempo-pitch, full mixer/recording/export and all fourteen workflow steps. |
 
 ## Actual Limit Break inventory
 
@@ -1041,3 +1049,34 @@ Audit/build/changed-source syntax/diff checks pass: **25 public stable IDs, 276 
 ### Published final checkpoint
 
 App `4a428e855af89ba5b85ee60498262bc5d484fcd4` pushed to `revamp/final-arcade-integration`; remote SHA verified. Documentation/evidence follow-up preserves v6.29.0 runtime and includes all 21 individual browser logs as tracked text files. Work Mode handoff pins checked source/existing destination. No Sites deployment here. Stop for final deployed acceptance; the next authorized development milestone is Beat Lab BL1 from the saved three-milestone roadmap.
+
+## Beat Lab BL1 session — 2026-10-30 (America/New_York)
+
+User requested **go ahead**, explicitly authorizing BL1 after final arcade publication `e6af71f2124bf58d20b932f16d9896c29c81d36a`. Read requirements, current progress, complete attached master specification and three-milestone roadmap. Branch `beatlab/bl1-playlist-foundation`, **v6.30.0**. Detailed architecture/inventory: `docs/BEAT_LAB_PLAYLIST_DEVELOPMENT.md`. No Sites deployment here.
+
+### Completed / preserved
+
+- Optional Playlist tab and Add to Playlist button extend the original screen. Original pads/sequencer/Edit/Transpose/Volume, preset/sound/import/mic/bank/recording/Beat Battle and sequential arrangement remain. No redesign/replacement, no blank Piano Roll/Mixer tabs. Optional panel is dark/readable; screenshot review includes phone layout.
+- Track names/colors, actual gain/pan/mute/solo; original independent named pattern controls and per-source sound snapshots; linked clips and explicit Make unique. Add/move/track reassignment, finger resize, source-phase trim, repeat through clip length, split, duplicate/delete, multi-selection/group copy/paste and 40-step undo/redo. Multiple pointer owners move distinct clips; cancellation/pause/view changes restore previews without changing formation. Keyboard/programmatic activation and focus restoration support shared menu/cursor navigation.
+- Bars/beats/ruler/zoom/scroll/snap/seek/playhead/duration, loop region and active-context master transport/Loop/BPM/metronome. One immutable compiled event plan drives live Web Audio and original offline export. Exact audio-clock loop lookahead is independent of render frames; pause/seek tail chase, live tempo/mix rebase and bounded lag recovery. Recording carries Playlist track mix/pan/seek offsets. Errors pause safely instead of leaving an unhandled live compile failure.
+- Actual complete stereo WAV PCM16 export added, genuine MP3 preserved, master Export follows active Playlist. Source parameters/master mix are real routing. No fake waveform: clips show programmed step previews. Export five-minute limit and 24 tracks/512 clips/128 bars/40k hits are explicit safety bounds, not hardware capacity claims.
+- Optional studioVersion/Playlist version 1 adapter; legacy absence gives an empty optional Playlist while original arrangement/pads still work. Complete source sounds/PCM and clip/mix settings save/reopen/backup. Backup/load validate new references/bounds/versions and preserve old fields. No IndexedDB store/version, global profile schema or score-edition change; no dependency/service/imported art change. New modules precached; all 98 original migration hashes untouched.
+- Sound-ownership guard prevents switching/deleting/restoring sources from overwriting a different source's pad settings. Source-delete confirmation now explicitly includes linked Playlist clips. Existing studio and previous Beat Battle recovery includes complete new project data.
+
+### Actual verification / failures / limits
+
+New pure/production-clock tests cover independent timing/repetition/tempo/split-phase, gain/pan/mute/solo, linked sound isolation, invalid/legacy state, seek offsets and actual PCM WAV layout. Controlled production scheduler checks exact two-second loop boundaries, paused musical position and no backlog burst after a long UI stall. Original `studios.mjs` legacy scheduler fixture now supplies explicit inactive Playlist context; original save/load/render/PCM/MP3 checks remain.
+
+Actual browser builds two different sources and overlapping eight-bar tracks via original editor + new Playlist. Exercises duplicate/copy/paste/split/unique-source editing/undo/redo, real simultaneous pointer moves, canceled rollback, resize, group copy and programmatic selection; checks frame-independent clock/pause/loop. Renders actual stereo WAV: ffprobe verifies format/channels/duration; PCM channel energy independently proves both tracks, solo/pan isolation and zero-volume removal. Master Export produces genuine MP3 verified by ffprobe. Full project/PCM backup and close/reopen/source-editor return pass. Two desktop/phone layout/accessibility audits.
+
+Initial full suite caught missing new inactive-context fields in the deliberately extracted legacy scheduler fixture, not a production launch failure; fixture updated. A new clock test initially omitted a playlistEnd import; corrected. First simultaneous pointer fixture addressed off-screen clips after timeline scroll; corrected actual viewport positioning, then independent moves/cancel/resize passed. Make-unique source-editor selection/focus/cancel details were corrected during review before final checks. Failed attempts are not counted as passes.
+
+Physical Windows touch/controller precision, audible speakers/headphones, microphone, audio latency and heavy-song capacity remain deployed trials. Automated input/audio files are real browser/DSP evidence, not child music/performance certification. BL1 is drum-pattern/song foundation only: no Piano Roll/instrument notes, independent audio time-stretch/pitch, recorded audio Playlist clips, peak meters/EQ/reverb/delay are claimed. Those belong to BL2/BL3. Full fourteen-step mixed-instrument workflow remains BL3 acceptance.
+
+### Resume / next
+
+Publish exact tested source and update WORK_MODE_HANDOFF.md. Work Mode deploys 6.30.0 dist/ to the same project/URL/access policy, verifies version and returns URL. User tries eight-bar song, sources/clip tools, two touches, live mix/loop/seek/BPM, real WAV/MP3, old/new saves and original Beat Lab workflow. Stop for trial. Next after explicit continuation: **BL2 — Piano Roll, instruments and collaborative performance** from the saved three-milestone roadmap; do not add extra expansion milestones or redesign familiar screens.
+
+### BL1 final checked result
+
+**62 test programs pass** (`npm test`), followed by final focused Playlist/legacy-studio checks and the complete final Playlist browser flow. **153 browser audits pass**: two Playlist, four original creative, 72 shared shell and 75 library/eight scenarios. Actual file audio proof additionally validates stereo WAV/MP3, eight-bar duration, both track channels, solo/gain isolation and recorded Playlist pan metadata. Screenshots reviewed at desktop/phone. Final audit/build/syntax/diff checks pass: **25 public IDs, 278 cache entries, 180 reachable dependencies, all 98 original migration hashes**. Detailed evidence in `docs/revamp/BL1_*`. Physical user trial remains; no Sites deployment here.
