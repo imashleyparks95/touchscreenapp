@@ -948,3 +948,7 @@ Publish exact checked checkpoint and update WORK_MODE_HANDOFF.md. Work Mode depl
 ### Final checked result
 
 **60 test programs pass** (`npm test`), including new recorder guards, existing real-host turn/sudden-death/once-only completion, all 100 campaign/difficulty solutions, toolkit/Forest/weapon and full arcade regressions. **76 browser audits pass**: four care plus 72 shell. Final audit/build/syntax/diff checks pass: 25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original migration hashes. Physical/live trials remain.
+
+### Published M9A checkpoint
+
+App `e11587b06c222f973af4a3adb31317eba4b3c57f` pushed to `revamp/milestone-9a-match-records`; remote SHA verified. Documentation-only follow-up preserves v6.26.0 runtime. Work Mode handoff pins checked source and existing destination. No Sites deployment here. Stop for deployed user trial; proposed M9B requires continuation.

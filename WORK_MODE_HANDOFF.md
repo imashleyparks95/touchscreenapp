@@ -2,7 +2,7 @@
 
 ## Deploy v6.26.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-9a-match-records**, based on published 8E `6d444eaddad7d7f3a9e06478c59851832560822f`. Exact checked publication recorded below. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-9a-match-records**, based on published 8E `6d444eaddad7d7f3a9e06478c59851832560822f`. Tested app commit **`e11587b06c222f973af4a3adb31317eba4b3c57f`** is pushed and verified against GitHub. This documentation-only follow-up preserves the runtime and may be pinned for deployment. Finish earlier deployments first.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md and docs/revamp/M9A_MULTIPLAYER_AUDIT.md. Authoritative **dist/**. Entry points: **dist/js/data.js** shared ranked preflight/unranked identity, **dist/js/refined.js** alternating rematch copy; **tests/match-records.mjs** and expanded **tests/care-browser.mjs**. Evidence **docs/revamp/M9A_***. Existing game rules, multiplayer/input, art/models and persistence retained. M9 is in progress.
 
@@ -20,3 +20,7 @@ Final checks: **60 test programs and 76 browser audits pass** (four care + 72 sh
 - Try unranked practice: no new competitive records/points; original feedback and player identity remain. Keep family browser data and test normal backup/export.
 
 Stop for deployed trial. After explicit continuation, proposed **M9B — learning/co-op progression and replay choices review**. Broader M9, remaining M7/M8 acceptance and M10 remain unfinished.
+
+## Message to paste into Work Mode
+
+Deploy Little Big Arcade Milestone 9A, version 6.26.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-9a-match-records, tested app commit e11587b06c222f973af4a3adb31317eba4b3c57f (or its final documentation-only handoff commit). Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.26.0 and return the URL for my trial. Pause further development for my trial.
