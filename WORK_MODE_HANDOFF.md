@@ -2,7 +2,7 @@
 
 ## Deploy v6.17.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7i-learning-games**, based on published 7H `718833e1e9f2e5e539ee1a457c67bb9dcf4b32dd`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Earlier deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7i-learning-games**, based on published 7H `718833e1e9f2e5e539ee1a457c67bb9dcf4b32dd`. Tested app commit **59662a0ab1588c036da0d06cfe2e9b6fdc930570**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Earlier deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7I improves Math Quest / Spelling Adventure; Milestone 7 remains in progress.** Runtime: `dist/js/math-board.js`, `math-quest.js`, `spelling.js`, `learning-polish.js`, scoped `dist/arcade-polish.css`. Authoritative source is `dist/`; version **6.17.0**. Evidence: `docs/revamp/M7I_*`. All 25 covers, shared local sounds, choice-first Doodle/mines/healers and earlier changes remain.
 
@@ -23,4 +23,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7I, version 6.17.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7i-learning-games, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.17.0 and return the existing URL for my Math/Spelling trial. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7I, version 6.17.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7i-learning-games, commit 59662a0ab1588c036da0d06cfe2e9b6fdc930570. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.17.0 and return the existing URL for my Math/Spelling trial. Pause further development for my trial.
