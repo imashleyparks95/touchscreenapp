@@ -1,0 +1,22 @@
+PASS arena-browser.mjs
+PASS care-browser.mjs
+PASS defense-browser.mjs
+PASS creative-browser.mjs
+PASS learning-browser.mjs
+PASS library-browser.mjs
+PASS limit-benchmark-browser.mjs
+PASS limit-browser.mjs
+PASS limit-expedition-browser.mjs
+PASS media-browser.mjs
+PASS motion-browser.mjs
+PASS physics-browser.mjs
+PASS play-browser.mjs
+PASS shared-browser.mjs
+PASS reaction-browser.mjs
+PASS shell-browser.mjs
+PASS wars-browser.mjs
+PASS wars-native-browser.mjs
+PASS workshop-browser.mjs
+PASS zoo-air-browser.mjs
+PASS wars-presentation-browser.mjs
+21/21 browser suites passed

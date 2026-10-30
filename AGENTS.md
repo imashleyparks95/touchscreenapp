@@ -14,3 +14,9 @@
 - Distinguish automated fixtures and generated streams from physical camera, microphone, Windows and USB multitouch verification in acceptance reports.
 - Before creating or modifying a 3D game, read `3D_GAME_DEVELOPMENT.md` and reuse the tested interfaces in `dist/js/3d/`. Keep game-specific art, rig mappings and rules outside the toolkit. Update the documentation when shared systems change, run independent toolkit/starter tests and regression-test existing dependent games. Do not call an untested extracted helper reusable.
 - Preserve existing menus, visual purchasing controls and established player workflows during 3D/engine upgrades unless the user explicitly requests UI changes. Recover originals from source/history before reconstructing; document missing references and never invent a purchasing subsystem or silently downgrade the engine as a UI-restoration fallback.
+
+## Beat Lab expansion follow-on
+
+- Before advanced Beat Lab work, read `docs/BEAT_LAB_EXPANSION_MASTER_PLAN.md` and `docs/BEAT_LAB_THREE_MILESTONES.md`. User requires exactly three expansion milestones; retain completed arcade milestone history.
+- Expand the familiar Beat Lab interface through optional Playlist, Piano Roll and Mixer tabs. Preserve its existing default screen, layout, pads, sequencer, Edit/Transpose/Volume, sounds, recordings, saved projects and two-player behavior.
+- Advanced controls must affect real synchronized audio and compatible saves/exports. Never label ordinary coupled playback-rate changes independent pitch/time processing. Validate the specification's full fourteen-step workflow before final expansion completion.

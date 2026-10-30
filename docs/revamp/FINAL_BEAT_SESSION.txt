@@ -1,0 +1,2 @@
+PASS: actual Beat Battle startup blocks active capture/export, saves recoverable pre-clear project, detaches named save identity, ignores duplicate start, preserves edits on failed storage and cancels late disposed startup.
+PASS: a new battle preserves both earlier players’ complete takes; failed recovery keeps previous session and studio intact.

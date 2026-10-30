@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.28.0
+## Current development checkpoint — 6.29.0 · Final arcade integration
+
+Remaining arcade review is consolidated into one final milestone. Every browser suite and full unit regression is included; Beat Battle also preserves both previous takes before a new session. See `docs/FINAL_ACCEPTANCE.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for evidence, limits and deployment. The attached Beat Lab expansion is preserved and organized into **exactly three future milestones** in `docs/BEAT_LAB_THREE_MILESTONES.md`; its advanced features are not implemented yet.
+
+### Retained creative-session checkpoint — 6.28.0
 
 Milestone **9C** protects Beat Lab sessions when starting Beat Battle: a recovery copy appears in Projects before clearing patterns, battle work uses a separate save identity, and active recording/export/microphone edits block new battle startup. Failed storage preserves the current work. Existing sound library, named projects, battle rules and scores remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial instructions.
 
