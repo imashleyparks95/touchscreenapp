@@ -1,0 +1,1 @@
+PASS: two actual two-player motion sessions, four active audits, native Gamepad API fixture sling/movement/star-switch, global-cursor ownership, pause/disconnect cleanup and backup.

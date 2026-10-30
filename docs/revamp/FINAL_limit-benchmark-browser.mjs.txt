@@ -1,0 +1,30 @@
+PASS: actual five-scene benchmark, measured raw exports, history/backup, no partial result and safe recovery. {
+  frames: 128,
+  durationMs: 42414.29999998957,
+  averageFPS: 3.017850111873389,
+  onePercentLowFPS: 0.5357764740552381,
+  medianMs: 273.6000000014901,
+  p95Ms: 880.8999999985099,
+  p99Ms: 1229.0999999940395,
+  worstMs: 2142.3000000044703,
+  spikes: 128,
+  worstSpikesMs: [
+    2142.3000000044703,
+    1590.5999999940395,
+    1229.0999999940395,
+    1174.8000000044703,
+    1001.1999999955297,
+    963.7000000029802,
+    923.8000000044703,
+    880.8999999985099
+  ],
+  distribution: [
+    { maxMs: 8.333, count: 0 },
+    { maxMs: 16.667, count: 0 },
+    { maxMs: 33.333, count: 0 },
+    { maxMs: 50, count: 0 },
+    { maxMs: 100, count: 0 },
+    { maxMs: null, count: 128 }
+  ],
+  sampleLimited: false
+}

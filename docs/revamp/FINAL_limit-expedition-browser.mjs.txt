@@ -1,0 +1,5 @@
+Loaded actual area: forest
+Loaded actual area: castle
+Loaded actual area: arena
+Loaded actual area: chaos
+PASS: 7 actual expedition browser scenarios, four scene loads, Castle door input, Chamber measured windows/reset, distinct completion records and no retained engines.

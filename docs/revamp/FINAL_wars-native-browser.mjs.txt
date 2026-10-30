@@ -1,0 +1,1 @@
+PASS: four native desktop/phone audits; real native/global cursor handoff, two-pad and mixed touch purchases/moves, camera, Ready/start, pause/resume/disconnect and complete engine cleanup.

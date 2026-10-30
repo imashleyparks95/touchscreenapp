@@ -1,0 +1,1 @@
+PASS: four active desktop/phone audits; real 3D deployment, cancellation, gallery/save/backup, camera, battle/pause/help/background and full engine cleanup. Backend: {"engine":"ThinEngine","software":false,"webgl":true,"renderer":"WebKit WebGL"}

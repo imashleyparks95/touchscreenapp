@@ -6,127 +6,127 @@
       "suite": "arena-browser.mjs",
       "code": 0,
       "durationMs": 15562,
-      "log": "FINAL_arena-browser.mjs.log"
+      "log": "FINAL_arena-browser.mjs.txt"
     },
     {
       "suite": "care-browser.mjs",
       "code": 0,
       "durationMs": 16109,
-      "log": "FINAL_care-browser.mjs.log"
+      "log": "FINAL_care-browser.mjs.txt"
     },
     {
       "suite": "defense-browser.mjs",
       "code": 0,
       "durationMs": 8027,
-      "log": "FINAL_defense-browser.mjs.log"
+      "log": "FINAL_defense-browser.mjs.txt"
     },
     {
       "suite": "creative-browser.mjs",
       "code": 0,
       "durationMs": 14896,
-      "log": "FINAL_creative-browser.mjs.log"
+      "log": "FINAL_creative-browser.mjs.txt"
     },
     {
       "suite": "learning-browser.mjs",
       "code": 0,
       "durationMs": 10839,
-      "log": "FINAL_learning-browser.mjs.log"
+      "log": "FINAL_learning-browser.mjs.txt"
     },
     {
       "suite": "library-browser.mjs",
       "code": 0,
       "durationMs": 59528,
-      "log": "FINAL_library-browser.mjs.log"
+      "log": "FINAL_library-browser.mjs.txt"
     },
     {
       "suite": "limit-benchmark-browser.mjs",
       "code": 0,
       "durationMs": 161778,
-      "log": "FINAL_limit-benchmark-browser.mjs.log"
+      "log": "FINAL_limit-benchmark-browser.mjs.txt"
     },
     {
       "suite": "limit-browser.mjs",
       "code": 0,
       "durationMs": 242762,
-      "log": "FINAL_limit-browser.mjs.log"
+      "log": "FINAL_limit-browser.mjs.txt"
     },
     {
       "suite": "limit-expedition-browser.mjs",
       "code": 0,
       "durationMs": 147101,
-      "log": "FINAL_limit-expedition-browser.mjs.log"
+      "log": "FINAL_limit-expedition-browser.mjs.txt"
     },
     {
       "suite": "media-browser.mjs",
       "code": 0,
       "durationMs": 15976,
-      "log": "FINAL_media-browser.mjs.log"
+      "log": "FINAL_media-browser.mjs.txt"
     },
     {
       "suite": "motion-browser.mjs",
       "code": 0,
       "durationMs": 9587,
-      "log": "FINAL_motion-browser.mjs.log"
+      "log": "FINAL_motion-browser.mjs.txt"
     },
     {
       "suite": "physics-browser.mjs",
       "code": 0,
       "durationMs": 13242,
-      "log": "FINAL_physics-browser.mjs.log"
+      "log": "FINAL_physics-browser.mjs.txt"
     },
     {
       "suite": "play-browser.mjs",
       "code": 0,
       "durationMs": 10716,
-      "log": "FINAL_play-browser.mjs.log"
+      "log": "FINAL_play-browser.mjs.txt"
     },
     {
       "suite": "shared-browser.mjs",
       "code": 0,
       "durationMs": 7228,
-      "log": "FINAL_shared-browser.mjs.log"
+      "log": "FINAL_shared-browser.mjs.txt"
     },
     {
       "suite": "reaction-browser.mjs",
       "code": 0,
       "durationMs": 33663,
-      "log": "FINAL_reaction-browser.mjs.log"
+      "log": "FINAL_reaction-browser.mjs.txt"
     },
     {
       "suite": "shell-browser.mjs",
       "code": 0,
       "durationMs": 32620,
-      "log": "FINAL_shell-browser.mjs.log"
+      "log": "FINAL_shell-browser.mjs.txt"
     },
     {
       "suite": "wars-browser.mjs",
       "code": 0,
       "durationMs": 31459,
-      "log": "FINAL_wars-browser.mjs.log"
+      "log": "FINAL_wars-browser.mjs.txt"
     },
     {
       "suite": "wars-native-browser.mjs",
       "code": 0,
       "durationMs": 30500,
-      "log": "FINAL_wars-native-browser.mjs.log"
+      "log": "FINAL_wars-native-browser.mjs.txt"
     },
     {
       "suite": "workshop-browser.mjs",
       "code": 0,
       "durationMs": 9996,
-      "log": "FINAL_workshop-browser.mjs.log"
+      "log": "FINAL_workshop-browser.mjs.txt"
     },
     {
       "suite": "zoo-air-browser.mjs",
       "code": 0,
       "durationMs": 13890,
-      "log": "FINAL_zoo-air-browser.mjs.log"
+      "log": "FINAL_zoo-air-browser.mjs.txt"
     },
     {
       "suite": "wars-presentation-browser.mjs",
       "code": 0,
       "durationMs": 46985,
-      "log": "FINAL_wars-presentation-browser.mjs.log"
+      "log": "FINAL_wars-presentation-browser.mjs.txt"
     }
   ]
 }

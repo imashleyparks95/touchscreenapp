@@ -1037,3 +1037,7 @@ Full unit and all browser suites execute for this integrated runtime; final exac
 Audit/build/changed-source syntax/diff checks pass: **25 public stable IDs, 276 cache entries, 178 reachable dependencies, all 98 original hashes**, original save/media/hosting identity retained. No new dependency/service. Final cloud baseline uses reported SwiftShader; its measured low frame rate is not a physical target-PC result. No real family data read/reset, no deployment here.
 
 **Consolidation complete as a software release checkpoint.** Remaining physical/device, subjective art/animation/feel and target-PC acceptance stay in FINAL_ACCEPTANCE.md under this same final milestone, rather than being silently certified or split into more numbered arcade phases. Publish checked source, hand Work Mode the exact existing-site deployment request and stop for final user trial. Beat Lab expansion is ready in exactly BL1/BL2/BL3; it has not begun. Start BL1 only after explicit continuation, preserving the familiar interface and all old projects.
+
+### Published final checkpoint
+
+App `4a428e855af89ba5b85ee60498262bc5d484fcd4` pushed to `revamp/final-arcade-integration`; remote SHA verified. Documentation/evidence follow-up preserves v6.29.0 runtime and includes all 21 individual browser logs as tracked text files. Work Mode handoff pins checked source/existing destination. No Sites deployment here. Stop for final deployed acceptance; the next authorized development milestone is Beat Lab BL1 from the saved three-milestone roadmap.

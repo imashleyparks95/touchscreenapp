@@ -1,0 +1,1 @@
+PASS: real Circuit wiring/cancel/pause, two legal Robot diagnosis turns, four active audits, actual backup and all 25 cover renders.
