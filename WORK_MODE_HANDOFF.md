@@ -2,7 +2,7 @@
 
 ## Deploy v6.14.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7f-physics-games**, based on published 7E `564bf6f92f9d29f71c81d310ae25288e92eae109`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7f-physics-games**, based on published 7E `564bf6f92f9d29f71c81d310ae25288e92eae109`. Tested app commit **c8862b00927220057066d294f919f5a3db497b77**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7F improves Gravity Chaos/Build & Smash; Milestone 7 remains in progress.** All 25 refreshed public covers and Beat Lab's 80 sounds/shared device recordings remain. Runtime source: `dist/js/gravity.js`, `smash.js`, new `physics-polish.js` and scoped `dist/arcade-polish.css`. Existing core physics/rules, campaign layouts and score editions remain. `dist/` is authoritative; package/release/cache version **6.14.0**. Evidence: `docs/revamp/M7F_*`.
 
@@ -23,4 +23,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7F, version 6.14.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7f-physics-games, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.14.0 and return the existing URL for me to test Gravity Chaos and Build & Smash, including the builder. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7F, version 6.14.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7f-physics-games, commit c8862b00927220057066d294f919f5a3db497b77. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.14.0 and return the existing URL for me to test Gravity Chaos and Build & Smash, including the builder. Pause further development for my trial.

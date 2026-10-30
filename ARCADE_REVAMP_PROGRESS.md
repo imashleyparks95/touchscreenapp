@@ -587,3 +587,7 @@ Physical USB/Bluetooth pads, real multitouch rotation/ramp/safety holds, actual 
 ### Resume / next steps
 
 Publish this checkpoint and exact commit in `WORK_MODE_HANDOFF.md`; Work Mode deploys **6.14.0** `dist/` to the existing project/URL/access policy, verifies live version and returns the link. User trials Gravity buttons/swipes, independent boards and later platform/ramp/safety mechanics; Smash aiming/cancel/abilities, fair turns, builder drag/lost capture/save/reopen/family gallery and backups. Stop here for deployed trial. **Next proposed batch after continuation: 7G — Castle Creator and Doodle Defenders**, starting with actual building/defense visuals, controls and feedback while preserving purchases, drawings, campaigns and records. Other unreviewed game rows and M8–M10 remain unfinished.
+
+### Milestone 7F published checkpoint
+
+Successfully pushed tested **v6.14.0** app commit **`c8862b00927220057066d294f919f5a3db497b77`** to **`revamp/milestone-7f-physics-games`** and verified the remote branch. 7E remains at `564bf6f92f9d29f71c81d310ae25288e92eae109`. This follow-up changes documentation only. Full regression completed (48 programs), with final focused capture/host/art checks after refinements; all 153 browser audits pass. Work Mode should deploy the exact published checkpoint to the existing Sites project, verify live **6.14.0** and return its URL for the user's Gravity/Smash/builder trial. **Milestone 7 remains in progress; stop before proposed 7G unless continued.** No live deployment performed here.
