@@ -1,0 +1,10 @@
+Premium-suite excerpt from the successful full npm test run; see M7G_REGRESSION.txt.
+PASS: all 20 Castle sieges and all 20 Wobbly campaign battles won through legal player actions and budgets; all 100 Doodle level/difficulty combinations defended through real ink costs and tower attacks.
+PASS: 135 career jobs plus 100 randomized fault combinations fully repaired, reassembled and interactively tested; every Buddy challenge mode completes at all five difficulties using real grabs, releases and gadgets.
+PASS: anchored elastic pull prevents free dragging; release moves opposite tension; all 30 Slime courses completed through slings, including genuine split-pad-merge puzzles.
+PASS: overlap/support validation, physical debris, creative no-attack behavior, saved budget enforcement; all eight Buddy physics rooms and all gadgets stay finite, with independent articulated grabs and complete body/joint cleanup.
+PASS: imperfect line/circle/triangle/zigzag/star/spiral recognition helper retained, canceled strokes without ink charge, chosen-defense concurrent ownership, undo refunds, real wall path/damage effects, and repair ordering/test failure feedback.
+PASS: all 21 units run live combat, terrain-aware AI reaches valid campaign winners, identical inputs reproduce exact physics, saved armies cannot bypass budgets, and a capped 48-unit/288-body battle stays finite and cleans up.
+PASS: all five game scenes at every difficulty render finite coordinates; all new records, designs, coins and unlocks roundtrip through the existing backup format without deleting legacy games or exposing secrets.
+PASS: shipped alternating identical robot turns, best-of-three exactly-once commits, two-stage equal-budget army preparation and explicit combat winner, Castle Clash opponent-design exchange and isolated attack clocks, concurrent Doodle stroke ownership, and pause cleanup.
+PASS: actual Castle controller opens the next construction stage, refreshes new unlocks and exact assault controls, holds the clock, saves per-profile defeats immediately and continues without an instruction popup or premature match record.

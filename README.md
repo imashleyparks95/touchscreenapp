@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.14.0
+## Current development checkpoint — 6.15.0
+
+Milestone **7G** reworks Doodle Defenders around **choose an ability, then draw it your way**. Your sketch stays on-screen: turrets shoot bullets, single-use mines explode, and healers send green pluses to injured defenses or nearby HOME. All eight roles, placement, upgrades and multiplayer remain. New defense records are separate from preserved earlier results. Castle Creator gains support/assault guidance, original fortress detail and clearer build controls while retaining visual purchases and saved designs. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
+
+### Retained physics checkpoint — 6.14.0
 
 Milestone **7F** improves Gravity Chaos and Build & Smash. Gravity has original orbital-workshop/energy-ball detail, per-player direction buttons beside swipes, live mission guidance and safer capture cleanup. Smash gains construction detail, actual sling-power/projectile guidance and canceled-drag recovery. Portrait fields/build controls improve readability. Existing physics, campaigns, saves, scores, multiplayer, all 25 public covers and shared Beat Lab sounds remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions; Milestone 7 remains in progress.
 

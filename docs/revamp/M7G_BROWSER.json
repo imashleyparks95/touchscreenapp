@@ -1,0 +1,35 @@
+{
+  "version": "6.15.0",
+  "checks": [
+    "real starter construction/support guidance, original purchasing controls and saved castle",
+    "actual unfinished Doodle stroke canceled by tool change, legal placement only on P1, isolated boards, paused clock and actual castle backup"
+  ],
+  "audits": [
+    {
+      "game": "castle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "castle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "doodle",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "game": "doodle",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "scope": "Real browser creative modes and controller-pointer fixture; no forced outcomes, full campaign or physical hardware claim."
+}

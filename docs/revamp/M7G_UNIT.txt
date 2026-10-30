@@ -1,0 +1,3 @@
+PASS: all eight placement ink estimates equal real model charges, canceled strokes cost nothing, support guidance preserves castles and original notebook/fortress artwork is finite.
+PASS: all eight chosen abilities preserve arbitrary freehand strokes and pointer-start role; real single-use mine damage, traveling healing pulses, defense/home restoration and health caps.
+PASS: actual old/new Doodle records remain separately keyed and survive schema-3 backup roundtrip.

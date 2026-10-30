@@ -1,0 +1,3 @@
+PASS: torso-relative Buddy neck limits, impact wobble, attachment and recovery through idle, throws, counter-spins, head/limb grabs, inversion and gadgets; body tumbles freely and War joints stay unchanged. Full illustrated ladybugs stay in bounds through every difficulty and live scale change.
+PASS: all 25 normal games plus the hidden game have distinct instructions; mandatory focus-contained acknowledgement, no Escape/backdrop skip, no start before acknowledgement, duplicate prevention, input-frame separation and pending-start cleanup.
+PASS: every shipped game entry holds real model creation until acknowledgement, even after 30 seconds of frame callbacks; studios install their interactive/audio workspaces only after Play + acknowledgement.
