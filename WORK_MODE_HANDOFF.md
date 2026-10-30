@@ -2,7 +2,7 @@
 
 ## Deploy v6.30.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **beatlab/bl1-playlist-foundation**, based on published final arcade `e6af71f2124bf58d20b932f16d9896c29c81d36a`. Exact checked publication recorded below. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **beatlab/bl1-playlist-foundation**, based on published final arcade `e6af71f2124bf58d20b932f16d9896c29c81d36a`. Tested app commit **`faeecaa96b459df65bb9a18722827a9971b0ddf9`** is published and verified against GitHub. This documentation-only follow-up preserves the runtime and may be pinned for deployment. Finish earlier deployments first.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md, docs/BEAT_LAB_THREE_MILESTONES.md and docs/BEAT_LAB_PLAYLIST_DEVELOPMENT.md. Authoritative **dist/**. Source: **js/beat.js**, new **js/beat-playlist.js** / **js/beat-playlist-ui.js**, optional backup validation in **js/data.js**, scoped **arcade-polish.css**. Evidence: **docs/revamp/BL1_***. Original default Beat Lab screen/controls and all previous games remain. Only BL1 is implemented; Piano Roll/instruments and advanced audio/mixer remain BL2/BL3.
 
@@ -22,3 +22,7 @@ Deployment is authorized. Serve **dist/** in existing Sites project **appgprj_6a
 Bounds: 24 tracks, 512 clips, 128 bars, 40k hits, 40 history steps; five-minute exports. These are safety limits, not hardware performance promises. Fine editing remains touch/mouse/keyboard first; shared controller cursor navigation is retained. No audio-waveform clips, independent time-stretch, Piano Roll, synth notes or full mixer/effects tab are claimed yet.
 
 Stop for deployed user trial. Next after explicit continuation: **BL2 — Piano Roll, instruments and collaborative performance**; then **BL3 — advanced audio/mixer/export/final 14-step workflow**. Exactly three expansion milestones; preserve familiar interface and old data.
+
+## Message to paste into Work Mode
+
+Deploy Beat Lab BL1, Little Big Arcade version 6.30.0, from imashleyparks95/touchscreenapp, branch beatlab/bl1-playlist-foundation, tested app commit faeecaa96b459df65bb9a18722827a9971b0ddf9 (or its final documentation-only handoff commit). Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and all family data, and do not create a replacement site. Verify live 6.30.0 and return the URL for my Playlist trial. BL2/BL3 are not implemented; pause development for my trial.

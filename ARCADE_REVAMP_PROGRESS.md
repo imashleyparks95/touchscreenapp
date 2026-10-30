@@ -1080,3 +1080,7 @@ Publish exact tested source and update WORK_MODE_HANDOFF.md. Work Mode deploys 6
 ### BL1 final checked result
 
 **62 test programs pass** (`npm test`), followed by final focused Playlist/legacy-studio checks and the complete final Playlist browser flow. **153 browser audits pass**: two Playlist, four original creative, 72 shared shell and 75 library/eight scenarios. Actual file audio proof additionally validates stereo WAV/MP3, eight-bar duration, both track channels, solo/gain isolation and recorded Playlist pan metadata. Screenshots reviewed at desktop/phone. Final audit/build/syntax/diff checks pass: **25 public IDs, 278 cache entries, 180 reachable dependencies, all 98 original migration hashes**. Detailed evidence in `docs/revamp/BL1_*`. Physical user trial remains; no Sites deployment here.
+
+### Published BL1 checkpoint
+
+Tested app `faeecaa96b459df65bb9a18722827a9971b0ddf9` pushed to `beatlab/bl1-playlist-foundation`; remote SHA verified. Documentation-only follow-up preserves v6.30.0 runtime. All code/evidence is in GitHub; WORK_MODE_HANDOFF.md pins source and existing Sites destination. No deployment performed here. **Stop for BL1 deployed trial. Next explicitly authorized continuation is BL2, not another BL1 sub-milestone.**
