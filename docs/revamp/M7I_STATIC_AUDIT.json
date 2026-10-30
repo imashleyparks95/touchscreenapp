@@ -1,0 +1,252 @@
+{
+  "scope": "Static development audit; gameplay and hardware checks are separate.",
+  "checks": [
+    {
+      "name": "registered roster and unique Limit Break",
+      "status": "passed",
+      "detail": "25 unique registered worlds; all 25 original public IDs retained"
+    },
+    {
+      "name": "hidden session and legacy record preservation hooks",
+      "status": "passed",
+      "detail": "Hidden game entry retained; legacy record import present (behavior requires regression tests)"
+    },
+    {
+      "name": "version and static hosting configuration",
+      "status": "passed",
+      "detail": "6.17.0; existing Sites identity and dist/ retained"
+    },
+    {
+      "name": "offline manifest files",
+      "status": "passed",
+      "detail": "270 distinct local cache entries exist"
+    },
+    {
+      "name": "application module/style dependency closure",
+      "status": "passed",
+      "detail": "172 reachable HTML/module/style/icon dependencies exist and are precached (model/texture decoding is tested separately)"
+    },
+    {
+      "name": "original vendored and art asset integrity",
+      "status": "passed",
+      "detail": "98 asset/vendor files match original migration checksums; intentional future asset replacements require a documented provenance update"
+    },
+    {
+      "name": "save schema and local media identity",
+      "status": "passed",
+      "detail": "Storage identities unchanged; run backup/restore tests for behavior, and export real family data in its original browser"
+    }
+  ],
+  "games": [
+    {
+      "id": "gladiator",
+      "name": "Gladiator Arena",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "math",
+      "name": "Math Quest",
+      "category": "learn",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "bugs",
+      "name": "Bug Squash",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "paint",
+      "name": "Creative Studio",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "balloons",
+      "name": "Balloon Mayhem",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "cafe",
+      "name": "Monster Café",
+      "category": "learn",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "circuit",
+      "name": "Circuit Rush",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "gravity",
+      "name": "Gravity Chaos",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "battle",
+      "name": "Two-Player Tap Battle",
+      "category": "together",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "build",
+      "name": "Build & Smash",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "beat",
+      "name": "Beat Lab",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "slime",
+      "name": "Slime Lab",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "dentist",
+      "name": "Monster Dentist",
+      "category": "learn",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "ninja",
+      "name": "Shadow Ninjas",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "castle",
+      "name": "Castle Creator",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "buddy",
+      "name": "Buddy Mayhem",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "doodle",
+      "name": "Doodle Defenders",
+      "category": "arcade",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "robot",
+      "name": "Robot Repair Shop",
+      "category": "learn",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "wars",
+      "name": "Wobbly Wars",
+      "category": "together",
+      "renderer": "Babylon/Havok 3D; inspect compatibility renderer separately",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "funny",
+      "name": "Funny Face Studio",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "monster",
+      "name": "Monster Me!",
+      "category": "creative",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "zoo",
+      "name": "My Noisy Zoo",
+      "category": "together",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "air",
+      "name": "Air Slice",
+      "category": "together",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "spelling",
+      "name": "Spelling Adventure",
+      "category": "learn",
+      "renderer": "Canvas/DOM; media devices where applicable",
+      "controller": "Shared menu navigation/controller cursor; not a dedicated action mapping",
+      "physical_verification": "not established by this audit"
+    },
+    {
+      "id": "limit",
+      "name": "Project Limit Break",
+      "category": "together",
+      "renderer": "Babylon/Havok 3D; inspect compatibility renderer separately",
+      "controller": "Dedicated movement/camera/combat plus menus",
+      "physical_verification": "not established by this audit"
+    }
+  ],
+  "errors": [],
+  "version": "6.17.0",
+  "persistence": {
+    "profiles": "lba-universe-v3",
+    "legacy": "lba-records",
+    "media": "lba-universe-media / items / version 1",
+    "backup": "little-big-arcade / version 3",
+    "user_data_accessed": false
+  },
+  "ok": true
+}

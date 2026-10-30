@@ -1,0 +1,1 @@
+PASS: answer-independent math format guidance, five spelling modes, real MathBoard legal/canceled/lost/disabled/zoom/dispose capture paths and preserved completed ink.

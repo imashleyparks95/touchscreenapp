@@ -1,0 +1,5 @@
+
+> little-big-arcade@6.17.0 build
+> node scripts/build.mjs
+
+Static application copied from authoritative dist/ source to build/. No transpilation required.

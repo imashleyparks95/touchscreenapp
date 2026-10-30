@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.16.0
+## Current development checkpoint — 6.17.0
+
+Milestone **7I** clarifies Math answer formats and Spelling's five mode workflows. Math notebook strokes now survive empty motion-sample batches, canceled gestures stay discarded, captures release safely and paused workspaces block input while preserving completed writing. Existing learning pools, handwriting, adaptive questions, scores, multiplayer and free speech—including Niko's pronunciation—remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
+
+### Retained play checkpoint — 6.16.0
 
 Milestone **7H** gives Buddy Mayhem original padded-room detail, live gadget/objective guidance and safe grab-to-gadget changes. Tap Battle gains readable per-player prompts, original arena detail and pause-safe captures. Both improve portrait layouts while retaining physics, challenge rules, unlocks, scoring and multiplayer. All earlier covers, shared local sounds and choice-first Doodle defenses remain. Read `WORK_MODE_HANDOFF.md` for deployment/trial directions. Milestone 7 remains in progress.
 
