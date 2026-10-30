@@ -2,7 +2,7 @@
 
 ## Deploy v6.13.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7e-creative-music**, based on published 7D `05de7bb4f669f8782432d15f6c166d3d91c985e2`. Tested app commit **APP_COMMIT_PENDING**; publication status will be recorded after push. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-7e-creative-music**, based on published 7D `05de7bb4f669f8782432d15f6c166d3d91c985e2`. Tested app commit **e1bed274fac679dba0c0526eb2e330fbaa15a66c**; published to GitHub and verified against the remote branch. This documentation-only follow-up has the same runtime; the final handoff may pin its commit instead. Previous deployment branches remain unchanged. Deployment is authorized; finish earlier deployments before deploying this checkpoint.
 
 Read `AGENTS.md`, `ARCADE_REVAMP_PROGRESS.md` and this file. **7E improves Creative Studio/Beat Lab; Milestone 7 remains in progress.** New sound library: 80 original offline sounds, individual assignment and saved mic samples shared across profiles **on the same device**, per user clarification. There is no online publishing/database requirement. All 25 refreshed public covers remain.
 
@@ -25,4 +25,4 @@ Stop for the user's deployed trial. Next proposed development after continuation
 
 ## Message to paste into Work Mode
 
-Deploy Little Big Arcade Milestone 7E, version 6.13.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7e-creative-music, commit APP_COMMIT_PENDING. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.13.0 and return the existing URL so I can test Creative Studio and Beat Lab's 80-sound library, per-track choices and mic sounds shared across profiles on this device. Pause further development for my trial.
+Deploy Little Big Arcade Milestone 7E, version 6.13.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-7e-creative-music, commit e1bed274fac679dba0c0526eb2e330fbaa15a66c. Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.13.0 and return the existing URL so I can test Creative Studio and Beat Lab's 80-sound library, per-track choices and mic sounds shared across profiles on this device. Pause further development for my trial.
