@@ -2,7 +2,7 @@
 
 ## Deploy v6.27.0 for live testing
 
-Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-9b-learning-coop**, based on published 9A `1286be675be32f4aa78e5e39f8ff4638439216bb`. Exact checked publication recorded below. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **revamp/milestone-9b-learning-coop**, based on published 9A `1286be675be32f4aa78e5e39f8ff4638439216bb`. Tested app commit **`bba371b254723862005f18e264c542a1807cbd94`** is pushed and verified against GitHub. This documentation-only follow-up preserves runtime and may be pinned for deployment. Finish earlier deployments first.
 
 Read AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Authoritative **dist/**. Entry point **dist/js/math-quest.js** (existing goal expression unified, both stage messages, named personal-review routes). Tests: expanded **tests/quest-controllers.mjs**, **tests/learning-browser.mjs**; evidence **docs/revamp/M9B_***. No scoring, mastery, threshold, grade curriculum, record edition or save-format changes. Broader M9 remains in progress.
 
@@ -20,3 +20,7 @@ Final checks: **60 test programs and six learning browser audits pass**. Audit/b
 - Check independent/shared notebooks, Ready hiding the next question, pause/help, records/achievements/backups, ordinary solo and Spelling split/co-op. Keep family data.
 
 Stop for deployed user trial. After explicit continuation, proposed **M9C — replay/session choices in creative and challenge games**. Broader M9, remaining M7/M8 acceptance and final M10 remain unfinished.
+
+## Message to paste into Work Mode
+
+Deploy Little Big Arcade Milestone 9B, version 6.27.0, from imashleyparks95/touchscreenapp, branch revamp/milestone-9b-learning-coop, tested app commit bba371b254723862005f18e264c542a1807cbd94 (or its final documentation-only handoff commit). Read WORK_MODE_HANDOFF.md, AGENTS.md and ARCADE_REVAMP_PROGRESS.md. Deployment is authorized. Finish earlier deployments, serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5, preserve the existing URL/access policy and family data, and do not create a replacement site. Verify live 6.27.0 and return the URL for my trial. Pause further development for my trial.

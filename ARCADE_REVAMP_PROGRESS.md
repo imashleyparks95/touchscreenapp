@@ -978,3 +978,7 @@ Publish exact checked source and update WORK_MODE_HANDOFF.md. Work Mode deploys 
 ### Final checked result
 
 **60 test programs pass** (`npm test`), including expanded actual Math result/replay fixtures, shared match guards, toolkit/Forest/weapon and full arcade regressions. **Six learning browser audits pass**, including the new fully completed mixed-grade co-op results and actual P2 review route. Audit/build/syntax/diff checks pass: **25 public worlds, 276 cache entries, 178 reachable dependencies, all 98 original hashes**. Phone/desktop screenshots reviewed. No deployment performed here.
+
+### Published M9B checkpoint
+
+App `bba371b254723862005f18e264c542a1807cbd94` pushed to `revamp/milestone-9b-learning-coop`; remote SHA verified. Documentation-only follow-up preserves v6.27.0 runtime. Work Mode handoff pins checked source and existing destination. No Sites deployment here. Stop for deployed trial; proposed M9C requires continuation.
