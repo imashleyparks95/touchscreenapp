@@ -22,3 +22,7 @@ Final checks: 63 full test programs followed by final focused checks; 157 browse
 Safety bounds: 256 notes per pattern, MIDI 24–108, 128 pattern beats, 32 beats per composed note, 128 seconds of unique note samples during preparation; bounded unreferenced live cache. Existing Playlist/export bounds remain. These are safety limits, not hardware performance claims.
 
 Stop for deployed BL2 trial. Next after explicit continuation: **BL3 — advanced audio, full mixer and final integration**, including actual audio clips/waveforms, honest independent audio tempo/pitch processing, complete export/settings and all fourteen master workflow steps. Exactly three expansion milestones; do not redesign the familiar interface or claim BL3 done.
+
+## Verified publication
+
+Tested application commit **`f4eaf19d4dbd098e98e3432fb429ec10884bac29`** is pushed to `beatlab/bl2-piano-instruments`; GitHub remote SHA verified. This documentation-only follow-up leaves the v6.31.0 runtime unchanged. Deploy this tested application commit or its documentation-only descendant on this branch. No deployment performed in this workspace.

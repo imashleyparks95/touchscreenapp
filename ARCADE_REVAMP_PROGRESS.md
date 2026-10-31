@@ -1112,3 +1112,7 @@ Publish exact checked source; Work Mode deploys 6.31.0 dist/ to the existing pro
 ### BL2 final checked result
 
 **63 full test programs pass**, followed by final focused instrument, Playlist and legacy-studio checks. **157 browser audits pass** across five suites: four Piano/song, two Playlist, four original creative, 72 shell and 75 library/eight scenarios. Real mixed/solo WAV and genuine MP3 exports were decoded/probed; the exported sub-bass verifies C3 frequency. Final audit/build pass: **25 original public IDs, 280 cache entries, 182 reachable dependencies and all 98 original asset/vendor hashes**. Evidence is preserved in `docs/revamp/BL2_*`, including responsive screenshots and exported-audio checksums/probes. Physical touchscreen/controller, audible timbre/latency and target-PC capacity remain user trials. No Sites deployment performed here.
+
+### Published BL2 checkpoint
+
+Tested application **`f4eaf19d4dbd098e98e3432fb429ec10884bac29`** pushed to `beatlab/bl2-piano-instruments`; remote SHA verified. Documentation follow-up changes no runtime. WORK_MODE_HANDOFF.md pins deployment source, existing Sites destination and live trial steps. **Stop for deployed BL2 trial; BL3 remains next after explicit continuation.**
