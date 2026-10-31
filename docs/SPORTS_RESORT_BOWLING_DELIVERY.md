@@ -27,3 +27,5 @@ Evidence is retained under docs/revamp/RESORT_*. Failed intermediate checks foun
 ## Next checkpoint
 
 Deploy this Bowling checkpoint to the existing site for user trial. Gather diagnostics and physical motion feedback before Tennis. M3 Tennis, M4 Boxing, M5 Baseball/Golf, M6 championships and M7 full physical/presentation acceptance remain unfinished. Full 21-point finger tracking is not delivered; assess its need and device cost before any future finger-specific mechanic.
+
+Publication: tested application `8b9add7b24ddcd2c99b5fa6b07234c2b2b70d5c6`, branch `sports/resort-bowling-foundation`, pushed and remote SHA verified. Documentation-only follow-up pins the tested source; no deployment performed. Stop for the user trial before Tennis.

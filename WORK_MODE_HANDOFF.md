@@ -1,6 +1,6 @@
 # Work Mode handoff — Sports Resort first playable Bowling · 6.34.0
 
-Repository imashleyparks95/touchscreenapp, branch sports/resort-bowling-foundation, base 31eb2df1cd0c8a73a6919b64c5c7d4a79fa97d27. Exact tested application publication pin is recorded below after push verification.
+Repository imashleyparks95/touchscreenapp, branch sports/resort-bowling-foundation, base 31eb2df1cd0c8a73a6919b64c5c7d4a79fa97d27. Tested application `8b9add7b24ddcd2c99b5fa6b07234c2b2b70d5c6` is pushed and its GitHub branch SHA was verified.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md, docs/SPORTS_RESORT_PROGRESS.md and docs/SPORTS_RESORT_BOWLING_DELIVERY.md. Original spec: docs/SPORTS_RESORT_MASTER_PLAN.md. Runtime source dist/; game modules dist/js/sports/; tests tests/sports-*.mjs; evidence docs/revamp/RESORT_*. Runtime 6.34.0. M1/M2 first checkpoint only: complete Bowling plus real local body/coarse-hand motion; Tennis/Boxing/Baseball/Golf are planned, full finger tracking not delivered.
 
@@ -22,3 +22,9 @@ Deployment authorized through the standing milestone handoff. Serve dist/ to exi
 Cloud software GPU blank-video tracking measured about 442 ms inference, 443 ms frame age and 2.2 FPS; stale frames are blocked. Physical webcam accuracy and usable latency are not certified. A short software-WebGL Bowling sample reported 50 FPS/48.2 ms p95, not a sustained target-PC result. See delivery report for exact limitations.
 
 Stop for the user's deployed trial before M3 Tennis. Do not infer physical acceptance from automated fixtures.
+
+## Verified publication / ready-to-paste request
+
+Tested application `8b9add7b24ddcd2c99b5fa6b07234c2b2b70d5c6` is published. This follow-up is documentation only; runtime is identical.
+
+> Deploy commit `8b9add7b24ddcd2c99b5fa6b07234c2b2b70d5c6` from `imashleyparks95/touchscreenapp`, branch `sports/resort-bowling-foundation`. Read WORK_MODE_HANDOFF.md, ARCADE_REVAMP_PROGRESS.md and docs/SPORTS_RESORT_BOWLING_DELIVERY.md. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5. Preserve the existing Little Big Arcade URL/access policy and all saved family data; do not create a replacement site or clear storage. Deployment is authorized. Verify the deployed commit and live version 6.34.0, then return the URL so I can test Sports Resort Bowling.

@@ -15,3 +15,5 @@ The current hub must explicitly label Tennis/Boxing/Baseball/Golf as planned, ne
 ## Verified checkpoint · 6.34.0
 
 Read SPORTS_RESORT_BOWLING_DELIVERY.md for scope, evidence and physical limitations. Full 69-program tests plus final focused checks, six browser suites/170 accessibility-layout audits, preservation audit and build passed. Actual coarse-hand/body motion is wired; full finger tracking is not delivered. Pause before M3 for the deployed Bowling trial. Publication pin follows the application commit.
+
+Publication: tested application `8b9add7b24ddcd2c99b5fa6b07234c2b2b70d5c6`, branch `sports/resort-bowling-foundation`, pushed and remote SHA verified. Documentation-only follow-up pins the tested source; no deployment performed. Stop for the user trial before Tennis.
