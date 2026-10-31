@@ -1,0 +1,79 @@
+{
+  "version": "6.32.0",
+  "checks": [
+    "1–3: original sequencer Drums A saved and repeated for eight bars",
+    "4–5: four-bar Bass A composed and repeated on separate track",
+    "6: polyphonic piano on Track 3",
+    "7–8: real imported decoded waveform, worker prepared independent tempo/pitch preview and undo/redo on Track 4",
+    "9–10: independent chorus drum source plus intro/verse/chorus/outro markers through beat 64",
+    "11: actual audio-clock playback from beginning to end, shared drum/note/audio tracks and measured audio meters",
+    "12: real rendered solo and zero-gain isolation",
+    "13: close/reopen whole v3 song, original source file/PCM and binary backup retained",
+    "14: genuine 192kbps MP3 and PCM16 stereo WAV; imported 880Hz shifted tone at correct timeline position plus drums/bass/piano mix, solo and gain isolation",
+    "Saved pad/mic PCM and actual shared performance can become scheduled waveform audio sources",
+    "Source delete confirmation, audio tempo-sync preparation/resume/seek and worker cancellation release controls",
+    "Independent actual OfflineAudioContext impulse/known-tone graph verifies delay, reverb tail and +6dB low EQ",
+    "Cancel during actual offline export suppresses download and clears busy state",
+    "Actual service-worker offline reload runs new waveform/DSP module worker, adds a real pad audio clip and plays its Playlist"
+  ],
+  "audits": [
+    {
+      "view": "audio",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "audio",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "mixer",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "mixer",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "graphProof": {
+    "dryLate": 0,
+    "delayLate": 0.2806249989569187,
+    "reverbLate": 0.01644412532831971,
+    "eqRatio": 3.9336797819776117
+  },
+  "wav": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "44100",
+        "channels": 2,
+        "duration": "19.400000",
+        "bit_rate": "1411200"
+      }
+    ]
+  },
+  "mp3": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 2,
+        "duration": "19.435083",
+        "bit_rate": "192000"
+      }
+    ]
+  },
+  "scope": "Actual browser/audio/worker/export/save workflow; generated audio fixture, not physical microphone/latency/timbre certification."
+}

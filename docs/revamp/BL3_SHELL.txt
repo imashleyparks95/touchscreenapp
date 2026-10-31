@@ -1,0 +1,1 @@
+PASS: 72 responsive shell/game-entry audits; search, filtering, mute state, player switching, canceled restore retry, controller menus, disabled options, independent captured pointers, disconnect pause, acknowledged Creative Studio drawing and real offline reload. Standard-controller fixtures; no physical device/GPU claim.

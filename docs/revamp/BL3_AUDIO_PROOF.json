@@ -1,0 +1,102 @@
+[
+  {
+    "file": "bl3-original.wav",
+    "bytes": 88244,
+    "sha256": "47dbe82fcdad7b3dba26be026798fe0a443f14203517f4c744a3ccc0c493f783",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "22050",
+          "channels": 1,
+          "bit_rate": "352800"
+        }
+      ],
+      "format": {
+        "duration": "2.000000"
+      }
+    }
+  },
+  {
+    "file": "bl3-full.wav",
+    "bytes": 3422204,
+    "sha256": "1d37afa0b8f18b4f6b502eea13a28efae05446c19eea5fe09c26bda3af6cc40e",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "44100",
+          "channels": 2,
+          "bit_rate": "1411200"
+        }
+      ],
+      "format": {
+        "duration": "19.400000"
+      }
+    }
+  },
+  {
+    "file": "bl3-audio.wav",
+    "bytes": 3422204,
+    "sha256": "1b328988c9661714aec64260acdb361d43ba1b3144fa8da5333bc5d636fa1a41",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "44100",
+          "channels": 2,
+          "bit_rate": "1411200"
+        }
+      ],
+      "format": {
+        "duration": "19.400000"
+      }
+    }
+  },
+  {
+    "file": "bl3-noaudio.wav",
+    "bytes": 3422204,
+    "sha256": "c1e5c31f5b5ee7e3d6c327bec7aadfd6b4ccad2001c5b56fdbb894253556d1c8",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "44100",
+          "channels": 2,
+          "bit_rate": "1411200"
+        }
+      ],
+      "format": {
+        "duration": "19.400000"
+      }
+    }
+  },
+  {
+    "file": "bl3-full.mp3",
+    "bytes": 466442,
+    "sha256": "b9081450204fc56913ece3ec8fd30d8497fb7120e2b872d03b2780ceacda9764",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2,
+          "bit_rate": "192000"
+        }
+      ],
+      "format": {
+        "duration": "19.435083"
+      }
+    }
+  }
+]

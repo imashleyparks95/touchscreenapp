@@ -1,0 +1,1 @@
+PASS: independent WSOLA duration/pitch known tones, stereo phase, original PCM preservation, decoded peaks, synced BPM, audio clip scheduling/trim/repetition, effect tails and invalid parameter guards.
