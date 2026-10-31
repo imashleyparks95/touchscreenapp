@@ -2,7 +2,7 @@
 
 ## Deploy v6.33.0 for the user's trial
 
-Repository **imashleyparks95/touchscreenapp**, branch **creative/cloudwake-inkfin**, based on published Beat Lab BL3 `b20a3dcfd261bcf329bba8b132184625ddacb112`. Exact checked application publication is pinned below after push.
+Repository **imashleyparks95/touchscreenapp**, branch **creative/cloudwake-inkfin**, based on published Beat Lab BL3 `b20a3dcfd261bcf329bba8b132184625ddacb112`. Tested application **`35515b80596b8b0833de9ab84e5e3024a4f2ae47`** is pushed; GitHub remote SHA verified.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md and **docs/CREATIVE_FREEDOM_DELIVERY.md**. Original request: docs/CREATIVE_FREEDOM_MASTER_PLAN.md; chosen design: docs/CREATIVE_FREEDOM_DESIGN.md. Authoritative source **dist/**. New game-owned modules in **dist/js/creative/**: games.js, cloudwake-core.js, cloudwake-scene.js, inkfin-core.js, inkfin-art.js, input.js, covers.js. Existing shell/registry/covers/instructions/library/data receive additive integration. Shared 3D toolkit API 1.0 and prior gameplay remain. Evidence **docs/revamp/FREEDOM_***.
 
@@ -30,3 +30,9 @@ Both add covers, setup, acknowledgement/manual instructions, pause/help/restart/
 Performance limits: short uncontrolled cloud-host WebGL windows varied around 14–29 FPS despite reduced draw work; they do not certify target 60 FPS or Windows GPU performance. Choose Low for modest hardware and compare actual frame pacing on the target PC. Software compatibility lacks WebGL texture/shadow fidelity. Scenes are bounded (maximal two-courier case 89 meshes/12 bodies); no online play, physical aerodynamics or real fluid simulation is claimed. Original assets are procedural/SVG/Canvas/synth with no new external licenses/dependencies. Pause/disconnect/background releases input/audio; asynchronous late scenes are disposed.
 
 Stop after deployment for the user's two-game trial. Resume only for feedback or an explicit new request.
+
+## Verified publication / ready-to-paste deployment request
+
+Tested application **`35515b80596b8b0833de9ab84e5e3024a4f2ae47`**, branch **creative/cloudwake-inkfin**, runtime **6.33.0**, is available on GitHub; remote SHA verified. This follow-up changes documentation only. Deploy this tested application commit or its documentation-only descendant. Final working-tree/remote verification follows the documentation push.
+
+> Deploy commit `35515b80596b8b0833de9ab84e5e3024a4f2ae47` from `imashleyparks95/touchscreenapp`, branch `creative/cloudwake-inkfin`. Read WORK_MODE_HANDOFF.md and ARCADE_REVAMP_PROGRESS.md. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5. Preserve the existing Little Big Arcade URL/access policy and all saved family data; do not create a replacement site or clear storage. Deployment is authorized. Verify the deployed commit and live version 6.33.0, then return the URL so I can test Cloudwake Couriers and Inkfin Lagoon.
