@@ -1,5 +1,11 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Cloudwake Couriers — original game-owned consumer (6.33.0)
+
+Cloudwake adds a separate vehicle/delivery game in `dist/js/creative/`, not another Forest/Wobbly ruleset. It reuses create3DScene, staticCollider/controlledCapsule, create3DEffects, createSynthAudio and GamepadHub/padAxis/padButton with toolkit API 1.0 unchanged. Original lofted craft/harbor geometry, three procedural WebGL surface textures, batching, movement/altitude/collisions, parcel rules, camera/map and presentation remain game-owned. Authoritative collisions are deterministic kinematic flight rules with real static/animated Havok scene proxies; no rigidbody-aerodynamics claim. Native ownership yields during setup/pause/results; disconnect/help/background/late loading pause and captures cancel.
+
+`tests/creative-freedom-scene.mjs` checks actual custom geometry/normals, real physics proxies, propeller freeze, exact positions, camera modes, repeatable maximal-scene counts (89 meshes / 35 materials / 12 bodies / 28,226 vertices) and full scene disposal. Pure tests legally complete all 60 solo/co-op route/difficulty combinations; browser fixtures complete actual native co-op play, and a separate unmodified browser test runs RAF/keyboard and real offline engine reload/failure recovery. Shared toolkit/starter and full prior game regressions remain. See `docs/CREATIVE_FREEDOM_DELIVERY.md` and progress/evidence for exact results/limits. Physical Windows/controller/multitouch/GPU/audio verification remains a user trial; short cloud-host render statistics do not certify target 60 FPS.
+
 ## Lighting and live effects quality — 6.25.0 (Milestone 8E)
 
 `createWarEnvironment` colors the existing `sky` hemisphere and `sun` directional lights using restrained snow/volcanic/daylight tints and the biome's soil bounce. No extra lights, passes, physics bodies or shared renderer defaults. Light lookup is optional for standalone fixture scenes. Existing geometry/material art and Low compatibility rendering remain.

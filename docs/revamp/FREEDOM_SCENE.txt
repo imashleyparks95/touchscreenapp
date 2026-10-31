@@ -1,0 +1,4 @@
+BJS - [04:40:07]: Babylon.js v9.32.0 - Null engine
+BJS - [04:40:07]: Babylon.js v9.32.0 - Null engine
+BJS - [04:40:07]: Babylon.js v9.32.0 - Null engine
+PASS: original lofted craft geometry/finite normals, real Babylon/Havok proxies, animated/frozen propellers, exact actor positions, follow/overview camera, bounded repeated scene counts and full disposal: [{"meshes":89,"materials":35,"bodies":12,"vertices":28226},{"meshes":89,"materials":35,"bodies":12,"vertices":28226},{"meshes":89,"materials":35,"bodies":12,"vertices":28226}]

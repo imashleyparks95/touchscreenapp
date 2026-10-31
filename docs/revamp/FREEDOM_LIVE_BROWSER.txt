@@ -1,0 +1,1 @@
+PASS: untouched production RAF/keyboard/mouse, pause/exit, real offline 2D/3D engine reload, 27-world preservation and recoverable engine failure. WebGL 3D · 14 FPS · 54 active meshes · 6 physics proxies · 279.1ms p95

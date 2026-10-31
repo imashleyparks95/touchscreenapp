@@ -1,0 +1,1 @@
+PASS: new original 3D/2D actual scenes, legal full co-op controller completions, pointer ownership, instruction/pause/help/restart/disconnect/background/exit, saved results/backup and four responsive audits.

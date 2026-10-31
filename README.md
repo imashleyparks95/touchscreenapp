@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.32.0 · Beat Lab BL3
+## Current development checkpoint — 6.33.0 · Creative Freedom
+
+Two original worlds expand the library to 27: **Cloudwake Couriers**, a 3D momentum/altitude parcel flight through floating harbors, and **Inkfin Lagoon**, an illustrated current-lure school rescue through living reefs. Both offer six journeys, five difficulties, solo/simultaneous co-op, touch/keyboard/native controller play, compatible local records and original covers/art/sound. All previous games and Beat Lab features remain. Read `docs/CREATIVE_FREEDOM_DELIVERY.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for tests, physical/performance limits and exact deployment source.
+
+### Retained Beat Lab checkpoint — 6.32.0 · BL3
 
 The third and final Beat Lab expansion adds optional Audio clips and Mixer: actual decoded waveforms, original-file/PCM preservation, independent worker-based speed/pitch, audio/pad/mic/performance Playlist clips, EQ/delay/reverb, measured levels and selectable-bitrate real song export. All fourteen song-workflow steps are tested; physical quality/touch/controller/listening remains the user's deployed trial. Read `docs/BEAT_LAB_STUDIO_DEVELOPMENT.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for exact scope, limits, checks and deployment source.
 

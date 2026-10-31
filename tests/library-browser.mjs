@@ -14,7 +14,7 @@ try{
  await context.addInitScript({path:'node_modules/axe-core/axe.min.js'});await page.addScriptTag({path:'node_modules/axe-core/axe.min.js'});
  const navigate=route=>page.evaluate(async r=>(await import('/js/shell.js')).navigate(r),route);
  const baseline=await page.evaluate(async()=>{const {DB}=await import('/js/data.js');return DB.profiles.map(p=>({id:p.id,xp:p.xp,results:p.results,played:p.played}));});
- assert.equal(await page.locator('#deck [data-game]').count(),25);
+ assert.equal(await page.locator('#deck [data-game]').count(),27);
  await page.locator('[data-featured="wars"]').click();assert.match(await page.locator('#libraryFeature h2').innerText(),/Wobbly/);assert.equal(await page.locator('[data-featured="wars"]').getAttribute('aria-pressed'),'true');
  await page.locator('[data-featured="paint"]').click();assert.match(await page.locator('#libraryFeature').innerText(),/Create together/);checks.push('manual spotlight selection, no automatic carousel');
  await page.locator('#deck [data-preview="paint"]').click();await page.locator('#modal [data-favorite="paint"]').tap();await page.locator('#modal .modal-close').click();assert.equal(await page.evaluate(()=>document.activeElement.dataset.preview),'paint','preview favorite mutation restores focus to the rebuilt card');await page.locator('#deck [data-favorite="paint"]').tap();checks.push('preview heart updates saved state and returns focus to the rebuilt game card');
@@ -24,8 +24,8 @@ try{
  await page.locator(`[data-player="${profiles[0]}"]`).click();assert.equal(await page.locator('#deck [data-game]').count(),1);
  await page.reload();await page.locator('#worldSearch').waitFor();assert.equal(await page.locator('#deck [data-favorite="paint"]').getAttribute('aria-pressed'),'true');checks.push('touch favorite action, favorites isolated by profile and persisted across reload');
  await page.locator('#librarySort').selectOption('name');const names=await page.locator('#deck h3').allTextContents();assert.deepEqual(names,[...names].sort((a,b)=>a.localeCompare(b)));
- await page.locator('#filter-together').click();assert.equal(await page.locator('#deck [data-game]').count(),25);await page.locator('#worldSearch').fill('beat');assert.equal(await page.locator('#deck [data-game]').count(),1);checks.push('alphabetical sort, together filter includes real Beat Lab rhythm turns, search composes with filter');
- await page.locator('#worldSearch').fill('no such world');await page.locator('#clearWorldSearch').click();assert.equal(await page.locator('#deck [data-game]').count(),25);
+ await page.locator('#filter-together').click();assert.equal(await page.locator('#deck [data-game]').count(),27);await page.locator('#worldSearch').fill('beat');assert.equal(await page.locator('#deck [data-game]').count(),1);checks.push('alphabetical sort, together filter includes real Beat Lab rhythm turns, search composes with filter');
+ await page.locator('#worldSearch').fill('no such world');await page.locator('#clearWorldSearch').click();assert.equal(await page.locator('#deck [data-game]').count(),27);
  const worlds=await page.locator('#deck [data-game]').evaluateAll(nodes=>nodes.map(n=>n.dataset.game));
  for(const width of [1440,768,390]){
   await page.setViewportSize({width,height:1000});
@@ -36,7 +36,7 @@ try{
    await page.locator('#modal .modal-close').click();
   }
  }
- checks.push('all 25 game previews audited at desktop, tablet and phone widths');
+ checks.push('all 27 game previews audited at desktop, tablet and phone widths');
  await page.setViewportSize({width:1280,height:900});await page.locator('#deck [data-preview="limit"]').click();assert.match(await page.locator('#modal').innerText(),/Native controller/);await page.locator('#modal [data-game="limit"]').click();
  if(await page.locator('.update-dialog [data-ack]').count())await page.locator('.update-dialog [data-ack]').click();await page.locator('#lbPlay').waitFor();assert.equal(await page.locator('#modal[open]').count(),0,'preview closes before setup');assert.equal(await page.locator('#lbCanvas').count(),0,'opening setup never bypasses acknowledgement');
  await navigate('home');assert.match(await page.locator('#libraryShelves').innerText(),/Recently opened/);await page.locator('#filter-recent').click();assert.equal(await page.locator('#deck [data-game="limit"]').count(),1);checks.push('preview launch closes modal, preserves instruction gate and adds profile-local recent entry');

@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Unmodified production 3D RAF, real keyboard climb, map/follow switch, frozen pause and full exit",
+    "Actual service-worker offline reload retains 27 cards and runs untouched 2D mouse-lure and 3D engine/Havok flight scenes",
+    "Failed local 3D engine startup remains recoverable without native ownership or simulation"
+  ],
+  "errors": [],
+  "metrics": "WebGL 3D · 14 FPS · 54 active meshes · 6 physics proxies · 279.1ms p95",
+  "altitude": 3.4,
+  "scope": "Unmodified real browser scenes/RAF, actual keyboard/mouse and offline worker cache. Short cloud-host metrics are not a Windows GPU benchmark."
+}

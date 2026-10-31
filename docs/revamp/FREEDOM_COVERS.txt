@@ -1,0 +1,1 @@
+PASS: all 27 public covers are updated/unique/offline with hidden entry excluded; repair guidance respects scan privacy and full workflow; all 30 circuit boards still solve legally with accurate connection status.

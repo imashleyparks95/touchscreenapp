@@ -2,7 +2,7 @@ import {matchingWorlds} from './discovery.js';
 
 // Public launcher capabilities, checked against the actual game instruction/mode inventory.
 // No secret entries or legacy score-only IDs belong in these shelves.
-export const LIBRARY_MODES=Object.freeze({
+export const LIBRARY_MODES=Object.freeze({cloudwake:'Simultaneous co-op',inkfin:'Simultaneous co-op',
  gladiator:'Turn-based duels',math:'Take turns · co-op',bugs:'Split-screen versus',paint:'Create together',
  balloons:'Split-screen versus',cafe:'Take turns',circuit:'Split-screen versus',gravity:'Split-screen versus',
  battle:'Simultaneous versus',build:'Take turns',beat:'Shared studio · take turns',slime:'Split-screen races',
@@ -12,14 +12,14 @@ export const LIBRARY_MODES=Object.freeze({
 });
 const publicId=id=>Object.hasOwn(LIBRARY_MODES,id);
 export function worldCapabilities(id){
- return{multiplayer:LIBRARY_MODES[id]||'',controller:['limit','slime','ninja','wars'].includes(id)?'Native controller':'Controller cursor',
+ return{multiplayer:LIBRARY_MODES[id]||'',controller:['limit','slime','ninja','wars','cloudwake','inkfin'].includes(id)?'Native controller':'Controller cursor',
   touch:['funny','monster'].includes(id)?'Touch editing':'Touch & mouse',
   device:({funny:'Camera for face tracking',monster:'Camera / microphone for capture',zoo:'Microphone for custom voices',air:'Camera tracking or touch fallback',spelling:'Speakers for spoken words'})[id]||'',
   note:id==='slime'?'Native controllers aim and charge a real sling; split/select/anchor tools support advanced puzzles. Touch still supports two-point stretch and pinch.':id==='ninja'?'Native controllers move and aim independently with direct abilities and shield. Touch routes and gestures remain available.':id==='limit'?'Explore four connected areas, or choose the original Forest chapter and its separate traversal baseline.':id==='paint'?'Freehand drawing works best with touch or a mouse.':id==='math'?'Use touch or a mouse for handwriting; submit answers separately.':id==='beat'?'Make music together, or take turns in rhythm challenges.':id==='wars'?'3D: native ground cursors, troop selection and camera; B returns to purchasing/menu cursors. Use two controllers or mixed touch for two players. Classic retains cursor controls.':''};
 }
 export function libraryState(profile){
  const value=profile?.library;
- return{favorites:[...new Set((Array.isArray(value?.favorites)?value.favorites:[]).filter(publicId))].slice(0,25),
+ return{favorites:[...new Set((Array.isArray(value?.favorites)?value.favorites:[]).filter(publicId))].slice(0,27),
   recent:(Array.isArray(value?.recent)?value.recent:[]).filter(item=>item&&publicId(item.id)&&Number.isFinite(item.at)&&item.at>=0).filter((item,i,all)=>all.findIndex(other=>other.id===item.id)===i).slice(0,12).map(item=>({...item}))};
 }
 export function toggleFavorite(profile,id){
@@ -34,7 +34,7 @@ export function rememberProfileWorld(profile,id,at=Date.now()){
 export function validateLibrary(profile){
  if(profile.library===undefined)return;
  const value=profile.library;
- if(!value||typeof value!=='object'||Array.isArray(value)||!Array.isArray(value.favorites)||value.favorites.length>25||value.favorites.some(id=>!publicId(id))||new Set(value.favorites).size!==value.favorites.length||!Array.isArray(value.recent)||value.recent.length>12||value.recent.some(item=>!item||!publicId(item.id)||!Number.isFinite(item.at)||item.at<0)||new Set(value.recent.map(item=>item.id)).size!==value.recent.length)throw Error('Game library preferences are invalid.');
+ if(!value||typeof value!=='object'||Array.isArray(value)||!Array.isArray(value.favorites)||value.favorites.length>27||value.favorites.some(id=>!publicId(id))||new Set(value.favorites).size!==value.favorites.length||!Array.isArray(value.recent)||value.recent.length>12||value.recent.some(item=>!item||!publicId(item.id)||!Number.isFinite(item.at)||item.at<0)||new Set(value.recent.map(item=>item.id)).size!==value.recent.length)throw Error('Game library preferences are invalid.');
 }
 export function libraryWorlds(games,{filter='all',query='',sort='featured',profile}={}){
  const state=libraryState(profile),ids=filter==='favorites'?state.favorites:filter==='recent'?state.recent.map(item=>item.id):null;

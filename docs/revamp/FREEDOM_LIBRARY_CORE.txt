@@ -1,0 +1,1 @@
+PASS: all 27 public capability entries, native/cursor/device distinctions, profile-isolated favorites, bounded/deduplicated recents, search/filter/sort, Beat Lab together inclusion, old/new backup compatibility and rejected malformed library data without changing scores.

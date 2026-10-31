@@ -36,8 +36,8 @@ try{
  await page.evaluate(async()=>{const d=await import('/js/data.js');d.player().theme='neon';d.save();});
  await navigate('home');
  await page.locator('#worldSearch').fill('robot');assert.equal(await page.locator('#deck [data-game]').count(),1);assert.match(await page.locator('#deck').innerText(),/Robot Repair/);
- await page.locator('#worldSearch').fill('zz-no-world');await page.locator('#clearWorldSearch').click();assert.equal(await page.locator('#deck [data-game]').count(),25);
- await page.locator('[data-filter="creative"]').click();assert.equal(await page.locator('[data-filter="creative"]').getAttribute('aria-pressed'),'true');assert.ok(await page.locator('#deck [data-game]').count()<25);
+ await page.locator('#worldSearch').fill('zz-no-world');await page.locator('#clearWorldSearch').click();assert.equal(await page.locator('#deck [data-game]').count(),27);
+ await page.locator('[data-filter="creative"]').click();assert.equal(await page.locator('[data-filter="creative"]').getAttribute('aria-pressed'),'true');assert.ok(await page.locator('#deck [data-game]').count()<27);
  await page.locator('[data-filter="all"]').click();
  await page.locator('#mute').click();assert.equal(await page.locator('#mute').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#mute').getAttribute('aria-label'),'Unmute all audio');
  await navigate('trophies');await page.locator('#trophySwitch').click();
@@ -109,7 +109,7 @@ try{
  await offlinePage.locator('[data-ack]').click();await offlinePage.evaluate(()=>navigator.serviceWorker.ready);
  await offlinePage.waitForFunction(()=>!!navigator.serviceWorker.controller);
  await offlineContext.setOffline(true);await offlinePage.reload();await offlinePage.locator('#worldSearch').waitFor();
- assert.equal(await offlinePage.locator('#deck [data-game]').count(),25,'complete updated lobby works after real offline reload');
+ assert.equal(await offlinePage.locator('#deck [data-game]').count(),27,'complete updated lobby works after real offline reload');
  await offlinePage.locator('#worldSearch').fill('robot');assert.equal(await offlinePage.locator('#deck [data-game]').count(),1,'new discovery module works offline');
  await offlineContext.close();
  writeFileSync('/tmp/little-big-arcade-browser-audit.json',JSON.stringify({audit,errors},null,2));

@@ -21,7 +21,7 @@ export function auditArcade(root){
   const ids=games.map(g=>g.id);need(new Set(ids).size===ids.length,'Duplicate game ID');
   for(const id of ORIGINAL_WORLD_IDS)need(ids.includes(id),'Missing protected world: '+id);
   need(ids.filter(id=>id==='limit').length===1,'Limit Break must have exactly one registration');
-  report.games=games.map(({id,name,type})=>({id,name,category:type,renderer:['limit','wars'].includes(id)?'Babylon/Havok 3D; inspect compatibility renderer separately':'Canvas/DOM; media devices where applicable',controller:id==='limit'?'Dedicated movement/camera/combat plus menus':'Shared menu navigation/controller cursor; not a dedicated action mapping',physical_verification:'not established by this audit'}));
+  report.games=games.map(({id,name,type})=>({id,name,category:type,renderer:['limit','wars','cloudwake'].includes(id)?'Babylon/Havok 3D; inspect compatibility renderer separately':'Canvas/DOM; media devices where applicable',controller:['limit','cloudwake','inkfin'].includes(id)?'Dedicated movement/camera/combat plus menus':'Shared menu navigation/controller cursor; not a dedicated action mapping',physical_verification:'not established by this audit'}));
   return `${games.length} unique registered worlds; all ${ORIGINAL_WORLD_IDS.length} original public IDs retained`;
  });
  check('hidden session and legacy record preservation hooks',()=>{

@@ -1,0 +1,4 @@
+PASS: all 60 solo/co-op courier route/difficulty combinations completed through legal acceleration, altitude, brakes and docking; terminal clocks/scores remain stable.
+PASS: all 60 solo/co-op reef/difficulty combinations rescued eight fish through actual bounded water-lure forces, stamina, rocks, jellyfish and flocking.
+PASS: unavailable docks, collision cooldown, lure exhaustion/recovery and genuine timed failure.
+PASS: actual isolated team commits keep rivalry unchanged, compatible profile backup retains both games and rejects malformed new rule/team/level/time records.

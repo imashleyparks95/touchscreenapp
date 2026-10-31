@@ -1,0 +1,3 @@
+BJS - [04:26:42]: Babylon.js v9.32.0 - Null engine
+BJS - [04:26:42]: Babylon.js v9.32.0 - Null engine
+PASS: toolkit v1 independently tested without Wobbly Wars imports: custom controllers/navigation, state/clip blending, timed contact attacks, swept pooled shots, pointer ownership, budgets, camera ray roundtrips, asset deduplication, local audio, effect pooling, frame sampling, real Havok settling/ragdoll recovery/disposal, skinned GLB software rendering, and complete one-/two-player starter games. WebGL GPU and physical touchscreen remain separate hardware verification.
