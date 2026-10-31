@@ -1,0 +1,1 @@
+PASS: ten-frame scoring, all strikes/spares/open/gutter games, correct tenth-frame bonus racks, equivalent two-player turns, unresolved bonuses, split recognition and duplicate/invalid outcome guards.

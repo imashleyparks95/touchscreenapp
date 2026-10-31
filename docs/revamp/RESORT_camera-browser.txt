@@ -1,0 +1,1 @@
+PASS: actual bundled local pose inference, consent/denial/late-result cleanup, zero blank-video gestures and one calibrated synthetic throw through the complete camera pipeline. Worker GPU pose · 442 ms inference · 444 ms median · 443 ms frame age · 2.2 measured fps · 0 person(s) · neutral · coarse hand landmarks

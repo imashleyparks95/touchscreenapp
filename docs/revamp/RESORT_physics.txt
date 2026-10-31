@@ -1,0 +1,4 @@
+BJS - [20:34:00]: Babylon.js v9.32.0 - Null engine
+BJS - [20:34:01]: Babylon.js v9.32.0 - Null engine
+BJS - [20:34:01]: Babylon.js v9.32.0 - Null engine
+PASS: real Havok ball/pin contacts, stationary rack stability, distinct aim outcomes, fallen-pin criteria, spare-rack preservation/reset and complete physics/scene disposal: [{"aim":0,"fallen":[0,1,2,3,4,5,6,7,8,9],"ball":[0.18952706456184387,0.010930557735264301,-16.044252395629883],"meshes":81,"bodies":17},{"aim":0.25,"fallen":[0,1,2,3,4,5,6,7,8,9],"ball":[2.478073835372925,-0.15266238152980804,-16.2255916595459],"meshes":81,"bodies":17},{"aim":1,"fallen":[8,9],"ball":[1.4377597570419312,0.11848757416009903,-16.40150260925293],"meshes":81,"bodies":17}]

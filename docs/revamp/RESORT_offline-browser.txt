@@ -1,0 +1,1 @@
+PASS: real service-worker offline 28-world reload, untouched Bowling RAF/Havok ball, result/pause/practice behavior and actual offline local pose inference/cleanup. WebGL 3D · 50 FPS · 79 active meshes · 17 physics bodies · 48.2ms p95 · Worker GPU pose · 3354 ms inference · 0 person(s) · neutral · coarse hand landmarks

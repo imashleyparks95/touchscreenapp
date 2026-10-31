@@ -1,0 +1,3 @@
+PASS: native RT hold/release, one-controller active-P2 fallback, no camera-source spoofing, keyboard charge/release, disconnect pause and listener cleanup.
+PASS: body-relative one/two-person neutral/reach/return calibration, real joint-angle math, stationary/missing-person rejection, both-hand temporal backswing/forward-extension throws, one-shot cooldown and loss reset. Synthetic landmark trajectories, not physical webcam certification.
+PASS: genuinely delayed positive-pose reply cannot calibrate or emit input even when reported model inference time is short; total frame age gates stale data.

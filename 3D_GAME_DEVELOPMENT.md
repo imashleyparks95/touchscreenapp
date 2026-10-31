@@ -1,5 +1,9 @@
 # Little Big Arcade — 3D game development toolkit
 
+## Sports Resort Bowling — game-owned consumer (6.34.0)
+
+`dist/js/sports/bowling-scene.js` reuses create3DScene, effects and tested two-bone IK without changing shared APIs. Actual Havok ball/pin contacts, custom lathed pin/avatar geometry, static-material batching and game-owned alley rules remain separate. Physics tests measure 81 meshes/17 bodies during a ball and disposal. See docs/SPORTS_RESORT_BOWLING_DELIVERY.md for software evidence and pending physical motion/GPU trials.
+
 ## Cloudwake Couriers — original game-owned consumer (6.33.0)
 
 Cloudwake adds a separate vehicle/delivery game in `dist/js/creative/`, not another Forest/Wobbly ruleset. It reuses create3DScene, staticCollider/controlledCapsule, create3DEffects, createSynthAudio and GamepadHub/padAxis/padButton with toolkit API 1.0 unchanged. Original lofted craft/harbor geometry, three procedural WebGL surface textures, batching, movement/altitude/collisions, parcel rules, camera/map and presentation remain game-owned. Authoritative collisions are deterministic kinematic flight rules with real static/animated Havok scene proxies; no rigidbody-aerodynamics claim. Native ownership yields during setup/pause/results; disconnect/help/background/late loading pause and captures cancel.

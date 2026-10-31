@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Untouched production RAF + real Havok Bowling ball completes offline, preserves result across pause and leaves practice unranked",
+    "Actual locally cached pose worker/runtime/model runs inference offline on blank generated video, produces no gestures and stops owned tracks"
+  ],
+  "errors": [],
+  "outcome": "0 pin(s) down",
+  "metrics": "WebGL 3D · 50 FPS · 79 active meshes · 17 physics bodies · 48.2ms p95",
+  "diagnostic": "Worker GPU pose · 3354 ms inference · 0 person(s) · neutral · coarse hand landmarks",
+  "scope": "Unmodified production modules and true offline service worker. Generated blank video, not physical camera/throw accuracy or target-PC performance."
+}

@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "Actual local PoseTracker/MediaPipe model inference on a generated video stream, zero false people/gestures, no permission before ack+Enable, no microphone and owned-stream/worker cleanup",
+    "Real camera permission denial path remains recoverable with explicit fallback guidance",
+    "Permission result arriving after exit is disposed without reviving camera/UI",
+    "Synthetic full 33-landmark sequence passes actual identity/smoothing/calibration/body normalization and emits one measured throw through SportsCamera; not a physical accuracy claim"
+  ],
+  "diagnostic": "Worker GPU pose · 442 ms inference · 444 ms median · 443 ms frame age · 2.2 measured fps · 0 person(s) · neutral · coarse hand landmarks",
+  "synthetic": {
+    "calibrated": true,
+    "events": [
+      {
+        "type": "throw",
+        "owner": 0,
+        "time": 11617,
+        "id": 1,
+        "hand": "right",
+        "power": 0.6260465902160124,
+        "aim": -0.000015470177617987446,
+        "confidence": 0.6404562211188907
+      }
+    ],
+    "stopped": "ended"
+  },
+  "errors": [],
+  "scope": "Actual local inference on blank generated video plus explicitly synthetic landmark trajectories. No physical webcam or human throw accuracy certification."
+}

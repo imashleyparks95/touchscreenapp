@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.33.0 · Creative Freedom
+## Current checkpoint — 6.34.0 · Sports Resort Bowling
+
+The new Sports Resort adds complete solo/two-player 3D Bowling, local body/coarse-hand motion calibration and diagnostics, controller/touch controls and original resort artwork. The four other sport cards are explicitly planned. Read docs/SPORTS_RESORT_BOWLING_DELIVERY.md and WORK_MODE_HANDOFF.md for exact scope, physical-camera limits and deployment source.
+
+## Retained checkpoint — 6.33.0 · Creative Freedom
 
 Two original worlds expand the library to 27: **Cloudwake Couriers**, a 3D momentum/altitude parcel flight through floating harbors, and **Inkfin Lagoon**, an illustrated current-lure school rescue through living reefs. Both offer six journeys, five difficulties, solo/simultaneous co-op, touch/keyboard/native controller play, compatible local records and original covers/art/sound. All previous games and Beat Lab features remain. Read `docs/CREATIVE_FREEDOM_DELIVERY.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md` for tests, physical/performance limits and exact deployment source.
 

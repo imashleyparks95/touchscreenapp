@@ -1,0 +1,1 @@
+PASS: complete mixed-input two-player ten-frame real Havok Bowling, fair scoring/input-separated saves/backup, gated camera-off diagnostics, pause/help and four responsive audits.
