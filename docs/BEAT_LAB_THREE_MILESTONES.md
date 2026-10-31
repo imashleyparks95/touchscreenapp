@@ -45,3 +45,5 @@ Acceptance: execute **all 14 workflow steps in master specification §16**, incl
 After each of these three milestones update ARCADE_REVAMP_PROGRESS.md and WORK_MODE_HANDOFF.md, publish exact tested commit, provide existing-Sites deployment request, and pause for trial. Do not deploy from this workspace. Existing user authorization permits milestone deployment handoffs; preserve URL/access policy/family data.
 
 BL2 v6.31.0 tested application publication: `f4eaf19d4dbd098e98e3432fb429ec10884bac29`, branch `beatlab/bl2-piano-instruments`; remote verified. See WORK_MODE_HANDOFF.md for deployment and trial.
+
+BL3 v6.32.0 tested application publication: `afb2f369d416ca887215b45ab79cf20d06e58963`, branch `beatlab/bl3-complete-studio`; remote verified. All three software checkpoints delivered; final deployed physical/listening trial remains. See WORK_MODE_HANDOFF.md.

@@ -2,7 +2,7 @@
 
 ## Deploy v6.32.0 for the user's live trial
 
-Repository **imashleyparks95/touchscreenapp**, branch **beatlab/bl3-complete-studio**, based on published BL2 `bc64c8f16e565b1fcc62a47115bd3e292f85f04e`. Exact checked application publication is recorded below after push. Finish earlier deployments first.
+Repository **imashleyparks95/touchscreenapp**, branch **beatlab/bl3-complete-studio**, based on published BL2 `bc64c8f16e565b1fcc62a47115bd3e292f85f04e`. Tested application commit **`afb2f369d416ca887215b45ab79cf20d06e58963`** is pushed and GitHub remote SHA verified. Finish earlier deployments first.
 
 Read AGENTS.md, ARCADE_REVAMP_PROGRESS.md, docs/BEAT_LAB_THREE_MILESTONES.md and docs/BEAT_LAB_STUDIO_DEVELOPMENT.md. Serve authoritative **dist/**. New modules: **js/beat-audio-core.js**, **beat-audio-worker.js**, **beat-audio-ui.js**, **beat-mixer.js** and **beat-mixer-ui.js**. Integration: existing **js/beat.js**, **beat-playlist.js/ui.js**, **beat-instruments.js**, **data.js**, **mp3-worker.js**, scoped CSS and service-worker manifest. Evidence: **docs/revamp/BL3_***. This completes exactly three expansion software milestones; familiar default pads/sequencer/Edit/Transpose/Volume, mic/library/projects/banks/Battle and other games remain.
 
@@ -23,3 +23,9 @@ Deployment is authorized. Deploy **dist/** to existing project **appgprj_6adab21
 5. Test actual touchscreen, controller cursor/two-player collaboration, microphone consent/release and audible quality/latency on the target PC. WSOLA can sound grainy on voices/dense mixes/transients; it is not studio-grade/formant-preserving. Waveform is an aggregate envelope; meters are sampled peak/RMS, not LUFS/true peak. Only 4/4 is supported. New audio prep bounds: 16 sources, five minutes original/prepared total, two minutes per prepared source, mono/stereo ≤96kHz, file <40MB. Existing five-minute export/24 tracks/512 clips/128 bars and note limits remain. Native decode/offline rendering cannot be forcibly stopped; cancellation discards late results/suppresses download and terminates owned worker/encoder tasks.
 
 Stop after deployment for the user's final trial. All three software expansion milestones are delivered; next work should respond to the user's actual feedback or explicit new request. No deployment was performed in the coding workspace.
+
+## Verified publication / paste into Work Mode
+
+Tested runtime **`afb2f369d416ca887215b45ab79cf20d06e58963`**, branch `beatlab/bl3-complete-studio`, version **6.32.0**, is available on GitHub; remote SHA verified. This follow-up changes documentation only. Deploy the tested app commit or its documentation-only descendant on this branch. Working-tree/publication verification is performed after the final documentation push.
+
+> Deploy commit `afb2f369d416ca887215b45ab79cf20d06e58963` from `imashleyparks95/touchscreenapp`, branch `beatlab/bl3-complete-studio`. Read WORK_MODE_HANDOFF.md and ARCADE_REVAMP_PROGRESS.md. Serve dist/ in existing Sites project appgprj_6adab219a4788191952c4c83432002c5. Preserve the existing URL, access policy and all saved family data; do not create a replacement site. Deployment is authorized. Verify live version 6.32.0 and the deployed commit, then return the URL for my final Beat Lab trial.
