@@ -1,0 +1,59 @@
+{
+  "version": "6.31.0",
+  "checks": [
+    "Actual note drag pitch/time, finger handle duration, group copy and undo retain original chord",
+    "Actual four-bar bass + polyphonic melody + original drums share Playlist/save/WAV/MP3, frequency-verified sub-bass, note velocity/copy/undo, simultaneous two keys plus drum capture, raw note timings and close/reopen/backup"
+  ],
+  "audits": [
+    {
+      "view": "piano",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "piano",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "song",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "view": "song",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "wav": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "44100",
+        "channels": 2,
+        "duration": "8.400000"
+      }
+    ]
+  },
+  "mp3": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 2,
+        "duration": "8.437500"
+      }
+    ]
+  },
+  "scope": "Actual browser/audio exports, injected multi-pointer keyboard and drum. No physical musical latency/audio quality certification."
+}

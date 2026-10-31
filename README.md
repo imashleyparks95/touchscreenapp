@@ -1,6 +1,10 @@
 # Little Big Arcade
 
-## Current development checkpoint — 6.30.0 · Beat Lab BL1
+## Current development checkpoint — 6.31.0 · Beat Lab BL2
+
+Beat Lab adds an optional Piano Roll with fifteen original synth instruments, chords, note editing/recording and live keyboard-plus-drums. Instrument patterns share the existing Playlist, real mix/export and compatible saves; the familiar default screens remain. See `docs/BEAT_LAB_PIANO_DEVELOPMENT.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md`. Advanced audio and the full mixer follow in BL3.
+
+### Retained Playlist checkpoint — 6.30.0
 
 Beat Lab keeps its familiar default screen and adds an optional multitrack drum Playlist: independent linked/unique patterns, clip editing, live mix/pan/solo, shared transport/looping, compatible project saves and actual full-song WAV/MP3 export. See `docs/BEAT_LAB_PLAYLIST_DEVELOPMENT.md`, `ARCADE_REVAMP_PROGRESS.md` and `WORK_MODE_HANDOFF.md`. Piano Roll/instruments and advanced audio/mixing follow in BL2/BL3.
 

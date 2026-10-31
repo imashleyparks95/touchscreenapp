@@ -4,11 +4,11 @@
 
 - **Work Mode entry point:** read [WORK_MODE_HANDOFF.md](WORK_MODE_HANDOFF.md) for the exact deployable checkpoint, publication status, existing Sites destination and ready-to-paste trial handoff. Update it after every milestone.
 
-- **Current checkpoint: Beat Lab BL1 — optional multitrack drum Playlist; v6.30.0.** Original default screen/controls remain. Independent linked/unique source patterns, clip editing, actual stereo mix, shared clock/loop/seek, compatible complete-song saves and WAV/MP3 exports. Branch `beatlab/bl1-playlist-foundation`, based on published final arcade `e6af71f2124bf58d20b932f16d9896c29c81d36a`. BL2 Piano Roll/instruments and BL3 advanced audio/mixer remain planned; physical acceptance remains a user trial.
+- **Current checkpoint: Beat Lab BL2 — Piano Roll, instruments and performance; v6.31.0.** Optional polyphonic note editing, fifteen original synth voices, independent keyboard/drums and actual shared recording; notes share Playlist/clock/mix/export and compatible saves. Branch `beatlab/bl2-piano-instruments`, based on published BL1 `8cbf50225444018ebcb4d222c4de2cc24dbbcfe8`. BL3 advanced audio/mixer remains planned. Physical musical latency/touch/audio acceptance remains a deployed user trial.
 - **Deployment workflow (standing user instruction):** after each completed and checked milestone, supply Work Mode a request to deploy the exact commit to the existing site; the user tests once deployed. Do not add a preview-only/no-deploy restriction. Pause before the next milestone unless explicitly authorized to continue. This session has no Sites deployment tools and does not claim another conversation's deployment completed.
 - Keep muted dark colors, every game, profiles, scores, saved media, existing access policy and site identity. No physical-device test success is implied by continuation or waived manual checkpoints.
 - Master specification: [complete original plan](docs/ARCADE_REVAMP_MASTER_PLAN.md), retained in full from the uploaded text. Read it and `AGENTS.md` before continuing; read `3D_GAME_DEVELOPMENT.md` before 3D changes.
-- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`beatlab/bl1-playlist-foundation`**, based on final arcade `e6af71f`. Do not reset to a different `main` and lose that work.
+- Starting source: **`2c31e13c0fc06519e5d845241feb2d5299bb4958`**, version **6.3.0**. Milestone 1 checkpoint is **`7cde351`**. Current branch: **`beatlab/bl2-piano-instruments`**, based on BL1 `8cbf502`. Do not reset to a different `main` and lose that work.
 - `dist/` is authoritative editable runtime source. `build/` is an ignored static copy. Use the existing checkout; no worktree is needed.
 
 ## Milestone ledger
@@ -34,7 +34,7 @@ These are the **new master plan's** milestones. Old “Milestone 2” labels ins
 | Expansion milestone | Status | Scope / next |
 | --- | --- | --- |
 | BL1 — Patterns / Playlist / drum-song foundation | **Implemented — 6.30.0; final checks/publication below** | Optional real multitrack pattern arrangement, source independence, clip tools, clock/mix, saves and WAV/MP3. Physical latency/touch/audio trial pending. |
-| BL2 — Piano Roll / instruments / collaborative performance | Planned | Actual notes/polyphony/instruments/keyboard/recording connected to the same Playlist and export. |
+| BL2 — Piano Roll / instruments / collaborative performance | **Implemented — 6.31.0; checks/publication below** | Actual notes/polyphony/instruments/keyboard/recording connected to the same Playlist and export. |
 | BL3 — Advanced audio / mixer / complete-song integration | Planned | Audio clips/real waveforms/independent tempo-pitch, full mixer/recording/export and all fourteen workflow steps. |
 
 ## Actual Limit Break inventory
@@ -1084,3 +1084,31 @@ Publish exact tested source and update WORK_MODE_HANDOFF.md. Work Mode deploys 6
 ### Published BL1 checkpoint
 
 Tested app `faeecaa96b459df65bb9a18722827a9971b0ddf9` pushed to `beatlab/bl1-playlist-foundation`; remote SHA verified. Documentation-only follow-up preserves v6.30.0 runtime. All code/evidence is in GitHub; WORK_MODE_HANDOFF.md pins source and existing Sites destination. No deployment performed here. **Stop for BL1 deployed trial. Next explicitly authorized continuation is BL2, not another BL1 sub-milestone.**
+
+## Beat Lab BL2 session — 2026-10-30 (America/New_York)
+
+User requested **next**, then **continue** while the same milestone was active. This authorizes BL2 after published BL1 `8cbf50225444018ebcb4d222c4de2cc24dbbcfe8`, not premature BL3. Read requirements/progress and retained full specification/three-stage roadmap. Branch `beatlab/bl2-piano-instruments`, **v6.31.0**. Exact architecture/inventory/limits: `docs/BEAT_LAB_PIANO_DEVELOPMENT.md`. No Sites deployment here.
+
+### Delivered / preservation
+
+- Optional Piano Roll with musical grid/piano labels, scrollable octaves, snap whole–32nd, horizontal/vertical zoom, playhead, draw/select/erase/Pan, finger note movement/resize and inspector, velocity/chords/sustains, group copy/paste/duplicate, quantize, undo/redo. Default rows 44px and bottom transport clearance improve touch reach. Pattern create/rename/save/copy/confirmed delete and Playlist routing; linked source and unique-copy behavior remain.
+- Fifteen original deterministic synth voices with distinct spectra/articulation/envelope, optional ADSR/filter/volume/pan and playable multitouch keyboard. These are synthesized styles, not sampled acoustic claims. Generated note PCM uses existing Web Audio routing and real stereo export; original drums/sample library unchanged. No external asset/dependency/service.
+- Actual notes/drums share compiled Playlist events, BPM/mix/loop/seek and original offline WAV/MP3 path. Musical note duration follows tempo without changing note frequency. Release tails extend into export when appropriate; trim/split/seek retain source phase. Piano master Play is a pattern preview, not full-song playback; context Export previews notes, while Playlist exports the complete mix.
+- Independent keys and drums, shared Master Record Song and optional musical Capture Live Notes. Clock integrates tempo changes; capture uses actual timing until explicit quantization. Eight-second live-key bound, per-pointer holds and click-echo suppression prevent phantom/doubled notes. Background/capture stop/Save/Projects/Exit close and save held notes; timers/captures/voices/looped pads release. Completed take duration remains bounded.
+- Studio version 2 extends the existing project; old/v1 projects still load. Note patterns/envelopes and complete song/mix persist; recorded PCM retains original sound. Backup validates new fields/references and keeps schema/store/score identities unchanged. Legacy sequencer/arrangement paths remain drum-only and protect the last original pattern. Musical note count now participates in existing creative-save handling. Original family data, media/banks/Beat Battle/recovery and all 25 games preserved; all original 98 hashes retained.
+
+### Tests / failures / limitations
+
+New independent instrument tests measure all fifteen finite distinct voices, actual known-note frequencies/octaves, musical tempo vs pitch, envelope/release, polyphonic timing/gain, real buffer cache and before-allocation budgets. Existing BL1 actual clock/phase/mix/PCM and legacy source fixtures remain with explicit inactive Piano context.
+
+New real browser builds original drums, four-bar sub-bass and polyphonic piano, tests note gestures/inspector/undo/redo/group copy and duplicate/delete source clips, preview, simultaneous two keys plus drum capture, and full note/project/recorded-PCM backup/close/reopen. Exports actual mixed and solo WAV plus genuine MP3; ffprobe validates files and spectral correlation verifies C3 sub-bass. Original mix differs from bass solo. Background fixture and held-key Exit preserve captured notes to a draft without overwriting the named original. Four responsive/accessibility audits; physical timbre/latency/hardware remain user trials.
+
+Tests caught and fixed: reentrant inspector change creating duplicate undo snapshots; controller synthetic click after pointer release creating phantom notes; old save milestone logic assuming every pattern had a drum matrix. Fixture group selection initially toggled the already selected note off; corrected selection order. Performance touch coordinates initially addressed a pad covered by the fixed transport; added bottom clearance and actual target hit checks/viewport positioning. Failed attempts are not counted as passes. Safety bounds and derived-cache limits are explicit in development docs, not measured target-PC capacity.
+
+### Resume / next
+
+Publish exact checked source; Work Mode deploys 6.31.0 dist/ to the existing project/URL/access policy, verifies live version and returns URL. User trials notes/voices/chords, original drums/Playlist mix, two independent keys/pads, capture/pause/background/exit, real export and old/new save/backup. Stop for BL2 deployed trial. Next after explicit continuation: **BL3 — advanced audio, full mixer and final integration**, including audio clips/waveforms, honest independent audio tempo/pitch processing and the remaining full fourteen-step workflow. Do not claim those BL3 features complete yet; retain exactly three expansion milestones.
+
+### BL2 final checked result
+
+**63 full test programs pass**, followed by final focused instrument, Playlist and legacy-studio checks. **157 browser audits pass** across five suites: four Piano/song, two Playlist, four original creative, 72 shell and 75 library/eight scenarios. Real mixed/solo WAV and genuine MP3 exports were decoded/probed; the exported sub-bass verifies C3 frequency. Final audit/build pass: **25 original public IDs, 280 cache entries, 182 reachable dependencies and all 98 original asset/vendor hashes**. Evidence is preserved in `docs/revamp/BL2_*`, including responsive screenshots and exported-audio checksums/probes. Physical touchscreen/controller, audible timbre/latency and target-PC capacity remain user trials. No Sites deployment performed here.

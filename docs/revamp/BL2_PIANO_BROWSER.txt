@@ -1,0 +1,1 @@
+PASS: four responsive audits, original drum + actual bass/chord patterns, live collaborative keys/drum capture, note edits/undo, real frequency-verified mixed WAV/MP3 and complete save/reopen/backup.

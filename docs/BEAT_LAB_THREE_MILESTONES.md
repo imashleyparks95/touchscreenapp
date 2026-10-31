@@ -1,6 +1,6 @@
 # Beat Lab expansion — exactly three milestones
 
-Status: **BL1 software checkpoint complete — v6.30.0; published app `faeecaa96b459df65bb9a18722827a9971b0ddf9` on `beatlab/bl1-playlist-foundation`; evidence/publication in ARCADE_REVAMP_PROGRESS.md; BL2 and BL3 remain planned**. Source specification retained verbatim in [BEAT_LAB_EXPANSION_MASTER_PLAN.md](BEAT_LAB_EXPANSION_MASTER_PLAN.md). User override: use three milestones instead of the specification's five phases; do not overwrite or renumber completed arcade milestones. Start after the consolidated final arcade checkpoint/trial and explicit continuation. No replacement application or redesign. Preserve the familiar default screen and existing 4×4 pads, sequencer, Edit/Transpose/Volume, recording, projects, import/export, sound library, shared local sounds and two-player battle. Advanced tabs are optional. No mandatory API key/subscription/service.
+Status: **BL1 software checkpoint complete — v6.30.0; published app `faeecaa96b459df65bb9a18722827a9971b0ddf9` on `beatlab/bl1-playlist-foundation`; evidence/publication in ARCADE_REVAMP_PROGRESS.md; BL2 software checkpoint v6.31.0 implemented (publication/evidence in progress document); BL3 remains planned**. Source specification retained verbatim in [BEAT_LAB_EXPANSION_MASTER_PLAN.md](BEAT_LAB_EXPANSION_MASTER_PLAN.md). User override: use three milestones instead of the specification's five phases; do not overwrite or renumber completed arcade milestones. Start after the consolidated final arcade checkpoint/trial and explicit continuation. No replacement application or redesign. Preserve the familiar default screen and existing 4×4 pads, sequencer, Edit/Transpose/Volume, recording, projects, import/export, sound library, shared local sounds and two-player battle. Advanced tabs are optional. No mandatory API key/subscription/service.
 
 ## BL1 — Pattern, Playlist and complete drum-song foundation
 
@@ -15,6 +15,8 @@ Shared audio-clock transport schedules overlapping tracks accurately, including 
 Acceptance: create Drums A and B without overwriting either; arrange overlapping/repeated sections for eight bars; linked vs unique edits; seek and change BPM without drift/stuck voices; real mix controls; save/close/reopen and legacy-project/backup roundtrip; independently inspect decoded export timing/channels; touchscreen/mouse/controller navigation/cleanup regressions. Deployable BL1 then user trial. Instrument/audio clip kinds are introduced only when functional in later milestones, never inactive placeholder controls.
 
 ## BL2 — Piano Roll, instruments and collaborative performance
+
+Implemented checkpoint: see [BEAT_LAB_PIANO_DEVELOPMENT.md](BEAT_LAB_PIANO_DEVELOPMENT.md) and ARCADE_REVAMP_PROGRESS.md for precise scope, tests and trial limits. Original acceptance requirements below are retained.
 
 Combines Phase B and instrument/performance parts of D. Add optional Piano Roll with piano keyboard, scrollable octaves, timeline, grid/snap/quantization, zoom, playback cursor and pattern/instrument selectors. Place/move/resize/delete/duplicate notes; chords/polyphony, long notes, velocities, grouped select/copy/paste, undo/redo. Whole through 32nd divisions where practical. Patterns store note timing/duration/velocity/instrument and join the same Playlist/clock/mixer/export/save path as drums.
 

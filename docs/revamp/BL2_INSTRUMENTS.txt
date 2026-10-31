@@ -1,0 +1,1 @@
+PASS: fifteen distinct finite original voices, independent octave frequency, musical envelope/release, polyphonic timing/velocity, actual note buffer cache, export tails and pre-allocation workload/invalid-note guards.

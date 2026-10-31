@@ -1,0 +1,59 @@
+[
+  {
+    "file": "bl2-mixed.wav",
+    "bytes": 1481804,
+    "sha256": "0566d29ff865a8d87d3940a0bf3568a5122029a522a5ffae3e47b1de2786b78e",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "8.400000"
+      }
+    }
+  },
+  {
+    "file": "bl2-bass.wav",
+    "bytes": 1481804,
+    "sha256": "aa548d889f353b317ece0737c55f3fa6ca615b6a467579df6c528e513bcb5eb6",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "8.400000"
+      }
+    }
+  },
+  {
+    "file": "bl2-mixed.mp3",
+    "bytes": 135000,
+    "sha256": "fd6f81e1c644e2da7dcd775ca96b7c0a0fd79dbd6cd2ea8ba7ad72984123b885",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "8.437500"
+      }
+    }
+  }
+]
